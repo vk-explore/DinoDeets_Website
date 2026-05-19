@@ -33,16 +33,16 @@ export const creatorParts = {
 
 // Fan art gallery data
 export const fanArtGallery = [
-  { title: 'Garden Explorer', artist: 'Riya, Age 8', image: '/images/fanart/trex-garden.png', likes: 42 },
-  { title: 'Family Walk', artist: 'Arjun, Age 10', image: '/images/fanart/triceratops-family.png', likes: 38 },
-  { title: 'Rainbow Lunch', artist: 'Ananya, Age 7', image: '/images/fanart/brachio-rainbow.png', likes: 55 },
+  { title: 'Garden Explorer', artist: 'Riya, Age 8', image: './images/fanart/trex-garden.png', likes: 42 },
+  { title: 'Family Walk', artist: 'Arjun, Age 10', image: './images/fanart/triceratops-family.png', likes: 38 },
+  { title: 'Rainbow Lunch', artist: 'Ananya, Age 7', image: './images/fanart/brachio-rainbow.png', likes: 55 },
 ];
 
 // Coloring pages data
 export const coloringPages = [
-  { name: 'Friendly T-Rex', image: '/images/coloring/trex.png', difficulty: 'Easy' },
-  { name: 'Stegosaurus', image: '/images/coloring/stegosaurus.png', difficulty: 'Medium' },
-  { name: 'Brachiosaurus & Tree', image: '/images/coloring/brachiosaurus.png', difficulty: 'Easy' },
+  { name: 'Friendly T-Rex', image: './images/coloring/trex.png', difficulty: 'Easy' },
+  { name: 'Stegosaurus', image: './images/coloring/stegosaurus.png', difficulty: 'Medium' },
+  { name: 'Brachiosaurus & Tree', image: './images/coloring/brachiosaurus.png', difficulty: 'Easy' },
 ];
 
 // Dino name generator data

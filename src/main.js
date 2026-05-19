@@ -7,12 +7,12 @@ import { translations } from './data/i18n.js';
 
 // Dino image mapping for Random Deet
 const dinoImages = {
-  'Tyrannosaurus Rex': '/images/dinos/trex.png',
-  'Velociraptor': '/images/dinos/velociraptor.png',
-  'Triceratops': '/images/dinos/triceratops.png',
-  'Stegosaurus': '/images/dinos/stegosaurus.png',
-  'Brachiosaurus': '/images/dinos/brachiosaurus.png',
-  'default': '/images/dinos/trex.png',
+  'Tyrannosaurus Rex': './images/dinos/trex.png',
+  'Velociraptor': './images/dinos/velociraptor.png',
+  'Triceratops': './images/dinos/triceratops.png',
+  'Stegosaurus': './images/dinos/stegosaurus.png',
+  'Brachiosaurus': './images/dinos/brachiosaurus.png',
+  'default': './images/dinos/trex.png',
 };
 
 function getDinoImage(name) {
@@ -129,12 +129,12 @@ function renderEpisodes(items) {
 
 function renderFallbackEpisodes() {
   const fallback = [
-    { title: "The BIGGEST Dinosaur Ever Found!", img: "/images/dinos/brachiosaurus.png" },
-    { title: "T-Rex: King of the Dinosaurs", img: "/images/dinos/trex.png" },
-    { title: "Fossils: How Dinosaurs Become Stones", img: "/images/fossils/trex-skull.png" },
-    { title: "Underwater Monsters of the Deep", img: "/images/dinos/velociraptor.png" },
-    { title: "The Armored Stegosaurus", img: "/images/dinos/stegosaurus.png" },
-    { title: "India's Own Dinosaurs!", img: "/images/dinos/triceratops.png" },
+    { title: "The BIGGEST Dinosaur Ever Found!", img: "./images/dinos/brachiosaurus.png" },
+    { title: "T-Rex: King of the Dinosaurs", img: "./images/dinos/trex.png" },
+    { title: "Fossils: How Dinosaurs Become Stones", img: "./images/fossils/trex-skull.png" },
+    { title: "Underwater Monsters of the Deep", img: "./images/dinos/velociraptor.png" },
+    { title: "The Armored Stegosaurus", img: "./images/dinos/stegosaurus.png" },
+    { title: "India's Own Dinosaurs!", img: "./images/dinos/triceratops.png" },
   ];
   const grid = document.getElementById('episodes-grid');
   grid.innerHTML = fallback.map((ep, i) => `
@@ -216,7 +216,7 @@ function initFossilDig() {
 
     // Draw fossil image underneath
     const fossilImg = new Image();
-    fossilImg.src = '/images/fossils/trex-skull.png';
+    fossilImg.src = './images/fossils/trex-skull.png';
     fossilImg.onload = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Draw dark background
@@ -236,7 +236,7 @@ function initFossilDig() {
 
       // Overlay dirt layer
       const dirtImg = new Image();
-      dirtImg.src = '/images/fossils/dig-earth.png';
+      dirtImg.src = './images/fossils/dig-earth.png';
       dirtImg.onload = () => {
         ctx.globalCompositeOperation = 'source-over';
         ctx.drawImage(dirtImg, 0, 0, canvas.width, canvas.height);
