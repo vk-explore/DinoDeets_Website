@@ -18,10 +18,15 @@ Website for the **Dino Deets** podcast — a kid-and-family-friendly dinosaur po
 3. Dino Map (interactive fossil discovery locations)
 4. Random Deet button (instant dino facts)
 
+## Agent Guidelines
+- **Living Documentation:** Agents MUST proactively update `agents.md` and all files in the `docs/` folder as new decisions are made, requirements change, or features are implemented during the chat. Do not wait for explicit user prompts to keep documentation synchronized.
+
 ## Documentation
 - [Roadmap](docs/roadmap.md) — Feature phases and release plan
 - [Design System](docs/design-system.md) — Colors, typography, spacing tokens
 - [Tech Stack](docs/tech-stack.md) — Architecture, APIs, file structure
+- [User Requirements](docs/user-requirements.md) — Detailed user stories, constraints, and business logic
+- [Implemented Features](docs/implemented-features.md) — Log of what has been built and completed so far
 
 ## Social Links
 - YouTube: https://www.youtube.com/@dinodeets
