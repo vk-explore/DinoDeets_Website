@@ -1,49 +1,40 @@
-# Dino Deets Website — Roadmap
+# Dino Deets Interactive Scene Engine — Master Roadmap
 
-## ✅ Phase 1: Foundation (v1.0)
-- [x] Project setup (Vite vanilla, static build for GitHub Pages)
-- [x] Design system (dark prehistoric theme, typography, colors)
-- [x] Base layout & responsive grid
-- [x] Navigation (sticky, animated)
-- [x] Hero section (parallax prehistoric landscape)
-- [x] Episodes section (YouTube RSS auto-pull + fallback)
-- [x] About section (Meet Devaansh)
-- [x] Social links (YouTube, Instagram, Facebook)
-- [x] Footer (geological strata design)
-- [x] Random Deet button (dino facts engine)
-- [x] Animated Dino Mascot (site companion)
-- [x] Scroll-triggered animations
-- [x] SEO meta tags & favicon
+This roadmap outlines the complete development cycle for transforming Dino Deets into an immersive, scene-based Interactive Engine.
 
-## ✅ Phase 2: Interactive Features (v1.1)
-- [x] Replace all emojis with realistic dinosaur images
-- [x] Fossil Dig mini-game (Canvas scratch-off)
-- [x] Dino Map (interactive fossil discovery sites)
-- [x] SVG icon system (sound toggle, back-to-top, nav)
-- [x] Image-based Random Deet (species portraits)
+## Phase 1: Engine Architecture & Tooling (Complete)
+- [x] Wipe legacy scrolling UI from `index.html`, `style.css`, and `main.js`.
+- [x] Create the local `vite.config.js` API to handle image discovery, uploads, and state saving.
+- [x] Build the Engine UI (`src/engine/core.js`) with the Scene Manager and Asset Manager.
+- [x] Hook the Engine deeply into `Theatre.js` so newly added UI objects immediately register as animatable elements.
+- [x] Implement **Two-Layer Architecture**: Layer 1 (Theatre.js 3D overlay) on top, Layer 2 (HTML DOM) underneath.
+- [x] Refactor Scene Manager to support 15 animation variations per scene (3 states x 5 resolutions) using dynamic Theatre.js sheets.
 
-## ✅ Phase 3: Community & Growth (v2.0)
-- [x] Episode countdown egg timer
-- [x] Dino Quiz with scoring & results
-- [x] "Ask Devaansh" listener questions form
-- [x] Dino Dictionary / Glossary (A-Z)
-- [x] Dino-o-Meter size comparisons
-- [x] Dino Timeline Explorer (horizontal scroll)
+## Phase 2: The Linking System (Next)
+- [ ] Implement the "Linker" Tool in the Engine Editor.
+- [ ] Allow clicking any `theatre-object` in the Editor and assigning an `onClick` destination (e.g., "Go to Scene: Encyclopedia").
+- [ ] Build the Play Mode runtime so clicking linked objects executes a smooth transition to the target scene.
+- [ ] Orchestrate transitions between layers: Layer 1 plays transition-out/in, Layer 2 swaps content.
 
-## ✅ Phase 4: Advanced (v3.0)
-- [x] "Dino Creator" — design your own dinosaur (Canvas)
-- [x] Fan Art gallery (lightbox)
-- [x] Coloring pages (downloadable PNGs)
-- [x] Auto-generated dino names
+## Phase 3: World Building - The Home Scene
+- [ ] Use AI generation to create cinematic, layered assets for the Home Scene (Background Space, Earth, Asteroid, etc.).
+- [ ] Process assets through the background removal script for transparency.
+- [ ] Upload and compose the assets into the Home Scene using the Editor.
+- [ ] Animate the Home Scene in Theatre.js (Camera pans, asteroid fire trails).
 
-## 🚀 Future Ideas
-- [ ] Multi-language support (Hindi, Spanish)
-- [ ] Community leaderboard (quiz high scores)
-- [ ] AR dino viewer (WebXR)
-- [ ] Podcast transcripts viewer
-- [ ] Sound system (ambient prehistoric audio)
+## Phase 4: Rebuilding the Encyclopedia Scene
+- [ ] Create a new "Encyclopedia" Scene via the Editor.
+- [ ] Generate the UI components as layered images (Grid backgrounds, polaroids of dinosaurs).
+- [ ] Build a custom scrolling behaviour inside the Engine for the Encyclopedia view.
+- [ ] Link the Home Scene's "Signpost" object to the Encyclopedia Scene.
 
-## Deployment
-- **Hosting:** GitHub Pages (static build)
-- **Domain:** TBD (will be configured later)
-- **Build:** `npm run build` → `dist/` folder
+## Phase 5: Rebuilding Mini-Games (Fossil Dig & Quiz)
+- [ ] Create "Fossil Dig" and "Quiz" Scenes.
+- [ ] Re-integrate the HTML5 Canvas logic for the scratch-off game into the new Engine architecture.
+- [ ] Build the interactive state machines for the Quiz using linked scenes (e.g., "Click A -> Go to Correct Scene", "Click B -> Go to Wrong Scene").
+
+## Phase 6: Polish, Sound & Export
+- [ ] Integrate ambient prehistoric audio (jungle ambiance, distant roars, wind) that crossfades between Scenes.
+- [ ] Add global micro-animations for linked objects (e.g., all clickable objects slowly breathe or pulse).
+- [ ] Build the Production Exporter: A script that strips out the Editor UI and packages the Engine into a static, highly optimized website for GitHub Pages.
+- [ ] Final deployment of the Interactive Engine to GitHub Pages.

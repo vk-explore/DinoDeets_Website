@@ -1,0 +1,192 @@
+{
+  "theatreState": {
+    "sheetsById": {
+      "MainScene": {
+        "staticOverrides": {
+          "byObject": {
+            "obj_chw4b6": {
+              "x": 278.48101265822584,
+              "rotation": -36.45569620253164,
+              "opacity": 0.569620253164557,
+              "zIndex": 0
+            },
+            "obj_g7s5jv": {
+              "scale": 0.43037974683544383,
+              "x": 455.69620253164555,
+              "y": 25.31645569620251,
+              "zIndex": 5
+            },
+            "obj_0wov4f": {
+              "y": -151.8987341772152,
+              "x": 227.84810126582286,
+              "scale": 0.7278481012658233,
+              "rotation": -360
+            }
+          }
+        },
+        "sequence": {
+          "subUnitsPerUnit": 30,
+          "length": 10,
+          "type": "PositionalSequence",
+          "tracksByObject": {
+            "obj_g7s5jv": {
+              "trackData": {
+                "P1K62hAe9-": {
+                  "type": "BasicKeyframedTrack",
+                  "__debugName": "obj_g7s5jv:[\"rotation\"]",
+                  "keyframes": [
+                    {
+                      "id": "WGpuk3U_yU",
+                      "position": 0,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0
+                      ],
+                      "type": "bezier",
+                      "value": -168.6075949367089
+                    },
+                    {
+                      "id": "CUqzUzWg26",
+                      "position": 3.267,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0
+                      ],
+                      "type": "bezier",
+                      "value": 241.51898734177237
+                    }
+                  ]
+                }
+              },
+              "trackIdByPropPath": {
+                "[\"rotation\"]": "P1K62hAe9-"
+              }
+            }
+          }
+        }
+      },
+      "Home_idle_16:9": {
+        "staticOverrides": {
+          "byObject": {
+            "obj_1twe9f": {
+              "position": {
+                "x": -0.21190063291770578,
+                "y": 0,
+                "z": -0.3155425891479928
+              }
+            },
+            "Main Camera": {
+              "position": {
+                "x": -0.2925209788081018,
+                "y": 0,
+                "z": 10
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0.22479391245408006,
+                "z": 0
+              }
+            },
+            "Sun Light": {
+              "rotation": {
+                "x": 0.8967738382689272,
+                "y": -0.3772929208178437,
+                "z": -1.9144054953740455
+              },
+              "position": {
+                "x": 0.7957665896895103,
+                "y": 0.38520472716390375,
+                "z": 10.110567277542467
+              },
+              "color": {
+                "r": 1,
+                "g": 0.7490196078431373,
+                "b": 0,
+                "a": 1
+              },
+              "intensity": 1.610000000000001
+            },
+            "Ambient Light": {
+              "intensity": 0.7099999999999989,
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+              }
+            },
+            "obj_k4l24u": {
+              "position": {
+                "y": 0.8300000000000007
+              }
+            }
+          }
+        }
+      }
+    },
+    "definitionVersion": "0.4.0",
+    "revisionHistory": [
+      "PON0wnLlhmtVyg2F",
+      "5GT_xJoIZWoFiWWa",
+      "GEN1S4gXjkvHlE-t",
+      "r_JmYhT3SF7D-c5L",
+      "fve8oiP15PeauIyq",
+      "X1qlOTkRiGzxcxXN",
+      "mlUL5k4ve4EGoqV9",
+      "prCUVhZ9pwTuAGvo",
+      "Uzct2Omq8ty9OtYI",
+      "TM0_rUE3zTHYae9i",
+      "wV0-4vSukjh8yHfX"
+    ]
+  },
+  "engineState": {
+    "activeScene": "Home",
+    "scenes": {
+      "Home": {
+        "objects": [
+          {
+            "id": "obj_k4l24u",
+            "src": "/images/fg_asteroid.png",
+            "name": "fg_asteroid",
+            "linkToScene": null
+          }
+        ],
+        "lights": [
+          {
+            "id": "light_ambient",
+            "type": "ambient",
+            "intensity": 0.5,
+            "name": "Ambient Light"
+          },
+          {
+            "id": "light_sun",
+            "type": "directional",
+            "intensity": 1,
+            "position": [
+              5,
+              5,
+              5
+            ],
+            "name": "Sun Light"
+          }
+        ],
+        "camera": {
+          "id": "cam_main",
+          "fov": 50,
+          "position": [
+            0,
+            0,
+            10
+          ],
+          "name": "Main Camera"
+        }
+      }
+    }
+  }
+}

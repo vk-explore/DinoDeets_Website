@@ -1,15 +1,27 @@
-# User Requirements
+# User Requirements & Business Logic
 
-This document tracks the detailed user stories, constraints, and business logic for the Dino Deets website.
+## Primary Goal
+To empower the creator (the User) with a custom, browser-based "Dino Engine Editor" that allows them to visually compose, animate, and link complex multi-layered prehistoric scenes without needing to write code manually for every element.
 
-## Overview
-- **Target Audience:** Growing kids (primary), parents (secondary).
-- **Core Value Proposition:** An interactive, educational, and fun destination that complements the YouTube podcast.
+## The Creator Workflow
+- **Custom Built Interactive Engine:** Must not use standard website builder templates. The experience must feel like a video game in the browser.
+- **Two-Layer Experience:**
+  - **Layer 1:** A 3D animated overlay (Theatre.js) that handles the rich, cinematic scene transitions and idle states.
+  - **Layer 2:** An underlying HTML layer that handles standard website content. During transitions, Layer 1 will animate (e.g., wipe, fade, or cinematic camera move), while Layer 2 swaps its content (pops out old elements, pops in new elements).
+- **Cinematic Scene Management:** Each scene must support 15 distinct animation sequences to ensure a perfect experience across all devices and states:
+  - **States:** `transition_in`, `idle`, `transition_out`
+  - **Resolutions:** `16:9`, `9:16`, `1:1`, `4:3`, `3:4`
+- **Immersive Layers:** Use complex, multi-layered visual compositions. No flat images. Every scene needs distinct foregrounds, midgrounds, subjects, backgrounds, and VFX (dust, fire).
+- **Full Customizability:** The creator needs an in-browser Engine Editor to:UI to upload these assets directly into the Engine.
+3. **Scene Composition:** The creator uses the Scene Manager to create a Scene, then adds the imported assets into the Scene.
+4. **Animation:** Using the integrated Theatre.js Studio, the creator scales, positions, and keyframe-animates the elements to bring the scene to life.
+5. **Linking:** (Next Feature) The creator assigns "onClick" transition events to objects to stitch scenes together into an interactive website.
 
-## Functional Requirements
-(To be populated as features are requested and decided)
+## Target Audience Experience
+- **Visuals First:** The final website should feel like an interactive storybook or video game.
+- **Cinematic Quality:** Scenes must use deep parallax, ambient animations, and high-quality cutouts.
+- **Exploration:** Kids will navigate the site by clicking on visual elements (like a wooden signpost or a dinosaur) rather than using standard web navigation bars.
+- **Seamless:** Transitions between scenes must be smooth, retaining the user's immersion.
 
-## Non-Functional Requirements
-- **Performance:** Fast load times, optimized assets (especially SVGs and Canvas).
-- **Accessibility:** Kid-friendly UI, clear contrast, easy-to-read typography.
-- **Responsiveness:** Must work flawlessly on mobile and tablet devices.
+## Future Mini-Games Integration
+The interactive Engine must eventually support encapsulating HTML5 Canvas experiences (like the Fossil Dig scratch-off game) within specific Scenes.
