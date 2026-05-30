@@ -5,6 +5,11 @@ import path from 'path';
 
 export default defineConfig({
   base: '/DinoDeets_Website/',
+  server: {
+    watch: {
+      ignored: ['**/src/data/animation-state.json']
+    }
+  },
   plugins: [
     react(),
     {
@@ -32,6 +37,21 @@ export default defineConfig({
                 res.end(JSON.stringify({ error: e.message }));
               }
             });
+          }
+          // API: Get State
+          else if (req.url.includes('/api/get-state') && req.method === 'GET') {
+            try {
+              const filePath = path.resolve(__dirname, 'src/data/animation-state.json');
+              let data = '{}';
+              if (fs.existsSync(filePath)) {
+                data = fs.readFileSync(filePath, 'utf-8');
+              }
+              res.setHeader('Content-Type', 'application/json');
+              res.end(data);
+            } catch (e) {
+              res.statusCode = 500;
+              res.end(JSON.stringify({ error: e.message }));
+            }
           }
           // API: List Images
           else if (req.url.endsWith('/api/images') && req.method === 'GET') {
@@ -64,8 +84,12 @@ export default defineConfig({
           else if (req.url.endsWith('/api/upload') && req.method === 'POST') {
             parseBody(req).then((data) => {
               try {
-                // Expecting { filename: "my-image.png", base64: "data:image/png;base64,iVBORw0KG..." }
-                const base64Data = data.base64.replace(/^data:image\/\w+;base64,/, "");
+                // Expecting { filename: "my-image.png", base64: "data:image/png;base64,..." } or { ..., image: "..." }
+                const rawBase64 = data.base64 || data.image;
+                if (!rawBase64) {
+                  throw new Error("Missing base64 image data. Provide either 'base64' or 'image' field.");
+                }
+                const base64Data = rawBase64.replace(/^data:image\/\w+;base64,/, "");
                 const buffer = Buffer.from(base64Data, 'base64');
                 const targetDir = path.resolve(__dirname, 'public/images/uploads');
                 if (!fs.existsSync(targetDir)) fs.mkdirSync(targetDir, { recursive: true });
@@ -74,7 +98,11 @@ export default defineConfig({
                 fs.writeFileSync(filePath, buffer);
                 
                 res.setHeader('Content-Type', 'application/json');
-                res.end(JSON.stringify({ success: true, url: `/images/uploads/${data.filename}` }));
+                res.end(JSON.stringify({ 
+                  success: true, 
+                  url: `/images/uploads/${data.filename}`,
+                  path: `/images/uploads/${data.filename}` 
+                }));
               } catch (e) {
                 res.statusCode = 500;
                 res.end(JSON.stringify({ error: e.message }));

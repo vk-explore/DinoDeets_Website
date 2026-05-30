@@ -15,8 +15,7 @@ The **Dino Deets** project has evolved from a standard static website into a ful
 
 ## Priority Features (Next Up)
 1. **The Linker:** Allow the creator to select an object in the Engine Editor and assign an `onClick` event that transitions the user to another Scene.
-2. **Animation Triggers:** Build controls to easily trigger "Transition In", "Idle", and "Transition Out" Theatre.js sequences for each scene.
-3. **Home Scene Composition:** Generate, cut out, and compose the complex layers for the primary landing scene.
+2. **Home Scene Composition:** Generate, cut out, and compose the complex layers for the primary landing scene.
 
 ## Agent Guidelines
 - **Living Documentation:** Agents MUST proactively update `agents.md` and all files in the `docs/` folder as new decisions are made, requirements change, or features are implemented during the chat. Do not wait for explicit user prompts to keep documentation synchronized.
