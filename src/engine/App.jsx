@@ -40,14 +40,14 @@ for (const sceneName in rawState.scenes) {
 }
 const initialState = rawState;
 
-// Initialize Project
+// Initialize Project (with HMR support)
 const projectConfig = Object.keys(stateJson.theatreState || {}).length > 0 ? { state: stateJson.theatreState } : undefined;
 let animProject;
-try {
+if (window.__THEATRE_PROJECT) {
+  animProject = window.__THEATRE_PROJECT;
+} else {
   animProject = getProject('DinoDeetsEngine', projectConfig);
-} catch (e) {
-  // Catch HMR reloads
-  animProject = getProject('DinoDeetsEngine');
+  window.__THEATRE_PROJECT = animProject;
 }
 
 // A helper component to load and render images as 3D Planes
@@ -172,19 +172,12 @@ export default function App() {
   };
 
   const handleSelectObject = (theatreKey) => {
-    if (isBuilder && actualStudio && sheet) {
-      try {
-        const obj = sheet.object(theatreKey, {});
-        if (typeof actualStudio.setSelection === 'function') {
-          actualStudio.setSelection([obj]);
-        } else {
-          alert("Error: actualStudio.setSelection is not a function. Available keys: " + Object.keys(actualStudio).join(', '));
-        }
-      } catch (e) {
-        alert("Selection error: " + e.message);
-        console.error("Could not select object:", e);
-      }
-    }
+    // Selection from external React UI to Theatre.js R3F objects is currently
+    // limited by Theatre's strict `sheet.object(key, config)` architecture.
+    // It does not expose a `getObject(key)` method, and passing an empty config
+    // throws the error you just saw.
+    // We will just log it for now.
+    console.log("To edit", theatreKey, "please select it directly in the Theatre.js Outliner on the right.");
   };
 
   return (

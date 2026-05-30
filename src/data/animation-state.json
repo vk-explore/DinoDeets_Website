@@ -123,7 +123,40 @@
             },
             "obj_k4l24u": {
               "position": {
-                "y": 0.8300000000000007
+                "y": 0.8300000000000007,
+                "x": -0.06515194061952112,
+                "z": -1.7079221309488508
+              }
+            }
+          }
+        },
+        "sequence": {
+          "subUnitsPerUnit": 30,
+          "length": 10,
+          "type": "PositionalSequence",
+          "tracksByObject": {
+            "obj_k4l24u": {
+              "trackData": {
+                "uCHbzO-Daz": {
+                  "type": "BasicKeyframedTrack",
+                  "__debugName": "obj_k4l24u:[\"position\",\"x\"]",
+                  "keyframes": []
+                },
+                "oiB5E5bjnR": {
+                  "type": "BasicKeyframedTrack",
+                  "__debugName": "obj_k4l24u:[\"position\",\"y\"]",
+                  "keyframes": []
+                },
+                "rvfYOKrMQV": {
+                  "type": "BasicKeyframedTrack",
+                  "__debugName": "obj_k4l24u:[\"position\",\"z\"]",
+                  "keyframes": []
+                }
+              },
+              "trackIdByPropPath": {
+                "[\"position\",\"x\"]": "uCHbzO-Daz",
+                "[\"position\",\"y\"]": "oiB5E5bjnR",
+                "[\"position\",\"z\"]": "rvfYOKrMQV"
               }
             }
           }
@@ -132,17 +165,56 @@
     },
     "definitionVersion": "0.4.0",
     "revisionHistory": [
-      "PON0wnLlhmtVyg2F",
-      "5GT_xJoIZWoFiWWa",
-      "GEN1S4gXjkvHlE-t",
-      "r_JmYhT3SF7D-c5L",
-      "fve8oiP15PeauIyq",
-      "X1qlOTkRiGzxcxXN",
-      "mlUL5k4ve4EGoqV9",
-      "prCUVhZ9pwTuAGvo",
-      "Uzct2Omq8ty9OtYI",
-      "TM0_rUE3zTHYae9i",
-      "wV0-4vSukjh8yHfX"
+      "QLsM7PjV9xEGGEf7",
+      "DzZAEFR-MWgvet5g",
+      "f1vIMu6D0Qlks5vH",
+      "z8aJFsrUJIjlAJOv",
+      "6oI_zsFzS_lp7TFC",
+      "dBfSTuZvxR4tg7KR",
+      "9BXpZZH57UiVpd-b",
+      "uyQNQm9FmYmkYo80",
+      "yaKPbC29UWm6ZyH2",
+      "QiNpzuwg0FtI4C6B",
+      "hQR_Hp-x_rGcr-yr",
+      "EqpElLByEmasC4QR",
+      "7jDxUOwqhn9buNB9",
+      "EfDwcLq9OInSv4jO",
+      "3ked5INEllx66n5Y",
+      "EeF9MxCSGKGk1jyL",
+      "kgpU4kHpOZMwNZho",
+      "53V07RW1sNNMq877",
+      "PQuaOTKqJSR7Dwj7",
+      "pBclDbFzJWOmIroS",
+      "84yAOHLIYwCA3uck",
+      "e3HKiU0OSi50nMqu",
+      "W8nHcvWPEX2uk6hz",
+      "rzPIT0V5ninhVqbu",
+      "d0oNamfzl4VvgAJz",
+      "qujZYcFG9N-IScu8",
+      "tudNa79yR4ikvCEl",
+      "SE1PX2fqyLXiSM6U",
+      "-eVN1yXLnBaeqyzJ",
+      "FFwIyYsLqwpxh2Qz",
+      "_ISxsbT0WmhM_nQU",
+      "YfoKxKyJw5kE8jQn",
+      "96U7Aab2QhLqLqRe",
+      "fHvm_IXY7jFI7v1b",
+      "p9FLyuAidoyBZ64P",
+      "mKdej9UslS5qQoeZ",
+      "8tdl12097WZUICLd",
+      "trFaER1ifcSQgAPB",
+      "s-soVqwNSzJKSbM-",
+      "IuiQhmkC0pN4NU3h",
+      "MXYu5bjPpCEIASLR",
+      "Fxklq9ib1579s5PK",
+      "vY3_4Y4Gx3LkKH0J",
+      "EtTqxxMLYMViF8jp",
+      "6_Wvbx-TBjvE31_s",
+      "ujZHCv5RCEt5N5Gt",
+      "n6RoALZZhUNcTpRU",
+      "oyN8OCy0X-DiWD-v",
+      "ftNNUsJIQvRGNNQ3",
+      "Odl_zAM_JOzbWfWw"
     ]
   },
   "engineState": {
