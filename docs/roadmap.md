@@ -5,16 +5,16 @@ This roadmap outlines the complete development cycle for transforming Dino Deets
 ## Phase 1: Engine Architecture & Tooling (Complete)
 - [x] Wipe legacy scrolling UI from `index.html`, `style.css`, and `main.js`.
 - [x] Create the local `vite.config.js` API to handle image discovery, uploads, and state saving.
-- [x] Build the Engine UI (`src/engine/core.js`) with the Scene Manager and Asset Manager.
+- [x] Build the Engine UI (`src/engine/App.jsx` + `EditorUI.jsx`) with the Scene Manager and Asset Manager.
 - [x] Hook the Engine deeply into `Theatre.js` so newly added UI objects immediately register as animatable elements.
 - [x] Implement **Two-Layer Architecture**: Layer 1 (Theatre.js 3D overlay) on top, Layer 2 (HTML DOM) underneath.
 - [x] Refactor Scene Manager to support 15 animation variations per scene (3 states x 5 resolutions) using dynamic Theatre.js sheets.
 
-## Phase 2: The Linking System (Next)
-- [ ] Implement the "Linker" Tool in the Engine Editor.
-- [ ] Allow clicking any `theatre-object` in the Editor and assigning an `onClick` destination (e.g., "Go to Scene: Encyclopedia").
-- [ ] Build the Play Mode runtime so clicking linked objects executes a smooth transition to the target scene.
-- [ ] Orchestrate transitions between layers: Layer 1 plays transition-out/in, Layer 2 swaps content.
+## Phase 2: The Linking System (Complete)
+- [x] Implement the "Linker" Tool in the Engine Editor.
+- [x] Allow clicking any `theatre-object` in the Editor and assigning an `onClick` destination (e.g., "Go to Scene: Encyclopedia").
+- [x] Build the Play Mode runtime so clicking linked objects executes a smooth transition to the target scene.
+- [x] Orchestrate transitions between layers: Layer 1 plays transition-out/in, Layer 2 swaps content.
 
 ## Phase 3: World Building - The Home Scene
 - [ ] Use AI generation to create cinematic, layered assets for the Home Scene (Background Space, Earth, Asteroid, etc.).

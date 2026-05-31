@@ -8,17 +8,19 @@ import extension from '@theatre/r3f/dist/extension';
 
 import { EditorUI } from './EditorUI';
 import stateJson from '../data/animation-state.json';
+import routesMap from '../data/routes.json';
+import WebsiteRouter from '../website/WebsiteRouter';
 
 const EditableCamera = e(PerspectiveCamera, 'perspectiveCamera');
 
-// Check if we are on the scenebuilder endpoint
-const isBuilder = window.location.pathname.includes('/scenebuilder') || window.location.hash.includes('#/scenebuilder');
+// Check if we are on the scenebuilder endpoint (case-insensitive)
+const isBuilder = window.location.pathname.toLowerCase().includes('/scenebuilder') || window.location.hash.toLowerCase().includes('#/scenebuilder');
 
 let currentProjectId = 'DinoDeetsEngine_v1';
 
 // Initialize Theatre.js Studio with the R3F extension only in builder mode
 const actualStudio = studio.default || studio;
-if (import.meta.env.DEV && isBuilder) {
+if (isBuilder) {
   actualStudio.extend(extension);
   actualStudio.initialize();
 }
@@ -66,16 +68,109 @@ function getInitialData(stateData) {
 }
 
 // A helper component to load and render images as 3D Planes
-function ImagePlane({ objData }) {
+class TextureErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error("Texture failed to load:", this.props.src, error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <e.mesh theatreKey={this.props.theatreKey}>
+          <planeGeometry args={[1, 1]} />
+          <meshBasicMaterial color="red" wireframe />
+        </e.mesh>
+      );
+    }
+    return this.props.children;
+  }
+}
+
+// Global Canvas Error Boundary to catch R3F or Three.js WebGL crashes cleanly and preserve the builder UI sidebar
+class CanvasErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error("3D Canvas rendering crashed:", error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div style={{
+          position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
+          display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center',
+          background: 'rgba(30, 14, 14, 0.95)', border: '2px dashed var(--color-volcanic)', 
+          borderRadius: '12px', color: 'var(--color-text-primary)', padding: '30px', 
+          zIndex: 9999, textAlign: 'center', boxShadow: '0 8px 32px rgba(0,0,0,0.5)',
+          width: '500px', maxWidth: '85%', pointerEvents: 'auto'
+        }}>
+          <h2 style={{ color: 'var(--color-volcanic)', marginBottom: '12px', fontFamily: 'var(--font-display)' }}>⚠️ 3D CANVAS RENDER ERROR</h2>
+          <p style={{ maxWidth: '500px', fontSize: '13px', color: 'var(--color-text-secondary)', lineHeight: '1.5', margin: '0 auto 15px auto' }}>
+            The WebGL Three.js Canvas crashed. This is commonly caused by WebGL context loss, a missing asset source, or a React Three Fiber syntax issue.
+          </p>
+          <pre style={{
+            background: 'rgba(0,0,0,0.4)', padding: '10px 14px', borderRadius: '6px', fontSize: '11px',
+            color: '#ff8888', maxWidth: '100%', overflowX: 'auto', textAlign: 'left', fontFamily: 'monospace',
+            border: '1px solid rgba(232, 101, 45, 0.2)'
+          }}>
+            {this.state.error ? this.state.error.toString() : 'Unknown WebGL Error'}
+          </pre>
+          <button 
+            onClick={() => window.location.reload()} 
+            style={{ 
+              marginTop: '20px', padding: '10px 20px', background: 'var(--color-volcanic)', 
+              color: 'white', border: 'none', borderRadius: '8px', cursor: 'pointer', fontWeight: 'bold' 
+            }}
+          >
+            🔄 Reload Developer Workspace
+          </button>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
+function ImagePlane({ objData, isBuilder }) {
   // Use Vite's base path for images
-  const texture = useTexture('/DinoDeets_Website' + objData.src);
+  const texturePath = '/DinoDeets_Website' + objData.src;
+  const texture = useTexture(texturePath);
   const aspect = texture.image ? texture.image.width / texture.image.height : 1;
   
   return (
-    <e.mesh theatreKey={objData.id}>
-      <planeGeometry args={[aspect * 5, 5]} />
-      <meshStandardMaterial map={texture} transparent side={2} />
+    <e.mesh 
+      theatreKey={objData.id}
+      onClick={(e) => {
+        if (!isBuilder && objData.linkToRoute) {
+          e.stopPropagation(); // prevent onPointerMissed click-through
+          window.location.hash = '#' + objData.linkToRoute;
+        }
+      }}
+    >
+      <planeGeometry args={[aspect, 1]} />
+      <meshBasicMaterial map={texture} transparent alphaTest={0.01} side={2} />
     </e.mesh>
+  );
+}
+
+function SafeImagePlane({ objData, isBuilder }) {
+  return (
+    <TextureErrorBoundary src={objData.src} theatreKey={objData.id}>
+      <Suspense fallback={null}>
+        <ImagePlane objData={objData} isBuilder={isBuilder} />
+      </Suspense>
+    </TextureErrorBoundary>
   );
 }
 
@@ -120,21 +215,72 @@ export default function App({ externalState }) {
   const activeStateJson = externalState || stateJson;
   const { initialState, animProject } = getInitialData(activeStateJson);
 
+  const initialHash = typeof window !== 'undefined' ? window.location.hash.replace('#', '') || '/' : '/';
+
   const [engineState, setEngineState] = useState(initialState);
-  const [activeScene, setActiveScene] = useState(initialState.activeScene || 'home');
-  const [activeState, setActiveState] = useState(initialState.activeState || 'idle');
+  const [activeScene, setActiveScene] = useState(isBuilder ? (initialState.activeScene || 'home') : (routesMap[initialHash] || 'home'));
+  const [activeState, setActiveState] = useState(isBuilder ? (initialState.activeState || 'idle') : 'transition_in');
   const [activeResolution, setActiveResolution] = useState(initialState.activeResolution || '16:9');
   const [sidebarWidth, setSidebarWidth] = useState(isBuilder ? 330 : 0);
+
+  // Debug boot status log
+  console.warn("🛠️ [App] Loaded state. isBuilder:", isBuilder, "sidebarWidth:", isBuilder ? 330 : 0);
+
+  const [currentRoute, setCurrentRoute] = useState(initialHash);
+  const [pendingRoute, setPendingRoute] = useState(null);
 
   // React Ref to hold the up-to-date master theatre state across saving operations
   const masterTheatreStateRef = useRef(activeStateJson.theatreState || { sheetsById: {} });
 
-  // Re-render when switching scenes
-  const sceneData = engineState.scenes[activeScene] || { objects: [], lights: [], camera: null };
-  
   // Dynamic Theatre Sheet based on Scene + State + Resolution
   const sheetName = `${activeScene}_${activeState}_${activeResolution}`;
   const sheet = animProject.sheet(sheetName);
+
+  // Handle Non-Builder Routing & Theatre Sequence Orchestration
+  useEffect(() => {
+    if (isBuilder) return;
+    const handleHashChange = () => {
+      const newRoute = window.location.hash.replace('#', '') || '/';
+      if (newRoute !== currentRoute) {
+        setPendingRoute(newRoute);
+        setActiveState('transition_out');
+      }
+    };
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, [isBuilder, currentRoute]);
+
+  useEffect(() => {
+    if (isBuilder || !sheet) return;
+    let isCancelled = false;
+    
+    const playSequence = async () => {
+      if (activeState === 'transition_in') {
+        await sheet.sequence.play({ iterationCount: 1, direction: 'normal' });
+        if (!isCancelled) setActiveState('idle');
+      } else if (activeState === 'idle') {
+        sheet.sequence.play({ iterationCount: Infinity, direction: 'normal' });
+      } else if (activeState === 'transition_out') {
+        await sheet.sequence.play({ iterationCount: 1, direction: 'normal' });
+        if (!isCancelled && pendingRoute) {
+          setCurrentRoute(pendingRoute);
+          setActiveScene(routesMap[pendingRoute] || 'home');
+          setActiveState('transition_in');
+          setPendingRoute(null);
+        }
+      }
+    };
+    
+    playSequence();
+    
+    return () => {
+      isCancelled = true;
+      sheet.sequence.pause();
+    };
+  }, [isBuilder, activeState, sheet, pendingRoute]);
+
+  // Re-render when switching scenes
+  const sceneData = engineState.scenes[activeScene] || { objects: [], lights: [], camera: null };
 
   const aspectRatios = {
     '16:9': 16 / 9,
@@ -213,7 +359,7 @@ export default function App({ externalState }) {
     const baseName = src.split('/').pop().split('.')[0];
     const safeName = baseName.replace(/[^a-zA-Z0-9]/g, '_');
     const id = safeName + '_' + Math.random().toString(36).substr(2, 4);
-    const newObj = { id, src, name: baseName, linkToScene: null };
+    const newObj = { id, src, name: baseName, linkToRoute: '' };
     
     setEngineState(prev => {
       const newState = { ...prev, scenes: { ...prev.scenes } };
@@ -221,6 +367,21 @@ export default function App({ externalState }) {
         ...newState.scenes[activeScene],
         objects: [...newState.scenes[activeScene].objects, newObj]
       };
+      return newState;
+    });
+  };
+
+  const handleUpdateObject = (objId, updates) => {
+    setEngineState(prev => {
+      const newState = { ...prev, scenes: { ...prev.scenes } };
+      const updatedScene = { ...newState.scenes[activeScene] };
+      const sceneObjects = [...updatedScene.objects];
+      const index = sceneObjects.findIndex(o => o.id === objId);
+      if (index >= 0) {
+        sceneObjects[index] = { ...sceneObjects[index], ...updates };
+      }
+      updatedScene.objects = sceneObjects;
+      newState.scenes[activeScene] = updatedScene;
       return newState;
     });
   };
@@ -434,6 +595,7 @@ export default function App({ externalState }) {
           onAddLight={handleAddLight}
           onRemoveLight={handleRemoveLight}
           onSelectObject={handleSelectObject}
+          onUpdateObject={handleUpdateObject}
           masterTheatreState={masterTheatreStateRef.current}
           onCopyAnimations={handleCopyAnimations}
           sidebarWidth={sidebarWidth}
@@ -476,11 +638,7 @@ export default function App({ externalState }) {
             </div>
           </div>
         ) : (
-          <div style={{ padding: '50px', color: 'white', textAlign: 'center' }}>
-            <h1>Layer 2 - HTML Content</h1>
-            <p>This content sits underneath the 3D canvas.</p>
-            <p>Current Scene: {activeScene}</p>
-          </div>
+          <WebsiteRouter activeRoute={currentRoute} />
         )}
       </div>
  
@@ -512,26 +670,47 @@ export default function App({ externalState }) {
           }} />
         )}
  
-        <Canvas gl={{ alpha: true }} style={{ width: `calc(100vw - ${sidebarWidth}px)`, height: '100vh', background: 'transparent' }}>
-          <SheetProvider key={sheetName} sheet={sheet}>
-            {sceneData.camera && (
-              <EditableCamera theatreKey={sceneData.camera.name} makeDefault position={sceneData.camera.position} fov={sceneData.camera.fov} />
-            )}
-            
-            {sceneData.lights.map(light => {
-              if (light.type === 'ambient') return <e.ambientLight key={light.id} theatreKey={light.name} intensity={light.intensity} />;
-              if (light.type === 'directional') return <e.directionalLight key={light.id} theatreKey={light.name} position={light.position} intensity={light.intensity} />;
-              if (light.type === 'point') return <e.pointLight key={light.id} theatreKey={light.name} position={light.position} intensity={light.intensity} />;
-              return null;
-            })}
-            
-            <Suspense fallback={null}>
-              {sceneData.objects.map(obj => (
-                <ImagePlane key={obj.id} objData={obj} />
-              ))}
-            </Suspense>
-          </SheetProvider>
-        </Canvas>
+        <CanvasErrorBoundary>
+          <Canvas 
+            gl={{ alpha: true }} 
+            style={{ width: `calc(100vw - ${sidebarWidth}px)`, height: '100vh', background: 'transparent' }}
+            onPointerMissed={(e) => {
+              if (isBuilder) return;
+              // Forward click to Layer 2 HTML beneath the Canvas
+              const htmlLayer = document.getElementById('layer-2-html');
+              if (htmlLayer && e.target && e.target.style) {
+                const canvasEl = e.target;
+                const prevPointerEvents = canvasEl.style.pointerEvents;
+                canvasEl.style.pointerEvents = 'none'; // Temporarily disable canvas pointer events
+                const elementUnder = document.elementFromPoint(e.clientX, e.clientY);
+                canvasEl.style.pointerEvents = prevPointerEvents; // Restore immediately
+                
+                if (elementUnder && elementUnder !== htmlLayer) {
+                  elementUnder.click();
+                }
+              }
+            }}
+          >
+            <SheetProvider key={sheetName} sheet={sheet}>
+              {sceneData.camera && (
+                <EditableCamera theatreKey={sceneData.camera.name} makeDefault position={sceneData.camera.position} fov={sceneData.camera.fov} />
+              )}
+              
+              {sceneData.lights.map(light => {
+                if (light.type === 'ambient') return <e.ambientLight key={light.id} theatreKey={light.name} intensity={light.intensity} />;
+                if (light.type === 'directional') return <e.directionalLight key={light.id} theatreKey={light.name} position={light.position} intensity={light.intensity} />;
+                if (light.type === 'point') return <e.pointLight key={light.id} theatreKey={light.name} position={light.position} intensity={light.intensity} />;
+                return null;
+              })}
+              
+              <Suspense fallback={null}>
+                {sceneData.objects.map(obj => (
+                  <SafeImagePlane key={obj.id} objData={obj} isBuilder={isBuilder} />
+                ))}
+              </Suspense>
+            </SheetProvider>
+          </Canvas>
+        </CanvasErrorBoundary>
       </div>
     </>
   );

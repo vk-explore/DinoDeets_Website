@@ -387,7 +387,7 @@
                         0
                       ],
                       "type": "bezier",
-                      "value": -1.7000000000000042
+                      "value": -4.649999999999993
                     },
                     {
                       "id": "EK5xgSDS7f",
@@ -400,7 +400,7 @@
                         0
                       ],
                       "type": "bezier",
-                      "value": 1.7100000000000075
+                      "value": 4.440000000000005
                     }
                   ]
                 },
@@ -413,72 +413,12 @@
                   "type": "BasicKeyframedTrack",
                   "__debugName": "forge_logo_0d46:[\"position\",\"z\"]",
                   "keyframes": []
-                },
-                "yEDYNERjgt": {
-                  "type": "BasicKeyframedTrack",
-                  "__debugName": "forge_logo_0d46:[\"scale\",\"x\"]",
-                  "keyframes": [
-                    {
-                      "id": "losL-ToawG",
-                      "position": 0,
-                      "connectedRight": true,
-                      "handles": [
-                        0.5,
-                        1,
-                        0.5,
-                        0
-                      ],
-                      "type": "bezier",
-                      "value": 0.37999999999999945
-                    }
-                  ]
-                },
-                "3miw8eHRsW": {
-                  "type": "BasicKeyframedTrack",
-                  "__debugName": "forge_logo_0d46:[\"scale\",\"y\"]",
-                  "keyframes": [
-                    {
-                      "id": "jYUB0u7HHv",
-                      "position": 0,
-                      "connectedRight": true,
-                      "handles": [
-                        0.5,
-                        1,
-                        0.5,
-                        0
-                      ],
-                      "type": "bezier",
-                      "value": 0.37999999999999945
-                    }
-                  ]
-                },
-                "0csFPsbBBB": {
-                  "type": "BasicKeyframedTrack",
-                  "__debugName": "forge_logo_0d46:[\"scale\",\"z\"]",
-                  "keyframes": [
-                    {
-                      "id": "WQjtVxA6Xa",
-                      "position": 0,
-                      "connectedRight": true,
-                      "handles": [
-                        0.5,
-                        1,
-                        0.5,
-                        0
-                      ],
-                      "type": "bezier",
-                      "value": 0.38
-                    }
-                  ]
                 }
               },
               "trackIdByPropPath": {
                 "[\"position\",\"x\"]": "HXPxnhxCvT",
                 "[\"position\",\"y\"]": "uPdG4pBqii",
-                "[\"position\",\"z\"]": "_njqXGrcau",
-                "[\"scale\",\"x\"]": "yEDYNERjgt",
-                "[\"scale\",\"y\"]": "3miw8eHRsW",
-                "[\"scale\",\"z\"]": "0csFPsbBBB"
+                "[\"position\",\"z\"]": "_njqXGrcau"
               }
             }
           }
@@ -676,13 +616,13 @@
     },
     "definitionVersion": "0.4.0",
     "revisionHistory": [
-      "HewK01947m4kqUCs",
-      "zGOO7PKGi0_amsQa",
-      "Zj8IV9yfz76gDWiz",
-      "CBC3A7t-WxdBl2RA",
-      "xwp-oQrrB1O6_DnP",
-      "8rPSrMgmlyVTWs8B",
-      "4sJqz6P8IscYgocd",
+      "IqKCmlKV_28lY6D9",
+      "DO6gUHJpk0SkuCoz",
+      "qbIpcu-S7jwQ1lRS",
+      "TIrNlk2yRv5vAW1I",
+      "Xsxa9Vgibbot0qd1",
+      "nGJXBVVfaJeqIOH8",
+      "YmVx45jrpNkARAXt",
       "zOUIN4S8fHDM4P2y",
       "pQyA5YGYGFIM5sDp",
       "JeQWYGsXmzW7Fsaw",
@@ -729,19 +669,12 @@
     ]
   },
   "engineState": {
-    "activeScene": "New Scene",
+    "activeScene": "home",
     "activeState": "idle",
-    "activeResolution": "9:16",
+    "activeResolution": "16:9",
     "scenes": {
-      "New Scene": {
-        "objects": [
-          {
-            "id": "forge_logo_0d46",
-            "src": "/images/uploads/forge-logo.png",
-            "name": "forge-logo",
-            "linkToScene": null
-          }
-        ],
+      "home": {
+        "objects": [],
         "lights": [
           {
             "id": "light_ambient",
@@ -773,6 +706,6 @@
         }
       }
     },
-    "revision": 2
+    "revision": 1
   }
 }

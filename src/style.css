@@ -52,28 +52,11 @@ body {
 }
 
 /* ===== TWO-LAYER ARCHITECTURE ===== */
-#layer-1-3d {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 10; /* Sits on top */
-}
+/* Layer positions, sizes, and z-indices are set via inline styles in App.jsx
+   because they dynamically react to sidebarWidth in builder mode. */
 
 #layer-1-3d canvas {
   pointer-events: auto; /* Ensure canvas still gets events */
-}
-
-#layer-2-html {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 5; /* Sits underneath */
-  overflow-y: auto; /* Allow normal scrolling on the HTML layer */
-  background: var(--color-bg-primary); /* Base background */
 }
 
 /* ===== THEATRE OBJECTS ===== */

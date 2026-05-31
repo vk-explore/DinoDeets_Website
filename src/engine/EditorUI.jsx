@@ -14,6 +14,7 @@ export function EditorUI({
   onAddLight, 
   onRemoveLight, 
   onSelectObject, 
+  onUpdateObject,
   masterTheatreState, 
   onCopyAnimations,
   sidebarWidth,
@@ -33,11 +34,17 @@ export function EditorUI({
   const sceneLights = sceneData.lights || [];
   const sceneCamera = sceneData.camera;
 
-  // Workspace Panel Resizing Logic
   const [isResizing, setIsResizing] = useState(false);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [lastWidth, setLastWidth] = useState(330);
   const [isFullyHidden, setIsFullyHidden] = useState(false);
+  
+  // Render diagnostics log
+  console.warn("🎨 [EditorUI] Rendering component status:", { isCollapsed, isFullyHidden, sidebarWidth });
+
+  const [isDragging, setIsDragging] = useState(false);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
 
   const states = ['transition_in', 'idle', 'transition_out'];
   const resolutions = ['16:9', '9:16', '1:1', '4:3', '3:4'];
@@ -473,23 +480,40 @@ export function EditorUI({
                 Scene is empty. Drag in an asset or select from the Library below!
               </div>
             ) : sceneObjects.map(obj => (
-              <div 
-                key={obj.id} 
-                onClick={() => handleItemClick(obj.id)}
-                style={{ 
-                  display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '6px 10px 6px 16px', borderRadius: '6px', margin: '2px 0',
-                  cursor: 'pointer', background: selectedTheatreKey === obj.id ? 'var(--color-surface)' : 'transparent', 
-                  color: selectedTheatreKey === obj.id ? 'var(--color-amber)' : 'var(--color-text-primary)',
-                  border: selectedTheatreKey === obj.id ? '1px solid rgba(212, 168, 67, 0.3)' : '1px solid transparent'
-                }}
-              >
-                <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '220px' }}>🖼️ {obj.name || obj.src.split('/').pop()}</span>
-                <button 
-                  onClick={(e) => { e.stopPropagation(); onRemoveAsset(obj.id); }} 
-                  style={{ background: 'none', border: 'none', color: 'var(--color-volcanic)', cursor: 'pointer', padding: '0 4px', fontSize: '14px', outline: 'none' }}
+              <div key={obj.id} style={{ display: 'flex', flexDirection: 'column', margin: '2px 0' }}>
+                <div 
+                  onClick={() => handleItemClick(obj.id)}
+                  style={{ 
+                    display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '6px 10px 6px 16px', borderRadius: '6px',
+                    cursor: 'pointer', background: selectedTheatreKey === obj.id ? 'var(--color-surface)' : 'transparent', 
+                    color: selectedTheatreKey === obj.id ? 'var(--color-amber)' : 'var(--color-text-primary)',
+                    border: selectedTheatreKey === obj.id ? '1px solid rgba(212, 168, 67, 0.3)' : '1px solid transparent'
+                  }}
                 >
-                  ✕
-                </button>
+                  <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '220px' }}>🖼️ {obj.name || obj.src.split('/').pop()}</span>
+                  <button 
+                    onClick={(e) => { e.stopPropagation(); onRemoveAsset(obj.id); }} 
+                    style={{ background: 'none', border: 'none', color: 'var(--color-volcanic)', cursor: 'pointer', padding: '0 4px', fontSize: '14px', outline: 'none' }}
+                  >
+                    ✕
+                  </button>
+                </div>
+                
+                {selectedTheatreKey === obj.id && (
+                  <div style={{ padding: '8px 10px 8px 16px', background: 'rgba(0,0,0,0.2)', borderBottomLeftRadius: '6px', borderBottomRightRadius: '6px', marginTop: '-4px' }}>
+                    <label style={{ display: 'block', fontSize: '10px', color: 'var(--color-text-muted)', marginBottom: '4px' }}>🔗 Link to Route (e.g. /encyclopedia)</label>
+                    <input 
+                      type="text" 
+                      value={obj.linkToRoute || ''}
+                      onChange={(e) => onUpdateObject(obj.id, { linkToRoute: e.target.value })}
+                      placeholder="Leave empty for no link"
+                      style={{ 
+                        width: '100%', background: 'var(--color-bg-primary)', border: '1px solid rgba(212, 168, 67, 0.2)', 
+                        color: 'white', padding: '4px 8px', borderRadius: '4px', fontSize: '11px', outline: 'none'
+                      }}
+                    />
+                  </div>
+                )}
               </div>
             ))}
 

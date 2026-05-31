@@ -14,8 +14,8 @@ The **Dino Deets** project has evolved from a standard static website into a ful
 - **Hosting:** Ultimately exported to GitHub Pages as a static interactive build.
 
 ## Priority Features (Next Up)
-1. **The Linker:** Allow the creator to select an object in the Engine Editor and assign an `onClick` event that transitions the user to another Scene.
-2. **Home Scene Composition:** Generate, cut out, and compose the complex layers for the primary landing scene.
+1. **Home Scene Composition:** Generate, cut out, and compose the complex layers for the primary landing scene.
+2. **Rebuilding the Encyclopedia Scene:** Create a new "Encyclopedia" scene and compose transparent, multi-layered dinosaur/fossil visual assets.
 
 ## Agent Guidelines
 - **Living Documentation:** Agents MUST proactively update `agents.md` and all files in the `docs/` folder as new decisions are made, requirements change, or features are implemented during the chat. Do not wait for explicit user prompts to keep documentation synchronized.

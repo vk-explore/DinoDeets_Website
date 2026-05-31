@@ -12,10 +12,11 @@ To empower the creator (the User) with a custom, browser-based "Dino Engine Edit
   - **States:** `transition_in`, `idle`, `transition_out`
   - **Resolutions:** `16:9`, `9:16`, `1:1`, `4:3`, `3:4`
 - **Immersive Layers:** Use complex, multi-layered visual compositions. No flat images. Every scene needs distinct foregrounds, midgrounds, subjects, backgrounds, and VFX (dust, fire).
-- **Full Customizability:** The creator needs an in-browser Engine Editor to:UI to upload these assets directly into the Engine.
-3. **Scene Composition:** The creator uses the Scene Manager to create a Scene, then adds the imported assets into the Scene.
-4. **Animation:** Using the integrated Theatre.js Studio, the creator scales, positions, and keyframe-animates the elements to bring the scene to life.
-5. **Linking:** (Next Feature) The creator assigns "onClick" transition events to objects to stitch scenes together into an interactive website.
+- **Full Customizability:** The creator needs an in-browser Engine Editor to:
+  1. **Asset Management:** Upload PNG images directly and register them as visual 3D plane meshes.
+  2. **Scene Composition:** Create, rename, or delete scenes and set up default camera and light rigs.
+  3. **Visual Animation:** Select elements and keyframe-animate positioning, scales, rotations, and lighting intensities.
+  4. **Dynamic Linking:** Assign click actions (`linkToRoute`) to meshes, stitching them into interactive transitions between website pages.
 
 ## Target Audience Experience
 - **Visuals First:** The final website should feel like an interactive storybook or video game.
