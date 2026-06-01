@@ -1,5 +1,23 @@
 import { defineConfig } from 'vite';
+import { resolve } from 'path';
 
 export default defineConfig({
   base: '/DinoDeets_Website/',
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        games: resolve(__dirname, 'games/index.html'),
+        fossilDig: resolve(__dirname, 'games/fossil-dig.html'),
+        dinoQuiz: resolve(__dirname, 'games/dino-quiz.html'),
+        dinoCreator: resolve(__dirname, 'games/dino-creator.html'),
+        explore: resolve(__dirname, 'explore/index.html'),
+        dinoMap: resolve(__dirname, 'explore/dino-map.html'),
+        dinoTimeline: resolve(__dirname, 'explore/dino-timeline.html'),
+        dinoMeter: resolve(__dirname, 'explore/dino-meter.html'),
+        encyclopedia: resolve(__dirname, 'explore/encyclopedia.html'),
+        art: resolve(__dirname, 'art/index.html'),
+      }
+    }
+  }
 });

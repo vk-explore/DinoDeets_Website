@@ -24,33 +24,35 @@
 ## File Structure
 ```
 DinoDeets_Website/
-├── index.html              # Main HTML (all sections)
-├── vite.config.js          # Vite configuration
+├── index.html              # Main HTML (Home)
+├── vite.config.js          # Vite config for multi-page build
 ├── package.json
 ├── agents.md               # AI agent context file
-├── docs/
-│   ├── roadmap.md          # Feature phases & release plan
-│   ├── design-system.md    # Colors, typography, spacing tokens
-│   └── tech-stack.md       # Architecture, APIs, file structure
+├── scripts/                # Helper scripts (build_json.js, remove_matte.py)
+├── docs/                   # Documentation files
+├── games/                  # Games category pages
+│   ├── index.html          
+│   ├── fossil-dig.html
+│   ├── dino-quiz.html
+│   └── dino-creator.html
+├── explore/                # Explore category pages
+│   ├── index.html
+│   ├── dino-map.html
+│   ├── dino-timeline.html
+│   ├── dino-meter.html
+│   └── encyclopedia.html
+├── printables/             # Printables category pages
+│   ├── index.html
+│   ├── coloring-pages.html
+│   └── fan-art.html
 ├── src/
-│   ├── style.css           # Design system + all component styles (~1200 lines)
-│   ├── main.js             # App entry, all feature logic (~900 lines)
+│   ├── style.css           # Design system + all component styles
+│   ├── main.js             # App entry, all feature logic
 │   └── data/
-│       ├── dino-facts.js   # Dinosaur facts + fossil data
-│       ├── map-data.js     # Fossil discovery locations (global)
-│       ├── phase3-data.js  # Quiz, glossary, sizes, timeline
-│       └── phase4-data.js  # Creator parts, fan art, coloring, names
+│       └── dino-data.json  # Consolidated JSON data
 └── public/
-    ├── favicon.svg
-    └── images/
-        ├── hero-bg.png     # Hero landscape
-        ├── mascot.png      # Baby dino mascot
-        ├── logo.png        # Fossil skull logo
-        ├── world-map.png   # Dark world map
-        ├── dinos/          # Species illustrations (5 images)
-        ├── fossils/        # Fossil assets (2 images)
-        ├── fanart/         # Fan art gallery (3 images)
-        └── coloring/       # Coloring pages (3 images)
+    ├── fonts/              # Custom fonts (Adumu)
+    └── images/             # Organized image assets (backgrounds, dinos, props, icons, etc.)
 ```
 
 ## Feature Modules (in main.js)

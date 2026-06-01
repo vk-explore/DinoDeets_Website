@@ -11,10 +11,12 @@ Website for the **Dino Deets** podcast — a kid-and-family-friendly dinosaur po
 - **Socials:** YouTube, Instagram, Facebook only
 - **Audio:** Ambient prehistoric sounds with toggle
 - **Domain:** TBD
+- **Architecture (v2):** Multi-page Vite application with separate categories (Games, Explore, Printables).
+- **Image Generation:** For transparent images, generate with a green matte background and programmatically remove it using `scripts/remove_matte.py`.
 
 ## Priority Features (Approved by User)
 1. Fossil Dig mini-game (Canvas scratch-off)
-2. Animated Dino Mascot (SVG site companion)
+2. Animated Dino Mascot (Completed - SVG site companion)
 3. Dino Map (interactive fossil discovery locations)
 4. Random Deet button (instant dino facts)
 

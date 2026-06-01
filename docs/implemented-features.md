@@ -10,4 +10,4 @@ This document serves as a living log of what has been built and completed for th
 - [x] Dark mode default ("Night at the Museum" vibe) established in CSS.
 
 ## Features
-(To be updated as we complete items from the Roadmap and Priority Features)
+- [x] **Animated Dino Mascot**: Rebuilt from a static image to a living SVG. Supports eye-tracking (follows the mouse cursor), random blinking, idle behavior (watching a fly), and click interactions (making a cute roar and smiling wider).

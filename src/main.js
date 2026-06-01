@@ -1,9 +1,11 @@
 import './style.css';
-import { dinoFacts, fossilData } from './data/dino-facts.js';
-import { discoveryData } from './data/map-data.js';
-import { quizQuestions, dinoGlossary, dinoSizes, timelineData } from './data/phase3-data.js';
-import { creatorParts, fanArtGallery, coloringPages, dinoNameParts } from './data/phase4-data.js';
-import { translations } from './data/i18n.js';
+import { initInteractiveMascot } from './mascot.js';
+import data from './data/dino-data.json';
+const { 
+  dinoFacts, fossilData, discoveryData, quizQuestions, 
+  dinoGlossary, dinoSizes, timelineData, creatorParts, 
+  fanArtGallery, coloringPages, dinoNameParts 
+} = data;
 
 // Dino image mapping for Random Deet
 const dinoImages = {
@@ -93,7 +95,7 @@ async function loadEpisodes() {
   `).join('');
 
   try {
-    const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=UCw2MYnMzFLWY_fndEWfmLdg`;
+    const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=UCyUZWmztaj_lRgG4n1kt-Ug`;
     const proxyUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
     const res = await fetch(proxyUrl);
     const data = await res.json();
@@ -120,7 +122,7 @@ function renderEpisodes(items) {
         </div>
         <div class="episode-card__body">
           <h3 class="episode-card__title">${item.title}</h3>
-          <span class="episode-card__date">📅 ${date}</span>
+          <span class="episode-card__date"><svg class="inline-icon" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" style="vertical-align: middle; margin-bottom: 2px;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> ${date}</span>
         </div>
       </a>`;
   }).join('');
@@ -131,7 +133,7 @@ function renderFallbackEpisodes() {
   const fallback = [
     { title: "The BIGGEST Dinosaur Ever Found!", img: "./images/dinos/brachiosaurus.png" },
     { title: "T-Rex: King of the Dinosaurs", img: "./images/dinos/trex.png" },
-    { title: "Fossils: How Dinosaurs Become Stones", img: "./images/fossils/trex-skull.png" },
+    { title: "Fossils: How Dinosaurs Become Stones", img: "./images/props/trex-skull.png" },
     { title: "Underwater Monsters of the Deep", img: "./images/dinos/velociraptor.png" },
     { title: "The Armored Stegosaurus", img: "./images/dinos/stegosaurus.png" },
     { title: "India's Own Dinosaurs!", img: "./images/dinos/triceratops.png" },
@@ -216,7 +218,7 @@ function initFossilDig() {
 
     // Draw fossil image underneath
     const fossilImg = new Image();
-    fossilImg.src = './images/fossils/trex-skull.png';
+    fossilImg.src = './images/props/trex-skull.png';
     fossilImg.onload = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Draw dark background
@@ -236,7 +238,7 @@ function initFossilDig() {
 
       // Overlay dirt layer
       const dirtImg = new Image();
-      dirtImg.src = './images/fossils/dig-earth.png';
+      dirtImg.src = './images/props/dig-earth.png';
       dirtImg.onload = () => {
         ctx.globalCompositeOperation = 'source-over';
         ctx.drawImage(dirtImg, 0, 0, canvas.width, canvas.height);
@@ -354,35 +356,7 @@ function initDinoMap() {
 }
 
 // ===== MASCOT =====
-function initMascot() {
-  const mascot = document.getElementById('mascot');
-  const bubble = document.getElementById('mascot-bubble');
-  const text = document.getElementById('mascot-text');
-  if (!mascot) return;
-
-  const messages = [
-    "Hey there, explorer!",
-    "Did you know I'm 65 million years old?",
-    "Try the Random Deet button!",
-    "New episodes every Friday!",
-    "Rawr means 'hello' in dinosaur!",
-    "Try the Fossil Dig game!",
-    "Check out the Dino Map!",
-  ];
-
-  let showTimeout;
-  const showBubble = (msg) => {
-    text.textContent = msg;
-    bubble.classList.add('mascot__bubble--visible');
-    clearTimeout(showTimeout);
-    showTimeout = setTimeout(() => bubble.classList.remove('mascot__bubble--visible'), 4000);
-  };
-
-  setTimeout(() => showBubble(messages[0]), 3000);
-  mascot.addEventListener('click', () => {
-    showBubble(messages[Math.floor(Math.random() * messages.length)]);
-  });
-}
+// (Mascot logic moved to src/mascot.js)
 
 // ===== BACK TO TOP =====
 function initBackToTop() {
@@ -395,6 +369,34 @@ function initBackToTop() {
 }
 
 // ===== SCROLL ANIMATIONS =====
+
+// ===== DROPDOWNS =====
+function initDropdowns() {
+  const toggles = document.querySelectorAll('.nav__dropdown-toggle');
+  
+  toggles.forEach(t => {
+    t.addEventListener('click', (e) => {
+      e.preventDefault(); 
+      const targetId = 'dropdown-' + t.dataset.dropdown;
+      const targetMenu = document.getElementById(targetId);
+      
+      document.querySelectorAll('.nav__submenu').forEach(m => {
+        if (m !== targetMenu) m.classList.remove('is-open');
+      });
+      
+      if (targetMenu) {
+        targetMenu.classList.toggle('is-open');
+      }
+    });
+  });
+  
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav__dropdown')) {
+      document.querySelectorAll('.nav__submenu').forEach(m => m.classList.remove('is-open'));
+    }
+  });
+}
+
 function initScrollAnimations() {
   const observer = new IntersectionObserver(
     (entries) => entries.forEach(entry => {
@@ -403,21 +405,6 @@ function initScrollAnimations() {
     { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
   );
   document.querySelectorAll('.anim-fade-up').forEach(el => observer.observe(el));
-}
-
-// ===== SOUND TOGGLE =====
-function initSound() {
-  const btn = document.getElementById('sound-toggle');
-  if (!btn) return;
-  let soundOn = false;
-  const iconOff = btn.querySelector('.sound-icon--off');
-  const iconOn = btn.querySelector('.sound-icon--on');
-
-  btn.addEventListener('click', () => {
-    soundOn = !soundOn;
-    iconOff.style.display = soundOn ? 'none' : 'block';
-    iconOn.style.display = soundOn ? 'block' : 'none';
-  });
 }
 
 // ===== SMOOTH SCROLL =====
@@ -889,181 +876,11 @@ function initColoringPages() {
   `).join('');
 }
 
-// ===== LANGUAGE SWITCHER =====
-function initLanguage() {
-  const btn = document.getElementById('lang-btn');
-  const dropdown = document.getElementById('lang-dropdown');
-  const flagEl = document.getElementById('lang-flag');
-  if (!btn || !dropdown) return;
-
-  let currentLang = localStorage.getItem('dinodeets-lang') || 'en';
-  const flagMap = { en: 'EN', hi: 'हि', te: 'తె' };
-
-  // Mapping: CSS selector → { key, attr } where attr is 'text', 'html', or 'placeholder'
-  const i18nMap = [
-    // Nav
-    { sel: '#nav-links a[href="#hero"]', key: 'navHome' },
-    { sel: '#nav-links a[href="#episodes"]', key: 'navEpisodes' },
-    { sel: '#nav-links a[href="#fossil-dig"]', key: 'navFossilDig' },
-    { sel: '#nav-links a[href="#dino-quiz"]', key: 'navQuiz' },
-    { sel: '#nav-links a[href="#dino-meter"]', key: 'navSizes' },
-    { sel: '#nav-links a[href="#dino-timeline"]', key: 'navTimeline' },
-    { sel: '#nav-links a[href="#dino-dictionary"]', key: 'navDictionary' },
-    { sel: '#nav-links a[href="#about"]', key: 'navAbout' },
-
-    // Hero
-    { sel: '.hero__subtitle', key: 'heroSubtitle' },
-
-    // Episodes
-    { sel: '#episodes .section__label', key: 'latestEpisodesLabel' },
-    { sel: '#episodes .section__title', key: 'latestEpisodes' },
-    { sel: '#episodes .section__subtitle', key: 'latestEpisodesSub' },
-
-    // Fossil Dig
-    { sel: '#fossil-dig .section__label', key: 'fossilDigLabel' },
-    { sel: '#fossil-dig .section__title', key: 'fossilDigTitle' },
-    { sel: '#fossil-dig .section__subtitle', key: 'fossilDigSub' },
-    { sel: '#fossil-dig-hint', key: 'fossilDigHint' },
-    { sel: '#fossil-dig-new', key: 'fossilDigNew' },
-
-    // Random Deet
-    { sel: '#random-deet .section__label', key: 'randomDeetLabel' },
-    { sel: '#random-deet .section__title', key: 'randomDeetTitle' },
-    { sel: '#random-deet .section__subtitle', key: 'randomDeetSub' },
-
-    // Dino Map
-    { sel: '#dino-map .section__label', key: 'dinoMapLabel' },
-    { sel: '#dino-map .section__title', key: 'dinoMapTitle' },
-    { sel: '#dino-map .section__subtitle', key: 'dinoMapSub' },
-
-    // Countdown
-    { sel: '#countdown .section__label', key: 'countdownLabel' },
-    { sel: '#countdown .section__title', key: 'countdownTitle' },
-    { sel: '#countdown .section__subtitle', key: 'countdownSub' },
-
-    // Quiz
-    { sel: '#dino-quiz .section__label', key: 'quizLabel' },
-    { sel: '#dino-quiz .section__title', key: 'quizTitle' },
-    { sel: '#dino-quiz .section__subtitle', key: 'quizSub' },
-    { sel: '#quiz-retry', key: 'quizRetry' },
-
-    // Meter
-    { sel: '#dino-meter .section__label', key: 'meterLabel' },
-    { sel: '#dino-meter .section__title', key: 'meterTitle' },
-    { sel: '#dino-meter .section__subtitle', key: 'meterSub' },
-
-    // Timeline
-    { sel: '#dino-timeline .section__label', key: 'timelineLabel' },
-    { sel: '#dino-timeline .section__title', key: 'timelineTitle' },
-    { sel: '#dino-timeline .section__subtitle', key: 'timelineSub' },
-
-    // Dictionary
-    { sel: '#dino-dictionary .section__label', key: 'dictionaryLabel' },
-    { sel: '#dino-dictionary .section__title', key: 'dictionaryTitle' },
-    { sel: '#dino-dictionary .section__subtitle', key: 'dictionarySub' },
-    { sel: '#dictionary-search', key: 'dictionarySearch', attr: 'placeholder' },
-
-    // Ask
-    { sel: '#ask-devaansh .section__label', key: 'askLabel' },
-    { sel: '#ask-devaansh .section__title', key: 'askTitle' },
-    { sel: '#ask-devaansh .section__subtitle', key: 'askSub' },
-    { sel: 'label[for="ask-name"]', key: 'askName' },
-    { sel: '#ask-name', key: 'askNamePh', attr: 'placeholder' },
-    { sel: 'label[for="ask-age"]', key: 'askAge' },
-    { sel: '#ask-age', key: 'askAgePh', attr: 'placeholder' },
-    { sel: 'label[for="ask-question"]', key: 'askQuestion' },
-    { sel: '#ask-question', key: 'askQuestionPh', attr: 'placeholder' },
-    { sel: '.ask__submit', key: 'askSubmit' },
-    { sel: '#ask-success h3', key: 'askSuccess' },
-    { sel: '#ask-success p', key: 'askSuccessMsg' },
-    { sel: '#ask-another', key: 'askAnother' },
-
-    // Creator
-    { sel: '#dino-creator .section__label', key: 'creatorLabel' },
-    { sel: '#dino-creator .section__title', key: 'creatorTitle' },
-    { sel: '#dino-creator .section__subtitle', key: 'creatorSub' },
-    { sel: '#creator-randomize', key: 'creatorRandomize' },
-
-    // Gallery
-    { sel: '#fan-art .section__label', key: 'galleryLabel' },
-    { sel: '#fan-art .section__title', key: 'galleryTitle' },
-    { sel: '#fan-art .section__subtitle', key: 'gallerySub' },
-
-    // Coloring
-    { sel: '#coloring-pages .section__label', key: 'coloringLabel' },
-    { sel: '#coloring-pages .section__title', key: 'coloringTitle' },
-    { sel: '#coloring-pages .section__subtitle', key: 'coloringSub' },
-
-    // About
-    { sel: '#about .section__label', key: 'aboutLabel' },
-    { sel: '#about .section__title', key: 'aboutTitle' },
-
-    // Footer
-    { sel: '.footer__tagline', key: 'footerTagline' },
-  ];
-
-  function applyTranslation(lang) {
-    const t = translations[lang] || translations.en;
-    i18nMap.forEach(({ sel, key, attr }) => {
-      const el = document.querySelector(sel);
-      if (!el || !t[key]) return;
-      if (attr === 'placeholder') { el.placeholder = t[key]; }
-      else if (attr === 'html') { el.innerHTML = t[key]; }
-      else { el.textContent = t[key]; }
-    });
-
-    // Countdown labels
-    document.querySelectorAll('.countdown__label').forEach((el, i) => {
-      const keys = ['countdownDays', 'countdownHours', 'countdownMins', 'countdownSecs'];
-      if (t[keys[i]]) el.textContent = t[keys[i]];
-    });
-
-    // Meter stat keys
-    const meterKeys = ['meterHeight', 'meterLength', 'meterWeight'];
-    document.querySelectorAll('.meter__stat-key').forEach((el, i) => {
-      if (t[meterKeys[i]]) el.textContent = t[meterKeys[i]];
-    });
-
-    // Creator category titles
-    const catKeys = ['creatorHead', 'creatorBody', 'creatorTail', 'creatorSpecial', 'creatorColor'];
-    document.querySelectorAll('.creator__cat-title').forEach((el, i) => {
-      if (t[catKeys[i]]) el.textContent = t[catKeys[i]];
-    });
-
-    // Update html lang
-    document.documentElement.lang = lang === 'hi' ? 'hi' : lang === 'te' ? 'te' : 'en';
-  }
-
-  function setLang(lang) {
-    currentLang = lang;
-    localStorage.setItem('dinodeets-lang', lang);
-    flagEl.textContent = flagMap[lang] || 'EN';
-    dropdown.querySelectorAll('.nav__lang-option').forEach(opt => {
-      opt.classList.toggle('nav__lang-option--active', opt.dataset.lang === lang);
-    });
-    dropdown.classList.remove('nav__lang-dropdown--open');
-    applyTranslation(lang);
-  }
-
-  btn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    dropdown.classList.toggle('nav__lang-dropdown--open');
-  });
-
-  dropdown.addEventListener('click', (e) => {
-    const opt = e.target.closest('.nav__lang-option');
-    if (opt) setLang(opt.dataset.lang);
-  });
-
-  document.addEventListener('click', () => dropdown.classList.remove('nav__lang-dropdown--open'));
-
-  // Apply saved language
-  if (currentLang !== 'en') setLang(currentLang);
-}
 
 // ===== INIT =====
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
+  initDropdowns();
   initParticles();
   loadEpisodes();
   initRandomDeet();
@@ -1078,10 +895,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initCreator();
   initGallery();
   initColoringPages();
-  initLanguage();
-  initMascot();
+
+  initInteractiveMascot();
   initBackToTop();
   initScrollAnimations();
-  initSound();
+  
   initSmoothLinks();
 });
