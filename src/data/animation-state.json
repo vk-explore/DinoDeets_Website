@@ -182,6 +182,49 @@
                 "y": 0,
                 "z": 0
               }
+            },
+            "prehistoric_earth_08v2": {
+              "position": {
+                "x": 3.4983665356135063,
+                "y": 0,
+                "z": 6.734884727542836
+              }
+            },
+            "asteroid_meteor_e4a2": {
+              "position": {
+                "x": 0.9701861759487951,
+                "y": 0.5881965587116236,
+                "z": 8.41395664146733
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 2.2901136638834227
+              },
+              "scale": {
+                "x": 0.5,
+                "y": 0.5,
+                "z": 0.5
+              }
+            },
+            "space_euc8": {
+              "scale": {
+                "x": 25.469715263729658,
+                "y": 22.468764328072847,
+                "z": 1
+              },
+              "position": {
+                "x": 3.719936171662455,
+                "y": -6.0307060145185725,
+                "z": 0
+              }
+            },
+            "Main Camera": {
+              "position": {
+                "x": -2.556916979149159,
+                "y": 0.39709603082679634,
+                "z": 10
+              }
             }
           }
         },
@@ -293,6 +336,483 @@
                 "[\"position\",\"x\"]": "cu8X3bDW2D",
                 "[\"position\",\"y\"]": "0_3e7aprAq",
                 "[\"position\",\"z\"]": "8PTIKgl-SJ"
+              }
+            },
+            "asteroid_meteor_e4a2": {
+              "trackData": {
+                "95mk8JMDpV": {
+                  "type": "BasicKeyframedTrack",
+                  "__debugName": "asteroid_meteor_e4a2:[\"position\",\"x\"]",
+                  "keyframes": [
+                    {
+                      "id": "ScTxxW6HqM",
+                      "position": 0,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0.5
+                      ],
+                      "type": "bezier",
+                      "value": -4.238592869455569
+                    },
+                    {
+                      "id": "nTUrxS6LsD",
+                      "position": 4.133,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0
+                      ],
+                      "type": "bezier",
+                      "value": 2.4026368692723388
+                    },
+                    {
+                      "id": "ftS6QaSEjl",
+                      "position": 5,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0
+                      ],
+                      "type": "bezier",
+                      "value": 2.8783454802952235
+                    }
+                  ]
+                },
+                "yFRdyo7afW": {
+                  "type": "BasicKeyframedTrack",
+                  "__debugName": "asteroid_meteor_e4a2:[\"position\",\"y\"]",
+                  "keyframes": [
+                    {
+                      "id": "WvIlZ-vJZ3",
+                      "position": 0,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0.5
+                      ],
+                      "type": "bezier",
+                      "value": 1.1377217421299821
+                    },
+                    {
+                      "id": "qgab54EFR0",
+                      "position": 4.133,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0
+                      ],
+                      "type": "bezier",
+                      "value": 0.3018869180364572
+                    },
+                    {
+                      "id": "xrvMq7OxMY",
+                      "position": 5,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0
+                      ],
+                      "type": "bezier",
+                      "value": 0.18548154977399745
+                    }
+                  ]
+                },
+                "ljqZXqSsKR": {
+                  "type": "BasicKeyframedTrack",
+                  "__debugName": "asteroid_meteor_e4a2:[\"position\",\"z\"]",
+                  "keyframes": [
+                    {
+                      "id": "vu5SNDOeNf",
+                      "position": 0,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0.5
+                      ],
+                      "type": "bezier",
+                      "value": 7.566279452392525
+                    },
+                    {
+                      "id": "4cKhPgVonO",
+                      "position": 4.133,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0
+                      ],
+                      "type": "bezier",
+                      "value": 7.597706169335206
+                    },
+                    {
+                      "id": "-BKHwNyH8M",
+                      "position": 5,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0
+                      ],
+                      "type": "bezier",
+                      "value": 8.41395664146733
+                    }
+                  ]
+                },
+                "vW67TuVcQS": {
+                  "type": "BasicKeyframedTrack",
+                  "__debugName": "asteroid_meteor_e4a2:[\"scale\",\"x\"]",
+                  "keyframes": [
+                    {
+                      "id": "OYtUMl-Eij",
+                      "position": 0,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0
+                      ],
+                      "type": "bezier",
+                      "value": 0.5
+                    },
+                    {
+                      "id": "VmJLMSGXF8",
+                      "position": 5,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0
+                      ],
+                      "type": "bezier",
+                      "value": 0.7
+                    }
+                  ]
+                },
+                "FtX0m59KRG": {
+                  "type": "BasicKeyframedTrack",
+                  "__debugName": "asteroid_meteor_e4a2:[\"scale\",\"y\"]",
+                  "keyframes": [
+                    {
+                      "id": "R8jo6S2_zi",
+                      "position": 0,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0
+                      ],
+                      "type": "bezier",
+                      "value": 0.5
+                    },
+                    {
+                      "id": "A2lXn0ZzIr",
+                      "position": 5,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0
+                      ],
+                      "type": "bezier",
+                      "value": 0.5
+                    }
+                  ]
+                },
+                "veSPxCkqqA": {
+                  "type": "BasicKeyframedTrack",
+                  "__debugName": "asteroid_meteor_e4a2:[\"scale\",\"z\"]",
+                  "keyframes": [
+                    {
+                      "id": "I-UtWApj6H",
+                      "position": 0,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0
+                      ],
+                      "type": "bezier",
+                      "value": 0.5
+                    },
+                    {
+                      "id": "UCwDNQiD-a",
+                      "position": 5,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0
+                      ],
+                      "type": "bezier",
+                      "value": 0.5
+                    }
+                  ]
+                }
+              },
+              "trackIdByPropPath": {
+                "[\"position\",\"x\"]": "95mk8JMDpV",
+                "[\"position\",\"y\"]": "yFRdyo7afW",
+                "[\"position\",\"z\"]": "ljqZXqSsKR",
+                "[\"scale\",\"x\"]": "vW67TuVcQS",
+                "[\"scale\",\"y\"]": "FtX0m59KRG",
+                "[\"scale\",\"z\"]": "veSPxCkqqA"
+              }
+            },
+            "space_euc8": {
+              "trackData": {
+                "RRMTG9sh1S": {
+                  "type": "BasicKeyframedTrack",
+                  "__debugName": "space_euc8:[\"position\",\"x\"]",
+                  "keyframes": [
+                    {
+                      "id": "O_W9nplGMA",
+                      "position": 0,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0
+                      ],
+                      "type": "bezier",
+                      "value": 1.521503776448224
+                    }
+                  ]
+                },
+                "4PcMOnO4cY": {
+                  "type": "BasicKeyframedTrack",
+                  "__debugName": "space_euc8:[\"position\",\"y\"]",
+                  "keyframes": [
+                    {
+                      "id": "MDu0q3AEU-",
+                      "position": 0,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0
+                      ],
+                      "type": "bezier",
+                      "value": -6.0307060145185725
+                    }
+                  ]
+                },
+                "xDboS7_zrv": {
+                  "type": "BasicKeyframedTrack",
+                  "__debugName": "space_euc8:[\"position\",\"z\"]",
+                  "keyframes": [
+                    {
+                      "id": "OPvxI1Ozxj",
+                      "position": 0,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0
+                      ],
+                      "type": "bezier",
+                      "value": 0
+                    }
+                  ]
+                }
+              },
+              "trackIdByPropPath": {
+                "[\"position\",\"x\"]": "RRMTG9sh1S",
+                "[\"position\",\"y\"]": "4PcMOnO4cY",
+                "[\"position\",\"z\"]": "xDboS7_zrv"
+              }
+            },
+            "prehistoric_earth_08v2": {
+              "trackData": {
+                "IkdmLwZBqA": {
+                  "type": "BasicKeyframedTrack",
+                  "__debugName": "prehistoric_earth_08v2:[\"position\",\"x\"]",
+                  "keyframes": []
+                },
+                "uT6rWOi0xw": {
+                  "type": "BasicKeyframedTrack",
+                  "__debugName": "prehistoric_earth_08v2:[\"position\",\"y\"]",
+                  "keyframes": []
+                },
+                "3cS274Jn0E": {
+                  "type": "BasicKeyframedTrack",
+                  "__debugName": "prehistoric_earth_08v2:[\"position\",\"z\"]",
+                  "keyframes": []
+                }
+              },
+              "trackIdByPropPath": {
+                "[\"position\",\"x\"]": "IkdmLwZBqA",
+                "[\"position\",\"y\"]": "uT6rWOi0xw",
+                "[\"position\",\"z\"]": "3cS274Jn0E"
+              }
+            },
+            "Main Camera": {
+              "trackData": {
+                "V2wIS2W41Z": {
+                  "type": "BasicKeyframedTrack",
+                  "__debugName": "Main Camera:[\"position\",\"x\"]",
+                  "keyframes": [
+                    {
+                      "id": "6ieYRgnj5s",
+                      "position": 0.7,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0
+                      ],
+                      "type": "bezier",
+                      "value": -2.556916979149159
+                    },
+                    {
+                      "id": "qR1Y1IDSjU",
+                      "position": 4.033,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0
+                      ],
+                      "type": "bezier",
+                      "value": 3.4954480597158804
+                    },
+                    {
+                      "id": "7j9U1SL1bH",
+                      "position": 5,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0
+                      ],
+                      "type": "bezier",
+                      "value": 3.5231941098606856
+                    }
+                  ]
+                },
+                "OgBq_57ItY": {
+                  "type": "BasicKeyframedTrack",
+                  "__debugName": "Main Camera:[\"position\",\"y\"]",
+                  "keyframes": [
+                    {
+                      "id": "NbuwTMFuBW",
+                      "position": 0.7,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0
+                      ],
+                      "type": "bezier",
+                      "value": 0.39709603082679634
+                    },
+                    {
+                      "id": "AueL2fSiUu",
+                      "position": 4.033,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0
+                      ],
+                      "type": "bezier",
+                      "value": 0.010597936001383867
+                    },
+                    {
+                      "id": "jAI4orShrl",
+                      "position": 5,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0
+                      ],
+                      "type": "bezier",
+                      "value": -0.014138973675658528
+                    }
+                  ]
+                },
+                "kvoZH_WKN1": {
+                  "type": "BasicKeyframedTrack",
+                  "__debugName": "Main Camera:[\"position\",\"z\"]",
+                  "keyframes": [
+                    {
+                      "id": "0y80lIUciF",
+                      "position": 0.7,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0
+                      ],
+                      "type": "bezier",
+                      "value": 10
+                    },
+                    {
+                      "id": "gnNh5P0vlA",
+                      "position": 4.033,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0
+                      ],
+                      "type": "bezier",
+                      "value": 9.603273418017732
+                    },
+                    {
+                      "id": "8AgQ7TU6uD",
+                      "position": 5,
+                      "connectedRight": true,
+                      "handles": [
+                        0.5,
+                        1,
+                        0.5,
+                        0
+                      ],
+                      "type": "bezier",
+                      "value": 6.9587658578360525
+                    }
+                  ]
+                }
+              },
+              "trackIdByPropPath": {
+                "[\"position\",\"x\"]": "V2wIS2W41Z",
+                "[\"position\",\"y\"]": "OgBq_57ItY",
+                "[\"position\",\"z\"]": "kvoZH_WKN1"
               }
             }
           }
@@ -616,6 +1136,12 @@
     },
     "definitionVersion": "0.4.0",
     "revisionHistory": [
+      "qQ3ywoR81dImdVK8",
+      "F8r2QGIaW-_-BRcR",
+      "9kgGBP4JHnLOd0p0",
+      "97HhfqakKQNsFtsU",
+      "qRD87SGOrpHr05P9",
+      "lvB-KrmWNEv2xVCs",
       "IqKCmlKV_28lY6D9",
       "DO6gUHJpk0SkuCoz",
       "qbIpcu-S7jwQ1lRS",
@@ -659,13 +1185,7 @@
       "CXvJIuEkSEb2M1ep",
       "hnY5iDGuTihE4Z_-",
       "mvqRturWeWol5pjL",
-      "xmCIh8d2d_DO6Hsh",
-      "TrnfyZEeA4HPyZg8",
-      "1_A8n4xrgAxqjKKf",
-      "92nceYoDdu6fyUfJ",
-      "HgGHYoTExZma2jPj",
-      "pAMNePLw8-rXCETB",
-      "ub16ZW00btXNOWPV"
+      "xmCIh8d2d_DO6Hsh"
     ]
   },
   "engineState": {
@@ -674,7 +1194,26 @@
     "activeResolution": "16:9",
     "scenes": {
       "home": {
-        "objects": [],
+        "objects": [
+          {
+            "id": "prehistoric_earth_08v2",
+            "src": "/images/celestials/prehistoric_earth.png",
+            "name": "prehistoric_earth",
+            "linkToRoute": ""
+          },
+          {
+            "id": "asteroid_meteor_e4a2",
+            "src": "/images/celestials/asteroid_meteor.png",
+            "name": "asteroid_meteor",
+            "linkToRoute": ""
+          },
+          {
+            "id": "space_euc8",
+            "src": "/images/backdrops/space.png",
+            "name": "space",
+            "linkToRoute": ""
+          }
+        ],
         "lights": [
           {
             "id": "light_ambient",

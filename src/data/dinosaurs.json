@@ -1,0 +1,272 @@
+[
+    {
+        "id": "tyrannosaurus_rex",
+        "name": "Tyrannosaurus Rex",
+        "diet": "Carnivore (Large dinosaurs like Triceratops and Edmontosaurus)",
+        "dimensions": {
+            "height": "4-6 meters",
+            "length": "12-13 meters",
+            "weight": "8,000-14,000 kg"
+        },
+        "discovery": {
+            "location": "North America (Montana, Wyoming, South Dakota)",
+            "latitude": 45.0,
+            "longitude": -108.0
+        },
+        "time_period": "Late Cretaceous (68-66 million years ago)",
+        "taxonomy": {
+            "species": "T. rex",
+            "genus": "Tyrannosaurus",
+            "suborder": "Theropoda",
+            "order": "Saurischia",
+            "superorder": "Dinosauria"
+        },
+        "images": {
+            "transparent": "/images/dinos/transparent/tyrannosaurus_rex.png",
+            "backdrop": "/images/dinos/backdrops/tyrannosaurus_rex.png"
+        }
+    },
+    {
+        "id": "triceratops",
+        "name": "Triceratops",
+        "diet": "Herbivore (Low-growing plants, ferns, cycads)",
+        "dimensions": {
+            "height": "2.9-3.0 meters",
+            "length": "8-9 meters",
+            "weight": "6,000-12,000 kg"
+        },
+        "discovery": {
+            "location": "North America (Colorado, Wyoming, Montana)",
+            "latitude": 39.0,
+            "longitude": -105.0
+        },
+        "time_period": "Late Cretaceous (68-66 million years ago)",
+        "taxonomy": {
+            "species": "T. horridus",
+            "genus": "Triceratops",
+            "suborder": "Ceratopsia",
+            "order": "Ornithischia",
+            "superorder": "Dinosauria"
+        },
+        "images": {
+            "transparent": "/images/dinos/transparent/triceratops.png",
+            "backdrop": "/images/dinos/backdrops/triceratops.png"
+        }
+    },
+    {
+        "id": "stegosaurus",
+        "name": "Stegosaurus",
+        "diet": "Herbivore (Mosses, ferns, horsetails, cycads, conifers)",
+        "dimensions": {
+            "height": "4 meters",
+            "length": "9 meters",
+            "weight": "5,000-7,000 kg"
+        },
+        "discovery": {
+            "location": "North America (Colorado, Utah, Wyoming) and Europe",
+            "latitude": 38.0,
+            "longitude": -110.0
+        },
+        "time_period": "Late Jurassic (155-150 million years ago)",
+        "taxonomy": {
+            "species": "S. stenops",
+            "genus": "Stegosaurus",
+            "suborder": "Stegosauria",
+            "order": "Ornithischia",
+            "superorder": "Dinosauria"
+        },
+        "images": {
+            "transparent": "/images/dinos/transparent/stegosaurus.png",
+            "backdrop": "/images/dinos/backdrops/stegosaurus.png"
+        }
+    },
+    {
+        "id": "velociraptor",
+        "name": "Velociraptor",
+        "diet": "Carnivore (Small mammals, reptiles, other small dinosaurs)",
+        "dimensions": {
+            "height": "0.5 meters",
+            "length": "2 meters",
+            "weight": "15-20 kg"
+        },
+        "discovery": {
+            "location": "Asia (Mongolia, China)",
+            "latitude": 43.0,
+            "longitude": 105.0
+        },
+        "time_period": "Late Cretaceous (75-71 million years ago)",
+        "taxonomy": {
+            "species": "V. mongoliensis",
+            "genus": "Velociraptor",
+            "suborder": "Theropoda",
+            "order": "Saurischia",
+            "superorder": "Dinosauria"
+        },
+        "images": {
+            "transparent": "/images/dinos/transparent/velociraptor.png",
+            "backdrop": "/images/dinos/backdrops/velociraptor.png"
+        }
+    },
+    {
+        "id": "brachiosaurus",
+        "name": "Brachiosaurus",
+        "diet": "Herbivore (Conifers, ginkgos, cycads high in trees)",
+        "dimensions": {
+            "height": "12-16 meters",
+            "length": "26 meters",
+            "weight": "28,000-58,000 kg"
+        },
+        "discovery": {
+            "location": "North America (Colorado, Utah) and Africa",
+            "latitude": 39.1,
+            "longitude": -108.7
+        },
+        "time_period": "Late Jurassic (154-153 million years ago)",
+        "taxonomy": {
+            "species": "B. altithorax",
+            "genus": "Brachiosaurus",
+            "suborder": "Sauropodomorpha",
+            "order": "Saurischia",
+            "superorder": "Dinosauria"
+        },
+        "images": {
+            "transparent": "/images/dinos/transparent/brachiosaurus.png",
+            "backdrop": "/images/dinos/backdrops/brachiosaurus.png"
+        }
+    },
+    {
+        "id": "spinosaurus",
+        "name": "Spinosaurus",
+        "diet": "Carnivore/Piscivore (Fish, small to medium-sized dinosaurs)",
+        "dimensions": {
+            "height": "5-6 meters",
+            "length": "14-18 meters",
+            "weight": "12,000-20,000 kg"
+        },
+        "discovery": {
+            "location": "North Africa (Egypt, Morocco)",
+            "latitude": 29.0,
+            "longitude": 28.0
+        },
+        "time_period": "Late Cretaceous (99-93.5 million years ago)",
+        "taxonomy": {
+            "species": "S. aegyptiacus",
+            "genus": "Spinosaurus",
+            "suborder": "Theropoda",
+            "order": "Saurischia",
+            "superorder": "Dinosauria"
+        },
+        "images": {
+            "transparent": "/images/dinos/transparent/spinosaurus.png",
+            "backdrop": "/images/dinos/backdrops/spinosaurus.png"
+        }
+    },
+    {
+        "id": "ankylosaurus",
+        "name": "Ankylosaurus",
+        "diet": "Herbivore (Low-lying plants, ferns, shrubs)",
+        "dimensions": {
+            "height": "1.7 meters",
+            "length": "6-8 meters",
+            "weight": "4,800-8,000 kg"
+        },
+        "discovery": {
+            "location": "North America (Montana, Wyoming, Alberta)",
+            "latitude": 46.0,
+            "longitude": -107.0
+        },
+        "time_period": "Late Cretaceous (68-66 million years ago)",
+        "taxonomy": {
+            "species": "A. magniventris",
+            "genus": "Ankylosaurus",
+            "suborder": "Thyreophora",
+            "order": "Ornithischia",
+            "superorder": "Dinosauria"
+        },
+        "images": {
+            "transparent": "/images/dinos/transparent/ankylosaurus.png",
+            "backdrop": "/images/dinos/backdrops/ankylosaurus.png"
+        }
+    },
+    {
+        "id": "allosaurus",
+        "name": "Allosaurus",
+        "diet": "Carnivore (Large herbivorous dinosaurs)",
+        "dimensions": {
+            "height": "3 meters",
+            "length": "8.5-10 meters",
+            "weight": "1,500-2,000 kg"
+        },
+        "discovery": {
+            "location": "North America (Colorado, Utah, Wyoming)",
+            "latitude": 38.5,
+            "longitude": -109.5
+        },
+        "time_period": "Late Jurassic (155-145 million years ago)",
+        "taxonomy": {
+            "species": "A. fragilis",
+            "genus": "Allosaurus",
+            "suborder": "Theropoda",
+            "order": "Saurischia",
+            "superorder": "Dinosauria"
+        },
+        "images": {
+            "transparent": "/images/dinos/transparent/allosaurus.png",
+            "backdrop": "/images/dinos/backdrops/allosaurus.png"
+        }
+    },
+    {
+        "id": "diplodocus",
+        "name": "Diplodocus",
+        "diet": "Herbivore (Ferns, leaves, soft vegetation)",
+        "dimensions": {
+            "height": "6 meters",
+            "length": "24-33 meters",
+            "weight": "10,000-15,000 kg"
+        },
+        "discovery": {
+            "location": "North America (Colorado, Utah, Montana, Wyoming)",
+            "latitude": 39.5,
+            "longitude": -106.0
+        },
+        "time_period": "Late Jurassic (154-152 million years ago)",
+        "taxonomy": {
+            "species": "D. carnegii",
+            "genus": "Diplodocus",
+            "suborder": "Sauropodomorpha",
+            "order": "Saurischia",
+            "superorder": "Dinosauria"
+        },
+        "images": {
+            "transparent": "/images/dinos/transparent/diplodocus.png",
+            "backdrop": "/images/dinos/backdrops/diplodocus.png"
+        }
+    },
+    {
+        "id": "parasaurolophus",
+        "name": "Parasaurolophus",
+        "diet": "Herbivore (Pine needles, leaves, twigs)",
+        "dimensions": {
+            "height": "4 meters",
+            "length": "9.5 meters",
+            "weight": "2,500-3,600 kg"
+        },
+        "discovery": {
+            "location": "North America (Alberta, Utah, New Mexico)",
+            "latitude": 51.0,
+            "longitude": -114.0
+        },
+        "time_period": "Late Cretaceous (76-73 million years ago)",
+        "taxonomy": {
+            "species": "P. walkeri",
+            "genus": "Parasaurolophus",
+            "suborder": "Ornithopoda",
+            "order": "Ornithischia",
+            "superorder": "Dinosauria"
+        },
+        "images": {
+            "transparent": "/images/dinos/transparent/parasaurolophus.png",
+            "backdrop": "/images/dinos/backdrops/parasaurolophus.png"
+        }
+    }
+]

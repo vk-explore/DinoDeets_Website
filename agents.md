@@ -24,6 +24,8 @@ The **Dino Deets** project has evolved from a standard static website into a ful
 - **Camera Animation:** Understand the entire scene dynamically. Do not just animate objects; incorporate cinematic camera animations (panning, zooming, tracking subjects) to tell a visual story.
 - **Aspect Ratios:** Ensure background images are generated in landscape/widescreen aspect ratios (e.g., 16:9) where appropriate for full-screen web scenes.
 - **Layer Purpose & Hierarchy:** Each layer must strictly fulfill its specific purpose without stealing focus. For example, a space background must be dark and subtle to convey the intent of stars, rather than being overly bright and distracting from the foreground globe.
+- **Asset Placement:** When adding new image assets, utilize the existing subdirectories in `public/images/` (e.g., `backdrops`, `celestials`, `dinos`, `fx`, `plants`, `hills`) to categorize images properly. Do NOT create new arbitrary folders.
+- **Prompting for Cutouts:** When generating images on a solid background (e.g., a green screen) for transparent extraction, explicitly mention in the prompt to avoid color spill or environmental lighting from the background onto the subject (e.g., "neutral lighting on the subject, absolutely no green lighting or green reflections on the subject").
 
 ## Documentation
 - [Roadmap](docs/roadmap.md) — Feature phases and release plan
