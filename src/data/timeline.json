@@ -1,0 +1,109 @@
+[
+  {
+    "era": "Triassic",
+    "period": "Late Triassic",
+    "years": "230–201 MYA",
+    "color": "#E8652D",
+    "events": [
+      {
+        "year": "230 MYA",
+        "title": "First Dinosaurs",
+        "desc": "Small, bipedal dinosaurs like Eoraptor appear in what is now Argentina.",
+        "image": "./images/dinos/velociraptor.png"
+      },
+      {
+        "year": "220 MYA",
+        "title": "Rise of Theropods",
+        "desc": "Herrerasaurus and other early predators begin to diversify."
+      },
+      {
+        "year": "201 MYA",
+        "title": "End-Triassic Extinction",
+        "desc": "Volcanic eruptions wipe out many species, allowing dinosaurs to dominate."
+      }
+    ]
+  },
+  {
+    "era": "Jurassic",
+    "period": "Early–Late Jurassic",
+    "years": "201–145 MYA",
+    "color": "#4CAF50",
+    "events": [
+      {
+        "year": "200 MYA",
+        "title": "Dinosaurs Dominate",
+        "desc": "With competitors gone, dinosaurs become the rulers of the land."
+      },
+      {
+        "year": "155 MYA",
+        "title": "Giants Emerge",
+        "desc": "Brachiosaurus, Diplodocus, and other massive sauropods roam the Earth.",
+        "image": "./images/dinos/brachiosaurus.png"
+      },
+      {
+        "year": "150 MYA",
+        "title": "Stegosaurus Era",
+        "desc": "Plated dinosaurs with spiked tails thrive in lush forests.",
+        "image": "./images/dinos/stegosaurus.png"
+      },
+      {
+        "year": "150 MYA",
+        "title": "First Birds",
+        "desc": "Archaeopteryx — half dinosaur, half bird — takes flight in Germany."
+      }
+    ]
+  },
+  {
+    "era": "Cretaceous",
+    "period": "Early Cretaceous",
+    "years": "145–100 MYA",
+    "color": "#29B6F6",
+    "events": [
+      {
+        "year": "130 MYA",
+        "title": "Feathered Dinosaurs",
+        "desc": "Sinosauropteryx and other feathered species discovered in China."
+      },
+      {
+        "year": "125 MYA",
+        "title": "Flowering Plants",
+        "desc": "The first flowers appear, transforming ecosystems worldwide."
+      },
+      {
+        "year": "112 MYA",
+        "title": "Spinosaurus",
+        "desc": "The largest known carnivore — bigger than T-Rex — hunts fish in rivers."
+      }
+    ]
+  },
+  {
+    "era": "Cretaceous",
+    "period": "Late Cretaceous",
+    "years": "100–66 MYA",
+    "color": "#D4A843",
+    "events": [
+      {
+        "year": "80 MYA",
+        "title": "Triceratops Appears",
+        "desc": "Three-horned giants roam North America in vast herds.",
+        "image": "./images/dinos/triceratops.png"
+      },
+      {
+        "year": "68 MYA",
+        "title": "T-Rex Reigns",
+        "desc": "The most famous predator of all time dominates the Late Cretaceous.",
+        "image": "./images/dinos/trex.png"
+      },
+      {
+        "year": "66 MYA",
+        "title": "The Asteroid Impact",
+        "desc": "A 6-mile-wide asteroid strikes the Yucatán Peninsula. The age of dinosaurs ends."
+      },
+      {
+        "year": "66 MYA",
+        "title": "Birds Survive",
+        "desc": "Small feathered dinosaurs survive the extinction — evolving into today's birds."
+      }
+    ]
+  }
+]

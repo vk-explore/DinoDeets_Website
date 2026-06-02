@@ -1,4 +1,5 @@
 import { mascotSvgString } from './components/mascot-svg.js';
+import dinoFacts from './data/random-deet.json';
 
 export function initInteractiveMascot() {
   const mascot = document.getElementById('mascot');
@@ -270,17 +271,8 @@ export function initInteractiveMascot() {
   let isDizzy = false;
   let showTimeout;
   let clickTimeout = null;
-
-  const facts = [
-    "Did you know I'm 65 million years old?",
-    "Check out the Fossil Dig game!",
-    "Try the Dino Map to find fossils!",
-    "Birds are actually living dinosaurs!",
-    "Devaansh drops new episodes every Friday!",
-    "Look around for hidden easter eggs!"
-  ];
-
   let factDelayTimeout = null;
+  let lastIndex = -1;
 
   function triggerFact() {
     clearTimeout(showTimeout);
@@ -292,9 +284,16 @@ export function initInteractiveMascot() {
     mascot.classList.add('mascot--react');
     
     const showNewFact = () => {
-      text.textContent = facts[Math.floor(Math.random() * facts.length)];
+      let idx;
+      do {
+        idx = Math.floor(Math.random() * dinoFacts.length);
+      } while (idx === lastIndex && dinoFacts.length > 1);
+      lastIndex = idx;
+      
+      const item = dinoFacts[idx];
+      text.textContent = item.fact;
       bubble.classList.add('mascot__bubble--visible');
-      showTimeout = setTimeout(() => bubble.classList.remove('mascot__bubble--visible'), 4000);
+      showTimeout = setTimeout(() => bubble.classList.remove('mascot__bubble--visible'), 8000);
     };
 
     if (bubble.classList.contains('mascot__bubble--visible')) {
@@ -330,8 +329,10 @@ export function initInteractiveMascot() {
     resetIdleTimer();
   }
 
-  mascot.addEventListener('click', () => {
+  mascot.addEventListener('click', (e) => {
     if (isDizzy) return;
+    // Don't trigger a new fact if the click was inside the bubble itself
+    if (e.target.closest('#mascot-bubble')) return;
     triggerFact();
   });
 

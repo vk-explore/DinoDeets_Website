@@ -1,8 +1,7 @@
 // encyclopedia.js
 
-import data from './data/dino-data.json';
+import dinoData from './data/encyclopedia.json';
 
-let dinoData = data.encyclopedia || [];
 let currentFilter = 'all';
 
 export function initEncyclopedia() {

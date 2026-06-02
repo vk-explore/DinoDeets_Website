@@ -1,6 +1,6 @@
 // dino-detail.js
 
-import data from './data/dino-data.json';
+import dinoData from './data/encyclopedia.json';
 
 export function initDinoDetail() {
   const container = document.getElementById('dino-detail-container');
@@ -16,7 +16,6 @@ export function initDinoDetail() {
       return;
     }
 
-    const dinoData = data.encyclopedia || [];
     const dino = dinoData.find(d => d.name.toLowerCase() === dinoName.toLowerCase());
 
     if (!dino) {

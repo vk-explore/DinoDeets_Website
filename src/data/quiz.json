@@ -1,0 +1,116 @@
+[
+  {
+    "question": "Which dinosaur had the strongest bite force of any land animal?",
+    "options": [
+      "Spinosaurus",
+      "Tyrannosaurus Rex",
+      "Giganotosaurus",
+      "Allosaurus"
+    ],
+    "correct": 1,
+    "explanation": "T-Rex had a bite force of about 12,800 pounds — enough to crush bone!",
+    "image": "./images/dinos/trex.png"
+  },
+  {
+    "question": "How big was a real Velociraptor?",
+    "options": [
+      "Size of a horse",
+      "Size of a turkey",
+      "Size of a bear",
+      "Size of a dog"
+    ],
+    "correct": 1,
+    "explanation": "Velociraptors were actually only about the size of a turkey — not the giants shown in movies!",
+    "image": "./images/dinos/velociraptor.png"
+  },
+  {
+    "question": "Which dinosaur had plates on its back that could regulate body temperature?",
+    "options": [
+      "Ankylosaurus",
+      "Triceratops",
+      "Stegosaurus",
+      "Parasaurolophus"
+    ],
+    "correct": 2,
+    "explanation": "Stegosaurus plates could flush with blood to help cool down or warm up!",
+    "image": "./images/dinos/stegosaurus.png"
+  },
+  {
+    "question": "What does the word 'dinosaur' mean in Greek?",
+    "options": [
+      "Giant beast",
+      "Terrible lizard",
+      "Ancient monster",
+      "Thunder reptile"
+    ],
+    "correct": 1,
+    "explanation": "Dinosaur means 'terrible lizard' — but they weren't actually lizards at all!"
+  },
+  {
+    "question": "Which period did dinosaurs first appear?",
+    "options": [
+      "Jurassic",
+      "Cretaceous",
+      "Triassic",
+      "Permian"
+    ],
+    "correct": 2,
+    "explanation": "Dinosaurs first appeared during the Late Triassic, about 230 million years ago."
+  },
+  {
+    "question": "How many horns did Triceratops have?",
+    "options": [
+      "One",
+      "Two",
+      "Three",
+      "Four"
+    ],
+    "correct": 2,
+    "explanation": "Triceratops means 'three-horned face' — two long brow horns and one shorter nose horn!",
+    "image": "./images/dinos/triceratops.png"
+  },
+  {
+    "question": "What are the closest living relatives of dinosaurs?",
+    "options": [
+      "Lizards",
+      "Crocodiles",
+      "Birds",
+      "Turtles"
+    ],
+    "correct": 2,
+    "explanation": "Birds evolved from small theropod dinosaurs and are technically dinosaurs themselves!"
+  },
+  {
+    "question": "How wide was the asteroid that wiped out the dinosaurs?",
+    "options": [
+      "1 mile",
+      "6 miles",
+      "20 miles",
+      "100 miles"
+    ],
+    "correct": 1,
+    "explanation": "The Chicxulub asteroid was about 6 miles wide — roughly the size of Mount Everest!"
+  },
+  {
+    "question": "Which of these was the largest flying animal ever?",
+    "options": [
+      "Pteranodon",
+      "Quetzalcoatlus",
+      "Archaeopteryx",
+      "Dimorphodon"
+    ],
+    "correct": 1,
+    "explanation": "Quetzalcoatlus had a wingspan of 36 feet — as wide as a small airplane!"
+  },
+  {
+    "question": "Where was the Rajasaurus dinosaur discovered?",
+    "options": [
+      "Africa",
+      "South America",
+      "India",
+      "Australia"
+    ],
+    "correct": 2,
+    "explanation": "Rajasaurus — meaning 'King Lizard' — was discovered in India's Narmada Valley!"
+  }
+]

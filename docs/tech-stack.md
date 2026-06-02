@@ -51,7 +51,16 @@ DinoDeets_Website/
 │   ├── style.css           # Design system + all component styles
 │   ├── main.js             # App entry, all feature logic
 │   └── data/
-│       └── dino-data.json  # Consolidated JSON data
+│       ├── encyclopedia.json   # Dinosaur encyclopedia data
+│       ├── random-deet.json    # Facts for Random Deet
+│       ├── fossil-dig.json     # Fossil dig game data
+│       ├── dino-map.json       # Dinosaur discovery map coordinates
+│       ├── quiz.json           # Quiz questions
+│       ├── glossary.json       # Dictionary terms
+│       ├── dino-meter.json     # Dino-o-Meter scale details
+│       ├── timeline.json       # Geological timeline data
+│       ├── dino-creator.json   # Creator options & naming parts
+│       └── art.json            # Fan art gallery & coloring files
 └── public/
     ├── fonts/              # Custom fonts (Adumu)
     └── images/             # Organized image assets (backgrounds, dinos, props, icons, etc.)
@@ -65,7 +74,7 @@ DinoDeets_Website/
 | Hero | Parallax bg, particles, CTA |
 | Episodes | YouTube RSS + static fallback |
 | Fossil Dig | Canvas scratch-off mini-game |
-| Random Deet | 30 facts with species-matched images |
+| Random Deet | Integrated directly into the mascot speech bubble on click |
 | Dino Map | 12 sites with Mercator projection pins |
 | Countdown | Live timer to next Friday episode |
 | Dino Quiz | 10 questions, scoring, results tiers |

@@ -1,0 +1,432 @@
+[
+  {
+    "name": "Compsognathus",
+    "diet": "Carnivore",
+    "period": "Late Jurassic",
+    "location": "Bavaria, Germany",
+    "length": "1m",
+    "weight": "3 kg",
+    "description": "About the size of a chicken! Compsognathus was one of the smallest dinosaurs — about the size of a chicken! But it was a fierce little predator.",
+    "image": "./images/dinos/velociraptor.png"
+  },
+  {
+    "name": "Velociraptor",
+    "diet": "Carnivore",
+    "period": "Late Cretaceous",
+    "location": "Gobi Desert, Mongolia",
+    "length": "1.8m",
+    "weight": "15 kg",
+    "description": "About the size of a turkey Velociraptors were actually only about the size of a turkey, not the giant creatures shown in movies!",
+    "image": "./images/dinos/velociraptor.png"
+  },
+  {
+    "name": "Stegosaurus",
+    "diet": "Herbivore",
+    "period": "Late Jurassic",
+    "location": "Colorado, USA",
+    "length": "9m",
+    "weight": "5,000 kg",
+    "description": "As long as a bus! Stegosaurus had a brain the size of a walnut, but it had bony plates on its back that could flush with blood to regulate body temperature.",
+    "image": "./images/dinos/stegosaurus.png"
+  },
+  {
+    "name": "Triceratops",
+    "diet": "Herbivore",
+    "period": "Late Cretaceous",
+    "location": "Montana, USA",
+    "length": "9m",
+    "weight": "6,000 kg",
+    "description": "Heavy as an elephant! Triceratops' frill wasn't just for protection — scientists think it was used to attract mates, like a peacock's tail!",
+    "image": "./images/dinos/triceratops.png"
+  },
+  {
+    "name": "T-Rex",
+    "diet": "Carnivore",
+    "period": "Late Cretaceous",
+    "location": "Montana, USA",
+    "length": "12.3m",
+    "weight": "8,400 kg",
+    "description": "Tall as a giraffe!",
+    "image": "./images/dinos/trex.png"
+  },
+  {
+    "name": "Brachiosaurus",
+    "diet": "Herbivore",
+    "period": "Late Jurassic",
+    "location": "Colorado, USA",
+    "length": "25m",
+    "weight": "56,000 kg",
+    "description": "Could peek into a 4th-floor window! Brachiosaurus could eat leaves from trees up to 30 feet high — that's like eating off the roof of a three-story building!",
+    "image": "./images/dinos/brachiosaurus.png"
+  },
+  {
+    "name": "Argentinosaurus",
+    "diet": "Herbivore",
+    "period": "Late Cretaceous",
+    "location": "Argentina",
+    "length": "35m",
+    "weight": "100,000 kg",
+    "description": "Heavier than 14 elephants combined! The Argentinosaurus was so massive it weighed about 100 tons — that's heavier than 14 African elephants combined!",
+    "image": "./images/dinos/brachiosaurus.png"
+  },
+  {
+    "name": "Ankylosaurus",
+    "diet": "Unknown",
+    "period": "Late Cretaceous",
+    "location": "Montana, USA",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "The Ankylosaurus had a tail club so powerful it could break the bones of a T-Rex. Talk about a built-in weapon!",
+    "image": ""
+  },
+  {
+    "name": "Protoceratops",
+    "diet": "Unknown",
+    "period": "Late Cretaceous",
+    "location": "Gobi Desert, Mongolia",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "",
+    "image": ""
+  },
+  {
+    "name": "Oviraptor",
+    "diet": "Unknown",
+    "period": "Late Cretaceous",
+    "location": "Gobi Desert, Mongolia",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "",
+    "image": ""
+  },
+  {
+    "name": "Giganotosaurus",
+    "diet": "Unknown",
+    "period": "Late Cretaceous",
+    "location": "Argentina",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "The Giganotosaurus from South America had a skull over 5 feet long — one of the biggest heads ever on a land predator!",
+    "image": ""
+  },
+  {
+    "name": "Dreadnoughtus",
+    "diet": "Unknown",
+    "period": "Late Cretaceous",
+    "location": "Argentina",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "Dreadnoughtus, meaning 'fears nothing', was one of the most massive land animals ever — weighing about 65 tons!",
+    "image": ""
+  },
+  {
+    "name": "Albertosaurus",
+    "diet": "Unknown",
+    "period": "Late Cretaceous",
+    "location": "Alberta, Canada",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "",
+    "image": ""
+  },
+  {
+    "name": "Corythosaurus",
+    "diet": "Unknown",
+    "period": "Late Cretaceous",
+    "location": "Alberta, Canada",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "",
+    "image": ""
+  },
+  {
+    "name": "Styracosaurus",
+    "diet": "Unknown",
+    "period": "Late Cretaceous",
+    "location": "Alberta, Canada",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "",
+    "image": ""
+  },
+  {
+    "name": "Archaeopteryx",
+    "diet": "Unknown",
+    "period": "Late Jurassic",
+    "location": "Bavaria, Germany",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "",
+    "image": ""
+  },
+  {
+    "name": "Ichthyosaurus",
+    "diet": "Unknown",
+    "period": "Early Jurassic",
+    "location": "Dorset, England",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "",
+    "image": ""
+  },
+  {
+    "name": "Plesiosaurus",
+    "diet": "Unknown",
+    "period": "Early Jurassic",
+    "location": "Dorset, England",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "",
+    "image": ""
+  },
+  {
+    "name": "Allosaurus",
+    "diet": "Unknown",
+    "period": "Late Jurassic",
+    "location": "Colorado, USA",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "",
+    "image": ""
+  },
+  {
+    "name": "Diplodocus",
+    "diet": "Unknown",
+    "period": "Late Jurassic",
+    "location": "Colorado, USA",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "Diplodocus could crack its tail like a whip, creating a sonic boom that could be heard from miles away!",
+    "image": ""
+  },
+  {
+    "name": "Sinosauropteryx",
+    "diet": "Unknown",
+    "period": "Early Cretaceous",
+    "location": "China",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "",
+    "image": ""
+  },
+  {
+    "name": "Microraptor",
+    "diet": "Unknown",
+    "period": "Early Cretaceous",
+    "location": "China",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "",
+    "image": ""
+  },
+  {
+    "name": "Yutyrannus",
+    "diet": "Unknown",
+    "period": "Early Cretaceous",
+    "location": "China",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "",
+    "image": ""
+  },
+  {
+    "name": "Giraffatitan",
+    "diet": "Unknown",
+    "period": "Late Jurassic",
+    "location": "Tanzania",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "",
+    "image": ""
+  },
+  {
+    "name": "Kentrosaurus",
+    "diet": "Unknown",
+    "period": "Late Jurassic",
+    "location": "Tanzania",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "",
+    "image": ""
+  },
+  {
+    "name": "Eoraptor",
+    "diet": "Unknown",
+    "period": "Late Triassic",
+    "location": "San Juan, Argentina",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "",
+    "image": ""
+  },
+  {
+    "name": "Herrerasaurus",
+    "diet": "Unknown",
+    "period": "Late Triassic",
+    "location": "San Juan, Argentina",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "",
+    "image": ""
+  },
+  {
+    "name": "Rajasaurus",
+    "diet": "Unknown",
+    "period": "Late Cretaceous",
+    "location": "Madhya Pradesh, India",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "",
+    "image": ""
+  },
+  {
+    "name": "Indosaurus",
+    "diet": "Unknown",
+    "period": "Late Cretaceous",
+    "location": "Madhya Pradesh, India",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "",
+    "image": ""
+  },
+  {
+    "name": "Titanosaurus",
+    "diet": "Unknown",
+    "period": "Late Cretaceous",
+    "location": "Madhya Pradesh, India",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "",
+    "image": ""
+  },
+  {
+    "name": "Bruhathkayosaurus",
+    "diet": "Unknown",
+    "period": "Late Cretaceous",
+    "location": "Tamil Nadu, India",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "",
+    "image": ""
+  },
+  {
+    "name": "Megalosaurus",
+    "diet": "Unknown",
+    "period": "Middle Jurassic",
+    "location": "Tamil Nadu, India",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "The first dinosaur fossil ever scientifically described was Megalosaurus in 1824, by William Buckland in England.",
+    "image": ""
+  },
+  {
+    "name": "Tyrannosaurus Rex",
+    "diet": "Unknown",
+    "period": "Late Cretaceous",
+    "location": "Unknown",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "T-Rex had the strongest bite of any land animal ever — about 12,800 pounds of force! That's like having a small car dropped on you. Some scientists believe T-Rex had feathers — at least as a baby. Imagine a fluffy T-Rex chick!",
+    "image": ""
+  },
+  {
+    "name": "Pteranodon",
+    "diet": "Unknown",
+    "period": "Late Cretaceous",
+    "location": "Unknown",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "Pterodactyls weren't actually dinosaurs! They were flying reptiles called pterosaurs that lived alongside dinosaurs.",
+    "image": ""
+  },
+  {
+    "name": "Spinosaurus",
+    "diet": "Unknown",
+    "period": "Late Cretaceous",
+    "location": "Unknown",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "Spinosaurus is the largest known carnivorous dinosaur, even bigger than T-Rex! It was also a fantastic swimmer.",
+    "image": ""
+  },
+  {
+    "name": "Micropachycephalosaurus",
+    "diet": "Unknown",
+    "period": "Late Cretaceous",
+    "location": "Unknown",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "The Micropachycephalosaurus has the longest name of any dinosaur — try saying that five times fast!",
+    "image": ""
+  },
+  {
+    "name": "Parasaurolophus",
+    "diet": "Unknown",
+    "period": "Late Cretaceous",
+    "location": "Unknown",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "Parasaurolophus had a long hollow crest on its head that it could use like a trumpet to make deep, booming sounds!",
+    "image": ""
+  },
+  {
+    "name": "Oviraptorosaur",
+    "diet": "Unknown",
+    "period": "Late Cretaceous",
+    "location": "Unknown",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "Some dinosaur eggs were as big as footballs! The largest ever found belonged to a type of oviraptorosaur.",
+    "image": ""
+  },
+  {
+    "name": "Utahraptor",
+    "diet": "Unknown",
+    "period": "Early Cretaceous",
+    "location": "Unknown",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "The Utahraptor was the largest raptor dinosaur, about 23 feet long and 1,100 pounds. Now THAT's a raptor!",
+    "image": ""
+  },
+  {
+    "name": "Pachycephalosaurus",
+    "diet": "Unknown",
+    "period": "Late Cretaceous",
+    "location": "Unknown",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "Pachycephalosaurus had a skull dome 10 inches thick! Scientists debate whether they head-butted each other like rams.",
+    "image": ""
+  },
+  {
+    "name": "Quetzalcoatlus",
+    "diet": "Unknown",
+    "period": "Late Cretaceous",
+    "location": "Unknown",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "The Quetzalcoatlus had a wingspan of 36 feet — as wide as a small airplane! It was the largest flying animal ever.",
+    "image": ""
+  },
+  {
+    "name": "Therizinosaurus",
+    "diet": "Unknown",
+    "period": "Late Cretaceous",
+    "location": "Unknown",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "Therizinosaurus had claws up to 3 feet long — the longest claws of any animal that ever lived!",
+    "image": ""
+  },
+  {
+    "name": "Iguanodon",
+    "diet": "Unknown",
+    "period": "Early Cretaceous",
+    "location": "Unknown",
+    "length": "Unknown",
+    "weight": "Unknown",
+    "description": "Iguanodon was one of the first three dinosaurs ever named, and scientists originally put its thumb spike on its nose like a horn!",
+    "image": ""
+  }
+]

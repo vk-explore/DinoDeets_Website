@@ -1,0 +1,117 @@
+[
+  {
+    "term": "Ammonite",
+    "definition": "An extinct marine animal with a spiral shell, common fossils from the Mesozoic Era.",
+    "category": "Fossil"
+  },
+  {
+    "term": "Biped",
+    "definition": "An animal that walks on two legs, like T-Rex and Velociraptor.",
+    "category": "Anatomy"
+  },
+  {
+    "term": "Carnivore",
+    "definition": "A meat-eating animal. Many theropod dinosaurs were fierce carnivores.",
+    "category": "Diet"
+  },
+  {
+    "term": "Coprolite",
+    "definition": "Fossilized dinosaur poop! Scientists study these to learn what dinosaurs ate.",
+    "category": "Fossil"
+  },
+  {
+    "term": "Cretaceous",
+    "definition": "The last period of the Mesozoic Era (145–66 million years ago). Ended with the asteroid impact.",
+    "category": "Era"
+  },
+  {
+    "term": "Dinosauria",
+    "definition": "The scientific name for the group of all dinosaurs, coined by Richard Owen in 1842.",
+    "category": "Science"
+  },
+  {
+    "term": "Extinction",
+    "definition": "When every member of a species dies out. Non-bird dinosaurs went extinct 66 million years ago.",
+    "category": "Event"
+  },
+  {
+    "term": "Fossil",
+    "definition": "Preserved remains or traces of ancient life found in rock. Can be bones, teeth, footprints, or even eggs!",
+    "category": "Fossil"
+  },
+  {
+    "term": "Gastroliths",
+    "definition": "Stones swallowed by dinosaurs to help grind food in their stomachs — like a built-in blender!",
+    "category": "Anatomy"
+  },
+  {
+    "term": "Herbivore",
+    "definition": "A plant-eating animal. Sauropods and ceratopsians were herbivores.",
+    "category": "Diet"
+  },
+  {
+    "term": "Ichthyosaur",
+    "definition": "A marine reptile that looked like a dolphin. Not a dinosaur, but lived alongside them!",
+    "category": "Animal"
+  },
+  {
+    "term": "Jurassic",
+    "definition": "The middle period of the Mesozoic Era (201–145 million years ago). The age of giant sauropods!",
+    "category": "Era"
+  },
+  {
+    "term": "K-Pg Boundary",
+    "definition": "The geological boundary marking the mass extinction event 66 million years ago that ended the dinosaurs.",
+    "category": "Event"
+  },
+  {
+    "term": "Mesozoic",
+    "definition": "The 'Age of Reptiles' — the era spanning 252–66 million years ago, divided into Triassic, Jurassic, and Cretaceous.",
+    "category": "Era"
+  },
+  {
+    "term": "Omnivore",
+    "definition": "An animal that eats both plants and meat. Some dinosaurs like Oviraptor were likely omnivores.",
+    "category": "Diet"
+  },
+  {
+    "term": "Paleontologist",
+    "definition": "A scientist who studies ancient life through fossils. They're real-life dinosaur detectives!",
+    "category": "Science"
+  },
+  {
+    "term": "Pterosaur",
+    "definition": "Flying reptiles that lived alongside dinosaurs. They were NOT dinosaurs, but close relatives!",
+    "category": "Animal"
+  },
+  {
+    "term": "Quadruped",
+    "definition": "An animal that walks on four legs, like Triceratops and Stegosaurus.",
+    "category": "Anatomy"
+  },
+  {
+    "term": "Raptor",
+    "definition": "Short for dromaeosaurid — a family of feathered, fast-running predatory dinosaurs.",
+    "category": "Animal"
+  },
+  {
+    "term": "Sauropod",
+    "definition": "Giant long-necked, plant-eating dinosaurs like Brachiosaurus and Argentinosaurus — the largest land animals ever!",
+    "category": "Animal"
+  },
+  {
+    "term": "Theropod",
+    "definition": "Two-legged, mostly carnivorous dinosaurs. Includes T-Rex, Velociraptor, and modern birds!",
+    "category": "Animal"
+  },
+  {
+    "term": "Triassic",
+    "definition": "The first period of the Mesozoic Era (252–201 million years ago). When dinosaurs first appeared!",
+    "category": "Era"
+  },
+  {
+    "term": "Vertebra",
+    "definition": "A single bone in the spine. Some sauropod vertebrae were over 3 feet long!",
+    "category": "Anatomy"
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Compsognathus",
+    "height": 0.3,
+    "length": 1,
+    "weight": "3 kg",
+    "diet": "Carnivore",
+    "image": "./images/dinos/velociraptor.png",
+    "comparison": "About the size of a chicken!"
+  },
+  {
+    "name": "Velociraptor",
+    "height": 0.5,
+    "length": 1.8,
+    "weight": "15 kg",
+    "diet": "Carnivore",
+    "image": "./images/dinos/velociraptor.png",
+    "comparison": "About the size of a turkey"
+  },
+  {
+    "name": "Human (for scale)",
+    "height": 1.8,
+    "length": 0.5,
+    "weight": "70 kg",
+    "diet": "Omnivore",
+    "image": "./images/mascot.png",
+    "comparison": "That's you!"
+  },
+  {
+    "name": "Stegosaurus",
+    "height": 4,
+    "length": 9,
+    "weight": "5,000 kg",
+    "diet": "Herbivore",
+    "image": "./images/dinos/stegosaurus.png",
+    "comparison": "As long as a bus!"
+  },
+  {
+    "name": "Triceratops",
+    "height": 3,
+    "length": 9,
+    "weight": "6,000 kg",
+    "diet": "Herbivore",
+    "image": "./images/dinos/triceratops.png",
+    "comparison": "Heavy as an elephant!"
+  },
+  {
+    "name": "T-Rex",
+    "height": 5.6,
+    "length": 12.3,
+    "weight": "8,400 kg",
+    "diet": "Carnivore",
+    "image": "./images/dinos/trex.png",
+    "comparison": "Tall as a giraffe!"
+  },
+  {
+    "name": "Brachiosaurus",
+    "height": 13,
+    "length": 25,
+    "weight": "56,000 kg",
+    "diet": "Herbivore",
+    "image": "./images/dinos/brachiosaurus.png",
+    "comparison": "Could peek into a 4th-floor window!"
+  },
+  {
+    "name": "Argentinosaurus",
+    "height": 15,
+    "length": 35,
+    "weight": "100,000 kg",
+    "diet": "Herbivore",
+    "image": "./images/dinos/brachiosaurus.png",
+    "comparison": "Heavier than 14 elephants combined!"
+  }
+]

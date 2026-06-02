@@ -2,12 +2,17 @@ import './style.css';
 import { initInteractiveMascot } from './mascot.js';
 import { initEncyclopedia } from './encyclopedia.js';
 import { initDinoDetail } from './dino-detail.js';
-import data from './data/dino-data.json';
-const { 
-  dinoFacts, fossilData, discoveryData, quizQuestions, 
-  dinoGlossary, dinoSizes, timelineData, creatorParts, 
-  fanArtGallery, coloringPages, dinoNameParts 
-} = data;
+import fossilData from './data/fossil-dig.json';
+import discoveryData from './data/dino-map.json';
+import quizQuestions from './data/quiz.json';
+import dinoGlossary from './data/glossary.json';
+import dinoSizes from './data/dino-meter.json';
+import timelineData from './data/timeline.json';
+import dinoCreatorData from './data/dino-creator.json';
+import artData from './data/art.json';
+
+const { creatorParts, dinoNameParts } = dinoCreatorData;
+const { fanArtGallery, coloringPages } = artData;
 
 // Dino image mapping for Random Deet
 const dinoImages = {
@@ -157,32 +162,7 @@ function renderFallbackEpisodes() {
   initScrollAnimations();
 }
 
-// ===== RANDOM DEET =====
-function initRandomDeet() {
-  const btn = document.getElementById('deet-btn');
-  const card = document.getElementById('deet-card');
-  const factEl = document.getElementById('deet-fact');
-  const dinoImg = document.getElementById('deet-dino-img');
-  const dinoEl = document.getElementById('deet-dino');
-  const eraEl = document.getElementById('deet-era');
-  if (!btn) return;
 
-  let lastIndex = -1;
-  btn.addEventListener('click', () => {
-    let idx;
-    do { idx = Math.floor(Math.random() * dinoFacts.length); } while (idx === lastIndex);
-    lastIndex = idx;
-    const fact = dinoFacts[idx];
-
-    card.classList.add('shake');
-    setTimeout(() => card.classList.remove('shake'), 500);
-
-    dinoImg.src = getDinoImage(fact.dino);
-    factEl.textContent = fact.fact;
-    dinoEl.textContent = fact.dino;
-    eraEl.textContent = fact.era;
-  });
-}
 
 // ===== FOSSIL DIG GAME =====
 function initFossilDig() {
@@ -886,7 +866,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initDropdowns();
   initParticles();
   loadEpisodes();
-  initRandomDeet();
   initFossilDig();
   initDinoMap();
   initCountdown();
