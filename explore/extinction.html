@@ -3,39 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Encyclopedia | Dino Deets</title>
-    <meta name="description" content="Dino Deets is a kid-and-family-friendly dinosaur podcast hosted by Devaansh. Explore prehistoric worlds, discover dino facts, and dig for fossils!" />
-    <meta name="keywords" content="dinosaurs, podcast, kids, education, prehistoric, fossils, Devaansh, dino facts" />
-    <meta property="og:title" content="Dino Deets — Dinosaur Podcast for Kids" />
-    <meta property="og:description" content="Where curious minds travel through prehistoric worlds. A fun, educational dinosaur podcast by Devaansh." />
-    <meta property="og:type" content="website" />
+    <title>The Extinction | Dino Deets</title>
+    <meta name="description" content="Learn about the end of the dinosaurs and why they disappeared." />
     <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Nunito:wght@400;600;700;800&family=Caveat:wght@400;700&display=swap" rel="stylesheet" />
   </head>
   <body>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Navigation -->
+    <!-- Navigation -->
     <nav id="main-nav" class="nav">
       <div class="nav__inner">
         <a href="/DinoDeets_Website/" class="nav__logo" id="nav-logo">
@@ -45,7 +21,6 @@
         <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
           <span></span><span></span><span></span>
         </button>
-        
         
         <ul class="nav__links" id="nav-links">
           <li>
@@ -92,9 +67,7 @@
               <a href="/DinoDeets_Website/explore/dino-meter.html" class="nav__submenu-link">Dino-o-Meter</a>
             </div>
           </li>
-          
-          
-                    <li>
+          <li>
             <a href="/DinoDeets_Website/art/index.html" class="nav__icon-link" aria-label="Art">
               <svg class="nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
@@ -105,62 +78,61 @@
             </a>
           </li>
         </ul>
-        
-        </div>
       </div>
     </nav>
-    <main class="page-content">
-      <!-- Story Banners -->
-      <section class="section encyclopedia-stories">
-        <div class="section__inner story-banners-container">
-          
-          <a href="/DinoDeets_Website/explore/origins.html" class="story-banner story-banner--origin">
-            <div class="story-banner__content">
-              <h2>Dino Origins</h2>
-              <p>How did they begin?</p>
-            </div>
-            <img src="../images/dinos/stegosaurus.png" alt="Evolution" class="story-banner__img" />
-          </a>
 
-          <a href="/DinoDeets_Website/explore/extinction.html" class="story-banner story-banner--extinction">
-            <div class="story-banner__content">
-              <h2>The End of an Era</h2>
-              <p>Why did they disappear?</p>
-            </div>
-            <img src="../images/props/trex-skull.png" alt="Extinction" class="story-banner__img" />
-          </a>
-
-        </div>
-      </section>
-
-      <!-- Encyclopedia Header & Filters -->
-      <section class="section encyclopedia-header">
-        <div class="section__inner text-center">
-          <h1 class="page-title"><span class="title-accent">Dino</span> Encyclopedia</h1>
-          <p class="page-subtitle">Select a period or browse all our dinosaur friends!</p>
-          
-          <div class="encyclopedia-filters" id="encyclopedia-filters">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="Triassic">Triassic</button>
-            <button class="filter-btn" data-filter="Jurassic">Jurassic</button>
-            <button class="filter-btn" data-filter="Cretaceous">Cretaceous</button>
-          </div>
-        </div>
-      </section>
-
-      <!-- Gallery -->
-      <section class="section encyclopedia-gallery">
+    <main class="page-content dino-detail-page origin-page">
+      <section class="section text-center" style="padding: 0 24px 20px;">
         <div class="section__inner">
-          <div id="encyclopedia-grid" class="encyclopedia-grid">
-            <!-- Dynamically populated by JS -->
+          <a href="/DinoDeets_Website/explore/encyclopedia.html" class="dino-detail__back-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="inline-icon" style="vertical-align: middle; margin-right: 4px; width: 18px; height: 18px;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            Back to Encyclopedia
+          </a>
+          <div class="dino-detail__header">
+            <h1 class="page-title">The End of an Era</h1>
+            <p class="page-subtitle">The mystery of the great extinction.</p>
+          </div>
+          <div class="text-center">
+            <img src="../images/backgrounds/hero-bg.png" alt="Prehistoric background" class="origin-hero-img" />
           </div>
         </div>
       </section>
+
+      <section class="section origin-timeline">
+        <div class="section__inner">
+          <div class="origin-card">
+            <h3>66 Million Years Ago</h3>
+            <p>The Earth was a bustling planet filled with incredible diversity. Massive herds of Triceratops roamed the plains, while the fearsome Tyrannosaurus Rex ruled as the apex predator. Pterosaurs filled the skies, and the oceans were teeming with giant marine reptiles.</p>
+          </div>
+          
+          <div class="origin-card">
+            <h3>The Impact</h3>
+            <p>One fateful day, an asteroid estimated to be about 6 to 9 miles (10 to 15 kilometers) wide hurtled towards Earth. It struck the shallow sea in what is now the Yucatán Peninsula in Mexico. The impact crater, known as Chicxulub, is over 90 miles wide!</p>
+            <p>The collision unleashed energy equivalent to billions of atomic bombs, instantly devastating the surrounding region.</p>
+          </div>
+
+          <div class="origin-card">
+            <h3>The Aftermath</h3>
+            <p>The impact triggered massive tsunamis, earthquakes, and volcanic eruptions. But the most deadly effect was the colossal cloud of dust and debris thrown into the atmosphere. This dust cloud blanketed the Earth, blocking out the sun for months or even years.</p>
+            <p>Without sunlight, plants couldn't grow. Without plants, the plant-eating dinosaurs starved. And without the plant-eaters, the meat-eating dinosaurs had no food. This caused a complete collapse of the food chain.</p>
+          </div>
+
+          <div class="origin-card">
+            <h3>The Survivors</h3>
+            <p>The event wiped out about 75% of all plant and animal species on Earth, including all non-avian dinosaurs. However, some creatures managed to survive the harsh new world.</p>
+            <p>Small mammals, amphibians, crocodiles, turtles, and certain small, feathered theropod dinosaurs (the ancestors of modern birds) made it through. Because they were small, they needed less food and could hide underground or in water to escape the extreme temperatures.</p>
+          </div>
+
+          <div class="origin-card">
+            <h3>A New Beginning</h3>
+            <p>With the giant dinosaurs gone, the surviving mammals eventually took over, leading to the incredible variety of life we see today—including us! The end of the dinosaurs paved the way for the Age of Mammals.</p>
+          </div>
+        </div>
+      </section>
+
     </main>
 
-
-
-<!-- Footer -->
+    <!-- Footer -->
     <footer id="footer" class="footer">
       <div class="footer__strata">
         <div class="footer__strata-layer footer__strata-layer--1"></div>
@@ -193,7 +165,6 @@
         </div>
         <div class="footer__bottom">
           <p>&copy; 2026 Dino Deets. Made with <img src="../images/dinos/trex.png" alt="dino" class="inline-icon inline-icon--xs" /> by Devaansh</p>
-
         </div>
       </div>
     </footer>
@@ -201,19 +172,13 @@
     <!-- Mascot -->
     <div class="mascot" id="mascot">
       <div id="mascot-fly" class="mascot__fly" style="display: none; transform-origin: center;">
-        <!-- Cute profile mosquito (faces right) -->
         <svg viewBox="0 0 32 32" width="32" height="32" style="overflow: visible;">
-          <!-- Legs -->
           <path d="M 14 20 L 12 26 M 16 21 L 16 27 M 18 20 L 20 25" stroke="#111" stroke-width="1.5" fill="none"/>
-          <!-- Wing -->
           <path d="M 14 14 C 6 2, -2 6, 12 14 Z" fill="#bbf" opacity="0.8">
             <animateTransform attributeName="transform" type="rotate" values="0 14 14; 50 14 14; 0 14 14" dur="0.025s" repeatCount="indefinite" />
           </path>
-          <!-- Body -->
           <ellipse cx="16" cy="16" rx="7" ry="5" fill="#ffd700"/>
-          <!-- Proboscis (nose) -->
           <line x1="22" y1="16" x2="28" y2="17" stroke="#111" stroke-width="1.5" stroke-linecap="round"/>
-          <!-- Big Cute Eye -->
           <circle cx="20" cy="13" r="3.5" fill="#fff"/>
           <circle cx="21.5" cy="13" r="1.5" fill="#000"/>
         </svg>
@@ -225,7 +190,7 @@
       </div>
       <div id="mascot-svg-container"></div>
       <div class="mascot__bubble" id="mascot-bubble">
-        <p id="mascot-text">Hey there, explorer!</p>
+        <p id="mascot-text">Wow, what a story!</p>
       </div>
     </div>
 

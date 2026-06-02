@@ -3,39 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Encyclopedia | Dino Deets</title>
-    <meta name="description" content="Dino Deets is a kid-and-family-friendly dinosaur podcast hosted by Devaansh. Explore prehistoric worlds, discover dino facts, and dig for fossils!" />
-    <meta name="keywords" content="dinosaurs, podcast, kids, education, prehistoric, fossils, Devaansh, dino facts" />
-    <meta property="og:title" content="Dino Deets — Dinosaur Podcast for Kids" />
-    <meta property="og:description" content="Where curious minds travel through prehistoric worlds. A fun, educational dinosaur podcast by Devaansh." />
-    <meta property="og:type" content="website" />
+    <title>Dino Origins | Dino Deets</title>
+    <meta name="description" content="Discover the origins of dinosaurs and how they evolved." />
     <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Nunito:wght@400;600;700;800&family=Caveat:wght@400;700&display=swap" rel="stylesheet" />
   </head>
   <body>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Navigation -->
+    <!-- Navigation -->
     <nav id="main-nav" class="nav">
       <div class="nav__inner">
         <a href="/DinoDeets_Website/" class="nav__logo" id="nav-logo">
@@ -45,7 +21,6 @@
         <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
           <span></span><span></span><span></span>
         </button>
-        
         
         <ul class="nav__links" id="nav-links">
           <li>
@@ -92,9 +67,7 @@
               <a href="/DinoDeets_Website/explore/dino-meter.html" class="nav__submenu-link">Dino-o-Meter</a>
             </div>
           </li>
-          
-          
-                    <li>
+          <li>
             <a href="/DinoDeets_Website/art/index.html" class="nav__icon-link" aria-label="Art">
               <svg class="nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
@@ -105,62 +78,59 @@
             </a>
           </li>
         </ul>
-        
-        </div>
       </div>
     </nav>
-    <main class="page-content">
-      <!-- Story Banners -->
-      <section class="section encyclopedia-stories">
-        <div class="section__inner story-banners-container">
-          
-          <a href="/DinoDeets_Website/explore/origins.html" class="story-banner story-banner--origin">
-            <div class="story-banner__content">
-              <h2>Dino Origins</h2>
-              <p>How did they begin?</p>
-            </div>
-            <img src="../images/dinos/stegosaurus.png" alt="Evolution" class="story-banner__img" />
-          </a>
 
-          <a href="/DinoDeets_Website/explore/extinction.html" class="story-banner story-banner--extinction">
-            <div class="story-banner__content">
-              <h2>The End of an Era</h2>
-              <p>Why did they disappear?</p>
-            </div>
-            <img src="../images/props/trex-skull.png" alt="Extinction" class="story-banner__img" />
-          </a>
-
-        </div>
-      </section>
-
-      <!-- Encyclopedia Header & Filters -->
-      <section class="section encyclopedia-header">
-        <div class="section__inner text-center">
-          <h1 class="page-title"><span class="title-accent">Dino</span> Encyclopedia</h1>
-          <p class="page-subtitle">Select a period or browse all our dinosaur friends!</p>
-          
-          <div class="encyclopedia-filters" id="encyclopedia-filters">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="Triassic">Triassic</button>
-            <button class="filter-btn" data-filter="Jurassic">Jurassic</button>
-            <button class="filter-btn" data-filter="Cretaceous">Cretaceous</button>
-          </div>
-        </div>
-      </section>
-
-      <!-- Gallery -->
-      <section class="section encyclopedia-gallery">
+    <main class="page-content dino-detail-page origin-page">
+      <section class="section text-center" style="padding: 0 24px 20px;">
         <div class="section__inner">
-          <div id="encyclopedia-grid" class="encyclopedia-grid">
-            <!-- Dynamically populated by JS -->
+          <a href="/DinoDeets_Website/explore/encyclopedia.html" class="dino-detail__back-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="inline-icon" style="vertical-align: middle; margin-right: 4px; width: 18px; height: 18px;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            Back to Encyclopedia
+          </a>
+          <div class="dino-detail__header">
+            <h1 class="page-title">The Origins of Dinosaurs</h1>
+            <p class="page-subtitle">Where did they come from? How did they evolve?</p>
+          </div>
+          <div class="text-center">
+            <img src="../images/backgrounds/hero-bg.png" alt="Prehistoric background" class="origin-hero-img" />
           </div>
         </div>
       </section>
+
+      <section class="section origin-timeline">
+        <div class="section__inner">
+          <div class="origin-card">
+            <h3>Before the Dinosaurs</h3>
+            <p>Long before dinosaurs roamed the Earth, the world was ruled by ancient reptiles and mammal-like creatures. During the Permian period, the dominant predators were synapsids, like the famous sail-backed Dimetrodon (which wasn't actually a dinosaur!).</p>
+          </div>
+          
+          <div class="origin-card">
+            <h3>The Triassic Period: The Beginning</h3>
+            <p>About 252 million years ago, a massive extinction event wiped out most life on Earth. From the survivors, a new group of reptiles emerged: the archosaurs. These "ruling reptiles" split into two main branches. One branch eventually became modern crocodiles, and the other branch became pterosaurs (flying reptiles) and dinosaurs!</p>
+            <p>The very first dinosaurs, like Eoraptor and Herrerasaurus, appeared around 240 million years ago. They were mostly small, agile, two-legged carnivores and omnivores.</p>
+          </div>
+
+          <div class="origin-card">
+            <h3>The Jurassic Period: The Age of Giants</h3>
+            <p>As the supercontinent Pangaea began to split apart, the climate became more humid. Dinosaurs diversified rapidly. This was the era of the giant long-necked sauropods like Brachiosaurus, and fierce predators like Allosaurus.</p>
+          </div>
+
+          <div class="origin-card">
+            <h3>The Cretaceous Period: The Final Chapter</h3>
+            <p>During this time, the world started looking more familiar. The first flowering plants appeared. This period saw the rise of famous dinosaurs like Tyrannosaurus Rex, Triceratops, and Velociraptor. It ended abruptly 66 million years ago with an asteroid impact, marking the end of the non-avian dinosaurs.</p>
+          </div>
+
+          <div class="origin-card">
+            <h3>The Dinosaur Survivors: Birds</h3>
+            <p>Did you know not all dinosaurs went extinct? A group of small, feathered theropod dinosaurs survived the extinction event. Over millions of years, they evolved into the birds we see today. So the next time you see a pigeon or a chicken, remember—you're looking at a living dinosaur!</p>
+          </div>
+        </div>
+      </section>
+
     </main>
 
-
-
-<!-- Footer -->
+    <!-- Footer -->
     <footer id="footer" class="footer">
       <div class="footer__strata">
         <div class="footer__strata-layer footer__strata-layer--1"></div>
@@ -193,7 +163,6 @@
         </div>
         <div class="footer__bottom">
           <p>&copy; 2026 Dino Deets. Made with <img src="../images/dinos/trex.png" alt="dino" class="inline-icon inline-icon--xs" /> by Devaansh</p>
-
         </div>
       </div>
     </footer>
@@ -201,19 +170,13 @@
     <!-- Mascot -->
     <div class="mascot" id="mascot">
       <div id="mascot-fly" class="mascot__fly" style="display: none; transform-origin: center;">
-        <!-- Cute profile mosquito (faces right) -->
         <svg viewBox="0 0 32 32" width="32" height="32" style="overflow: visible;">
-          <!-- Legs -->
           <path d="M 14 20 L 12 26 M 16 21 L 16 27 M 18 20 L 20 25" stroke="#111" stroke-width="1.5" fill="none"/>
-          <!-- Wing -->
           <path d="M 14 14 C 6 2, -2 6, 12 14 Z" fill="#bbf" opacity="0.8">
             <animateTransform attributeName="transform" type="rotate" values="0 14 14; 50 14 14; 0 14 14" dur="0.025s" repeatCount="indefinite" />
           </path>
-          <!-- Body -->
           <ellipse cx="16" cy="16" rx="7" ry="5" fill="#ffd700"/>
-          <!-- Proboscis (nose) -->
           <line x1="22" y1="16" x2="28" y2="17" stroke="#111" stroke-width="1.5" stroke-linecap="round"/>
-          <!-- Big Cute Eye -->
           <circle cx="20" cy="13" r="3.5" fill="#fff"/>
           <circle cx="21.5" cy="13" r="1.5" fill="#000"/>
         </svg>
@@ -225,7 +188,7 @@
       </div>
       <div id="mascot-svg-container"></div>
       <div class="mascot__bubble" id="mascot-bubble">
-        <p id="mascot-text">Hey there, explorer!</p>
+        <p id="mascot-text">Evolution is cool!</p>
       </div>
     </div>
 

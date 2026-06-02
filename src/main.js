@@ -1,5 +1,7 @@
 import './style.css';
 import { initInteractiveMascot } from './mascot.js';
+import { initEncyclopedia } from './encyclopedia.js';
+import { initDinoDetail } from './dino-detail.js';
 import data from './data/dino-data.json';
 const { 
   dinoFacts, fossilData, discoveryData, quizQuestions, 
@@ -878,6 +880,7 @@ function initColoringPages() {
 
 
 // ===== INIT =====
+
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
   initDropdowns();
@@ -895,6 +898,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initCreator();
   initGallery();
   initColoringPages();
+  initEncyclopedia();
+  initDinoDetail();
 
   initInteractiveMascot();
   initBackToTop();

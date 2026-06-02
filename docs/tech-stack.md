@@ -36,11 +36,13 @@ DinoDeets_Website/
 │   ├── dino-quiz.html
 │   └── dino-creator.html
 ├── explore/                # Explore category pages
-│   ├── index.html
 │   ├── dino-map.html
 │   ├── dino-timeline.html
 │   ├── dino-meter.html
-│   └── encyclopedia.html
+│   ├── encyclopedia.html
+│   ├── dino-detail.html
+│   ├── origins.html
+│   └── extinction.html
 ├── printables/             # Printables category pages
 │   ├── index.html
 │   ├── coloring-pages.html
