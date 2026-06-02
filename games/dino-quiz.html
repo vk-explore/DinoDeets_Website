@@ -110,6 +110,53 @@
       </div>
     </nav>
 
+    <main class="section dino-quiz">
+      <div class="section__inner">
+        <div class="dino-quiz__wrapper">
+          <!-- Start Screen -->
+          <div id="quiz-start" class="quiz-screen quiz-screen--active">
+            <img src="../images/dinos/triceratops.png" alt="Triceratops" class="quiz__mascot" />
+            <h1 class="quiz__title">Dino Brain Quiz</h1>
+            <p class="quiz__desc">Test your prehistoric knowledge! Can you answer these 10 fun questions correctly?</p>
+            <button id="btn-start-quiz" class="btn btn--primary quiz__btn-start">Start Quiz</button>
+          </div>
+
+          <!-- Active Quiz Screen -->
+          <div id="quiz-active" class="quiz-screen" style="display: none;">
+            <div class="quiz__header">
+              <div class="quiz__progress-text">Question <span id="quiz-current-num">1</span> of 10</div>
+              <div class="quiz__score-display">Score: <span id="quiz-score">0</span></div>
+            </div>
+            <div class="quiz__progress-bar"><div class="quiz__progress-fill" id="quiz-progress-fill" style="width: 10%;"></div></div>
+            
+            <h2 id="quiz-question" class="quiz__question-text">Loading...</h2>
+            
+            <div id="quiz-options" class="quiz__options">
+              <!-- Buttons injected by JS -->
+            </div>
+          </div>
+
+          <!-- Results Screen -->
+          <div id="quiz-results" class="quiz-screen" style="display: none;">
+            <div id="quiz-results-emoji" class="quiz__results-emoji">🏆</div>
+            <h2 class="quiz__results-title">Quiz Complete!</h2>
+            <div class="quiz__final-score">You scored <span id="quiz-final-score-val">0</span> out of 10</div>
+            <p id="quiz-feedback" class="quiz__feedback">Great job!</p>
+            <button id="btn-restart-quiz" class="btn btn--primary quiz__btn-restart">Play Again</button>
+          </div>
+        </div>
+
+        <!-- Progress Graph Section -->
+        <div class="dino-quiz__history">
+          <h3 class="history__title">Recent Scores</h3>
+          <div class="history__chart" id="quiz-history-chart">
+            <!-- Chart bars injected by JS -->
+            <p class="history__empty">Play a game to see your history!</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
 <!-- Footer -->
     <footer id="footer" class="footer">
       <div class="footer__strata">
@@ -185,5 +232,6 @@
     </button>
 
     <script type="module" src="../src/main.js"></script>
+    <script type="module" src="../src/dino-quiz.js"></script>
   </body>
 </html>

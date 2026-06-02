@@ -23,6 +23,34 @@ export function initInteractiveMascot() {
   let mouseY = window.innerHeight / 2;
   let isIdle = false;
   let idleTimer = null;
+  let isDizzy = false;
+  let showTimeout;
+  let clickTimeout = null;
+  let factDelayTimeout = null;
+  let lastIndex = -1;
+  let recentHistory = []; // tracks last N shown indices to avoid repeats
+  const HISTORY_SIZE = 25;
+  let activeMessageType = null; // null, 'deet', 'dizzy', 'tip'
+
+  const websiteTips = [
+    "Did you know I'm 65 million years old?",
+    "Check out the Fossil Dig game!",
+    "Try the Dino Map to find fossils!",
+    "Birds are actually living dinosaurs!",
+    "Devaansh drops new episodes every Friday!",
+    "Look around for hidden easter eggs!"
+  ];
+
+  const dizzyReactions = [
+    "Ouch!",
+    "Oops!",
+    "Whoa!",
+    "Dizzy!",
+    "Spinning!",
+    "Bonk!",
+    "Oof!",
+    "Stars!"
+  ];
   
   // Fly State Machine
   let flyState = 'hidden'; // 'hidden', 'entering', 'orbiting', 'exiting'
@@ -199,6 +227,13 @@ export function initInteractiveMascot() {
     clearTimeout(idleTimer);
     idleTimer = setTimeout(() => {
       isIdle = true;
+      
+      // Only show idle tip if no active message or if the active message is a tip (not a deet or dizzy)
+      if (!isDizzy && (!bubble.classList.contains('mascot__bubble--visible') || activeMessageType === 'tip')) {
+        const randomTip = websiteTips[Math.floor(Math.random() * websiteTips.length)];
+        showMessage(randomTip, 10000, false, 'tip');
+      }
+
       if (flyState === 'hidden' || flyState === 'exiting') {
         flyState = 'entering';
         fly.style.display = 'block';
@@ -268,40 +303,65 @@ export function initInteractiveMascot() {
   });
 
   // Click interaction (Single / Double Tap)
-  let isDizzy = false;
-  let showTimeout;
-  let clickTimeout = null;
-  let factDelayTimeout = null;
-  let lastIndex = -1;
-
-  function triggerFact() {
+  function showMessage(messageText, autoHideDuration, showCloseButton, msgType) {
     clearTimeout(showTimeout);
     clearTimeout(factDelayTimeout);
     
+    activeMessageType = msgType;
+    
+    const displayMsg = () => {
+      text.textContent = messageText;
+      
+      const closeBtn = document.getElementById('mascot-bubble-close');
+      if (closeBtn) {
+        closeBtn.style.display = showCloseButton ? 'inline-flex' : 'none';
+      }
+      
+      // Update message type modifier classes
+      bubble.classList.remove('mascot__bubble--deet', 'mascot__bubble--dizzy', 'mascot__bubble--tip');
+      if (msgType) {
+        bubble.classList.add(`mascot__bubble--${msgType}`);
+      }
+      
+      bubble.classList.add('mascot__bubble--visible');
+      
+      if (autoHideDuration) {
+        showTimeout = setTimeout(() => {
+          bubble.classList.remove('mascot__bubble--visible');
+          if (activeMessageType === msgType) {
+            activeMessageType = null;
+          }
+        }, autoHideDuration);
+      }
+    };
+
+    if (bubble.classList.contains('mascot__bubble--visible')) {
+      bubble.classList.remove('mascot__bubble--visible');
+      factDelayTimeout = setTimeout(displayMsg, 400); // Wait for CSS transition (0.4s) to finish
+    } else {
+      displayMsg();
+    }
+  }
+
+  function triggerFact() {
     // Trigger anticipation reaction
     mascot.classList.remove('mascot--react');
     void mascot.offsetWidth; // trigger reflow
     mascot.classList.add('mascot--react');
     
-    const showNewFact = () => {
-      let idx;
-      do {
-        idx = Math.floor(Math.random() * dinoFacts.length);
-      } while (idx === lastIndex && dinoFacts.length > 1);
-      lastIndex = idx;
-      
-      const item = dinoFacts[idx];
-      text.textContent = item.fact;
-      bubble.classList.add('mascot__bubble--visible');
-      showTimeout = setTimeout(() => bubble.classList.remove('mascot__bubble--visible'), 8000);
-    };
-
-    if (bubble.classList.contains('mascot__bubble--visible')) {
-      bubble.classList.remove('mascot__bubble--visible');
-      factDelayTimeout = setTimeout(showNewFact, 400); // Wait for CSS transition (0.4s) to finish
-    } else {
-      showNewFact();
-    }
+    let idx;
+    // Avoid any index seen recently; fall back to just avoiding the last one if pool too small
+    const avoidSet = recentHistory.length < dinoFacts.length ? recentHistory : [recentHistory[recentHistory.length - 1]];
+    do {
+      idx = Math.floor(Math.random() * dinoFacts.length);
+    } while (avoidSet.includes(idx));
+    
+    recentHistory.push(idx);
+    if (recentHistory.length > HISTORY_SIZE) recentHistory.shift();
+    lastIndex = idx;
+    
+    const item = dinoFacts[idx];
+    showMessage(item.fact, 20000, true, 'deet');
     
     resetIdleTimer();
   }
@@ -310,29 +370,56 @@ export function initInteractiveMascot() {
     if (isDizzy) return;
     isDizzy = true;
     
-    clearTimeout(factDelayTimeout);
     playHitSound();
     svg.classList.add('mascot--dizzy');
     mascot.classList.add('mascot--dizzy');
     
-    text.textContent = "Ouch! Seeing stars...";
-    bubble.classList.add('mascot__bubble--visible');
-    clearTimeout(showTimeout);
+    const reaction = dizzyReactions[Math.floor(Math.random() * dizzyReactions.length)];
+    showMessage(reaction, 3000, false, 'dizzy');
     
     setTimeout(() => {
       isDizzy = false;
       svg.classList.remove('mascot--dizzy');
       mascot.classList.remove('mascot--dizzy');
-      showTimeout = setTimeout(() => bubble.classList.remove('mascot__bubble--visible'), 2000);
     }, 2500);
     
     resetIdleTimer();
   }
 
+  // Inject close button dynamically
+  if (bubble && !document.getElementById('mascot-bubble-close')) {
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'mascot__bubble-close';
+    closeBtn.id = 'mascot-bubble-close';
+    closeBtn.setAttribute('aria-label', 'Close bubble');
+    closeBtn.innerHTML = `
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+    `;
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      bubble.classList.remove('mascot__bubble--visible');
+      clearTimeout(showTimeout);
+    });
+    bubble.appendChild(closeBtn);
+  }
+
+  // Close speech bubble when clicking elsewhere
+  document.addEventListener('click', (e) => {
+    if (bubble.classList.contains('mascot__bubble--visible')) {
+      if (!mascot.contains(e.target) && !bubble.contains(e.target)) {
+        bubble.classList.remove('mascot__bubble--visible');
+        clearTimeout(showTimeout);
+      }
+    }
+  });
+
   mascot.addEventListener('click', (e) => {
     if (isDizzy) return;
     // Don't trigger a new fact if the click was inside the bubble itself
     if (e.target.closest('#mascot-bubble')) return;
+    
     triggerFact();
   });
 
