@@ -7,7 +7,7 @@
     "length": "1m",
     "weight": "3 kg",
     "description": "Compsognathus was discovered by Dr. Joseph Oberndorfer in the late 1850s in the Solnhofen limestone of Germany. For over a century, it was famous for being the smallest known dinosaur, about the size of a turkey, and played a crucial role in early debates about the connection between dinosaurs and birds due to its similarities to Archaeopteryx.",
-    "image": "./images/dinos/velociraptor.png",
+    "image": "./images/dinos/compsognathus.png",
     "height": "0.3m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -187,7 +187,7 @@
     "length": "35m",
     "weight": "100,000 kg",
     "description": "Argentinosaurus was discovered by a local rancher in Argentina in 1987. It is widely considered by paleontologists to be the largest and heaviest land animal to have ever walked the Earth. Its sheer size was its primary defense, as few predators would dare attack a fully grown adult.",
-    "image": "./images/dinos/brachiosaurus.png",
+    "image": "./images/dinos/argentinosaurus.png",
     "height": "12.2m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -217,7 +217,7 @@
     "length": "8m",
     "weight": "6000kg",
     "description": "Discovered by Barnum Brown in 1906. Ankylosaurus was the ultimate armored tank of the dinosaur world. Its entire back was covered in thick, bony plates (osteoderms) fused directly to its skeleton. Scientists have noted that even its eyelids were heavily armored to protect its eyes during combat.",
-    "image": "",
+    "image": "./images/dinos/ankylosaurus.png",
     "height": "1.7m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -247,7 +247,7 @@
     "length": "1.8m",
     "weight": "180kg",
     "description": "Discovered in the Gobi Desert by Roy Chapman Andrews in the 1920s. Unlike its later, giant relatives like Triceratops, Protoceratops lacked facial horns and was about the size of a sheep. The discovery of numerous nests, eggs, and juveniles in Mongolia has provided scientists with profound insights into dinosaur herd behavior and growth.",
-    "image": "",
+    "image": "./images/dinos/protoceratops.png",
     "height": "0.6m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -277,7 +277,7 @@
     "length": "1.6m",
     "weight": "33kg",
     "description": "First discovered in 1924 sitting atop a nest of eggs, scientists originally named it the 'Egg Thief' believing it was stealing them. Decades later in the 1990s, new discoveries proved those eggs actually belonged to Oviraptor itself. It wasn't a thief at all, but a fiercely protective parent brooding its own nest, completely revolutionizing how scientists view dinosaur parenting.",
-    "image": "",
+    "image": "./images/dinos/oviraptor.png",
     "height": "1.5m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -307,7 +307,7 @@
     "length": "13m",
     "weight": "8000kg",
     "description": "Discovered in Patagonia, Argentina in 1993 by an amateur fossil hunter. Giganotosaurus shocked the paleontology world by proving to be slightly longer and heavier than the famous T-Rex. Scientists have determined it was the apex predator of South America, likely hunting giant sauropods in coordinated packs.",
-    "image": "",
+    "image": "./images/dinos/giganotosaurus.png",
     "height": "4m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -337,7 +337,7 @@
     "length": "26m",
     "weight": "49000kg",
     "description": "Discovered in 2005 in Patagonia, Argentina, Dreadnoughtus provides the most complete skeleton ever found of a giant titanosaur. Because over 70% of its bones were recovered, scientists have been able to calculate its immense weight with unprecedented accuracy, confirming it as one of the most massive creatures to ever exist.",
-    "image": "",
+    "image": "./images/dinos/dreadnoughtus.png",
     "height": "9m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -367,7 +367,7 @@
     "length": "9m",
     "weight": "1900kg",
     "description": "Discovered in 1884 in Alberta, Canada by Joseph Burr Tyrrell. As a smaller, faster relative of the T-Rex, Albertosaurus has provided vital clues about tyrannosaur pack behavior. A famous 'bonebed' discovery in Dry Island Buffalo Jump Provincial Park contained the remains of 26 Albertosaurus individuals of varying ages, heavily suggesting they lived and hunted in multi-generational packs.",
-    "image": "",
+    "image": "./images/dinos/albertosaurus.png",
     "height": "3m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -397,7 +397,7 @@
     "length": "9m",
     "weight": "3000kg",
     "description": "Discovered in 1911 by Barnum Brown in Alberta, Canada. It is famous for the stunning, hollow, plate-like crest on top of its head, resembling a Corinthian soldier's helmet. Scientists have determined that the crest contained complex nasal passages, acting as a resonating chamber to produce loud, low-frequency honking sounds to communicate across vast distances.",
-    "image": "",
+    "image": "./images/dinos/corythosaurus.png",
     "height": "2.5m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -427,7 +427,7 @@
     "length": "5.5m",
     "weight": "2700kg",
     "description": "Discovered in 1913 in the Dinosaur Provincial Park of Alberta, Canada. Styracosaurus had one of the most wildly elaborate skulls of any dinosaur. It featured a massive nose horn and a stunning array of long, deadly spikes projecting from the back of its neck frill. Scientists believe these spikes were primarily used for dazzling visual displays during mating season, and secondary defense.",
-    "image": "",
+    "image": "./images/dinos/styracosaurus.png",
     "height": "1.8m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -457,7 +457,7 @@
     "length": "0.5m",
     "weight": "1kg",
     "description": "Discovered in 1861 in the Solnhofen limestone of Germany, just two years after Charles Darwin published 'On the Origin of Species'. Archaeopteryx represents one of the most important 'missing links' in paleontology, perfectly capturing the evolutionary transition between non-avian feathered dinosaurs and modern birds. It possessed both dinosaur traits (teeth, long bony tail) and bird traits (flight feathers, wishbone).",
-    "image": "",
+    "image": "./images/dinos/archaeopteryx.png",
     "height": "0.2m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -487,7 +487,7 @@
     "length": "3.3m",
     "weight": "90kg",
     "description": "Discovered by the pioneering paleontologist Mary Anning in England in 1811 when she was just 12 years old. Ichthyosaurus was not a dinosaur, but a marine reptile that perfectly adapted to life in the ocean. Through convergent evolution, it developed a body shape remarkably similar to modern dolphins and tuna, proving that different animals will evolve similar shapes for speed in the water.",
-    "image": "",
+    "image": "./images/dinos/ichthyosaurus.png",
     "height": "0.5m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -517,7 +517,7 @@
     "length": "3.5m",
     "weight": "450kg",
     "description": "Another incredibly famous marine reptile discovered by Mary Anning in 1823 in Dorset, England. Plesiosaurus shocked the scientific community with its bizarre anatomy: a broad, turtle-like body, four massive flippers, and an incredibly long, snake-like neck. Scientists now believe it used its long neck to ambush schools of fish with quick, striking motions.",
-    "image": "",
+    "image": "./images/dinos/plesiosaurus.png",
     "height": "0.8m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -547,7 +547,7 @@
     "length": "9.5m",
     "weight": "2300kg",
     "description": "Discovered in 1877 during the American 'Bone Wars', Allosaurus was the apex predator of the Late Jurassic period in North America. Paleontologists have uncovered vast numbers of Allosaurus skeletons at the Cleveland-Lloyd Dinosaur Quarry in Utah, leading to theories that they may have hunted in loose packs to take down giant sauropods like Diplodocus.",
-    "image": "",
+    "image": "./images/dinos/allosaurus.png",
     "height": "3m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -577,7 +577,7 @@
     "length": "27m",
     "weight": "15000kg",
     "description": "First discovered in 1877 in Colorado by Benjamin Mudge and Samuel Wendell Williston. Diplodocus is famous for its extreme length, possessing one of the longest necks and tails of any dinosaur. The 'double beam' refers to unique chevron bones under its tail vertebrae that provided extra support. Scientists believe it used its incredibly long tail like a bullwhip to create deafening sonic booms to scare off predators.",
-    "image": "",
+    "image": "./images/dinos/diplodocus.png",
     "height": "6m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -607,7 +607,7 @@
     "length": "1.1m",
     "weight": "0.5kg",
     "description": "Discovered in 1996 in the Liaoning Province of China by a local farmer. Sinosauropteryx was a massive breakthrough in paleontology because it was the very first non-avian dinosaur found with clear evidence of feathers. Incredibly, scientists were able to analyze the fossilized melanosomes (pigment cells) to determine its actual color, a first for any dinosaur.",
-    "image": "",
+    "image": "./images/dinos/sinosauropteryx.png",
     "height": "0.3m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -637,7 +637,7 @@
     "length": "1.2m",
     "weight": "1kg",
     "description": "Also discovered in the rich fossil beds of Liaoning, China in the early 2000s. Microraptor completely changed how scientists view the evolution of flight. This tiny dinosaur, about the size of a crow, possessed four wings\u2014long flight feathers on both its arms and its legs. Scientists debate whether it actively flew or gracefully glided from tree to tree.",
-    "image": "",
+    "image": "./images/dinos/microraptor.png",
     "height": "0.4m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -667,7 +667,7 @@
     "length": "9m",
     "weight": "1400kg",
     "description": "Discovered in 2012 in the Liaoning Province of China. Yutyrannus is a spectacular find because it proved that even massive, apex predators could be covered in feathers. As an early relative of the T-Rex, it weighed over a ton and was over 30 feet long, making it the largest known feathered dinosaur.",
-    "image": "",
+    "image": "./images/dinos/yutyrannus.png",
     "height": "3m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -697,7 +697,7 @@
     "length": "22m",
     "weight": "40000kg",
     "description": "Originally discovered in Tanzania, Africa in the early 1900s by Werner Janensch. For decades, it was classified as a species of Brachiosaurus. However, scientists eventually realized it was distinct enough to warrant its own genus. It remains one of the largest dinosaurs known from nearly complete skeleton material, famous for its towering, giraffe-like posture.",
-    "image": "",
+    "image": "./images/dinos/giraffatitan.png",
     "height": "12m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -727,7 +727,7 @@
     "length": "4.5m",
     "weight": "1000kg",
     "description": "Discovered alongside Giraffatitan in the Tendaguru Formation of Tanzania during the German expeditions of 1909\u20131912. Kentrosaurus is a close, smaller relative of the famous Stegosaurus. While Stegosaurus is known for its large plates, Kentrosaurus was armed with a spectacular array of long, deadly spikes running down the back half of its body and tail.",
-    "image": "",
+    "image": "./images/dinos/kentrosaurus.png",
     "height": "1.5m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -757,7 +757,7 @@
     "length": "1m",
     "weight": "10kg",
     "description": "Discovered in 1991 in the Valley of the Moon in Argentina by paleontologist Paul Sereno. Eoraptor is incredibly important because it is one of the earliest known dinosaurs, dating back 230 million years to the dawn of the dinosaur era. Its primitive anatomy gives scientists a perfect look at what the common ancestor of all dinosaurs might have looked like.",
-    "image": "",
+    "image": "./images/dinos/eoraptor.png",
     "height": "0.3m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -787,7 +787,7 @@
     "length": "6m",
     "weight": "350kg",
     "description": "Discovered in 1959 by an Andean goatherd named Victorino Herrera in Argentina. Living alongside Eoraptor, Herrerasaurus was one of the very first apex predators of the dinosaur lineage. While primitive, it already possessed the sharp teeth, bipedal stance, and grasping claws that would define theropod dinosaurs for the next 160 million years.",
-    "image": "",
+    "image": "./images/dinos/herrerasaurus.png",
     "height": "1.5m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -817,7 +817,7 @@
     "length": "6.6m",
     "weight": "2000kg",
     "description": "Discovered in 1981 in the Narmada River valley of Gujarat, India. Rajasaurus is a fascinating example of an abelisaurid, a group of stocky, powerful theropods that dominated the southern continents. Scientists were thrilled to find this apex predator in India, providing crucial evidence of how the Indian subcontinent was connected to Madagascar and Africa millions of years ago.",
-    "image": "",
+    "image": "./images/dinos/rajasaurus.png",
     "height": "2m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -847,7 +847,7 @@
     "length": "6m",
     "weight": "700kg",
     "description": "First discovered in 1932 by Charles Matley and Friedrich von Huene in Jabalpur, India. Indosaurus is known primarily from a partial skull, but it was enough to identify it as a formidable abelisaurid predator. Its discovery helped confirm the widespread presence of these unique predators across the prehistoric southern hemisphere.",
-    "image": "",
+    "image": "./images/dinos/indosaurus.png",
     "height": "2m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -877,7 +877,7 @@
     "length": "12m",
     "weight": "13000kg",
     "description": "Discovered in 1877 in India by Richard Lydekker. Titanosaurus was the very first of the 'titanosaurs' to be named\u2014a massively successful group of sauropods that survived right up until the asteroid impact. Though the original fossils were fragmentary, its discovery opened the door to finding dozens of giant, armored sauropods across the globe.",
-    "image": "",
+    "image": "./images/dinos/titanosaurus.png",
     "height": "3m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -907,7 +907,7 @@
     "length": "35m",
     "weight": "80000kg",
     "description": "Discovered in 1989 in southern India by researchers Yadagiri and Ayyasami. Bruhathkayosaurus is one of the most mysterious and controversial dinosaurs ever found. Based on massive, fragmentary bones (including what was thought to be a tibia larger than a human), some scientists initially proposed it could have been larger than Argentinosaurus.",
-    "image": "",
+    "image": "./images/dinos/bruhathkayosaurus.png",
     "height": "10m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -937,7 +937,7 @@
     "length": "6m",
     "weight": "700kg",
     "description": "Described in 1824 by William Buckland in England. Megalosaurus is incredibly historically significant: it was the very first dinosaur to ever be scientifically described and named! The discovery of its massive jawbone and sharp teeth shocked Victorian England and kick-started the worldwide fascination with prehistoric life.",
-    "image": "",
+    "image": "./images/dinos/megalosaurus.png",
     "height": "2m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -967,7 +967,7 @@
     "length": "12.3m",
     "weight": "8400kg",
     "description": "Tyrannosaurus Rex was discovered by Barnum Brown in 1902 in Hell Creek, Montana. It remains the most heavily studied dinosaur in history. Scientists have discovered that despite its famously small arms, the T-Rex possessed the strongest bite force of any terrestrial animal that has ever lived, capable of crushing bone to extract nutrient-rich marrow.",
-    "image": "",
+    "image": "./images/dinos/tyrannosaurus_rex.png",
     "height": "4m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -997,7 +997,7 @@
     "length": "3m",
     "weight": "35kg",
     "description": "Discovered by Othniel Charles Marsh in 1870 in the Smoky Hill Chalk of Kansas. Pteranodon was not a dinosaur, but a massive flying reptile (pterosaur). It soared over the Western Interior Seaway\u2014a shallow ocean that split North America in half\u2014using its massive wingspan to glide effortlessly while plunging its toothless beak into the water to catch fish.",
-    "image": "",
+    "image": "./images/dinos/pteranodon.png",
     "height": "1.5m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1027,7 +1027,7 @@
     "length": "14m",
     "weight": "7400kg",
     "description": "Originally discovered in Egypt in 1912 by Richard Markgraf. Spinosaurus is one of the most enigmatic predators ever found. Recent discoveries by Nizar Ibrahim have revolutionized our understanding of this beast, proving it was uniquely adapted for a semi-aquatic lifestyle, making it the first known swimming dinosaur, hunting massive fish in ancient river systems.",
-    "image": "",
+    "image": "./images/dinos/spinosaurus.png",
     "height": "4.5m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1057,7 +1057,7 @@
     "length": "1m",
     "weight": "5kg",
     "description": "Discovered in 1978 in Shandong, China by paleontologist Dong Zhiming. This dinosaur holds the prestigious record for having the longest name of any known dinosaur! Despite its enormous 23-letter name, the animal itself was tiny\u2014barely over three feet long and weighing less than a large house cat.",
-    "image": "",
+    "image": "./images/dinos/micropachycephalosaurus.png",
     "height": "0.3m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1087,7 +1087,7 @@
     "length": "10m",
     "weight": "3600kg",
     "description": "Discovered in 1920 in Alberta, Canada by William Parks. Parasaurolophus is instantly recognizable by the magnificent, sweeping tubular crest extending from the back of its skull. Using computer modeling, scientists have pushed air through digital recreations of the crest, revealing it produced deep, resonant, trombone-like sounds to communicate with its herd.",
-    "image": "",
+    "image": "./images/dinos/parasaurolophus.png",
     "height": "3m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1117,7 +1117,7 @@
     "length": "2m",
     "weight": "50kg",
     "description": "Oviraptorosaurs are a fascinating group of highly bird-like, feathered dinosaurs found primarily in Asia and North America. They ranged in size from tiny, turkey-sized creatures to massive, imposing beasts like the Gigantoraptor. Their bizarre, often toothless beaks and elaborate crests make them some of the strangest dinosaurs ever discovered.",
-    "image": "",
+    "image": "./images/dinos/oviraptorosaur.png",
     "height": "1m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1147,7 +1147,7 @@
     "length": "7m",
     "weight": "500kg",
     "description": "Discovered in 1991 in Utah by Jim Kirkland. Utahraptor is the largest known member of the dromaeosaur (raptor) family. Discovered around the same time 'Jurassic Park' was being filmed, it proved that giant, terrifying raptors actually did exist! It was an incredibly heavily built predator designed for grappling and taking down large prey.",
-    "image": "",
+    "image": "./images/dinos/utahraptor.png",
     "height": "2m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1177,7 +1177,7 @@
     "length": "4.5m",
     "weight": "450kg",
     "description": "Discovered in the late 1850s in North America. Pachycephalosaurus is the undisputed king of the 'bone-head' dinosaurs. Its skull was topped with a solid dome of bone up to 10 inches thick! For decades, scientists debated if they rammed their heads together like bighorn sheep. Recent studies of healed bone lesions strongly suggest they did indeed engage in violent head-butting combat.",
-    "image": "",
+    "image": "./images/dinos/pachycephalosaurus.png",
     "height": "1.5m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1207,7 +1207,7 @@
     "length": "6m",
     "weight": "200kg",
     "description": "Discovered in 1971 in Texas by Douglas A. Lawson. Quetzalcoatlus was not a dinosaur, but an azhdarchid pterosaur\u2014and one of the largest flying animals of all time. Named after the Aztec feathered serpent god, this colossal creature was as tall as a modern giraffe when standing on the ground, using its massive beak to hunt small dinosaurs and mammals like a giant, terrifying stork.",
-    "image": "",
+    "image": "./images/dinos/quetzalcoatlus.png",
     "height": "5m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1237,7 +1237,7 @@
     "length": "10m",
     "weight": "5000kg",
     "description": "First discovered in 1948 in the Gobi Desert of Mongolia by a Soviet expedition. Therizinosaurus is one of the most bizarre dinosaurs ever found. Early scientists thought its massive, three-foot-long fossilized claws belonged to a giant turtle! We now know it was a huge, pot-bellied, feathered theropod that used its terrifying claws not for hunting, but to pull down high tree branches.",
-    "image": "",
+    "image": "./images/dinos/therizinosaurus.png",
     "height": "4.5m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1267,7 +1267,7 @@
     "length": "10m",
     "weight": "3000kg",
     "description": "Discovered in 1822 in Sussex, England by Gideon Mantell (and his wife Mary Ann). Iguanodon was the second dinosaur ever formally named and helped kickstart the entire field of paleontology. Famous for its distinctive thumb spike, early scientists mistakenly thought this spike belonged on its nose like a rhinoceros horn!",
-    "image": "",
+    "image": "./images/dinos/iguanodon.png",
     "height": "3m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1297,7 +1297,7 @@
     "length": "8m",
     "weight": "1,350 kg",
     "description": "Discovered in 1984 by renowned paleontologist Jos\u00e9 Bonaparte in Patagonia, Argentina. Carnotaurus is instantly recognizable by the two thick, bull-like horns protruding from above its eyes. Unlike the heavy, bone-crushing T-Rex, Carnotaurus was built for pure speed, earning it the nickname 'the cheetah of the Cretaceous'.",
-    "image": "",
+    "image": "./images/dinos/carnotaurus.png",
     "height": "2.8m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1327,7 +1327,7 @@
     "length": "21m",
     "weight": "16,400 kg",
     "description": "Discovered in 1877 by Othniel Charles Marsh in Colorado. For over a century, a massive naming mix-up led the public to know this dinosaur by its invalid name, 'Brontosaurus' (though Brontosaurus was later reinstated as a separate genus). Apatosaurus was a massive, heavily built sauropod that dominated the Late Jurassic plains of North America.",
-    "image": "",
+    "image": "./images/dinos/apatosaurus.png",
     "height": "7.3m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1357,7 +1357,7 @@
     "length": "7.5m",
     "weight": "1,200 kg",
     "description": "Discovered in 1983 by amateur fossil hunter William Walker in a clay pit near London. Baryonyx revolutionized our understanding of theropods by revealing that some dinosaurs were primarily fish-eaters (piscivores). It had a long, narrow snout filled with cone-shaped teeth, remarkably similar to a modern gharial crocodile.",
-    "image": "",
+    "image": "./images/dinos/baryonyx.png",
     "height": "2.6m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1387,7 +1387,7 @@
     "length": "7m",
     "weight": "400 kg",
     "description": "Discovered in 1942 in northern Arizona by Jesse Williams. Dilophosaurus is famous for the stunning pair of rounded, plate-like crests on its skull. Contrary to its popular depiction in movies (like Jurassic Park), it did *not* have a neck frill, it was *not* the size of a dog, and there is zero evidence it could spit venom. It was actually a large, 20-foot apex predator of the Early Jurassic.",
-    "image": "",
+    "image": "./images/dinos/dilophosaurus.png",
     "height": "2.4m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1417,7 +1417,7 @@
     "length": "3.4m",
     "weight": "73 kg",
     "description": "Discovered in 1964 by paleontologist John Ostrom in Montana. The discovery of Deinonychus completely revolutionized paleontology and sparked the 'Dinosaur Renaissance'. Because it was so obviously agile, fast, and bird-like, Ostrom proposed that dinosaurs were warm-blooded, active animals rather than slow, sluggish reptiles.",
-    "image": "",
+    "image": "./images/dinos/deinonychus.png",
     "height": "1.2m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1447,7 +1447,7 @@
     "length": "6m",
     "weight": "440 kg",
     "description": "Discovered in the early 1960s in the Gobi Desert of Mongolia by Polish-Mongolian expeditions. Gallimimus was an 'ornithomimid', or ostrich-mimic dinosaur. Lacking teeth completely, it had a long neck, a small head, and long, powerful legs perfectly adapted for high-speed running to escape the terrifying Tarbosaurus.",
-    "image": "",
+    "image": "./images/dinos/gallimimus.png",
     "height": "2.1m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1477,7 +1477,7 @@
     "length": "2m",
     "weight": "50 kg",
     "description": "First discovered in 1856 by Ferdinand Vandeveer Hayden in North America. For over a century, Troodon was considered the smartest dinosaur to have ever lived, possessing an exceptionally large brain-to-body mass ratio. However, in recent years, scientists have debated if 'Troodon' is a valid genus, reclassifying many of its fossils into other closely related species like Stenonychosaurus.",
-    "image": "",
+    "image": "./images/dinos/troodon.png",
     "height": "0.7m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1507,7 +1507,7 @@
     "length": "12m",
     "weight": "6,000 kg",
     "description": "First discovered in 1927 in North Africa, its original fossils were tragically destroyed during World War II. In 1995, Paul Sereno rediscovered it in the Sahara Desert. Carcharodontosaurus was a colossal predator, slightly longer than the T-Rex, with jaws packed full of terrifying, serrated teeth that closely resembled those of a great white shark.",
-    "image": "",
+    "image": "./images/dinos/carcharodontosaurus.png",
     "height": "4.2m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1537,7 +1537,7 @@
     "length": "9m",
     "weight": "2,500 kg",
     "description": "Discovered in 1978 in Montana by paleontologist Jack Horner. The discovery of 'Egg Mountain'\u2014a massive nesting ground containing Maiasaura eggs, embryos, and juveniles\u2014was a monumental breakthrough. It provided the very first definitive proof that some dinosaurs cared for and fed their young long after they hatched, completely changing how we view dinosaur behavior.",
-    "image": "",
+    "image": "./images/dinos/maiasaura.png",
     "height": "3.1m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1567,7 +1567,7 @@
     "length": "12m",
     "weight": "4,000 kg",
     "description": "Discovered in 1917 in southern Alberta, Canada. Edmontosaurus is one of the best-understood dinosaurs in the world due to the staggering number of fossils found, including several incredible 'mummies' preserving skin, scales, and soft tissue. It was a massive, 40-foot-long duck-billed dinosaur that served as the primary food source for the T-Rex.",
-    "image": "",
+    "image": "./images/dinos/edmontosaurus.png",
     "height": "4.2m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1597,7 +1597,7 @@
     "length": "6m",
     "weight": "900 kg",
     "description": "Discovered in 1884 by Othniel Charles Marsh in Colorado. Ceratosaurus is easily identifiable by the prominent, blade-like horn sitting directly on its snout, and the row of bony armor plates (osteoderms) running down its back. It shared its Late Jurassic habitat with the much larger Allosaurus, likely hunting smaller prey or scavenging to avoid competition.",
-    "image": "",
+    "image": "./images/dinos/ceratosaurus.png",
     "height": "2.1m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1627,7 +1627,7 @@
     "length": "9m",
     "weight": "2,600 kg",
     "description": "Discovered in 1984 in the La Amarga Formation of Patagonia, Argentina. This incredibly strange sauropod was relatively small for a long-necked dinosaur, but it sported two parallel rows of incredibly long, backward-pointing neural spines running down its neck and back. These spines make it one of the most visually striking dinosaurs ever found.",
-    "image": "",
+    "image": "./images/dinos/amargasaurus.png",
     "height": "3.1m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1657,7 +1657,7 @@
     "length": "6m",
     "weight": "2,000 kg",
     "description": "Discovered in 1889 in Wyoming by Othniel Charles Marsh. Nodosaurus was an armored dinosaur closely related to Ankylosaurus, but it completely lacked the famous tail club. Instead, it relied entirely on its impenetrable armor plating, dropping flat to the ground to protect its soft underbelly when threatened by predators.",
-    "image": "",
+    "image": "./images/dinos/nodosaurus.png",
     "height": "2.1m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1687,7 +1687,7 @@
     "length": "35m",
     "weight": "25,000 kg",
     "description": "Discovered in 1952 during highway construction in the Sichuan Province of China. Mamenchisaurus holds the record for having one of the longest necks in proportion to its body size of any animal in Earth's history! Its neck alone made up nearly half of its entire 65-foot body length.",
-    "image": "",
+    "image": "./images/dinos/mamenchisaurus.png",
     "height": "12.2m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1717,7 +1717,7 @@
     "length": "18m",
     "weight": "18,000 kg",
     "description": "Discovered in 1877 by Othniel Charles Marsh in Colorado. Camarasaurus is the most common sauropod found in the famous Morrison Formation of North America. It had a remarkably short, boxy skull with large, spoon-shaped teeth perfectly adapted for eating much tougher vegetation than its neighbors Diplodocus and Apatosaurus.",
-    "image": "",
+    "image": "./images/dinos/camarasaurus.png",
     "height": "6.3m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1747,7 +1747,7 @@
     "length": "5m",
     "weight": "475 kg",
     "description": "Discovered in 1981 by a joint Canadian-Chinese expedition in Xinjiang, China. This medium-sized predator is instantly recognizable by the single, highly ornate bony crest running down the entire midline of its snout. This crest was highly pneumatized (filled with air pockets), suggesting it was fragile and used exclusively for visual display.",
-    "image": "",
+    "image": "./images/dinos/monolophosaurus.png",
     "height": "1.8m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1777,7 +1777,7 @@
     "length": "7m",
     "weight": "2,200 kg",
     "description": "Discovered in 1965 in Niger, Africa by French paleontologist Philippe Taquet. Ouranosaurus was a fascinating ornithopod (iguanodontian) that evolved in the scorching deserts of prehistoric Africa. Its most striking feature was a tall, bony sail running down its back, remarkably similar to the predatory Spinosaurus which lived in the same region.",
-    "image": "",
+    "image": "./images/dinos/ouranosaurus.png",
     "height": "2.4m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1807,7 +1807,7 @@
     "length": "2m",
     "weight": "20 kg",
     "description": "Discovered in 1922 in Mongolia by the American Museum of Natural History expedition. Psittacosaurus is one of the most completely known dinosaur genera, with over 400 fossil specimens found ranging from hatchlings to adults. This small, bipedal herbivore is famous for its powerful, parrot-like beak used to crack tough nuts and seeds.",
-    "image": "",
+    "image": "./images/dinos/psittacosaurus.png",
     "height": "0.7m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1837,7 +1837,7 @@
     "length": "8m",
     "weight": "2,800 kg",
     "description": "Discovered in 1963 by a grazier near the town of Muttaburra in Queensland, Australia. Muttaburrasaurus was a large ornithopod dinosaur that roamed the forests of ancient Australia when the continent was still attached to Antarctica. It is widely known for its large, hollow, bony bump on its snout.",
-    "image": "",
+    "image": "./images/dinos/muttaburrasaurus.png",
     "height": "2.8m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1867,7 +1867,7 @@
     "length": "2m",
     "weight": "10 kg",
     "description": "Discovered in 1989 in Dinosaur Cove, Australia by paleontologists Thomas Rich and Patricia Vickers-Rich (who named it after their daughter, Leaellyn). Because Australia was located deep within the Antarctic Circle during the Early Cretaceous, Leaellynasaura evolved unique adaptations to survive months of total freezing darkness during the polar winter.",
-    "image": "",
+    "image": "./images/dinos/leaellynasaura.png",
     "height": "0.7m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1897,7 +1897,7 @@
     "length": "12m",
     "weight": "7,000 kg",
     "description": "Discovered in 1980 in the Salta Province of Argentina by Jos\u00e9 Bonaparte. Saltasaurus shocked the paleontology community because it provided the first conclusive proof that some sauropods were covered in bony armor plating (osteoderms). Before this discovery, scientists believed all sauropods relied entirely on their massive size for defense.",
-    "image": "",
+    "image": "./images/dinos/saltasaurus.png",
     "height": "4.2m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1927,7 +1927,7 @@
     "length": "15m",
     "weight": "16,000 kg",
     "description": "Discovered in 1973 in the Shandong Peninsula of China. Shantungosaurus holds the incredible title of being the largest known hadrosaur (duck-billed dinosaur) and arguably the largest bipedal animal to have ever lived on Earth. Reaching nearly 50 feet in length, it weighed as much as a fully grown T-Rex.",
-    "image": "",
+    "image": "./images/dinos/shantungosaurus.png",
     "height": "5.2m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1957,7 +1957,7 @@
     "length": "7m",
     "weight": "2,800 kg",
     "description": "Discovered in 1977 during the construction of a dam in Sichuan, China. Tuojiangosaurus is the most famous Asian relative of the American Stegosaurus. It provides a fascinating look at how plate-backed dinosaurs evolved on separate continents, featuring tall, sharply pointed plates that were far more triangular than those of its American cousin.",
-    "image": "",
+    "image": "./images/dinos/tuojiangosaurus.png",
     "height": "2.4m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -1987,7 +1987,7 @@
     "length": "8m",
     "weight": "2,500 kg",
     "description": "Discovered in 1914 by Charles H. Sternberg in Alberta, Canada. Gorgosaurus was a terrifying tyrannosaurid that lived slightly earlier and was more lightly built than the T-Rex. Because dozens of complete skeletons have been found, it is actually one of the best-represented tyrannosaurs in the fossil record, providing invaluable data on how these apex predators grew from juveniles to adults.",
-    "image": "",
+    "image": "./images/dinos/gorgosaurus.png",
     "height": "2.8m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -2017,7 +2017,7 @@
     "length": "0.6m",
     "weight": "1kg",
     "description": "Peltosaurus is actually a genus of extinct anguid lizard, not a dinosaur! However, in the context of prehistoric armor, its name (Shield Lizard) perfectly describes its heavily armored, osteoderm-covered body. It lived millions of years after the dinosaurs, thriving during the Eocene and Oligocene epochs in North America.",
-    "image": "",
+    "image": "./images/dinos/peltosaurus.png",
     "height": "0.1m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -2047,7 +2047,7 @@
     "length": "4.5m",
     "weight": "1,200 kg",
     "description": "Discovered in 2007 in the Grand Staircase-Escalante National Monument of Utah. Kosmoceratops has arguably the most bizarre and elaborate skull of any known dinosaur. It possessed a staggering total of 15 horns and spikes adorning its head, leading paleontologists to nickname it the 'most ornamented dinosaur ever found'.",
-    "image": "",
+    "image": "./images/dinos/kosmoceratops.png",
     "height": "1.6m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -2077,7 +2077,7 @@
     "length": "6.5m",
     "weight": "465 kg",
     "description": "Discovered in 1990 by William Hammer on Mount Kirkpatrick, Antarctica\u2014at an elevation of 13,000 feet! Cryolophosaurus is famously known as the first meat-eating dinosaur discovered in Antarctica. It is instantly recognizable by the bizarre, forward-curving bony crest on its head, which earned it the humorous nickname 'Elvisaurus' due to its resemblance to an Elvis Presley pompadour.",
-    "image": "",
+    "image": "./images/dinos/cryolophosaurus.png",
     "height": "2.3m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -2107,7 +2107,7 @@
     "length": "7m",
     "weight": "1,100 kg",
     "description": "Discovered in 1896 on the isolated island of Madagascar. Majungasaurus was the apex predator of its unique island ecosystem. Because Madagascar was cut off from the rest of the world, this abelisaurid evolved highly specialized traits, including an incredibly stocky body, practically useless stubby arms, and one of the most brutal, bone-crushing bites of any dinosaur.",
-    "image": "",
+    "image": "./images/dinos/majungasaurus.png",
     "height": "2.4m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -2137,7 +2137,7 @@
     "length": "3m",
     "weight": "75 kg",
     "description": "Discovered in 2006 in the Junggar Basin of Xinjiang, China. Guanlong is an incredibly important dinosaur because it is one of the earliest known ancestors of the Tyrannosaurus Rex. Unlike its massive, bone-crushing descendants, Guanlong was small, agile, likely covered in feathers, and sported a spectacular, fragile crest on its snout.",
-    "image": "",
+    "image": "./images/dinos/guanlong.png",
     "height": "1.0m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -2167,7 +2167,7 @@
     "length": "3m",
     "weight": "15-20 kg",
     "description": "First discovered in 1881 by David Baldwin in New Mexico. Coelophysis was one of the earliest true dinosaurs to roam the Earth during the Triassic period. A massive bonebed found at Ghost Ranch in 1947 contained hundreds of complete skeletons, revealing that these small, agile predators gathered in massive packs or flocks near water sources.",
-    "image": "",
+    "image": "./images/dinos/coelophysis.png",
     "height": "1.0m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -2197,7 +2197,7 @@
     "length": "5-10m",
     "weight": "600-4,000 kg",
     "description": "Discovered in 1834 in Germany by Johann Friedrich Engelhardt. Plateosaurus was one of the very first large dinosaurs to evolve. As a 'prosauropod', it represents the evolutionary step between small bipedal runners and the massive, four-legged long-necked giants like Brachiosaurus that would dominate the later Jurassic period.",
-    "image": "",
+    "image": "./images/dinos/plateosaurus.png",
     "height": "178.5m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -2227,7 +2227,7 @@
     "length": "8m",
     "weight": "1,300 kg",
     "description": "Discovered in 1924 in the Elliot Formation of South Africa by Sidney H. Haughton. Melanorosaurus marks a critical turning point in dinosaur evolution. It was one of the very first 'sauropodomorphs' to grow so incredibly large and heavy that it was forced to walk on all four legs permanently, paving the way for the true sauropod giants.",
-    "image": "",
+    "image": "./images/dinos/melanorosaurus.png",
     "height": "2.8m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -2257,7 +2257,7 @@
     "length": "2m",
     "weight": "30 kg",
     "description": "Discovered in 1936 in the Santa Maria Formation of Brazil by Llewellyn Ivor Price. Staurikosaurus is one of the absolute oldest dinosaurs ever discovered, dating back approximately 233 million years to the Late Triassic. It was a primitive, fast-running predator that sheds light on the very dawn of the dinosaur lineage.",
-    "image": "",
+    "image": "./images/dinos/staurikosaurus.png",
     "height": "0.7m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -2287,7 +2287,7 @@
     "length": "1m",
     "weight": "1 kg",
     "description": "Discovered in 1911 in the Stubensandstein of Germany by Eberhard Fraas. Procompsognathus was a tiny, primitive theropod that hunted insects and small lizards in the Late Triassic. It is famously known to the public as the 'Compys' from the novel and film 'The Lost World: Jurassic Park', though the real animal was quite different from its fictional counterpart.",
-    "image": "",
+    "image": "./images/dinos/procompsognathus.png",
     "height": "0.3m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -2317,7 +2317,7 @@
     "length": "10m",
     "weight": "3,000 kg",
     "description": "Discovered in 1969 by Jos\u00e9 Bonaparte in the La Rioja Province of Argentina. Riojasaurus was a massive, heavily built early herbivore from the Late Triassic. Unlike its contemporary Plateosaurus, Riojasaurus was so incredibly large and heavy that it was physically incapable of rearing up on its hind legs, forced to permanently walk on all fours.",
-    "image": "",
+    "image": "./images/dinos/riojasaurus.png",
     "height": "3.5m",
     "scientificClassification": {
       "superorder": "Dinosauria",
@@ -2347,7 +2347,7 @@
     "length": "5m",
     "weight": "130 kg",
     "description": "Discovered in 1934 in the Trossingen Formation of Germany, and named after the German scientist Hugo R\u00fchle von Lilienstern. Liliensternus was a large, highly active predator of the Late Triassic period. It bridges the evolutionary gap between the primitive, small Coelophysis and the massive, dominant apex predators of the later Jurassic.",
-    "image": "",
+    "image": "./images/dinos/liliensternus.png",
     "height": "1.8m",
     "scientificClassification": {
       "superorder": "Dinosauria",
