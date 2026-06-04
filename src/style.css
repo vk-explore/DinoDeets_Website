@@ -2216,27 +2216,37 @@ body {
   align-items: flex-end;
   justify-content: center;
   cursor: help;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  border: 1.5px dashed transparent;
+  border-radius: var(--radius-sm, 6px);
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.meter__entity:hover {
+  border-color: var(--dino-color, var(--color-amber));
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .meter__entity-img {
   height: 100%;
   width: auto;
   object-position: bottom center;
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.45));
   transition: filter 0.3s ease;
   overflow: visible;
 }
 
 .meter__entity:hover .meter__entity-img {
-  filter: drop-shadow(0 0 10px var(--dino-color, var(--color-amber))) drop-shadow(0 4px 12px rgba(0,0,0,0.7));
+  filter: brightness(1.08) drop-shadow(0 4px 8px rgba(0,0,0,0.45));
 }
 
 .meter__entity--human .meter__entity-img {
   filter: brightness(0.4) sepia(0.2) drop-shadow(0 4px 6px rgba(0,0,0,0.5));
 }
 .meter__entity--human:hover .meter__entity-img {
-  filter: brightness(0.6) sepia(0.2) drop-shadow(0 0 6px rgba(255,255,255,0.4));
+  filter: brightness(0.55) sepia(0.2) drop-shadow(0 4px 6px rgba(0,0,0,0.5));
 }
 
 /* Entity Tooltip */
@@ -3219,120 +3229,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* ===== DINO CREATOR ===== */
-.dino-creator {
-  background: var(--color-bg-secondary);
-}
 
-.creator__container {
-  display: grid;
-  grid-template-columns: 400px 1fr;
-  gap: 32px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.creator__preview {
-  background: var(--color-surface);
-  border-radius: var(--radius-card);
-  padding: 24px;
-  text-align: center;
-  border: 1px solid rgba(212, 168, 67, 0.15);
-  position: sticky;
-  top: 100px;
-}
-
-.creator__dino-name {
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  color: var(--color-amber);
-  margin-bottom: 12px;
-}
-
-#creator-canvas {
-  width: 100%;
-  height: auto;
-  border-radius: var(--radius-sm);
-  background: var(--color-bg-primary);
-}
-
-.creator__randomize {
-  margin-top: 16px;
-}
-
-.creator__controls {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.creator__cat-title {
-  font-family: var(--font-display);
-  font-size: 1rem;
-  color: var(--color-amber);
-  margin-bottom: 10px;
-}
-
-.creator__options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.creator__option {
-  padding: 10px 16px;
-  border-radius: var(--radius-sm);
-  background: var(--color-bg-primary);
-  border: 2px solid rgba(212, 168, 67, 0.1);
-  color: var(--color-text-primary);
-  cursor: pointer;
-  transition: all 0.3s var(--ease-bounce);
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-
-.creator__option:hover {
-  border-color: var(--color-amber);
-  transform: translateY(-2px);
-}
-
-.creator__option--active {
-  border-color: var(--color-amber);
-  background: rgba(212, 168, 67, 0.15);
-  color: var(--color-amber);
-}
-
-.creator__option-desc {
-  display: block;
-  font-size: 0.7rem;
-  color: var(--color-text-muted);
-  font-weight: 400;
-  margin-top: 2px;
-}
-
-.creator__colors {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.creator__color {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  cursor: pointer;
-  border: 3px solid transparent;
-  transition: all 0.2s var(--ease-bounce);
-}
-
-.creator__color:hover {
-  transform: scale(1.2);
-}
-
-.creator__color--active {
-  border-color: var(--color-text-primary);
-  transform: scale(1.15);
-}
 
 /* ===== FAN ART GALLERY ===== */
 .fan-art {
@@ -3702,13 +3599,6 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .creator__container {
-    grid-template-columns: 1fr;
-  }
-
-  .creator__preview {
-    position: static;
-  }
 
   .gallery__grid {
     grid-template-columns: 1fr;
@@ -3796,19 +3686,20 @@ body {
 }
 
 .nav__submenu-link {
+  display: block;
   color: var(--color-text-primary);
   text-decoration: none;
   padding: 10px 20px;
   font-family: var(--font-accent);
   font-size: 1rem;
-  transition: all 0.2s ease;
+  transition: all 0.2s var(--ease-bounce);
   white-space: nowrap;
 }
 
 .nav__submenu-link:hover {
   background: rgba(212, 168, 67, 0.15);
   color: var(--color-amber);
-  transform: translateX(4px);
+  padding-left: 24px;
 }
 
 /* ===== ART CARDS ===== */
@@ -4191,6 +4082,14 @@ body {
 /* ===== DINO DETAIL PAGE ===== */
 .dino-detail-page {
   padding: 100px 24px 80px;
+}
+
+.dino-detail-page:not(.origin-page) {
+  padding: 80px 24px 80px;
+}
+
+.dino-detail-section {
+  padding-top: 0;
 }
 
 .dino-detail__back-link {
@@ -4845,6 +4744,38 @@ body {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.dd-minimap-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: radial-gradient(circle, #0a1f12 0%, #050a06 100%);
+  border-radius: 4px;
+}
+
+.dd-minimap-svg path {
+  fill: #223f2b;
+  stroke: #0a170e;
+  stroke-width: 1px;
+}
+
+.dd-minimap-pin-ring {
+  fill: rgba(212, 168, 67, 0.25);
+  pointer-events: none;
+  animation: ddPinPulse 2s ease-in-out infinite;
+}
+
+.dd-minimap-pin-dot {
+  fill: var(--color-amber);
+  pointer-events: none;
+  stroke: #ffffff;
+  stroke-width: 1px;
+}
+
+@keyframes ddPinPulse {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 0.75; }
 }
 
 /* Timeline */

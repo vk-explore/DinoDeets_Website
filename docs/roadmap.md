@@ -31,7 +31,7 @@
 - [x] Dino Timeline Explorer (vertical scroll refactor)
 
 ## ✅ Phase 4: Advanced (v3.0)
-- [x] "Dino Creator" — design your own dinosaur (Canvas)
+- [x] "Dino Creator" — design your own dinosaur (Canvas - Removed)
 - [x] Fan Art gallery (lightbox)
 - [x] Coloring pages (downloadable WebP sheets)
 - [x] Auto-generated dino names

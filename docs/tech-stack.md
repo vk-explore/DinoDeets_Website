@@ -10,7 +10,7 @@
 
 ## Key APIs & Techniques
 - **YouTube RSS Feed** — Auto-fetch episodes from @dinodeets channel (via rss2json proxy)
-- **Canvas API** — Fossil Dig mini-game + Dino Creator drawing engine
+- **Canvas API** — Fossil Dig mini-game
 - **Intersection Observer** — Scroll-triggered entrance animations
 - **CSS Custom Properties** — Theming and design tokens
 - **Range Input** — Dino-o-Meter size comparison slider
@@ -31,10 +31,8 @@ DinoDeets_Website/
 ├── scripts/                # Helper scripts (build_json.js, remove_matte.py)
 ├── docs/                   # Documentation files
 ├── games/                  # Games category pages
-│   ├── index.html          
 │   ├── fossil-dig.html
-│   ├── dino-quiz.html
-│   └── dino-creator.html
+│   └── dino-quiz.html
 ├── explore/                # Explore category pages
 │   ├── dino-map.html
 │   ├── dino-timeline.html
@@ -59,7 +57,6 @@ DinoDeets_Website/
 │       ├── quiz.json           # Quiz questions
 │       ├── glossary.json       # Dictionary terms
 │       ├── timeline.json       # Geological timeline data
-│       ├── dino-creator.json   # Creator options & naming parts
 │       └── art.json            # Fan art gallery & coloring files
 └── public/
     ├── fonts/              # Custom fonts (Adumu)
@@ -82,7 +79,7 @@ DinoDeets_Website/
 | Timeline | Horizontal scroll through geological eras |
 | Dictionary | A-Z glossary with search & letter filter |
 | Ask Devaansh | Question submission form |
-| **Dino Creator** | Canvas drawing with 5 head/body/tail/special options + 8 colors |
+
 | **Fan Art Gallery** | Community art grid with lightbox overlay |
 | **Coloring Pages** | Downloadable line art for printing |
 | Mascot | Floating companion with speech bubbles |

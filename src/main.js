@@ -8,10 +8,8 @@ import quizQuestions from './data/quiz.json';
 import dinoGlossary from './data/glossary.json';
 import timelineData from './data/timeline.json';
 import dinoData from './data/encyclopedia.json';
-import dinoCreatorData from './data/dino-creator.json';
 import artData from './data/art.json';
 
-const { creatorParts, dinoNameParts } = dinoCreatorData;
 const { fanArtGallery, coloringPages } = artData;
 
 // Dino image mapping for Random Deet
@@ -1131,168 +1129,7 @@ function initAskForm() {
   });
 }
 
-// ===== DINO CREATOR =====
-function initCreator() {
-  const canvas = document.getElementById('creator-canvas');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
 
-  const state = {
-    head: creatorParts.heads[0],
-    body: creatorParts.bodies[0],
-    tail: creatorParts.tails[0],
-    special: creatorParts.specials[0],
-    color: creatorParts.colors[0],
-  };
-
-  function genName() {
-    const p = dinoNameParts;
-    return `${p.prefixes[Math.floor(Math.random()*p.prefixes.length)]}${p.roots[Math.floor(Math.random()*p.roots.length)]} ${p.titles[Math.floor(Math.random()*p.titles.length)]}`;
-  }
-
-  function drawDino() {
-    const w = canvas.width, h = canvas.height;
-    ctx.clearRect(0, 0, w, h);
-    const c = state.color;
-    const cx = w / 2, cy = h / 2;
-    const bodyScale = state.body.scale;
-
-    // Body
-    ctx.fillStyle = c;
-    ctx.beginPath();
-    ctx.ellipse(cx, cy + 20, 70 * bodyScale, 50 * bodyScale, 0, 0, Math.PI * 2);
-    ctx.fill();
-
-    // Legs
-    ctx.fillStyle = c;
-    [-30, 30].forEach(ox => {
-      ctx.beginPath();
-      ctx.roundRect(cx + ox - 10, cy + 50 * bodyScale, 20, 40, 8);
-      ctx.fill();
-    });
-
-    // Tail
-    ctx.strokeStyle = c; ctx.lineWidth = 12; ctx.lineCap = 'round';
-    ctx.beginPath();
-    ctx.moveTo(cx - 70 * bodyScale, cy + 20);
-    const tailEnds = { club: [-130, cy+10], spike: [-140, cy-10], whip: [-150, cy+30], fan: [-120, cy-20], short: [-100, cy+15] };
-    const te = tailEnds[state.tail.id] || tailEnds.whip;
-    ctx.quadraticCurveTo(cx - 100 * bodyScale, cy - 10, cx + te[0], te[1]);
-    ctx.stroke();
-    // Tail end
-    if (state.tail.id === 'club') { ctx.beginPath(); ctx.arc(cx + te[0], te[1], 15, 0, Math.PI*2); ctx.fillStyle = c; ctx.fill(); }
-    if (state.tail.id === 'spike') { for (let i = 0; i < 3; i++) { ctx.beginPath(); ctx.moveTo(cx+te[0]+i*8, te[1]); ctx.lineTo(cx+te[0]+i*8+4, te[1]-15); ctx.lineTo(cx+te[0]+i*8+8, te[1]); ctx.fillStyle = c; ctx.fill(); } }
-    if (state.tail.id === 'fan') { ctx.beginPath(); ctx.arc(cx+te[0], te[1], 20, -0.5, 0.5); ctx.fillStyle = c; ctx.fill(); }
-
-    // Head
-    ctx.fillStyle = c;
-    const headX = cx + 60 * bodyScale, headY = cy - 20;
-    if (state.head.id === 'rex') {
-      ctx.beginPath(); ctx.ellipse(headX + 20, headY - 10, 35, 25, 0.2, 0, Math.PI*2); ctx.fill();
-      ctx.fillStyle = '#0E1A16'; ctx.beginPath(); ctx.arc(headX + 35, headY - 20, 4, 0, Math.PI*2); ctx.fill();
-      ctx.strokeStyle = '#0E1A16'; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(headX+10, headY); ctx.lineTo(headX+45, headY-2); ctx.stroke();
-    } else if (state.head.id === 'tri') {
-      ctx.beginPath(); ctx.ellipse(headX + 15, headY, 30, 22, 0.1, 0, Math.PI*2); ctx.fill();
-      ctx.fillStyle = c; ctx.beginPath(); ctx.moveTo(headX+30, headY-20); ctx.lineTo(headX+38, headY-40); ctx.lineTo(headX+22, headY-20); ctx.fill();
-      ctx.beginPath(); ctx.moveTo(headX+35, headY-8); ctx.lineTo(headX+50, headY-20); ctx.lineTo(headX+35, headY+2); ctx.fill();
-      ctx.fillStyle = '#0E1A16'; ctx.beginPath(); ctx.arc(headX+25, headY-8, 3, 0, Math.PI*2); ctx.fill();
-    } else if (state.head.id === 'raptor') {
-      ctx.beginPath(); ctx.ellipse(headX + 20, headY - 5, 28, 18, 0.3, 0, Math.PI*2); ctx.fill();
-      ctx.fillStyle = '#0E1A16'; ctx.beginPath(); ctx.arc(headX+30, headY-14, 4, 0, Math.PI*2); ctx.fill();
-    } else if (state.head.id === 'brachio') {
-      ctx.strokeStyle = c; ctx.lineWidth = 16;
-      ctx.beginPath(); ctx.moveTo(headX-10, headY+10); ctx.quadraticCurveTo(headX+20, headY-60, headX+10, headY-80); ctx.stroke();
-      ctx.fillStyle = c; ctx.beginPath(); ctx.ellipse(headX+10, headY-85, 18, 12, 0, 0, Math.PI*2); ctx.fill();
-      ctx.fillStyle = '#0E1A16'; ctx.beginPath(); ctx.arc(headX+18, headY-90, 3, 0, Math.PI*2); ctx.fill();
-    } else {
-      ctx.beginPath(); ctx.ellipse(headX + 15, headY - 5, 25, 20, 0.2, 0, Math.PI*2); ctx.fill();
-      ctx.fillStyle = '#0E1A16'; ctx.beginPath(); ctx.arc(headX+25, headY-15, 3, 0, Math.PI*2); ctx.fill();
-    }
-
-    // Special
-    ctx.fillStyle = c; ctx.globalAlpha = 0.7;
-    if (state.special.id === 'wings') {
-      ctx.beginPath(); ctx.moveTo(cx, cy); ctx.quadraticCurveTo(cx-80, cy-70, cx-50, cy-30); ctx.fill();
-      ctx.beginPath(); ctx.moveTo(cx, cy); ctx.quadraticCurveTo(cx+80, cy-70, cx+50, cy-30); ctx.fill();
-    }
-    if (state.special.id === 'armor') {
-      for (let i = 0; i < 5; i++) { ctx.beginPath(); ctx.arc(cx - 30 + i*15, cy - 25*bodyScale, 8, 0, Math.PI*2); ctx.fill(); }
-    }
-    if (state.special.id === 'horns') {
-      [cx-20, cx, cx+20].forEach(x => { ctx.beginPath(); ctx.moveTo(x-5, cy-45*bodyScale); ctx.lineTo(x, cy-70*bodyScale); ctx.lineTo(x+5, cy-45*bodyScale); ctx.fill(); });
-    }
-    if (state.special.id === 'crest') {
-      ctx.beginPath(); ctx.ellipse(headX+15, headY-40, 20, 30, 0, Math.PI, 0); ctx.fill();
-    }
-    if (state.special.id === 'glow') {
-      ctx.shadowColor = c; ctx.shadowBlur = 30;
-      ctx.beginPath(); ctx.ellipse(cx, cy+20, 75*bodyScale, 55*bodyScale, 0, 0, Math.PI*2); ctx.fill();
-      ctx.shadowBlur = 0;
-    }
-    ctx.globalAlpha = 1;
-  }
-
-  function renderOptions(catId, items, stateKey) {
-    const el = document.getElementById(`creator-${catId}`);
-    if (!el) return;
-    el.innerHTML = items.map((item, i) => `
-      <button class="creator__option${i === 0 ? ' creator__option--active' : ''}" data-idx="${i}">
-        ${item.name}
-        <span class="creator__option-desc">${item.desc}</span>
-      </button>
-    `).join('');
-    el.addEventListener('click', (e) => {
-      const btn = e.target.closest('.creator__option');
-      if (!btn) return;
-      el.querySelectorAll('.creator__option').forEach(b => b.classList.remove('creator__option--active'));
-      btn.classList.add('creator__option--active');
-      state[stateKey] = items[parseInt(btn.dataset.idx)];
-      drawDino();
-    });
-  }
-
-  renderOptions('heads', creatorParts.heads, 'head');
-  renderOptions('bodies', creatorParts.bodies, 'body');
-  renderOptions('tails', creatorParts.tails, 'tail');
-  renderOptions('specials', creatorParts.specials, 'special');
-
-  // Colors
-  const colorsEl = document.getElementById('creator-colors');
-  colorsEl.innerHTML = creatorParts.colors.map((c, i) => `
-    <button class="creator__color${i === 0 ? ' creator__color--active' : ''}" style="background:${c}" data-idx="${i}"></button>
-  `).join('');
-  colorsEl.addEventListener('click', (e) => {
-    const btn = e.target.closest('.creator__color');
-    if (!btn) return;
-    colorsEl.querySelectorAll('.creator__color').forEach(b => b.classList.remove('creator__color--active'));
-    btn.classList.add('creator__color--active');
-    state.color = creatorParts.colors[parseInt(btn.dataset.idx)];
-    drawDino();
-  });
-
-  document.getElementById('creator-randomize')?.addEventListener('click', () => {
-    const rand = arr => arr[Math.floor(Math.random() * arr.length)];
-    state.head = rand(creatorParts.heads);
-    state.body = rand(creatorParts.bodies);
-    state.tail = rand(creatorParts.tails);
-    state.special = rand(creatorParts.specials);
-    state.color = rand(creatorParts.colors);
-    document.getElementById('creator-dino-name').textContent = genName();
-    // Update active states
-    ['heads','bodies','tails','specials'].forEach(cat => {
-      const key = cat.slice(0, -1);
-      const el = document.getElementById(`creator-${cat}`);
-      const idx = creatorParts[cat].indexOf(state[key === 'bodie' ? 'body' : key]);
-      el?.querySelectorAll('.creator__option').forEach((b, i) => b.classList.toggle('creator__option--active', i === idx));
-    });
-    const cidx = creatorParts.colors.indexOf(state.color);
-    colorsEl.querySelectorAll('.creator__color').forEach((b, i) => b.classList.toggle('creator__color--active', i === cidx));
-    drawDino();
-  });
-
-  document.getElementById('creator-dino-name').textContent = genName();
-  drawDino();
-}
 
 // ===== FAN ART GALLERY =====
 function initGallery() {
@@ -1360,7 +1197,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initTimeline();
   initDictionary();
   initAskForm();
-  initCreator();
   initGallery();
   initColoringPages();
   initEncyclopedia();

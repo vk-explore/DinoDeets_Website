@@ -25,10 +25,12 @@ Website for the **Dino Deets** podcast — a kid-and-family-friendly dinosaur po
 7. A Paleontologist's Guide (Completed - detailed page explaining paleontology steps for kids)
 8. Dino Timeline Explorer (Completed - refactored vertical scroll layout with custom strata scrollbar, horizontal stage chips with detailed hover tooltips, and educational Triassic empty-state explanations)
 9. Dino-o-Meter Size Comparison (Completed - interactive size comparison tool with dynamic scale grid, neutral side-profile cutouts, human silhouette, and automatic aspect-ratio zoom/resizing. Full-width scale layout with modal picker dialog for adding dinosaurs.)
+10. Dino Creator Removal & Navigation Cleanups (Completed - removed dino-creator.html page and assets, removed Dino Creator and Paleo Guide links from dropdown menus, removed "Back to Encyclopedia" buttons from story detail pages, and styled navigation dropdown links with block formatting and padding-left transitions on hover.)
 
 
 ## Agent Guidelines
 - **Living Documentation:** Agents MUST proactively update `agents.md` and all files in the `docs/` folder as new decisions are made, requirements change, or features are implemented during the chat. Do not wait for explicit user prompts to keep documentation synchronized.
+- **Browser Testing:** Chrome is not installed on this environment; do not attempt browser testing or launching browser subagents.
 
 ## Documentation
 - [Roadmap](docs/roadmap.md) — Feature phases and release plan

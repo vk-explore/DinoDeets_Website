@@ -2,6 +2,49 @@
 
 import dinoData from './data/encyclopedia.json';
 
+// Coordinates matching dino-map.js for accurate projection on world.svg
+const locationCoords = {
+  'Neuquén, Argentina':             { lat: -38.95, lon: -68.05 },
+  'Santa Cruz, Argentina':          { lat: -48.90, lon: -70.00 },
+  'Chubut, Argentina':              { lat: -43.30, lon: -65.10 },
+  'Salta, Argentina':               { lat: -24.70, lon: -65.40 },
+  'La Rioja, Argentina':            { lat: -29.40, lon: -66.80 },
+  'San Juan, Argentina':            { lat: -31.50, lon: -68.50 },
+  'Liaoning, China':                { lat: 41.80, lon: 123.40 },
+  'Shandong, China':                { lat: 36.60, lon: 117.00 },
+  'Sichuan, China':                 { lat: 30.60, lon: 104.00 },
+  'Xinjiang, China':                { lat: 41.80, lon:  85.60 },
+  'Tendaguru, Tanzania':            { lat: -9.70,  lon: 39.30 },
+  'Montana, USA':                   { lat: 46.90, lon: -110.30 },
+  'South Dakota, USA':              { lat: 44.20, lon: -100.20 },
+  'Kansas, USA':                    { lat: 38.50, lon: -98.00 },
+  'Alberta, Canada':                { lat: 53.90, lon: -116.50 },
+  'Colorado, USA':                  { lat: 39.00, lon: -105.30 },
+  'Arizona, USA':                   { lat: 34.00, lon: -111.90 },
+  'Wyoming, USA':                   { lat: 43.00, lon: -107.20 },
+  'New Mexico, USA':                { lat: 34.50, lon: -106.00 },
+  'Texas, USA':                     { lat: 31.90, lon: -99.90 },
+  'Utah, USA':                      { lat: 39.30, lon: -111.60 },
+  'Kem Kem, Morocco':               { lat: 31.20, lon: -4.00 },
+  'Bahariya Oasis, Egypt':          { lat: 28.30, lon: 28.90 },
+  'Agadez, Niger':                  { lat: 16.97, lon:  7.99 },
+  'Gobi Desert, Mongolia':          { lat: 42.50, lon: 103.00 },
+  'Sussex, England':                { lat: 50.90, lon: -0.10 },
+  'Surrey, England':                { lat: 51.20, lon: -0.40 },
+  'Dorset, England':                { lat: 50.70, lon: -2.30 },
+  'Bavaria, Germany':               { lat: 48.70, lon: 11.40 },
+  'Baden-Württemberg, Germany':     { lat: 48.60, lon:  9.00 },
+  'Thuringia, Germany':             { lat: 50.90, lon: 11.00 },
+  'Queensland, Australia':          { lat: -20.90, lon: 142.70 },
+  'Victoria, Australia':            { lat: -37.00, lon: 144.00 },
+  'Mount Kirkpatrick, Antarctica':  { lat: -84.30, lon: 166.20 },
+  'Cape Province, South Africa':    { lat: -33.90, lon: 18.40 },
+  'Rio Grande do Sul, Brazil':      { lat: -30.00, lon: -51.20 },
+  'Madhya Pradesh, India':          { lat: 23.50, lon: 78.60 },
+  'Tamil Nadu, India':              { lat: 11.10, lon: 78.60 },
+  'Madagascar':                     { lat: -18.70, lon: 46.80 },
+};
+
 // Helper to determine active diets
 function getActiveDiets(dietString) {
   const ds = (dietString || '').toLowerCase();
@@ -55,6 +98,8 @@ export function initDinoDetail() {
       'Lived during the ' + dino.period + ' period.',
       'Fossils have been found in ' + dino.location + '.'
     ];
+
+    const locs = (dino.location || '').split(';').map(l => l.trim());
 
     container.innerHTML = `
       <div class="dd-header">
@@ -130,14 +175,10 @@ export function initDinoDetail() {
             <h3 class="dd-loc-title">${dino.location.toUpperCase()}</h3>
             <span class="dd-loc-sub">${dino.landFormation || 'PREHISTORIC FORMATION'}</span>
             <div class="dd-map-wrap">
+              <!-- Loading/Fallback placeholder map -->
               <svg class="dd-map" viewBox="0 0 100 50">
                 <ellipse cx="50" cy="25" rx="48" ry="24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
                 <path d="M15,15 Q30,5 50,5 T85,15 M15,35 Q30,45 50,45 T85,35 M50,1 L50,49 M30,3 Q20,25 30,47 M70,3 Q80,25 70,47" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.3"/>
-                <!-- Continents roughly -->
-                <path d="M20,10 Q30,15 35,5 Q45,10 55,5 Q65,15 75,10 Q85,15 80,25 Q90,30 85,40 Q75,45 65,35 Q55,40 45,30 Q35,45 25,35 Q15,40 10,25 Q5,15 20,10 Z" fill="#EAE0D5" opacity="0.8"/>
-                <!-- Pin -->
-                <circle cx="30" cy="25" r="2" fill="#FFA782"/>
-                <path d="M30,27 L30,31" stroke="#FFA782" stroke-width="1"/>
               </svg>
             </div>
           </div>
@@ -181,6 +222,75 @@ export function initDinoDetail() {
         </div>
       </div>
     `;
+
+    // Fetch and draw the high-fidelity minimap
+    const mapWrap = container.querySelector('.dd-map-wrap');
+    if (mapWrap) {
+      fetch('../images/map/world.svg')
+        .then(res => {
+          if (!res.ok) throw new Error('Failed to load map file');
+          return res.text();
+        })
+        .then(svgText => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(svgText, 'image/svg+xml');
+          const svg = doc.querySelector('svg');
+          if (svg) {
+            svg.setAttribute('class', 'dd-minimap-svg');
+            svg.removeAttribute('width');
+            svg.removeAttribute('height');
+            svg.setAttribute('viewBox', '0 0 950 620');
+            svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+
+            // Apply theme styles to map paths
+            const paths = svg.querySelectorAll('path');
+            paths.forEach(p => {
+              p.style.fill = '#223f2b';
+              p.style.stroke = '#0a170e';
+              p.style.strokeWidth = '1px';
+            });
+
+            // Create group for pins
+            const ns = 'http://www.w3.org/2000/svg';
+            const pinsGroup = document.createElementNS(ns, 'g');
+            pinsGroup.setAttribute('class', 'dd-minimap-pins');
+
+            locs.forEach(loc => {
+              const coords = locationCoords[loc];
+              if (coords) {
+                // Project coordinates onto 950x620 viewBox
+                const x = ((coords.lon + 180) / 360) * 950;
+                const y = ((90 - coords.lat) / 180) * 620;
+
+                // Pulsing ring marker
+                const ring = document.createElementNS(ns, 'circle');
+                ring.setAttribute('cx', x);
+                ring.setAttribute('cy', y);
+                ring.setAttribute('r', 16);
+                ring.setAttribute('class', 'dd-minimap-pin-ring');
+
+                // Inner dot marker
+                const dot = document.createElementNS(ns, 'circle');
+                dot.setAttribute('cx', x);
+                dot.setAttribute('cy', y);
+                dot.setAttribute('r', 7);
+                dot.setAttribute('class', 'dd-minimap-pin-dot');
+
+                pinsGroup.appendChild(ring);
+                pinsGroup.appendChild(dot);
+              }
+            });
+
+            svg.appendChild(pinsGroup);
+            mapWrap.innerHTML = '';
+            mapWrap.appendChild(svg);
+          }
+        })
+        .catch(err => {
+          console.error('Error loading minimap:', err);
+          // Keep placeholder map visible as fallback
+        });
+    }
 
     // Mascot interactive line
     const mascotBubble = document.getElementById('mascot-text');

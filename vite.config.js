@@ -9,7 +9,6 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         fossilDig: resolve(__dirname, 'games/fossil-dig.html'),
         dinoQuiz: resolve(__dirname, 'games/dino-quiz.html'),
-        dinoCreator: resolve(__dirname, 'games/dino-creator.html'),
         dinoMap: resolve(__dirname, 'explore/dino-map.html'),
         dinoTimeline: resolve(__dirname, 'explore/dino-timeline.html'),
         dinoMeter: resolve(__dirname, 'explore/dino-meter.html'),
