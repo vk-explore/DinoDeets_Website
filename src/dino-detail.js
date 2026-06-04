@@ -162,7 +162,6 @@ export function initDinoDetail() {
         <!-- CENTER COLUMN -->
         <div class="dd-col dd-center">
           <div class="dd-image-container">
-            <div class="dd-watermark">FACTS APP</div>
             <img src="${originalSrc}" alt="${dino.name}" class="dd-dino-img" />
           </div>
         </div>
@@ -226,7 +225,7 @@ export function initDinoDetail() {
     // Fetch and draw the high-fidelity minimap
     const mapWrap = container.querySelector('.dd-map-wrap');
     if (mapWrap) {
-      fetch('../images/map/world.svg')
+      fetch('../images/map/world-accurate.svg')
         .then(res => {
           if (!res.ok) throw new Error('Failed to load map file');
           return res.text();
@@ -239,7 +238,7 @@ export function initDinoDetail() {
             svg.setAttribute('class', 'dd-minimap-svg');
             svg.removeAttribute('width');
             svg.removeAttribute('height');
-            svg.setAttribute('viewBox', '0 0 950 620');
+            svg.setAttribute('viewBox', '0 63.5 3600 1693');
             svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
 
             // Apply theme styles to map paths
@@ -247,7 +246,7 @@ export function initDinoDetail() {
             paths.forEach(p => {
               p.style.fill = '#223f2b';
               p.style.stroke = '#0a170e';
-              p.style.strokeWidth = '1px';
+              p.style.strokeWidth = '4px';
             });
 
             // Create group for pins
@@ -258,22 +257,22 @@ export function initDinoDetail() {
             locs.forEach(loc => {
               const coords = locationCoords[loc];
               if (coords) {
-                // Project coordinates onto 950x620 viewBox
-                const x = ((coords.lon + 180) / 360) * 950;
-                const y = ((90 - coords.lat) / 180) * 620;
+                // Project coordinates onto 3600x1800 viewBox
+                const x = (coords.lon + 180) * 10;
+                const y = (90 - coords.lat) * 10;
 
                 // Pulsing ring marker
                 const ring = document.createElementNS(ns, 'circle');
                 ring.setAttribute('cx', x);
                 ring.setAttribute('cy', y);
-                ring.setAttribute('r', 16);
+                ring.setAttribute('r', 60);
                 ring.setAttribute('class', 'dd-minimap-pin-ring');
 
                 // Inner dot marker
                 const dot = document.createElementNS(ns, 'circle');
                 dot.setAttribute('cx', x);
                 dot.setAttribute('cy', y);
-                dot.setAttribute('r', 7);
+                dot.setAttribute('r', 25);
                 dot.setAttribute('class', 'dd-minimap-pin-dot');
 
                 pinsGroup.appendChild(ring);

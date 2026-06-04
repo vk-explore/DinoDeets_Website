@@ -4757,11 +4757,11 @@ body {
 .dd-minimap-svg path {
   fill: #223f2b;
   stroke: #0a170e;
-  stroke-width: 1px;
+  stroke-width: 4px;
 }
 
 .dd-minimap-pin-ring {
-  fill: rgba(212, 168, 67, 0.25);
+  fill: rgba(212, 168, 67, 0.35);
   pointer-events: none;
   animation: ddPinPulse 2s ease-in-out infinite;
 }
@@ -4770,7 +4770,7 @@ body {
   fill: var(--color-amber);
   pointer-events: none;
   stroke: #ffffff;
-  stroke-width: 1px;
+  stroke-width: 3px;
 }
 
 @keyframes ddPinPulse {
