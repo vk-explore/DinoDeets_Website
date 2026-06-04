@@ -3,39 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Encyclopedia | Dino Deets</title>
-    <meta name="description" content="Dino Deets is a kid-and-family-friendly dinosaur podcast hosted by Devaansh. Explore prehistoric worlds, discover dino facts, and dig for fossils!" />
-    <meta name="keywords" content="dinosaurs, podcast, kids, education, prehistoric, fossils, Devaansh, dino facts" />
-    <meta property="og:title" content="Dino Deets — Dinosaur Podcast for Kids" />
-    <meta property="og:description" content="Where curious minds travel through prehistoric worlds. A fun, educational dinosaur podcast by Devaansh." />
-    <meta property="og:type" content="website" />
+    <title>A Paleontologist's Guide | Dino Deets</title>
+    <meta name="description" content="Learn how paleontologists find, dig up, and study dinosaur fossils to bring them back to life!" />
     <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Nunito:wght@400;600;700;800&family=Caveat:wght@400;700&display=swap" rel="stylesheet" />
   </head>
   <body>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Navigation -->
+    <!-- Navigation -->
     <nav id="main-nav" class="nav">
       <div class="nav__inner">
         <a href="/DinoDeets_Website/" class="nav__logo" id="nav-logo">
@@ -45,7 +21,6 @@
         <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
           <span></span><span></span><span></span>
         </button>
-        
         
         <ul class="nav__links" id="nav-links">
           <li>
@@ -93,9 +68,7 @@
               <a href="/DinoDeets_Website/explore/paleo-guide.html" class="nav__submenu-link">Paleo Guide</a>
             </div>
           </li>
-          
-          
-                    <li>
+          <li>
             <a href="/DinoDeets_Website/art/index.html" class="nav__icon-link" aria-label="Art">
               <svg class="nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
@@ -106,70 +79,73 @@
             </a>
           </li>
         </ul>
-        
-        </div>
       </div>
     </nav>
-    <main class="page-content">
-      <!-- Story Banners -->
-      <section class="section encyclopedia-stories">
-        <div class="section__inner story-banners-container">
-          
-          <a href="/DinoDeets_Website/explore/origins.html" class="story-banner story-banner--origin">
-            <div class="story-banner__content">
-              <h2>Dino Origins</h2>
-              <p>How did they begin?</p>
-            </div>
-            <img src="../images/dinos/stegosaurus.webp" alt="Evolution" class="story-banner__img" />
-          </a>
 
-          <a href="/DinoDeets_Website/explore/paleo-guide.html" class="story-banner story-banner--paleo">
-            <div class="story-banner__content">
-              <h2>Paleo Guide</h2>
-              <p>How do we study fossils?</p>
-            </div>
-            <img src="../images/props/fossil.webp" alt="Paleontology Guide" class="story-banner__img" />
-          </a>
-
-          <a href="/DinoDeets_Website/explore/extinction.html" class="story-banner story-banner--extinction">
-            <div class="story-banner__content">
-              <h2>The End of an Era</h2>
-              <p>Why did they disappear?</p>
-            </div>
-            <img src="../images/props/trex-skull.webp" alt="Extinction" class="story-banner__img" />
-          </a>
-
-        </div>
-      </section>
-
-      <!-- Encyclopedia Header & Filters -->
-      <section class="section encyclopedia-header">
-        <div class="section__inner text-center">
-          <h1 class="page-title"><span class="title-accent">Dino</span> Encyclopedia</h1>
-          <p class="page-subtitle">Select a period or browse all our dinosaur friends!</p>
-          
-          <div class="encyclopedia-filters" id="encyclopedia-filters">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="Triassic">Triassic</button>
-            <button class="filter-btn" data-filter="Jurassic">Jurassic</button>
-            <button class="filter-btn" data-filter="Cretaceous">Cretaceous</button>
-          </div>
-        </div>
-      </section>
-
-      <!-- Gallery -->
-      <section class="section encyclopedia-gallery">
+    <main class="page-content dino-detail-page origin-page">
+      <section class="section text-center" style="padding: 0 24px 20px;">
         <div class="section__inner">
-          <div id="encyclopedia-grid" class="encyclopedia-grid">
-            <!-- Dynamically populated by JS -->
+          <a href="/DinoDeets_Website/explore/encyclopedia.html" class="dino-detail__back-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="inline-icon" style="vertical-align: middle; margin-right: 4px; width: 18px; height: 18px;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            Back to Encyclopedia
+          </a>
+          <div class="dino-detail__header">
+            <h1 class="page-title">A Paleontologist's Guide</h1>
+            <p class="page-subtitle">Learn the secrets of how we find and study prehistoric dinosaurs!</p>
+          </div>
+          <div class="text-center">
+            <img src="../images/props/paleo-guide-banner.webp" alt="Dinosaur fossil excavation site with tools" class="origin-hero-img" />
           </div>
         </div>
       </section>
+
+      <section class="section origin-timeline">
+        <div class="section__inner">
+          <div class="origin-card">
+            <h3>1. The Paleontologist's Superpowers</h3>
+            <p>Have you ever wanted to be a real-life dinosaur detective? That's what a paleontologist is! To be one, you don't need super strength. You just need three things: <strong>Curiosity</strong> (always asking 'why' and 'how'), <strong>Patience</strong> (fossil hunting takes a long time!), and a <strong>Love for Adventure</strong> (paleontologists hike through hot deserts, climb muddy mountains, and camp under the stars to find bones).</p>
+          </div>
+          
+          <div class="origin-card">
+            <h3>2. Finding the Hidden Treasures</h3>
+            <p>Paleontologists don't just dig random holes in the ground! First, they look at geological maps to find rocks that are the same age as dinosaurs (from 252 to 66 million years old). Then, they go on a "prospecting" hike. They walk slowly, keeping their eyes glued to the ground, looking for tiny, crumbly bits of bone that have washed out of the dirt. If they find a small piece, they follow the trail uphill to see if the rest of the skeleton is hidden inside the cliff!</p>
+          </div>
+
+          <div class="origin-card">
+            <h3>3. The Great Excavation</h3>
+            <p>Once a fossil is found, the heavy work begins! If the bone is buried deep, paleontologists might use shovels or jackhammers to remove the top dirt. But when they get close to the fossil, they switch to tiny tools like paintbrushes, dental picks, and small chisels to gently clean it. Before moving it, they paint the fossil with special glue so it doesn't crumble, wrap it in wet toilet paper, and cover it in plaster bandages—just like a cast you get when you break an arm! This protects it on its bumpy ride back to the lab.</p>
+          </div>
+
+          <div class="origin-card">
+            <h3>4. The Rock Clock</h3>
+            <p>How do we know a fossil is 150 million years old if it doesn't come with a label? Paleontologists use two clever tricks! First is <strong>Relative Dating</strong>: rock layers stack up like a pile of dirty laundry—the oldest rocks are at the bottom, and the newest are on top. So, fossils found deeper are older. Second is <strong>Absolute Dating</strong>: they find layers of volcanic ash near the fossil and measure the special "radioactive isotopes" inside them. Since we know exactly how fast volcanic minerals decay over time, this acts like a super-accurate digital clock!</p>
+          </div>
+
+          <div class="origin-card">
+            <h3>5. Are you a Meat-Eater or a Plant-Eater?</h3>
+            <p>To figure out what a dinosaur ate, scientists look straight at its mouth! Carnivores (meat-eaters) had sharp, pointy, and serrated teeth—like steak knives—perfect for slicing meat. Herbivores (plant-eaters) had flat, blocky teeth for grinding tough leaves, or peg-like teeth for stripping needles off branches. And sometimes, they find fossilized poop called <strong>Coprolites</strong>! By slicing coprolites open, scientists can see leaf fragments or tiny bone bits, showing exactly what that dino had for lunch!</p>
+          </div>
+
+          <div class="origin-card">
+            <h3>6. Scales, Feathers, and Dino Colors</h3>
+            <p>We usually think of fossils as just hard bones, but did you know we can find fossilized skin and feathers too? If a dinosaur died in very soft mud, its skin pattern could leave an imprint before it rotted away, leaving a scaly pattern in the stone. Even cooler, by looking at fossilized feathers under giant microscopes, scientists can see microscopic ink sacs called <strong>Melanosomes</strong>. By comparing their shapes with modern birds, we now know that some dinosaurs had red-and-white striped tails, while others had shiny black feathers like crows!</p>
+          </div>
+
+          <div class="origin-card">
+            <h3>7. Building a 3D Dinosaur</h3>
+            <p>How do we go from a pile of crushed bones to a walking, roaring 3D dinosaur? First, scientists scan the bones using high-tech CT scanners (just like in hospitals) to see inside them without breaking them. Then, they load the scans into computers to create 3D digital models. By studying where muscles attached to the bones, artists and scientists can calculate how thick the muscles were and where they went. Finally, they wrap a digital skin over the muscles, bringing the dinosaur back to life in movies and games!</p>
+          </div>
+
+          <div class="origin-card">
+            <h3>8. Footprints and Features</h3>
+            <p>Bones tell us what dinosaurs looked like, but footprints (called <strong>Trace Fossils</strong>) tell us how they behaved! By measuring the distance between footprints, scientists can figure out the dinosaur's stride length. Combined with their leg length, we can calculate exactly how fast they were running! Footprints also show us if dinosaurs traveled in groups (like a herd of Triceratops walking together) or if they walked alone, and if they carried their tails high in the air or dragged them in the mud.</p>
+          </div>
+        </div>
+      </section>
+
     </main>
 
-
-
-<!-- Footer -->
+    <!-- Footer -->
     <footer id="footer" class="footer">
       <div class="footer__strata">
         <div class="footer__strata-layer footer__strata-layer--1"></div>
@@ -202,7 +178,6 @@
         </div>
         <div class="footer__bottom">
           <p>&copy; 2026 Dino Deets. Made with <img src="../images/dinos/trex.webp" alt="dino" class="inline-icon inline-icon--xs" /> by Devaansh</p>
-
         </div>
       </div>
     </footer>
@@ -210,19 +185,13 @@
     <!-- Mascot -->
     <div class="mascot" id="mascot">
       <div id="mascot-fly" class="mascot__fly" style="display: none; transform-origin: center;">
-        <!-- Cute profile mosquito (faces right) -->
         <svg viewBox="0 0 32 32" width="32" height="32" style="overflow: visible;">
-          <!-- Legs -->
           <path d="M 14 20 L 12 26 M 16 21 L 16 27 M 18 20 L 20 25" stroke="#111" stroke-width="1.5" fill="none"/>
-          <!-- Wing -->
           <path d="M 14 14 C 6 2, -2 6, 12 14 Z" fill="#bbf" opacity="0.8">
             <animateTransform attributeName="transform" type="rotate" values="0 14 14; 50 14 14; 0 14 14" dur="0.025s" repeatCount="indefinite" />
           </path>
-          <!-- Body -->
           <ellipse cx="16" cy="16" rx="7" ry="5" fill="#ffd700"/>
-          <!-- Proboscis (nose) -->
           <line x1="22" y1="16" x2="28" y2="17" stroke="#111" stroke-width="1.5" stroke-linecap="round"/>
-          <!-- Big Cute Eye -->
           <circle cx="20" cy="13" r="3.5" fill="#fff"/>
           <circle cx="21.5" cy="13" r="1.5" fill="#000"/>
         </svg>
@@ -234,7 +203,7 @@
       </div>
       <div id="mascot-svg-container"></div>
       <div class="mascot__bubble" id="mascot-bubble">
-        <p id="mascot-text">Hey there, explorer!</p>
+        <p id="mascot-text">You make a great paleontologist!</p>
       </div>
     </div>
 

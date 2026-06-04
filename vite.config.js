@@ -17,6 +17,7 @@ export default defineConfig({
         dinoDetail: resolve(__dirname, 'explore/dino-detail.html'),
         origins: resolve(__dirname, 'explore/origins.html'),
         extinction: resolve(__dirname, 'explore/extinction.html'),
+        paleoGuide: resolve(__dirname, 'explore/paleo-guide.html'),
         art: resolve(__dirname, 'art/index.html'),
       }
     }

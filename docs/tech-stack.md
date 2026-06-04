@@ -42,7 +42,8 @@ DinoDeets_Website/
 │   ├── encyclopedia.html
 │   ├── dino-detail.html
 │   ├── origins.html
-│   └── extinction.html
+│   ├── extinction.html
+│   └── paleo-guide.html
 ├── printables/             # Printables category pages
 │   ├── index.html
 │   ├── coloring-pages.html
