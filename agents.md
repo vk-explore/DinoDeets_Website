@@ -23,6 +23,8 @@ Website for the **Dino Deets** podcast — a kid-and-family-friendly dinosaur po
 5. Dino Encyclopedia sizing and responsive text scaling (Completed)
 6. Expanded Prehistoric Stories (Origins & Extinction expanded with details and custom covers)
 7. A Paleontologist's Guide (Completed - detailed page explaining paleontology steps for kids)
+8. Dino Timeline Explorer (Completed - refactored vertical scroll layout with custom strata scrollbar, horizontal stage chips with detailed hover tooltips, and educational Triassic empty-state explanations)
+
 
 ## Agent Guidelines
 - **Living Documentation:** Agents MUST proactively update `agents.md` and all files in the `docs/` folder as new decisions are made, requirements change, or features are implemented during the chat. Do not wait for explicit user prompts to keep documentation synchronized.

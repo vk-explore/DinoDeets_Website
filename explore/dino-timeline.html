@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Nunito:wght@400;600;700;800&family=Caveat:wght@400;700&display=swap" rel="stylesheet" />
   </head>
-  <body>
+  <body class="timeline-page-body">
     
 
 
@@ -110,6 +110,25 @@
         </div>
       </div>
     </nav>
+
+    <main class="page-content timeline-page">
+      <section class="section text-center" style="padding: 100px 24px 20px;">
+        <div class="section__inner">
+          <h1 class="page-title"><span class="title-accent">Prehistoric</span> Timeline</h1>
+          <p class="page-subtitle">Journey through the Mesozoic Era and meet the dinosaurs who lived in each time period!</p>
+        </div>
+      </section>
+
+      <section class="section timeline-gallery" style="padding-top: 0; padding-bottom: 80px;">
+        <div class="section__inner">
+          <div class="timeline__vertical-container">
+            <div id="timeline-vertical-track" class="timeline__vertical-track">
+              <!-- Dynamically populated by main.js -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
 <!-- Footer -->
     <footer id="footer" class="footer">

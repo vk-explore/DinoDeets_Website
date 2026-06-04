@@ -2118,97 +2118,468 @@ body {
   overflow: hidden;
 }
 
-.timeline__container {
-  overflow-x: auto;
-  padding-bottom: 16px;
-  scrollbar-width: thin;
+/* Custom Page Scrollbar representing Geological Strata */
+.timeline-page-body::-webkit-scrollbar {
+  width: 14px;
+}
+
+.timeline-page-body::-webkit-scrollbar-track {
+  background: 
+    repeating-linear-gradient(to bottom, transparent, transparent 15px, rgba(255, 255, 255, 0.05) 15px, rgba(255, 255, 255, 0.05) 16px),
+    linear-gradient(
+      to bottom,
+      #FF7043 0%,   /* Triassic: Orange Clay */
+      #FF7043 33%,
+      #4CAF50 34%,  /* Jurassic: Jungle Green */
+      #4CAF50 66%,
+      #00BCD4 67%,  /* Cretaceous: Marine Cyan */
+      #00BCD4 100%
+    );
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.8);
+}
+
+.timeline-page-body::-webkit-scrollbar-thumb {
+  background: var(--color-amber);
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 7px;
+  box-shadow: 0 0 6px rgba(212, 168, 67, 0.5);
+  background-image: radial-gradient(circle, var(--color-amber-glow) 0%, var(--color-amber) 70%);
+  cursor: pointer;
+}
+
+.timeline-page-body::-webkit-scrollbar-thumb:hover {
+  background: var(--color-amber-glow);
+  box-shadow: 0 0 12px rgba(212, 168, 67, 0.9);
+}
+
+.timeline-page-body {
+  scrollbar-width: auto;
   scrollbar-color: var(--color-amber) var(--color-bg-secondary);
 }
 
-.timeline__container::-webkit-scrollbar {
-  height: 8px;
+.timeline__vertical-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
-.timeline__container::-webkit-scrollbar-track {
-  background: var(--color-bg-secondary);
-  border-radius: 4px;
-}
-
-.timeline__container::-webkit-scrollbar-thumb {
-  background: var(--color-amber);
-  border-radius: 4px;
-}
-
-.timeline__track {
-  display: flex;
-  gap: 0;
-  min-width: max-content;
-  padding: 20px 0;
+.timeline__vertical-track {
   position: relative;
+  padding-left: 24px;
 }
 
-.timeline__era {
-  min-width: 320px;
-  padding: 0 24px;
+/* Central timeline line that connects everything */
+.timeline__vertical-track::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 12px;
+  width: 4px;
+  background: linear-gradient(
+    to bottom,
+    #FF7043 0%,   /* Triassic */
+    #FF7043 30%,
+    #4CAF50 35%,  /* Jurassic */
+    #4CAF50 65%,
+    #00BCD4 70%,  /* Cretaceous */
+    #00BCD4 100%
+  );
+  border-radius: 2px;
+  opacity: 0.85;
+}
+
+/* Era Section */
+.timeline__vertical-era {
   position: relative;
-  border-left: 3px solid var(--color-bg-tertiary);
+  margin-bottom: 50px;
 }
 
-.timeline__era-header {
+.timeline__vertical-era:last-child {
+  margin-bottom: 0;
+}
+
+.timeline__era-node {
+  position: absolute;
+  left: 12px;
+  top: 18px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 4px solid var(--color-bg-primary);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+  z-index: 5;
+}
+
+.timeline__era-header-wrap {
+  padding-left: 24px;
+  margin-bottom: 20px;
+}
+
+.timeline__era-title {
   font-family: var(--font-display);
-  font-size: 1.3rem;
-  margin-bottom: 4px;
+  font-size: 1.8rem;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .timeline__era-years {
   font-family: var(--font-accent);
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--color-text-muted);
+  display: block;
+  margin-top: 4px;
+}
+
+.timeline__era-desc {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 12px 0 0 0;
+  max-width: 750px;
+}
+
+.timeline__subperiods-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Subperiod Card */
+.timeline__vertical-subperiod {
+  position: relative;
+  margin-left: 24px;
+  background: var(--color-surface);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-left: 4px solid var(--era-color);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s var(--ease-bounce), box-shadow 0.3s ease;
+}
+
+.timeline__vertical-subperiod:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.timeline__subperiod-node {
+  position: absolute;
+  left: -12px; /* Centers on the main track line at left: 12px relative to Era wrapper */
+  top: 32px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-bg-primary);
+  border: 3.5px solid var(--era-color);
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.timeline__subperiod-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  margin: 0 0 6px 0;
+  color: var(--color-text-primary);
+}
+
+.timeline__subperiod-years {
+  font-family: var(--font-accent);
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-left: 8px;
+  font-weight: normal;
+}
+
+.timeline__subperiod-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin: 0 0 18px 0;
+}
+
+/* Stratigraphic Geological Stages Block */
+.timeline__stages-wrapper {
   margin-bottom: 20px;
 }
 
-.timeline__event {
-  background: var(--color-surface);
-  border-radius: var(--radius-sm);
-  padding: 16px;
-  margin-bottom: 12px;
-  border-left: 3px solid transparent;
-  transition: all 0.3s var(--ease-bounce);
+.timeline__stages-title {
+  font-family: var(--font-accent);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
 }
 
-.timeline__event:hover {
+.timeline__stages-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-sm);
+  padding: 10px;
+}
+
+.timeline__stage-chip {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-family: var(--font-accent);
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+  transition: all 0.3s var(--ease-bounce);
+  cursor: help;
+  position: relative;
+  user-select: none;
+}
+
+.timeline__stage-chip:hover {
+  background: var(--era-color-alpha);
+  border-color: var(--era-color);
+  color: var(--color-text-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Stage Detailed Tooltip */
+.timeline__stage-tooltip {
+  position: absolute;
+  bottom: 135%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px) scale(0.85);
+  background: var(--bubble-color, var(--color-amber));
+  color: var(--color-bg-primary);
+  border-radius: 12px;
+  padding: 10px 14px;
+  width: 220px;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  transition: opacity 0.25s ease, transform 0.25s var(--ease-bounce), visibility 0.25s;
+  z-index: 100;
+  line-height: 1.35;
+}
+
+.timeline__stage-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: var(--bubble-color, var(--color-amber)) transparent transparent transparent;
+}
+
+.timeline__stage-chip:hover .timeline__stage-tooltip {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.timeline__stage-tooltip-title {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  margin: 0 0 3px 0;
+}
+
+.timeline__stage-tooltip-range {
+  font-family: var(--font-accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  opacity: 0.95;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.timeline__stage-tooltip-fact {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Key Milestones in Vertical Layout */
+.timeline__events-section {
+  margin-top: 20px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.08);
+  padding-top: 16px;
+}
+
+.timeline__vertical-events {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.timeline__vertical-event {
+  display: flex;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  transition: all 0.25s ease;
+  border: 1px solid transparent;
+}
+
+.timeline__vertical-event:hover {
+  background: rgba(255, 255, 255, 0.04);
   transform: translateX(4px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.timeline__event-year-pill {
+  font-family: var(--font-accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: 12px;
+  height: fit-content;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.timeline__event-content {
+  flex: 1;
+  position: relative;
 }
 
 .timeline__event-img {
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   object-fit: cover;
   float: right;
-  margin: 0 0 8px 12px;
-  border: 1px solid rgba(212, 168, 67, 0.2);
-}
-
-.timeline__event-year {
-  font-family: var(--font-accent);
-  font-size: 0.9rem;
-  color: var(--color-text-muted);
+  margin-left: 12px;
   margin-bottom: 4px;
+  border: 1.5px solid var(--color-amber);
 }
 
 .timeline__event-title {
-  font-weight: 700;
-  font-size: 1rem;
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 0.95rem;
   color: var(--color-text-primary);
-  margin-bottom: 6px;
+  margin: 0 0 4px 0;
 }
 
 .timeline__event-desc {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--color-text-secondary);
-  line-height: 1.5;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Dino Timeline Circular Icons & Tooltips */
+.timeline__dinos-section {
+  margin-top: 24px;
+  border-top: 1px dashed rgba(212, 168, 67, 0.2);
+  padding-top: 16px;
+}
+
+.timeline__dinos-header {
+  font-family: var(--font-accent);
+  font-size: 0.95rem;
+  color: var(--color-amber);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.timeline__dino-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-start;
+}
+
+.timeline__dino-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid rgba(212, 168, 67, 0.3);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s var(--ease-bounce);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.timeline__dino-icon:hover {
+  transform: scale(1.15);
+  border-color: var(--color-amber-glow);
+  box-shadow: 0 6px 15px rgba(212, 168, 67, 0.4);
+  z-index: 10;
+}
+
+/* Chat bubble popover tooltip */
+.timeline__dino-bubble {
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px) scale(0.85);
+  background: var(--bubble-color, var(--color-amber));
+  color: var(--color-bg-primary);
+  border-radius: 12px;
+  padding: 6px 10px;
+  width: max-content;
+  max-width: 160px;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.25s ease, transform 0.25s var(--ease-bounce), visibility 0.25s;
+  z-index: 100;
+}
+
+/* Tooltip Arrow */
+.timeline__dino-bubble::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: var(--bubble-color, var(--color-amber)) transparent transparent transparent;
+}
+
+/* Show bubble on icon hover */
+.timeline__dino-icon:hover .timeline__dino-bubble {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.timeline__dino-bubble-name {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.timeline__dino-bubble-diet {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 2px 0 0;
+  opacity: 0.8;
 }
 
 /* ===== DICTIONARY ===== */

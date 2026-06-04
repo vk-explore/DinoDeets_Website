@@ -28,7 +28,7 @@
 - [x] "Ask Devaansh" listener questions form
 - [x] Dino Dictionary / Glossary (A-Z)
 - [x] Dino-o-Meter size comparisons
-- [x] Dino Timeline Explorer (horizontal scroll)
+- [x] Dino Timeline Explorer (vertical scroll refactor)
 
 ## ✅ Phase 4: Advanced (v3.0)
 - [x] "Dino Creator" — design your own dinosaur (Canvas)

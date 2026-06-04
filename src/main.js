@@ -8,6 +8,7 @@ import quizQuestions from './data/quiz.json';
 import dinoGlossary from './data/glossary.json';
 import dinoSizes from './data/dino-meter.json';
 import timelineData from './data/timeline.json';
+import dinoData from './data/encyclopedia.json';
 import dinoCreatorData from './data/dino-creator.json';
 import artData from './data/art.json';
 
@@ -559,23 +560,176 @@ function initMeter() {
 
 // ===== TIMELINE =====
 function initTimeline() {
-  const track = document.getElementById('timeline-track');
+  const track = document.getElementById('timeline-vertical-track');
   if (!track) return;
 
-  track.innerHTML = timelineData.map(era => `
-    <div class="timeline__era" style="border-left-color: ${era.color}">
-      <h3 class="timeline__era-header" style="color: ${era.color}">${era.era} — ${era.period}</h3>
-      <p class="timeline__era-years">${era.years}</p>
-      ${era.events.map(ev => `
-        <div class="timeline__event" style="border-left-color: ${era.color}">
-          ${ev.image ? `<img src="${ev.image}" alt="" class="timeline__event-img" />` : ''}
-          <p class="timeline__event-year">${ev.year}</p>
-          <h4 class="timeline__event-title">${ev.title}</h4>
-          <p class="timeline__event-desc">${ev.desc}</p>
+  const stageDetails = {
+    // Triassic
+    "Induan": { range: "252 – 251 MYA", fact: "The very beginning of the Triassic, right after the Great Dying extinction." },
+    "Olenekian": { range: "251 – 247 MYA", fact: "Earth was hot and dry. Early reptiles began adapting to the desert heat." },
+    "Anisian": { range: "247 – 242 MYA", fact: "Lush plants started returning. Early cousins of dinosaurs started walking upright." },
+    "Ladinian": { range: "242 – 237 MYA", fact: "The landmass of Pangaea was massive. Crocodile-like predators ruled the rivers." },
+    "Carnian": { range: "237 – 227 MYA", fact: "The first true dinosaurs, like Eoraptor, appeared during this rainy age!" },
+    "Norian": { range: "227 – 208 MYA", fact: "Early long-necked sauropod relatives and flying pterosaurs took to the skies." },
+    "Rhaetian": { range: "208 – 201 MYA", fact: "Ended with huge volcanic eruptions that cleared the way for dinosaurs to dominate." },
+    // Jurassic
+    "Hettangian": { range: "201 – 199 MYA", fact: "Dinosaurs survived the extinction and started growing larger." },
+    "Sinemurian": { range: "199 – 191 MYA", fact: "Armored dinosaurs like Scelidosaurus began to develop plates for defense." },
+    "Pliensbachian": { range: "191 – 183 MYA", fact: "Continents began to drift apart, creating new oceans and coastlines." },
+    "Toarcian": { range: "183 – 174 MYA", fact: "A time of major ocean warming, with giant sea monsters like Ichthyosaurs ruling the seas." },
+    "Aalenian": { range: "174 – 171 MYA", fact: "Ferns and conifers thrived in a warm, moist, greenhouse-like climate." },
+    "Bajocian": { range: "171 – 168 MYA", fact: "Early stegosaurs and giant sauropods began browsing high up in tree canopies." },
+    "Bathonian": { range: "168 – 165 MYA", fact: "Megalosaurus, one of the first giant meat-eaters, hunted in European forests." },
+    "Callovian": { range: "165 – 163 MYA", fact: "Huge marine reptiles like Liopleurodon ruled the warm shallow seas." },
+    "Oxfordian": { range: "163 – 157 MYA", fact: "Warm coral reefs grew in the oceans, while Archaeopteryx began gliding through trees." },
+    "Kimmeridgian": { range: "157 – 152 MYA", fact: "Stegosaurus and Allosaurus faced off in classic prehistoric duels." },
+    "Tithonian": { range: "152 – 145 MYA", fact: "Massive herds of long-necked giants migrated across open plains." },
+    // Cretaceous
+    "Berriasian": { range: "145 – 140 MYA", fact: "The start of the Cretaceous period. Early flowering plants made their debut." },
+    "Valanginian": { range: "140 – 134 MYA", fact: "Temperatures cooled slightly, and dinosaurs evolved feathers for warmth." },
+    "Hauterivian": { range: "134 – 129 MYA", fact: "Early bird-like dinosaurs diversified, learning to flap their wings." },
+    "Barremian": { range: "129 – 125 MYA", fact: "Fierce raptors like Utahraptor hunted in packs using giant toe claws." },
+    "Aptian": { range: "125 – 113 MYA", fact: "Flowering plants began to attract early insects like bees and beetles." },
+    "Albian": { range: "113 – 100 MYA", fact: "Colossal dinosaurs like Spinosaurus adapted to life in rivers and swamps." },
+    "Cenomanian": { range: "100 – 94 MYA", fact: "Giganotosaurus and Argentinosaurus had epic battles in South America." },
+    "Turonian": { range: "94 – 90 MYA", fact: "High sea levels flooded land, creating warm inland seaways filled with sharks." },
+    "Coniacian": { range: "90 – 86 MYA", fact: "Plesiosaurs and Mosasaurs became the apex predators of the Cretaceous oceans." },
+    "Santonian": { range: "86 – 83 MYA", fact: "Horned dinosaurs like Protoceratops started developing protective frills." },
+    "Campanian": { range: "83 – 72 MYA", fact: "Duck-billed dinosaurs like Parasaurolophus used hollow crests to trumpet calls." },
+    "Maastrichtian": { range: "72 – 66 MYA", fact: "The grand finale of the dinosaur age, ending with the famous asteroid impact." }
+  };
+
+  track.innerHTML = timelineData.map(era => {
+    const subperiodsHtml = era.subperiods.map(subperiod => {
+      // Group dinosaurs by subperiod
+      const subDinos = dinoData.filter(d => {
+        const p = (d.period || '').toLowerCase().trim();
+        const subName = subperiod.name.toLowerCase().trim();
+        if (subName === 'late cretaceous') {
+          return p === 'late cretaceous' || p === 'paleogene';
+        }
+        return p === subName;
+      });
+
+      // Meet the Dinosaurs section with custom kid-friendly explanations for Triassic empty states
+      let dinosHtml = '';
+      if (subDinos.length > 0) {
+        dinosHtml = `
+          <div class="timeline__dinos-section">
+            <h4 class="timeline__dinos-header">Meet the Dinosaurs</h4>
+            <div class="timeline__dino-grid">
+              ${subDinos.map(dino => {
+                const imgSrc = dino.image && dino.image.trim() !== '' ? dino.image : './images/dinos/trex.webp';
+                const cleanSrc = imgSrc.startsWith('./') ? imgSrc.replace('./', '../') : imgSrc;
+                return `
+                  <div class="timeline__dino-icon" style="background-image: url('${cleanSrc}'); border-color: ${era.color};" data-dino="${dino.name}">
+                    <div class="timeline__dino-bubble" style="--bubble-color: ${era.color}; color: #0E1A16;">
+                      <p class="timeline__dino-bubble-name">${dino.name}</p>
+                      <p class="timeline__dino-bubble-diet">${dino.diet}</p>
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+        `;
+      } else {
+        let emptyMessage = 'No dinosaurs found for this subperiod.';
+        if (subperiod.name === 'Early Triassic') {
+          emptyMessage = '<strong>Did you know?</strong> True dinosaurs hadn\'t evolved yet! Earth was slowly recovering from a massive extinction, ruled by ancient reptiles like the shovel-faced <em>Lystrosaurus</em>.';
+        } else if (subperiod.name === 'Middle Triassic') {
+          emptyMessage = '<strong>Did you know?</strong> The first tiny dinosaur cousins (Dinosauromorphs) were just beginning to run around, but true dinosaurs wouldn\'t evolve for another 10 million years!';
+        }
+        dinosHtml = `
+          <div class="timeline__dinos-section">
+            <h4 class="timeline__dinos-header">Meet the Dinosaurs</h4>
+            <p style="font-size: 0.88rem; color: var(--color-text-secondary); line-height: 1.45; margin: 0; background: rgba(0,0,0,0.18); padding: 12px 16px; border-radius: 8px; border-left: 3px solid ${era.color};">${emptyMessage}</p>
+          </div>
+        `;
+      }
+
+      // Geological ages/stages horizontal chip view with detailed tooltips
+      const agesHtml = subperiod.ages && subperiod.ages.length > 0 ? `
+        <div class="timeline__stages-wrapper">
+          <div class="timeline__stages-title" style="color: ${era.color};">Geological Stages (Hover for Details)</div>
+          <div class="timeline__stages-grid">
+            ${subperiod.ages.map(age => {
+              const info = stageDetails[age] || { range: "TBD", fact: "A fascinating geological age." };
+              return `
+                <div class="timeline__stage-chip" style="--era-color-alpha: ${era.color}1c; --era-color: ${era.color};">
+                  ${age}
+                  <div class="timeline__stage-tooltip" style="--bubble-color: ${era.color}; color: #0E1A16;">
+                    <p class="timeline__stage-tooltip-title">${age}</p>
+                    <p class="timeline__stage-tooltip-range">${info.range}</p>
+                    <p class="timeline__stage-tooltip-fact">${info.fact}</p>
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
         </div>
-      `).join('')}
-    </div>
-  `).join('');
+      ` : '';
+
+      // Events (Milestones) HTML
+      const eventsHtml = subperiod.events && subperiod.events.length > 0 ? `
+        <div class="timeline__events-section">
+          <h4 class="timeline__dinos-header">Key Milestones</h4>
+          <div class="timeline__vertical-events">
+            ${subperiod.events.map(ev => {
+              const evImgSrc = ev.image ? (ev.image.startsWith('./') ? ev.image.replace('./', '../') : ev.image) : '';
+              return `
+                <div class="timeline__vertical-event">
+                  <span class="timeline__event-year-pill" style="background: ${era.color}; color: #0E1A16;">${ev.year}</span>
+                  <div class="timeline__event-content">
+                    ${evImgSrc ? `<img src="${evImgSrc}" alt="" class="timeline__event-img" />` : ''}
+                    <h5 class="timeline__event-title">${ev.title}</h5>
+                    <p class="timeline__event-desc">${ev.desc}</p>
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+      ` : '';
+
+      return `
+        <div class="timeline__vertical-subperiod" style="border-left-color: ${era.color}; --era-color: ${era.color};">
+          <div class="timeline__subperiod-node" style="border-color: ${era.color}; --era-color: ${era.color};"></div>
+          <h3 class="timeline__subperiod-title">${subperiod.name} <span class="timeline__subperiod-years">${subperiod.years}</span></h3>
+          <p class="timeline__subperiod-desc">${subperiod.description}</p>
+          
+          ${agesHtml}
+          ${dinosHtml}
+          ${eventsHtml}
+        </div>
+      `;
+    }).join('');
+
+    return `
+      <div class="timeline__vertical-era" style="--era-color: ${era.color};">
+        <div class="timeline__era-node" style="background: ${era.color};"></div>
+        <div class="timeline__era-header-wrap">
+          <h2 class="timeline__era-title" style="color: ${era.color};">${era.era} Period</h2>
+          <span class="timeline__era-years">${era.years}</span>
+          <p class="timeline__era-desc">${era.description}</p>
+        </div>
+        
+        <div class="timeline__subperiods-container">
+          ${subperiodsHtml}
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  // Add click listeners to dinosaur circular icons to navigate to details page
+  track.querySelectorAll('.timeline__dino-icon').forEach(icon => {
+    icon.addEventListener('click', () => {
+      const dinoName = icon.dataset.dino;
+      if (dinoName) {
+        window.location.href = `/DinoDeets_Website/explore/dino-detail.html?dino=${encodeURIComponent(dinoName)}`;
+      }
+    });
+  });
 }
 
 // ===== DICTIONARY =====
