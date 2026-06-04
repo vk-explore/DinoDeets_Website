@@ -58,7 +58,6 @@ DinoDeets_Website/
 │       ├── dino-map.json       # Dinosaur discovery map coordinates
 │       ├── quiz.json           # Quiz questions
 │       ├── glossary.json       # Dictionary terms
-│       ├── dino-meter.json     # Dino-o-Meter scale details
 │       ├── timeline.json       # Geological timeline data
 │       ├── dino-creator.json   # Creator options & naming parts
 │       └── art.json            # Fan art gallery & coloring files

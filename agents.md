@@ -24,6 +24,7 @@ Website for the **Dino Deets** podcast — a kid-and-family-friendly dinosaur po
 6. Expanded Prehistoric Stories (Origins & Extinction expanded with details and custom covers)
 7. A Paleontologist's Guide (Completed - detailed page explaining paleontology steps for kids)
 8. Dino Timeline Explorer (Completed - refactored vertical scroll layout with custom strata scrollbar, horizontal stage chips with detailed hover tooltips, and educational Triassic empty-state explanations)
+9. Dino-o-Meter Size Comparison (Completed - interactive size comparison tool with dynamic scale grid, neutral side-profile cutouts, human silhouette, and automatic aspect-ratio zoom/resizing. Full-width scale layout with modal picker dialog for adding dinosaurs.)
 
 
 ## Agent Guidelines

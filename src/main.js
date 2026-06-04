@@ -6,7 +6,6 @@ import fossilData from './data/fossil-dig.json';
 import discoveryData from './data/dino-map.json';
 import quizQuestions from './data/quiz.json';
 import dinoGlossary from './data/glossary.json';
-import dinoSizes from './data/dino-meter.json';
 import timelineData from './data/timeline.json';
 import dinoData from './data/encyclopedia.json';
 import dinoCreatorData from './data/dino-creator.json';
@@ -531,31 +530,364 @@ function initQuiz() {
 
 // ===== DINO-O-METER =====
 function initMeter() {
-  const slider = document.getElementById('meter-slider');
-  if (!slider) return;
+  const search = document.getElementById('meter-search');
+  if (!search) return;
 
-  const labelsEl = document.getElementById('meter-labels');
-  labelsEl.innerHTML = dinoSizes.map(d => `<span>${d.name.split(' ')[0]}</span>`).join('');
+  const selectorList = document.getElementById('meter-selector-list');
+  const compareCount = document.getElementById('meter-compare-count');
+  const compareSlots = document.getElementById('meter-compare-slots');
+  const board = document.getElementById('meter-board');
+  const gridOverlay = document.getElementById('meter-grid-overlay');
+  const gridDimensions = document.getElementById('meter-grid-dimensions');
+  const statsList = document.getElementById('meter-stats-list');
 
-  function updateMeter(idx) {
-    const d = dinoSizes[idx];
-    document.getElementById('meter-img').src = d.image;
-    document.getElementById('meter-name').textContent = d.name;
-    document.getElementById('meter-height').textContent = `${d.height}m`;
-    document.getElementById('meter-length').textContent = `${d.length}m`;
-    document.getElementById('meter-weight').textContent = d.weight;
-    document.getElementById('meter-comparison').textContent = d.comparison;
-    document.getElementById('meter-diet').textContent = d.diet;
-    const maxH = 15; // Argentinosaurus
-    document.getElementById('meter-bar').style.width = `${(d.height / maxH) * 100}%`;
-    // Scale the image
-    const wrap = document.querySelector('.meter__dino-wrap');
-    const scale = 0.6 + (d.height / maxH) * 0.5;
-    wrap.style.transform = `scale(${Math.min(scale, 1.1)})`;
+  const addedDinos = [];
+  const colors = ['#FF7043', '#4CAF50', '#00BCD4', '#9C27B0'];
+
+  const meterProfileMapping = {
+    "Compsognathus": {
+      image: "../images/meter/compsognathus.webp",
+      comparison: "About the size of a chicken!"
+    },
+    "Velociraptor": {
+      image: "../images/meter/velociraptor.webp",
+      comparison: "About the size of a turkey!"
+    },
+    "Stegosaurus": {
+      image: "../images/meter/stegosaurus.webp",
+      comparison: "As long as a bus!"
+    },
+    "Triceratops": {
+      image: "../images/meter/triceratops.webp",
+      comparison: "Heavy as an elephant!"
+    },
+    "Tyrannosaurus Rex": {
+      image: "../images/meter/trex.webp",
+      comparison: "Tall as a giraffe!"
+    },
+    "Brachiosaurus": {
+      image: "../images/meter/brachiosaurus.webp",
+      comparison: "Could peek into a 4th-floor window!"
+    },
+    "Argentinosaurus": {
+      image: "../images/meter/argentinosaurus.webp",
+      comparison: "Heavier than 14 elephants combined!"
+    },
+    "Ankylosaurus": {
+      image: "../images/meter/ankylosaurus.webp",
+      comparison: "Low to the ground and armored like a battle tank!"
+    },
+    "Spinosaurus": {
+      image: "../images/meter/spinosaurus.webp",
+      comparison: "The longest predatory dinosaur, even longer than a Tyrannosaurus Rex!"
+    },
+    "Carnotaurus": {
+      image: "../images/meter/carnotaurus.webp",
+      comparison: "A fast meat-eater with short bull-like horns!"
+    },
+    "Allosaurus": {
+      image: "../images/meter/allosaurus.webp",
+      comparison: "The apex predator of the Jurassic period!"
+    },
+    "Diplodocus": {
+      image: "../images/meter/diplodocus.webp",
+      comparison: "Famous for its whip-like tail and long neck!"
+    },
+    "Parasaurolophus": {
+      image: "../images/meter/parasaurolophus.webp",
+      comparison: "Has a long curved crest used to trumpet calls!"
+    }
+  };
+
+  function generateDynamicComparison(dino) {
+    const height = parseFloat(dino.height) || 0;
+    const length = parseFloat(dino.length) || 0;
+    
+    let weightKg = 0;
+    if (dino.weight) {
+      const weightVal = parseFloat(dino.weight.replace(/[^0-9.]/g, ''));
+      if (!isNaN(weightVal)) {
+        if (dino.weight.toLowerCase().includes('ton') || dino.weight.toLowerCase().includes('t ') || dino.weight.toLowerCase().endsWith('t')) {
+          weightKg = weightVal * 1000;
+        } else {
+          weightKg = weightVal;
+        }
+      }
+    }
+
+    if (height > 12) {
+      return "Taller than a 4-story building!";
+    } else if (height > 6) {
+      return "Could peek into a 2nd-floor window!";
+    } else if (weightKg > 40000) {
+      return "Heavier than 8 school buses!";
+    } else if (weightKg > 20000) {
+      return "Heavier than 4 large elephants!";
+    } else if (weightKg > 5000) {
+      return "Weighed as much as a Tyrannosaurus Rex!";
+    } else if (length > 25) {
+      return "Longer than two school buses parked end-to-end!";
+    } else if (length > 15) {
+      return "Longer than a bowling lane!";
+    } else if (length > 8) {
+      return "As long as a large motorhome!";
+    } else if (height > 3.5) {
+      return "Tall as a double-decker bus!";
+    } else if (height > 1.8) {
+      return "Taller than a tall adult human!";
+    } else if (weightKg > 1000) {
+      return "Weighed as much as a small car!";
+    } else if (weightKg > 200) {
+      return "Heavy as a grizzly bear!";
+    } else if (length > 3) {
+      return "Longer than a compact car!";
+    } else if (length > 1.5) {
+      return "About the size of a large dog!";
+    } else if (weightKg > 0 && weightKg < 10) {
+      return "Light as a house cat!";
+    } else {
+      return "About the size of a human!";
+    }
   }
 
-  slider.addEventListener('input', () => updateMeter(parseInt(slider.value)));
-  updateMeter(parseInt(slider.value));
+  function getDinoStats(dino) {
+    const name = dino.name;
+    let image = "";
+    let comparison = "";
+
+    if (meterProfileMapping.hasOwnProperty(name)) {
+      image = meterProfileMapping[name].image;
+      comparison = meterProfileMapping[name].comparison;
+    } else {
+      const slug = name.toLowerCase().replace(/[^a-z0-9]/g, '_');
+      image = `../images/meter/${slug}.webp`;
+      comparison = generateDynamicComparison(dino);
+    }
+
+    return {
+      name: dino.name,
+      length: parseFloat(dino.length) || 0,
+      height: parseFloat(dino.height) || 0,
+      weight: dino.weight || "Unknown",
+      diet: dino.diet || "Unknown",
+      image: image,
+      comparison: comparison
+    };
+  }
+
+  function renderCompare() {
+    const maxHeight = Math.max(1.8, ...addedDinos.map(d => d.height));
+    const H_max = Math.max(2.5, maxHeight * 1.15);
+
+    // Build entity data
+    const entities = [
+      {
+        name: "Human (for scale)", length: 0.5, height: 1.8,
+        image: "../images/meter/human.webp", color: "#555555",
+        weight: "70 kg", comparison: "That's you!", isHuman: true
+      },
+      ...addedDinos.map((dino, idx) => ({
+        ...dino, color: colors[idx % colors.length]
+      }))
+    ];
+
+    // Render entities into the flex container (no absolute positioning!)
+    const entitiesRow = document.getElementById('meter-entities-row');
+    const drawableHeight = entitiesRow ? (entitiesRow.clientHeight || 350) : 350;
+
+    const html = entities.map(entity => {
+      // Height in pixels based on proportion to H_max and drawable height
+      const heightPx = Math.round((entity.height / H_max) * drawableHeight);
+      const cleanSrc = entity.image.startsWith('./') ? entity.image.replace('./', '../') : entity.image;
+      const cls = entity.isHuman ? ' meter__entity--human' : '';
+      return `
+        <div class="meter__entity${cls}" style="height:${heightPx}px; --dino-color:${entity.color};">
+          <img src="${cleanSrc}" alt="${entity.name}" class="meter__entity-img"/>
+          <div class="meter__entity-tooltip" style="border-color:${entity.color};">
+            <strong>${entity.name}</strong><br/>
+            Height: ${entity.height.toFixed ? entity.height.toFixed(1) : entity.height}m<br/>
+            Length: ${entity.length.toFixed ? entity.length.toFixed(1) : entity.length}m<br/>
+            Weight: ${entity.weight}<br/>
+            <em>${entity.comparison}</em>
+          </div>
+        </div>`;
+    }).join('');
+    entitiesRow.innerHTML = html;
+
+    // Render height grid lines (height axis is what matters for comparison)
+    gridDimensions.textContent = `${H_max.toFixed(1)}m`;
+
+    let gridHtml = '';
+    let hStep = 1;
+    if (H_max > 10) hStep = 2;
+    for (let y = hStep; y < H_max; y += hStep) {
+      const bp = (y / H_max) * 100;
+      gridHtml += `<div class="meter__grid-line-h" style="bottom:${bp}%"></div>
+        <span class="meter__grid-label-h" style="bottom:${bp}%">${y}m</span>`;
+    }
+    gridOverlay.innerHTML = gridHtml;
+
+    // Update slots, count, and stats (synchronous — doesn't depend on images)
+    let slotsHtml = '';
+    for (let i = 0; i < 4; i++) {
+      const dino = addedDinos[i];
+      if (dino) {
+        slotsHtml += `
+          <div class="meter__compare-slot meter__compare-slot--active" style="border-left: 4px solid ${colors[i]};">
+            <span class="meter__compare-slot-name">${dino.name}</span>
+            <button class="meter__compare-slot-remove" data-idx="${i}">&times;</button>
+          </div>`;
+      } else {
+        slotsHtml += `
+          <div class="meter__compare-slot">
+            <span class="text-muted" style="font-size: 0.8rem; font-style: italic;">Empty Slot</span>
+          </div>`;
+      }
+    }
+    compareSlots.innerHTML = slotsHtml;
+    compareCount.textContent = addedDinos.length;
+
+    // Attach remove listeners
+    compareSlots.querySelectorAll('.meter__compare-slot-remove').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const idx = parseInt(btn.dataset.idx);
+        addedDinos.splice(idx, 1);
+        renderCompare();
+        renderSelectorList();
+      });
+    });
+
+    // Render comparison stats
+    if (addedDinos.length === 0) {
+      statsList.innerHTML = '<p class="text-muted" style="margin: 0; font-size: 0.9rem; font-style: italic;">Add some dinosaurs to see how they stack up against a human!</p>';
+    } else {
+      statsList.innerHTML = addedDinos.map((dino, idx) => {
+        const heightTimes = (dino.height / 1.8).toFixed(1);
+        const lengthTimes = (dino.length / 0.5).toFixed(1);
+        const weightVal = parseFloat(dino.weight.replace(/[^0-9.]/g, ''));
+        const weightTimes = !isNaN(weightVal) ? (weightVal / 70).toFixed(0) : 0;
+
+        let factText = `The <strong>${dino.name}</strong> was ${heightTimes}x taller and ${lengthTimes}x longer than a human!`;
+        if (weightTimes > 1) {
+          factText += ` It weighed as much as ${weightTimes} humans!`;
+        }
+
+        return `
+          <div class="meter__stat-item" style="border-left-color: ${colors[idx]}; --dino-color: ${colors[idx]};">
+            <span class="meter__stat-bullet" style="color: ${colors[idx]};">&bull;</span>
+            <p style="margin: 0; font-size: 0.88rem;">${factText} <em>${dino.comparison}</em></p>
+          </div>`;
+      }).join('');
+    }
+  }
+
+  function renderSelectorList() {
+    const searchVal = search.value.toLowerCase().trim();
+    const activeFilterBtn = document.querySelector('.meter__filter-btn--active');
+    const activeFilter = activeFilterBtn ? activeFilterBtn.dataset.filter : 'all';
+
+    const filtered = dinoData.filter(d => {
+      const matchesSearch = d.name.toLowerCase().includes(searchVal);
+      const matchesFilter = activeFilter === 'all' || d.diet === activeFilter;
+      return matchesSearch && matchesFilter;
+    });
+
+    selectorList.innerHTML = filtered.map(d => {
+      const isAdded = addedDinos.some(ad => ad.name === d.name);
+      const itemClass = isAdded ? 'meter__select-item meter__select-item--disabled' : 'meter__select-item';
+      const icon = isAdded ? '&#10003;' : '+';
+      
+      const profileSrc = meterProfileMapping.hasOwnProperty(d.name)
+        ? meterProfileMapping[d.name].image
+        : `../images/meter/${d.name.toLowerCase().replace(/[^a-z0-9]/g, '_')}.webp`;
+
+      const parsedHeight = parseFloat(d.height) || 0;
+      const parsedLength = parseFloat(d.length) || 0;
+
+      return `
+        <div class="${itemClass}" data-dino="${d.name}" style="${isAdded ? 'opacity: 0.5; pointer-events: none;' : ''}">
+          <img src="${profileSrc}" alt="" class="meter__select-item-img" />
+          <div class="meter__select-item-info">
+            <h4 class="meter__select-item-name">${d.name}</h4>
+            <p class="meter__select-item-sizes">H: ${parsedHeight.toFixed(1)}m | L: ${parsedLength.toFixed(1)}m | ${d.diet}</p>
+          </div>
+          <span class="meter__select-add-icon" style="${isAdded ? 'color: #4CAF50;' : ''}">${icon}</span>
+        </div>
+      `;
+    }).join('') || '<p class="text-muted" style="text-align: center; margin: 20px 0;">No dinosaurs found.</p>';
+
+    // Add click listeners to select items
+    selectorList.querySelectorAll('.meter__select-item:not(.meter__select-item--disabled)').forEach(item => {
+      item.addEventListener('click', () => {
+        const dinoName = item.dataset.dino;
+        const dino = dinoData.find(d => d.name === dinoName);
+        const isAdded = addedDinos.some(ad => ad.name === dinoName);
+
+        if (!isAdded && addedDinos.length < 4 && dino) {
+          addedDinos.push(getDinoStats(dino));
+          renderCompare();
+          renderSelectorList();
+          // Auto-close picker after adding
+          closePicker();
+        }
+      });
+    });
+  }
+
+  // === Modal Picker Logic ===
+  const pickerOverlay = document.getElementById('meter-picker-overlay');
+  const pickerCloseBtn = document.getElementById('meter-picker-close');
+  const addBtn = document.getElementById('meter-add-btn');
+
+  function openPicker() {
+    if (addedDinos.length >= 4) return;
+    renderSelectorList();
+    pickerOverlay.classList.add('meter__picker-overlay--open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closePicker() {
+    pickerOverlay.classList.remove('meter__picker-overlay--open');
+    document.body.style.overflow = '';
+  }
+
+  addBtn.addEventListener('click', openPicker);
+  pickerCloseBtn.addEventListener('click', closePicker);
+  pickerOverlay.addEventListener('click', (e) => {
+    if (e.target === pickerOverlay) closePicker();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && pickerOverlay.classList.contains('meter__picker-overlay--open')) {
+      closePicker();
+    }
+  });
+
+  // Update add button state
+  function updateAddBtnState() {
+    addBtn.disabled = addedDinos.length >= 4;
+  }
+
+  // Wrap renderCompare to also update button state
+  const _origRenderCompare = renderCompare;
+  renderCompare = function() {
+    _origRenderCompare();
+    updateAddBtnState();
+  };
+
+  // Filter click handlers
+  document.querySelectorAll('.meter__filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.meter__filter-btn').forEach(b => b.classList.remove('meter__filter-btn--active'));
+      btn.classList.add('meter__filter-btn--active');
+      renderSelectorList();
+    });
+  });
+
+  search.addEventListener('input', renderSelectorList);
+
+  // Initial render
+  renderSelectorList();
+  renderCompare();
 }
 
 // ===== TIMELINE =====
