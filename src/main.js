@@ -2,6 +2,9 @@ import './style.css';
 import { initInteractiveMascot } from './mascot.js';
 import { initEncyclopedia } from './encyclopedia.js';
 import { initDinoDetail } from './dino-detail.js';
+import { initDinoQuizPage } from './dino-quiz.js';
+import { initFossilDigPage } from './fossil-dig.js';
+import { initDinoMapPage } from './dino-map.js';
 import fossilData from './data/fossil-dig.json';
 import discoveryData from './data/dino-map.json';
 import quizQuestions from './data/quiz.json';
@@ -387,15 +390,6 @@ function initScrollAnimations() {
   document.querySelectorAll('.anim-fade-up').forEach(el => observer.observe(el));
 }
 
-// ===== SMOOTH SCROLL =====
-function initSmoothLinks() {
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', (e) => {
-      const target = document.querySelector(link.getAttribute('href'));
-      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
-    });
-  });
-}
 
 // ===== EPISODE COUNTDOWN =====
 function initCountdown() {
@@ -431,7 +425,7 @@ function initCountdown() {
     set('cd-secs', String(s).padStart(2, '0'));
   }
   update();
-  setInterval(update, 1000);
+  countdownInterval = setInterval(update, 1000);
 }
 
 // ===== DINO QUIZ =====
@@ -952,12 +946,12 @@ function initTimeline() {
                 const imgSrc = dino.image && dino.image.trim() !== '' ? dino.image : './images/dinos/trex.webp';
                 const cleanSrc = imgSrc.startsWith('./') ? imgSrc.replace('./', '../') : imgSrc;
                 return `
-                  <div class="timeline__dino-icon" style="background-image: url('${cleanSrc}'); border-color: ${era.color};" data-dino="${dino.name}">
+                  <a href="/DinoDeets_Website/explore/dino-detail.html?dino=${encodeURIComponent(dino.name)}" class="timeline__dino-icon" style="background-image: url('${cleanSrc}'); border-color: ${era.color};" data-dino="${dino.name}">
                     <div class="timeline__dino-bubble" style="--bubble-color: ${era.color}; color: #0E1A16;">
                       <p class="timeline__dino-bubble-name">${dino.name}</p>
                       <p class="timeline__dino-bubble-diet">${dino.diet}</p>
                     </div>
-                  </div>
+                  </a>
                 `;
               }).join('')}
             </div>
@@ -1051,15 +1045,7 @@ function initTimeline() {
     `;
   }).join('');
 
-  // Add click listeners to dinosaur circular icons to navigate to details page
-  track.querySelectorAll('.timeline__dino-icon').forEach(icon => {
-    icon.addEventListener('click', () => {
-      const dinoName = icon.dataset.dino;
-      if (dinoName) {
-        window.location.href = `/DinoDeets_Website/explore/dino-detail.html?dino=${encodeURIComponent(dinoName)}`;
-      }
-    });
-  });
+
 }
 
 // ===== DICTIONARY =====
@@ -1182,16 +1168,61 @@ function initColoringPages() {
 }
 
 
-// ===== INIT =====
+// ===== PAGE TRANSITIONS & PJAX ROUTING =====
+let pageCleanups = [];
+let countdownInterval = null;
 
-document.addEventListener('DOMContentLoaded', () => {
-  initNav();
-  initDropdowns();
+window.registerPageCleanup = function(fn) {
+  pageCleanups.push(fn);
+};
+
+function runPageCleanups() {
+  pageCleanups.forEach(fn => {
+    try {
+      fn();
+    } catch (e) {
+      console.error('Error during page cleanup:', e);
+    }
+  });
+  pageCleanups = [];
+}
+
+function wrapPageContent() {
+  let wrapper = document.getElementById('app-content-wrapper');
+  if (!wrapper) {
+    wrapper = document.createElement('div');
+    wrapper.id = 'app-content-wrapper';
+    
+    const nav = document.getElementById('main-nav');
+    const footer = document.getElementById('footer');
+    if (nav && footer) {
+      footer.parentNode.insertBefore(wrapper, footer);
+      
+      let next = nav.nextSibling;
+      while (next && next !== wrapper) {
+        const current = next;
+        next = next.nextSibling;
+        wrapper.appendChild(current);
+      }
+    }
+  }
+}
+
+function initPageContent() {
+  runPageCleanups();
+
   initParticles();
   loadEpisodes();
   initFossilDig();
   initDinoMap();
-  initCountdown();
+  
+  // Re-initialize countdown with safety check
+  if (countdownInterval) clearInterval(countdownInterval);
+  const nextEl = document.getElementById('countdown-next');
+  if (nextEl) {
+    initCountdown();
+  }
+  
   initQuiz();
   initMeter();
   initTimeline();
@@ -1202,9 +1233,292 @@ document.addEventListener('DOMContentLoaded', () => {
   initEncyclopedia();
   initDinoDetail();
 
+  // Page bundle initializers
+  initDinoQuizPage();
+  initFossilDigPage();
+  initDinoMapPage();
+
+  initScrollAnimations();
+  initSmoothLinks();
+  
+  updateNavbarActiveLinks();
+}
+
+let progressBarEl = null;
+let progressInterval = null;
+let progressWidth = 0;
+
+function createProgressBar() {
+  if (!progressBarEl) {
+    progressBarEl = document.createElement('div');
+    progressBarEl.className = 'page-progress-bar';
+    document.body.appendChild(progressBarEl);
+  }
+}
+
+function startProgressBar() {
+  createProgressBar();
+  progressBarEl.style.opacity = '1';
+  progressBarEl.style.width = '0%';
+  progressWidth = 0;
+  
+  if (progressInterval) clearInterval(progressInterval);
+  
+  setTimeout(() => {
+    if (progressBarEl) {
+      progressBarEl.style.width = '10%';
+      progressWidth = 10;
+    }
+  }, 10);
+  
+  progressInterval = setInterval(() => {
+    if (progressWidth < 90) {
+      const inc = (90 - progressWidth) * 0.15 * Math.random();
+      progressWidth += inc;
+      if (progressBarEl) progressBarEl.style.width = `${progressWidth}%`;
+    }
+  }, 150);
+}
+
+function finishProgressBar() {
+  if (progressInterval) clearInterval(progressInterval);
+  if (progressBarEl) {
+    progressBarEl.style.width = '100%';
+    setTimeout(() => {
+      if (progressBarEl) {
+        progressBarEl.style.opacity = '0';
+        setTimeout(() => {
+          if (progressBarEl && progressBarEl.style.opacity === '0') {
+            progressBarEl.style.width = '0%';
+          }
+        }, 300);
+      }
+    }, 200);
+  }
+}
+
+function getPageContentElements(doc = document) {
+  const elements = [];
+  const nav = doc.getElementById('main-nav');
+  const footer = doc.getElementById('footer');
+  if (!nav || !footer) {
+    const main = doc.querySelector('main');
+    if (main) return [main];
+    return Array.from(doc.body.children).filter(el => {
+      return el.tagName !== 'SCRIPT' && el.id !== 'mascot' && el.id !== 'back-to-top' && el.id !== 'main-nav' && el.id !== 'footer';
+    });
+  }
+  
+  let current = nav.nextElementSibling;
+  while (current && current !== footer) {
+    if (current.id !== 'mascot' && current.id !== 'back-to-top' && current.tagName !== 'SCRIPT') {
+      elements.push(current);
+    }
+    current = current.nextElementSibling;
+  }
+  return elements;
+}
+
+function updateNavbarActiveLinks() {
+  const currentPath = window.location.pathname;
+  const navLinks = document.querySelectorAll('#nav-links a');
+  
+  navLinks.forEach(link => link.classList.remove('active'));
+  
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href || href === '#') return;
+    
+    let linkPath = '';
+    try {
+      linkPath = new URL(href, window.location.origin).pathname;
+    } catch (e) {
+      return;
+    }
+    
+    const normCurrent = currentPath.replace(/\/$/, '');
+    const normLink = linkPath.replace(/\/$/, '');
+    
+    if (normCurrent === normLink) {
+      link.classList.add('active');
+    }
+  });
+  
+  const normCurrent = currentPath.replace(/\/$/, '');
+  const hasActive = Array.from(navLinks).some(link => link.classList.contains('active'));
+  
+  if (!hasActive) {
+    if (normCurrent.includes('/games/')) {
+      const gamesToggle = document.querySelector('#nav-links a[data-dropdown="games"]');
+      if (gamesToggle) gamesToggle.classList.add('active');
+    } else if (normCurrent.includes('/explore/encyclopedia.html') || 
+               normCurrent.includes('/explore/dino-detail.html') ||
+               normCurrent.includes('/explore/origins.html') ||
+               normCurrent.includes('/explore/extinction.html') ||
+               normCurrent.includes('/explore/paleo-guide.html')) {
+      const encLink = document.querySelector('#nav-links a[href*="encyclopedia.html"]');
+      if (encLink) encLink.classList.add('active');
+    } else if (normCurrent.includes('/explore/')) {
+      const exploreToggle = document.querySelector('#nav-links a[data-dropdown="explore"]');
+      if (exploreToggle) exploreToggle.classList.add('active');
+    }
+  }
+}
+
+async function fetchPage(url) {
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+    const text = await res.text();
+    const parser = new DOMParser();
+    return parser.parseFromString(text, 'text/html');
+  } catch (err) {
+    console.error('Failed to fetch page:', err);
+    return null;
+  }
+}
+
+let currentTransitionPromise = null;
+
+async function navigateToPage(url, pushState = true) {
+  if (currentTransitionPromise) return;
+  
+  currentTransitionPromise = (async () => {
+    try {
+      startProgressBar();
+      
+      const wrapper = document.getElementById('app-content-wrapper');
+      let fadeOutPromise = Promise.resolve();
+      if (wrapper) {
+        wrapper.classList.add('page-transition--fading');
+        fadeOutPromise = new Promise(resolve => {
+          wrapper.addEventListener('transitionend', function handler(e) {
+            if (e.propertyName === 'opacity') {
+              wrapper.removeEventListener('transitionend', handler);
+              resolve();
+            }
+          });
+          setTimeout(resolve, 350);
+        });
+      }
+      
+      const fetchPromise = fetchPage(url.href);
+      const [newDoc] = await Promise.all([fetchPromise, fadeOutPromise]);
+      
+      if (!newDoc) {
+        window.location.href = url.href;
+        return;
+      }
+      
+      document.title = newDoc.querySelector('title')?.innerText || '';
+      document.body.className = newDoc.body.className;
+      
+      if (wrapper) {
+        wrapper.innerHTML = '';
+        const newElements = getPageContentElements(newDoc);
+        newElements.forEach(el => {
+          const imported = document.importNode(el, true);
+          wrapper.appendChild(imported);
+        });
+      }
+      
+      if (url.hash) {
+        const hashEl = document.querySelector(url.hash);
+        if (hashEl) {
+          hashEl.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'auto' });
+        }
+      } else {
+        window.scrollTo({ top: 0, behavior: 'auto' });
+      }
+      
+      if (pushState) {
+        window.history.pushState(null, '', url.href);
+      }
+      
+      initPageContent();
+      
+      finishProgressBar();
+      
+      if (wrapper) {
+        wrapper.getBoundingClientRect(); // reflow
+        wrapper.classList.remove('page-transition--fading');
+      }
+    } catch (err) {
+      console.error('PJAX navigation error:', err);
+      window.location.href = url.href;
+    } finally {
+      currentTransitionPromise = null;
+    }
+  })();
+}
+
+function handleLinkClick(e) {
+  const link = e.target.closest('a');
+  if (!link) return;
+  if (link.target === '_blank' || link.hasAttribute('download')) return;
+  
+  const href = link.getAttribute('href');
+  if (!href || href.startsWith('javascript:')) return;
+  if (href.startsWith('#')) return;
+  
+  let targetUrl;
+  try {
+    targetUrl = new URL(link.href);
+  } catch (err) {
+    return;
+  }
+  
+  if (targetUrl.origin !== window.location.origin) return;
+  
+  if (targetUrl.pathname === window.location.pathname && targetUrl.search === window.location.search) {
+    if (targetUrl.hash) {
+      const targetEl = document.querySelector(targetUrl.hash);
+      if (targetEl) {
+        e.preventDefault();
+        targetEl.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    return;
+  }
+  
+  e.preventDefault();
+  navigateToPage(targetUrl);
+}
+
+function initSmoothLinks() {
+  const container = document.getElementById('app-content-wrapper') || document;
+  container.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+}
+
+// ===== INIT =====
+
+document.addEventListener('DOMContentLoaded', () => {
+  wrapPageContent();
+  initNav();
+  initDropdowns();
+  
+  // Initialize persistent components
   initInteractiveMascot();
   initBackToTop();
-  initScrollAnimations();
   
-  initSmoothLinks();
+  // Initialize dynamic page content
+  initPageContent();
+  
+  // Set up global click interceptor for link navigation
+  document.body.addEventListener('click', handleLinkClick);
+  
+  // Listen to popstate event for browser back/forward buttons
+  window.addEventListener('popstate', () => {
+    navigateToPage(new URL(window.location.href), false);
+  });
 });

@@ -1,9 +1,16 @@
 import encyclopediaData from './data/encyclopedia.json';
 
-document.addEventListener('DOMContentLoaded', () => {
+let timerInterval = null;
+
+export function initFossilDigPage() {
   const svgMap = document.getElementById('vector-world-map');
   const mapWrapper = document.getElementById('vector-map-wrapper');
   if (!svgMap || !mapWrapper) return;
+
+  const targetsContainer = document.getElementById('fossil-targets');
+  if (!targetsContainer) return;
+
+  if (timerInterval) clearInterval(timerInterval);
 
   // Modals & UI
   const introState = document.getElementById('fossil-intro-state');
@@ -54,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let timeLeft = 60;
   let totalScore = 0;
   let currentStreak = 0;
-  let timerInterval = null;
   let isPlaying = false;
 
   // Sound generation logic using HTML5 Web Audio API
@@ -834,10 +840,17 @@ document.addEventListener('DOMContentLoaded', () => {
   scratchCanvas.addEventListener('touchmove', (e) => { e.preventDefault(); handleScratch(e); });
   
   // Update pointer on window resize
-  window.addEventListener('resize', () => {
+  const resizeHandler = () => {
     if (digLensContainer.style.display === 'block') {
       drawPointer();
     }
-  });
+  };
+  window.addEventListener('resize', resizeHandler);
 
-});
+  if (window.registerPageCleanup) {
+    window.registerPageCleanup(() => {
+      window.removeEventListener('resize', resizeHandler);
+      if (timerInterval) clearInterval(timerInterval);
+    });
+  }
+}

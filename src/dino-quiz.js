@@ -1,8 +1,9 @@
 import quizData from './data/dino-quiz.json';
 
-document.addEventListener('DOMContentLoaded', () => {
+export function initDinoQuizPage() {
   // Elements
   const screenStart = document.getElementById('quiz-start');
+  if (!screenStart) return;
   const screenActive = document.getElementById('quiz-active');
   const screenResults = document.getElementById('quiz-results');
 
@@ -219,4 +220,4 @@ document.addEventListener('DOMContentLoaded', () => {
       elChart.appendChild(barWrap);
     });
   }
-});
+}

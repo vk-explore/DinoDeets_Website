@@ -26,6 +26,7 @@ Website for the **Dino Deets** podcast — a kid-and-family-friendly dinosaur po
 8. Dino Timeline Explorer (Completed - refactored vertical scroll layout with custom strata scrollbar, horizontal stage chips with detailed hover tooltips, and educational Triassic empty-state explanations)
 9. Dino-o-Meter Size Comparison (Completed - interactive size comparison tool with dynamic scale grid, neutral side-profile cutouts, human silhouette, and automatic aspect-ratio zoom/resizing. Full-width scale layout with modal picker dialog for adding dinosaurs.)
 10. Dino Creator Removal & Navigation Cleanups (Completed - removed dino-creator.html page and assets, removed Dino Creator and Paleo Guide links from dropdown menus, removed "Back to Encyclopedia" buttons from story detail pages, and styled navigation dropdown links with block formatting and padding-left transitions on hover.)
+11. Smooth Page Transitions & Progress Bar (Completed - implemented client-side PJAX routing to swap page content smoothly, showing a gold-green-orange trickle progress bar at the top, and dissolving the old page content into the new page to eliminate browser loading flashes.)
 
 
 ## Agent Guidelines

@@ -65,13 +65,13 @@ function latLonToSvg(lat, lon) {
   };
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+export function initDinoMapPage() {
   const svgMap = document.getElementById('vector-world-map');
   const panelTitle = document.getElementById('panel-location-title');
   const panelGrid = document.getElementById('panel-dino-grid');
   const mapWrapper = document.getElementById('vector-map-wrapper');
 
-  if (!svgMap) return;
+  if (!svgMap || !panelTitle || !panelGrid || !mapWrapper) return;
 
   // Create an HTML tooltip (guarantees perfect text scaling and theming)
   const htmlTooltip = document.createElement('div');
@@ -263,4 +263,4 @@ document.addEventListener('DOMContentLoaded', () => {
     markersGroup.appendChild(markerGroup);
     markerIndex++;
   });
-});
+}

@@ -74,7 +74,8 @@ function renderGallery() {
 
 function renderCards(dinos, container) {
   dinos.forEach(dino => {
-    const card = document.createElement('div');
+    const card = document.createElement('a');
+    card.href = `/DinoDeets_Website/explore/dino-detail.html?dino=${encodeURIComponent(dino.name)}`;
     card.className = 'dino-card';
     
     // Handle placeholder image
@@ -91,9 +92,6 @@ function renderCards(dinos, container) {
       </div>
     `;
     
-    card.addEventListener('click', () => {
-      window.location.href = `/DinoDeets_Website/explore/dino-detail.html?dino=${encodeURIComponent(dino.name)}`;
-    });
     container.appendChild(card);
   });
 }
