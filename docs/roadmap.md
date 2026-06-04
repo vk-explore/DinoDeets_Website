@@ -33,8 +33,9 @@
 ## ✅ Phase 4: Advanced (v3.0)
 - [x] "Dino Creator" — design your own dinosaur (Canvas)
 - [x] Fan Art gallery (lightbox)
-- [x] Coloring pages (downloadable PNGs)
+- [x] Coloring pages (downloadable WebP sheets)
 - [x] Auto-generated dino names
+- [x] WebP image asset optimization and size reduction (v9)
 
 ## 🚀 Future Ideas
 - [ ] Multi-language support (Hindi, Spanish)

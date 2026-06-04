@@ -43,7 +43,7 @@ export function initDinoDetail() {
 
     document.title = `${dino.name} | Dino Deets`;
 
-    const imgSrc = dino.image && dino.image.trim() !== '' ? dino.image : '../images/dinos/trex.png';
+    const imgSrc = dino.image && dino.image.trim() !== '' ? dino.image : '../images/dinos/trex.webp';
     const originalSrc = imgSrc.startsWith('./') ? imgSrc.replace('./', '../') : imgSrc;
 
     const diets = getActiveDiets(dino.diet);

@@ -5,7 +5,7 @@
     "length": 1,
     "weight": "3 kg",
     "diet": "Carnivore",
-    "image": "./images/dinos/velociraptor.png",
+    "image": "./images/dinos/velociraptor.webp",
     "comparison": "About the size of a chicken!"
   },
   {
@@ -14,7 +14,7 @@
     "length": 1.8,
     "weight": "15 kg",
     "diet": "Carnivore",
-    "image": "./images/dinos/velociraptor.png",
+    "image": "./images/dinos/velociraptor.webp",
     "comparison": "About the size of a turkey"
   },
   {
@@ -23,7 +23,7 @@
     "length": 0.5,
     "weight": "70 kg",
     "diet": "Omnivore",
-    "image": "./images/mascot.png",
+    "image": "./images/mascot.webp",
     "comparison": "That's you!"
   },
   {
@@ -32,7 +32,7 @@
     "length": 9,
     "weight": "5,000 kg",
     "diet": "Herbivore",
-    "image": "./images/dinos/stegosaurus.png",
+    "image": "./images/dinos/stegosaurus.webp",
     "comparison": "As long as a bus!"
   },
   {
@@ -41,7 +41,7 @@
     "length": 9,
     "weight": "6,000 kg",
     "diet": "Herbivore",
-    "image": "./images/dinos/triceratops.png",
+    "image": "./images/dinos/triceratops.webp",
     "comparison": "Heavy as an elephant!"
   },
   {
@@ -50,7 +50,7 @@
     "length": 12.3,
     "weight": "8,400 kg",
     "diet": "Carnivore",
-    "image": "./images/dinos/trex.png",
+    "image": "./images/dinos/trex.webp",
     "comparison": "Tall as a giraffe!"
   },
   {
@@ -59,7 +59,7 @@
     "length": 25,
     "weight": "56,000 kg",
     "diet": "Herbivore",
-    "image": "./images/dinos/brachiosaurus.png",
+    "image": "./images/dinos/brachiosaurus.webp",
     "comparison": "Could peek into a 4th-floor window!"
   },
   {
@@ -68,7 +68,7 @@
     "length": 35,
     "weight": "100,000 kg",
     "diet": "Herbivore",
-    "image": "./images/dinos/brachiosaurus.png",
+    "image": "./images/dinos/brachiosaurus.webp",
     "comparison": "Heavier than 14 elephants combined!"
   }
 ]

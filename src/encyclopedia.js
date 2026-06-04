@@ -78,7 +78,7 @@ function renderCards(dinos, container) {
     card.className = 'dino-card';
     
     // Handle placeholder image
-    const imgSrc = dino.image && dino.image.trim() !== '' ? dino.image : '../images/dinos/trex.png';
+    const imgSrc = dino.image && dino.image.trim() !== '' ? dino.image : '../images/dinos/trex.webp';
     const originalSrc = imgSrc.startsWith('./') ? imgSrc.replace('./', '../') : imgSrc;
 
     card.innerHTML = `

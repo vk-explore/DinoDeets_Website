@@ -16,12 +16,12 @@ const { fanArtGallery, coloringPages } = artData;
 
 // Dino image mapping for Random Deet
 const dinoImages = {
-  'Tyrannosaurus Rex': './images/dinos/trex.png',
-  'Velociraptor': './images/dinos/velociraptor.png',
-  'Triceratops': './images/dinos/triceratops.png',
-  'Stegosaurus': './images/dinos/stegosaurus.png',
-  'Brachiosaurus': './images/dinos/brachiosaurus.png',
-  'default': './images/dinos/trex.png',
+  'Tyrannosaurus Rex': './images/dinos/trex.webp',
+  'Velociraptor': './images/dinos/velociraptor.webp',
+  'Triceratops': './images/dinos/triceratops.webp',
+  'Stegosaurus': './images/dinos/stegosaurus.webp',
+  'Brachiosaurus': './images/dinos/brachiosaurus.webp',
+  'default': './images/dinos/trex.webp',
 };
 
 function getDinoImage(name) {
@@ -138,12 +138,12 @@ function renderEpisodes(items) {
 
 function renderFallbackEpisodes() {
   const fallback = [
-    { title: "The BIGGEST Dinosaur Ever Found!", img: "./images/dinos/brachiosaurus.png" },
-    { title: "T-Rex: King of the Dinosaurs", img: "./images/dinos/trex.png" },
-    { title: "Fossils: How Dinosaurs Become Stones", img: "./images/props/trex-skull.png" },
-    { title: "Underwater Monsters of the Deep", img: "./images/dinos/velociraptor.png" },
-    { title: "The Armored Stegosaurus", img: "./images/dinos/stegosaurus.png" },
-    { title: "India's Own Dinosaurs!", img: "./images/dinos/triceratops.png" },
+    { title: "The BIGGEST Dinosaur Ever Found!", img: "./images/dinos/brachiosaurus.webp" },
+    { title: "T-Rex: King of the Dinosaurs", img: "./images/dinos/trex.webp" },
+    { title: "Fossils: How Dinosaurs Become Stones", img: "./images/props/trex-skull.webp" },
+    { title: "Underwater Monsters of the Deep", img: "./images/dinos/velociraptor.webp" },
+    { title: "The Armored Stegosaurus", img: "./images/dinos/stegosaurus.webp" },
+    { title: "India's Own Dinosaurs!", img: "./images/dinos/triceratops.webp" },
   ];
   const grid = document.getElementById('episodes-grid');
   grid.innerHTML = fallback.map((ep, i) => `
@@ -200,7 +200,7 @@ function initFossilDig() {
 
     // Draw fossil image underneath
     const fossilImg = new Image();
-    fossilImg.src = './images/props/trex-skull.png';
+    fossilImg.src = './images/props/trex-skull.webp';
     fossilImg.onload = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Draw dark background
@@ -220,7 +220,7 @@ function initFossilDig() {
 
       // Overlay dirt layer
       const dirtImg = new Image();
-      dirtImg.src = './images/props/dig-earth.png';
+      dirtImg.src = './images/props/dig-earth.webp';
       dirtImg.onload = () => {
         ctx.globalCompositeOperation = 'source-over';
         ctx.drawImage(dirtImg, 0, 0, canvas.width, canvas.height);
@@ -850,7 +850,7 @@ function initColoringPages() {
       <div class="coloring__card-info">
         <h3 class="coloring__card-name">${page.name}</h3>
         <p class="coloring__card-diff">Difficulty: ${page.difficulty}</p>
-        <a href="${page.image}" download="DinoDeets-${page.name.replace(/\s+/g, '-')}.png" class="coloring__download">
+        <a href="${page.image}" download="DinoDeets-${page.name.replace(/\s+/g, '-')}.webp" class="coloring__download">
           Download & Print
         </a>
       </div>

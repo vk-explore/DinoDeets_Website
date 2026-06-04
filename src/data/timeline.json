@@ -9,7 +9,7 @@
         "year": "230 MYA",
         "title": "First Dinosaurs",
         "desc": "Small, bipedal dinosaurs like Eoraptor appear in what is now Argentina.",
-        "image": "./images/dinos/velociraptor.png"
+        "image": "./images/dinos/velociraptor.webp"
       },
       {
         "year": "220 MYA",
@@ -38,13 +38,13 @@
         "year": "155 MYA",
         "title": "Giants Emerge",
         "desc": "Brachiosaurus, Diplodocus, and other massive sauropods roam the Earth.",
-        "image": "./images/dinos/brachiosaurus.png"
+        "image": "./images/dinos/brachiosaurus.webp"
       },
       {
         "year": "150 MYA",
         "title": "Stegosaurus Era",
         "desc": "Plated dinosaurs with spiked tails thrive in lush forests.",
-        "image": "./images/dinos/stegosaurus.png"
+        "image": "./images/dinos/stegosaurus.webp"
       },
       {
         "year": "150 MYA",
@@ -86,13 +86,13 @@
         "year": "80 MYA",
         "title": "Triceratops Appears",
         "desc": "Three-horned giants roam North America in vast herds.",
-        "image": "./images/dinos/triceratops.png"
+        "image": "./images/dinos/triceratops.webp"
       },
       {
         "year": "68 MYA",
         "title": "T-Rex Reigns",
         "desc": "The most famous predator of all time dominates the Late Cretaceous.",
-        "image": "./images/dinos/trex.png"
+        "image": "./images/dinos/trex.webp"
       },
       {
         "year": "66 MYA",

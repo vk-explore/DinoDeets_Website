@@ -9,7 +9,7 @@
     ],
     "correct": 1,
     "explanation": "T-Rex had a bite force of about 12,800 pounds — enough to crush bone!",
-    "image": "./images/dinos/trex.png"
+    "image": "./images/dinos/trex.webp"
   },
   {
     "question": "How big was a real Velociraptor?",
@@ -21,7 +21,7 @@
     ],
     "correct": 1,
     "explanation": "Velociraptors were actually only about the size of a turkey — not the giants shown in movies!",
-    "image": "./images/dinos/velociraptor.png"
+    "image": "./images/dinos/velociraptor.webp"
   },
   {
     "question": "Which dinosaur had plates on its back that could regulate body temperature?",
@@ -33,7 +33,7 @@
     ],
     "correct": 2,
     "explanation": "Stegosaurus plates could flush with blood to help cool down or warm up!",
-    "image": "./images/dinos/stegosaurus.png"
+    "image": "./images/dinos/stegosaurus.webp"
   },
   {
     "question": "What does the word 'dinosaur' mean in Greek?",
@@ -67,7 +67,7 @@
     ],
     "correct": 2,
     "explanation": "Triceratops means 'three-horned face' — two long brow horns and one shorter nose horn!",
-    "image": "./images/dinos/triceratops.png"
+    "image": "./images/dinos/triceratops.webp"
   },
   {
     "question": "What are the closest living relatives of dinosaurs?",
