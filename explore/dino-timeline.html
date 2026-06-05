@@ -17,29 +17,133 @@
   <body class="timeline-page-body">
     <!-- DINO LOADER START -->
     <style id="loader-styles">
-      #dino-loader{position:fixed;inset:0;background:#0e1a16;z-index:99999;display:flex;align-items:center;justify-content:center;opacity:1;transition:opacity 0.5s ease}
+      #dino-loader{position:fixed;inset:0;z-index:99999;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:1;transition:opacity 0.6s ease;overflow:hidden;background:radial-gradient(ellipse at 50% 80%,#172922 0%,#0e1a16 50%,#070d0a 100%)}
       #dino-loader *{margin:0;padding:0;box-sizing:border-box}
-      .dl-track{width:min(80vw,500px);height:6px;background:rgba(255,255,255,0.1);border-radius:4px;position:relative}
-      .dl-bar{height:100%;background:#d4a843;width:0%;border-radius:4px;box-shadow:0 0 12px #d4a843,0 0 4px #d4a843;transition:width 80ms linear}
-      .dl-asteroid{position:absolute;top:50%;left:0%;transform:translate(-50%,-50%);z-index:2;filter:drop-shadow(0 0 8px #e8652d) drop-shadow(0 0 16px rgba(232,101,45,0.5));transition:left 80ms linear}
-      .dl-trex{position:absolute;top:50%;right:-30px;transform:translateY(-50%);z-index:1}
-      .dl-bubble{background:#fff;color:#0e1a16;padding:3px 7px;border-radius:10px;font-family:sans-serif;font-size:11px;font-weight:700;white-space:nowrap;position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);box-shadow:0 2px 8px rgba(0,0,0,0.4);transition:all 0.2s ease}
-      .dl-bubble::after{content:'';position:absolute;top:100%;left:50%;margin-left:-4px;border:4px solid transparent;border-top-color:#fff}
-      .dl-spark{position:absolute;width:3px;height:3px;border-radius:50%;pointer-events:none;opacity:1;animation:dlspark 0.5s forwards ease-out}
-      @keyframes dlspark{to{opacity:0;transform:translate(var(--dx),var(--dy)) scale(0)}}
+
+      .dl-stars{position:absolute;inset:0;overflow:hidden}
+      .dl-star{position:absolute;width:2px;height:2px;background:#fff;border-radius:50%;animation:dl-twinkle 2.5s infinite alternate ease-in-out}
+      @keyframes dl-twinkle{0%{opacity:0.15;transform:scale(0.8)}100%{opacity:0.8;transform:scale(1.2)}}
+
+      .dl-scene{position:relative;width:min(90vw,580px);display:flex;flex-direction:column;align-items:center;gap:32px}
+
+      .dl-title{font-family:'Titan One','Nunito',sans-serif;font-size:clamp(18px,4vw,26px);color:#d4a843;text-align:center;letter-spacing:1.5px;text-shadow:0 0 20px rgba(212,168,67,0.3);animation:dl-pulse-text 1.8s ease-in-out infinite alternate}
+      @keyframes dl-pulse-text{0%{opacity:0.7;text-shadow:0 0 20px rgba(212,168,67,0.2)}100%{opacity:1;text-shadow:0 0 30px rgba(212,168,67,0.5)}}
+
+      /* MASSIVE track */
+      .dl-track{width:100%;height:28px;background:rgba(255,255,255,0.05);border-radius:99px;position:relative;border:1px solid rgba(255,255,255,0.04);box-shadow:inset 0 3px 8px rgba(0,0,0,0.4)}
+      .dl-bar{height:100%;width:0%;border-radius:99px;background:linear-gradient(90deg,#c17b2e,#d4a843,#f0c850);box-shadow:0 0 20px rgba(212,168,67,0.5),0 0 8px rgba(212,168,67,0.3);transition:width 80ms linear}
+
+      .dl-meteor{position:absolute;top:50%;left:0%;transform:translate(-50%,-50%);z-index:3;transition:left 80ms linear}
+      .dl-meteor svg{display:block;filter:drop-shadow(0 0 10px rgba(255,140,40,0.7)) drop-shadow(0 0 20px rgba(232,101,45,0.3))}
+
+      .dl-trex-pos{position:absolute;top:50%;left:50%;width:0;height:0;z-index:2;transition:left 100ms linear}
+      .dl-trex-shiver{position:absolute;transform:translate(-50%,-50%)}
+      .dl-trex-shiver svg{display:block;filter:drop-shadow(0 0 5px rgba(105,158,75,0.4))}
+
+      .dl-exclaim{position:absolute;bottom:calc(100% + 4px);left:50%;transform:translateX(-50%);font-family:'Titan One',sans-serif;font-weight:900;color:#ff1744;font-size:0;text-shadow:0 0 8px rgba(255,23,68,0.6);transition:font-size 0.3s cubic-bezier(.34,1.56,.64,1);pointer-events:none;white-space:nowrap;letter-spacing:2px}
+
+      .dl-sweat{position:absolute;pointer-events:none;animation:dl-sweat-fly 0.5s forwards ease-out}
+      @keyframes dl-sweat-fly{0%{opacity:0.9;transform:translate(0,0)}100%{opacity:0;transform:translate(var(--sx),var(--sy))}}
+
+
+
+      .dl-particle{position:absolute;border-radius:50%;pointer-events:none;animation:dl-particle-fly 0.6s forwards ease-out}
+      @keyframes dl-particle-fly{0%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(var(--px),var(--py)) scale(0)}}
+
+      .dl-flash{position:absolute;top:50%;transform:translate(-50%,-50%) scale(0);width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(255,220,80,1) 0%,rgba(232,101,45,0.7) 30%,transparent 65%);pointer-events:none;z-index:10}
+
+
+
+      @keyframes dl-shiver-mild{0%,100%{transform:translate(-50%,-50%) rotate(0)}25%{transform:translate(calc(-50% + 1px),calc(-50% - 1px)) rotate(1deg)}75%{transform:translate(calc(-50% - 1px),calc(-50% + 1px)) rotate(-1deg)}}
+      @keyframes dl-shiver-med{0%,100%{transform:translate(-50%,-50%) rotate(0)}25%{transform:translate(calc(-50% + 2px),calc(-50% - 2px)) rotate(2.5deg)}75%{transform:translate(calc(-50% - 2px),calc(-50% + 2px)) rotate(-2.5deg)}}
+      @keyframes dl-shiver-max{0%,100%{transform:translate(-50%,-50%) rotate(0)}20%{transform:translate(calc(-50% + 3px),calc(-50% - 3px)) rotate(4deg)}40%{transform:translate(calc(-50% - 3px),calc(-50% + 3px)) rotate(-3deg)}60%{transform:translate(calc(-50% + 2px),calc(-50% - 2px)) rotate(3deg)}80%{transform:translate(calc(-50% - 2px),calc(-50% + 2px)) rotate(-4deg)}}
+
       body.dl-loading > *:not(#dino-loader):not(script):not(style):not(link){visibility:hidden !important}
     </style>
     <div id="dino-loader">
-      <div class="dl-track" id="dl-track">
-        <div class="dl-bar" id="dl-bar"></div>
-        <div class="dl-asteroid" id="dl-asteroid">
-          <span class="dl-bubble" id="dl-abub">Here I come!</span>
-          <svg viewBox="0 0 60 40" width="44" height="30"><polygon points="0,15 35,10 35,30 0,25" fill="#d4a843" opacity=".7"/><polygon points="0,17 30,14 30,26 0,23" fill="#ffeb3b" opacity=".5"/><circle cx="40" cy="20" r="14" fill="#e8652d"/><circle cx="37" cy="16" r="3" fill="#c35222"/><circle cx="44" cy="24" r="3.5" fill="#c35222"/></svg>
+      <div class="dl-stars" id="dl-stars"></div>
+      <div class="dl-scene">
+        <p class="dl-title" id="dl-title">Traveling back in time…</p>
+        <div class="dl-track" id="dl-track">
+          <div class="dl-bar" id="dl-bar"></div>
+          <div class="dl-meteor" id="dl-meteor">
+
+            <!-- BIG detailed asteroid - bigger than dino -->
+            <svg viewBox="0 0 120 80" width="90" height="72">
+              <defs>
+                <radialGradient id="mglow" cx="60%" cy="45%" r="55%"><stop offset="0%" stop-color="#ffeb3b" stop-opacity="0.6"/><stop offset="100%" stop-color="#ff6f00" stop-opacity="0"/></radialGradient>
+                <radialGradient id="mcore" cx="55%" cy="45%" r="45%"><stop offset="0%" stop-color="#e8873d"/><stop offset="60%" stop-color="#c35222"/><stop offset="100%" stop-color="#8b3015"/></radialGradient>
+                <linearGradient id="mtail" x1="0" y1="0.5" x2="0.65" y2="0.5"><stop offset="0%" stop-color="#ffeb3b" stop-opacity="0"/><stop offset="30%" stop-color="#ff9800" stop-opacity="0.25"/><stop offset="70%" stop-color="#e8652d" stop-opacity="0.7"/><stop offset="100%" stop-color="#c35222" stop-opacity="0.9"/></linearGradient>
+                <linearGradient id="mlava" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ff6f00" stop-opacity="0.8"/><stop offset="100%" stop-color="#e8652d" stop-opacity="0"/></linearGradient>
+              </defs>
+              <!-- Outer heat glow -->
+              <ellipse cx="78" cy="40" rx="42" ry="36" fill="url(#mglow)"/>
+              <!-- Flame tail - outer -->
+              <path d="M0,30 Q15,18 35,26 Q55,32 70,38 Q75,40 70,42 Q55,48 35,54 Q15,62 0,50 Z" fill="url(#mtail)"/>
+              <!-- Flame tail - inner hot -->
+              <path d="M20,33 Q35,24 52,34 Q65,38 68,40 Q65,42 52,46 Q35,56 20,47 Z" fill="#ff9800" opacity="0.5"/>
+              <!-- Flame wisps -->
+              <path d="M8,28 Q18,20 28,28" fill="none" stroke="#ffeb3b" stroke-width="1.5" opacity="0.4"/>
+              <path d="M5,50 Q15,58 25,50" fill="none" stroke="#ff9800" stroke-width="1.5" opacity="0.35"/>
+              <!-- Rock body -->
+              <ellipse cx="80" cy="40" rx="24" ry="22" fill="url(#mcore)"/>
+              <!-- Surface texture / cracks -->
+              <path d="M68,30 Q74,36 70,42 Q78,45 85,38" fill="none" stroke="#8b3015" stroke-width="1" opacity="0.5"/>
+              <path d="M88,32 Q92,40 86,48" fill="none" stroke="#a33b17" stroke-width="0.8" opacity="0.4"/>
+              <!-- Craters -->
+              <ellipse cx="72" cy="34" rx="4" ry="3.5" fill="#8b3015" opacity="0.7"/>
+              <ellipse cx="72" cy="34" rx="2.5" ry="2" fill="#6d2410" opacity="0.4"/>
+              <ellipse cx="88" cy="46" rx="5" ry="4" fill="#8b3015" opacity="0.6"/>
+              <ellipse cx="88" cy="46" rx="3" ry="2.5" fill="#6d2410" opacity="0.35"/>
+              <circle cx="76" cy="50" r="2.5" fill="#8b3015" opacity="0.5"/>
+              <circle cx="92" cy="35" r="2" fill="#a33b17" opacity="0.45"/>
+              <!-- Lava veins -->
+              <path d="M70,38 Q76,42 82,38 Q86,36 90,40" fill="none" stroke="url(#mlava)" stroke-width="1.5" opacity="0.6"/>
+              <path d="M74,44 Q80,48 86,44" fill="none" stroke="#ff6f00" stroke-width="1" opacity="0.4"/>
+              <!-- Top highlight -->
+              <ellipse cx="76" cy="30" rx="8" ry="4" fill="#e8873d" opacity="0.45"/>
+              <!-- Evil eyes -->
+              <ellipse cx="74" cy="38" rx="4.5" ry="4" fill="#fff"/>
+              <ellipse cx="88" cy="38" rx="4.5" ry="4" fill="#fff"/>
+              <circle cx="75.5" cy="38" r="2.2" fill="#1a1a1a"/>
+              <circle cx="89.5" cy="38" r="2.2" fill="#1a1a1a"/>
+              <circle cx="76.2" cy="37" r="0.8" fill="#fff"/>
+              <circle cx="90.2" cy="37" r="0.8" fill="#fff"/>
+              <!-- Evil grin -->
+              <path d="M78,44 Q81,48 84,44" fill="none" stroke="#1a1a1a" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <!-- Outer = position, Inner = shiver -->
+          <div class="dl-trex-pos" id="dl-trex-pos">
+            <div class="dl-trex-shiver" id="dl-trex-shiver">
+              <div class="dl-exclaim" id="dl-exclaim"></div>
+
+              <svg id="dl-trex-svg" viewBox="0 0 64 72" width="52" height="58" style="transform:scaleX(-1);overflow:visible">
+                <defs>
+                  <linearGradient id="trexg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7ec55e"/><stop offset="100%" stop-color="#4a8c34"/></linearGradient>
+                  <linearGradient id="trexbelly" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a8e88a"/><stop offset="100%" stop-color="#8fd46e"/></linearGradient>
+                </defs>
+                <path d="M18,34 Q8,28 2,20 Q0,16 3,17 Q8,22 14,28 Q16,32 18,34" fill="url(#trexg)"/>
+                <ellipse cx="32" cy="34" rx="15" ry="12" fill="url(#trexg)"/>
+                <ellipse cx="33" cy="37" rx="9" ry="7" fill="url(#trexbelly)" opacity="0.4"/>
+                <path d="M20,24 L17,18 L23,24 M26,22 L24,16 L30,22 M32,22 L32,16 L36,22" fill="#5ea83e" opacity="0.7"/>
+                <path d="M34,24 Q34,16 36,12 L42,12 Q40,18 38,24" fill="url(#trexg)"/>
+                <path d="M34,6 L54,3 L56,8 L54,13 L52,13 L48,15 L38,15 L34,12 Z" fill="url(#trexg)"/>
+                <path d="M54,13 L54,16 L46,17 L38,15" fill="#5ea83e"/>
+                <path d="M54,13 L52,16.5 L50,13 L48,16.5 L46,13.5" fill="none" stroke="#fff" stroke-width="1.2" stroke-linecap="round"/>
+                <ellipse id="dl-eye-white" cx="44" cy="8" rx="4" ry="3.5" fill="#fff"/>
+                <circle id="dl-eye-pupil" cx="45" cy="8" r="2" fill="#1a2e1a"/>
+                <circle cx="46" cy="7" r="0.8" fill="#fff"/>
+                <path d="M42,26 Q48,28 47,32" fill="none" stroke="url(#trexg)" stroke-width="3.5" stroke-linecap="round"/>
+                <circle cx="47" cy="32" r="1.5" fill="#5ea83e"/>
+                <g id="dl-leg-l"><path d="M26,44 L22,58 L18,58 L17,61 L25,61 L28,46" fill="url(#trexg)"/></g>
+                <g id="dl-leg-r"><path d="M38,44 L42,58 L38,58 L37,61 L45,61 L40,46" fill="url(#trexg)"/></g>
+              </svg>
+            </div>
+          </div>
+          <div class="dl-flash" id="dl-flash"></div>
         </div>
-        <div class="dl-trex" id="dl-trex">
-          <span class="dl-bubble" id="dl-tbub">Oh no!</span>
-          <svg viewBox="0 0 44 47" width="36" height="30" style="transform:scaleX(-1)"><path d="M22 0h22v7h-2v2h-2v2h-2v2h-12v2h-2v2h-2v2h-2v4h2v4h2v2h2v8h-4v2h-4v-6h2v-4h-2v-4h-2v4h-2v2h-4v4h-4v2h-4v-10h4v-2h4v-4h2v-4h2v-4h2v-4h2v-4h2v-4h2v-2h4v-2z" fill="#699e4b"/><rect x="28" y="6" width="4" height="4" fill="#1a2e1a"/></svg>
-        </div>
+
       </div>
     </div>
     <script>
@@ -48,28 +152,146 @@
       var el=document.getElementById('dino-loader');
       if(!el)return;
       var bar=document.getElementById('dl-bar');
-      var ast=document.getElementById('dl-asteroid');
-      var tb=document.getElementById('dl-tbub');
-      var ab=document.getElementById('dl-abub');
+      var meteor=document.getElementById('dl-meteor');
+
+
       var track=document.getElementById('dl-track');
-      var p=0,ready=false,t0=Date.now();
-      var cols=['#ffeb3b','#e8652d','#ff9800'];
-      function spark(){
-        if(p>95)return;
+      var flash=document.getElementById('dl-flash');
+
+      var title=document.getElementById('dl-title');
+      var starsEl=document.getElementById('dl-stars');
+      var trexPos=document.getElementById('dl-trex-pos');
+      var trexShiver=document.getElementById('dl-trex-shiver');
+      var exclaim=document.getElementById('dl-exclaim');
+      var eyeW=document.getElementById('dl-eye-white');
+      var eyeP=document.getElementById('dl-eye-pupil');
+      var legL=document.getElementById('dl-leg-l');
+      var legR=document.getElementById('dl-leg-r');
+
+      for(var i=0;i<50;i++){
         var s=document.createElement('div');
-        s.className='dl-spark';
-        s.style.left=p+'%';s.style.top='50%';
-        s.style.background=cols[Math.random()*3|0];
-        s.style.setProperty('--dx',(Math.random()*20-10)+'px');
-        s.style.setProperty('--dy',(Math.random()*16+4)+'px');
-        track.appendChild(s);
-        setTimeout(function(){if(s.parentNode)s.parentNode.removeChild(s)},500);
+        s.className='dl-star';
+        s.style.left=Math.random()*100+'%';
+        s.style.top=Math.random()*100+'%';
+        s.style.width=s.style.height=(1+Math.random()*2)+'px';
+        s.style.animationDelay=(Math.random()*3)+'s';
+        s.style.animationDuration=(1.5+Math.random()*2)+'s';
+        starsEl.appendChild(s);
       }
+
+      var p=0,ready=false,t0=Date.now(),legFrame=0;
+      var dinoPos=50;
+      var cols=['#ffeb3b','#ff9800','#e8652d','#ff6f00','#ffc107'];
+
+
+
+
+      function sweat(){
+        if(p<25||Math.random()>0.35)return;
+        var d=document.createElement('div');
+        d.className='dl-sweat';
+        d.style.left=dinoPos+'%';
+        d.style.top='50%';
+        d.style.width='4px';d.style.height='6px';
+        d.style.borderRadius='50% 50% 50% 50% / 60% 60% 40% 40%';
+        d.style.background='#64b5f6';
+        d.style.setProperty('--sx',(Math.random()*20-10)+'px');
+        d.style.setProperty('--sy',(10+Math.random()*14)+'px');
+        track.appendChild(d);
+        setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d)},500);
+      }
+
+      function particle(){
+        if(p>92)return;
+        var d=document.createElement('div');
+        d.className='dl-particle';
+        d.style.left=Math.min(p,dinoPos-8)+'%';d.style.top='50%';
+        var size=2+Math.random()*4;
+        d.style.width=d.style.height=size+'px';
+        d.style.background=cols[Math.random()*cols.length|0];
+        d.style.setProperty('--px',(Math.random()*24-12)+'px');
+        d.style.setProperty('--py',(Math.random()*24+6)+'px');
+        track.appendChild(d);
+        setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d)},600);
+      }
+
+      /* FRANTIC legs - very fast */
+      function animateLegs(){
+        if(p<12)return;
+        legFrame++;
+        /* Speed ramps up dramatically */
+        var speed=p<30?0.8:(p<50?1.5:(p<70?2.5:3.5));
+        var swing=p<30?25:(p<50?35:(p<70?45:55));
+        var angle=Math.sin(legFrame*speed)*swing;
+        legL.setAttribute('transform','rotate('+angle+',26,44)');
+        legR.setAttribute('transform','rotate('+(-angle)+',38,44)');
+      }
+
+      function updateFear(){
+        if(p<15){
+          eyeW.setAttribute('rx','4');eyeW.setAttribute('ry','3.5');
+          eyeP.setAttribute('r','2');
+        }else if(p<40){
+          eyeW.setAttribute('rx','5');eyeW.setAttribute('ry','4.5');
+          eyeP.setAttribute('r','1.8');
+        }else if(p<65){
+          eyeW.setAttribute('rx','6.5');eyeW.setAttribute('ry','6');
+          eyeP.setAttribute('r','1.5');
+        }else{
+          eyeW.setAttribute('rx','8');eyeW.setAttribute('ry','7.5');
+          eyeP.setAttribute('r','1.2');
+        }
+
+        if(p<15){
+          trexShiver.style.animation='none';
+        }else if(p<40){
+          trexShiver.style.animation='dl-shiver-mild 0.2s infinite';
+        }else if(p<60){
+          trexShiver.style.animation='dl-shiver-med 0.12s infinite';
+        }else{
+          trexShiver.style.animation='dl-shiver-max 0.06s infinite';
+        }
+
+        if(p<12){
+          exclaim.textContent='';exclaim.style.fontSize='0';
+        }else if(p<30){
+          exclaim.textContent='?';exclaim.style.fontSize='18px';exclaim.style.color='#ffc107';
+        }else if(p<45){
+          exclaim.textContent='!';exclaim.style.fontSize='22px';exclaim.style.color='#ff9800';
+        }else if(p<60){
+          exclaim.textContent='!!';exclaim.style.fontSize='26px';exclaim.style.color='#ff5722';
+        }else if(p<78){
+          exclaim.textContent='!!!';exclaim.style.fontSize='30px';exclaim.style.color='#ff1744';
+        }else{
+          exclaim.textContent='‼️⚡';exclaim.style.fontSize='32px';
+        }
+
+        /* Dino runs from 50% to ~95% (near end of bar) */
+        if(p<12){
+          dinoPos=50;
+        }else{
+          var runSpeed=0.35+((p-12)/76)*1.5;
+          dinoPos+=runSpeed;
+          if(dinoPos>95)dinoPos=95;
+        }
+        trexPos.style.left=dinoPos+'%';
+
+      }
+
       function finish(){
-        p=100;bar.style.width='100%';ast.style.left='100%';
+        p=100;bar.style.width='100%';
+        meteor.style.left=dinoPos+'%';
+
         clearInterval(iv);
-        tb.textContent='BOOM!';tb.style.background='#e8652d';tb.style.color='#fff';
-        ab.style.opacity='0';
+
+        exclaim.textContent='💥';exclaim.style.fontSize='36px';
+        title.textContent='Welcome, Explorer!';title.style.color='#f0c850';
+        trexShiver.style.animation='none';
+        flash.style.left=dinoPos+'%';
+        flash.style.transition='transform 0.2s ease-out, opacity 0.5s ease';
+        flash.style.transform='translate(-50%,-50%) scale(1)';flash.style.opacity='1';
+        setTimeout(function(){flash.style.opacity='0'},250);
+        el.style.animation='dl-shake 0.4s ease';
         setTimeout(function(){
           el.style.opacity='0';
           setTimeout(function(){
@@ -77,17 +299,26 @@
             if(el.parentNode)el.parentNode.removeChild(el);
             var ls=document.getElementById('loader-styles');
             if(ls)ls.parentNode.removeChild(ls);
-          },500);
-        },350);
+          },600);
+        },500);
       }
+
+      var sheetEl=document.createElement('style');
+      sheetEl.textContent='@keyframes dl-shake{0%,100%{transform:translate(0)}20%{transform:translate(-5px,4px)}40%{transform:translate(5px,-4px)}60%{transform:translate(-4px,5px)}80%{transform:translate(4px,-3px)}}';
+      document.head.appendChild(sheetEl);
+
       var iv=setInterval(function(){
         if(ready&&p>=88){finish();return}
-        p+=1.2+Math.random()*2.5;if(p>88)p=88;
-        bar.style.width=p+'%';ast.style.left=p+'%';
-        spark();
-        if(p>50&&p<72)tb.textContent='Uh oh...';
-        if(p>=72){tb.textContent='GULP!';tb.style.color='#e8652d';ab.textContent='INCOMING!';ab.style.color='#e8652d'}
-      },65);
+        p+=1.0+Math.random()*2.2;if(p>88)p=88;
+        bar.style.width=p+'%';
+        var meteorPos=Math.min(p,dinoPos-10);
+        meteor.style.left=meteorPos+'%';
+        particle();
+        sweat();
+        animateLegs();
+        updateFear();
+
+      },70);
       window.addEventListener('load',function(){
         var wait=Math.max(0,1500-(Date.now()-t0));
         setTimeout(function(){ready=true},wait);
