@@ -14,7 +14,9 @@ import dinoData from './data/encyclopedia.json';
 import artData from './data/art.json';
 import { resolveAssetPath, normalizeAllImages } from './resolve-path.js';
 
+
 const { fanArtGallery, coloringPages } = artData;
+
 
 // Dino image mapping for Random Deet
 const dinoImages = {

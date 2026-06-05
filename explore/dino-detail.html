@@ -12,7 +12,88 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </head>
   <body>
-    <!-- Navigation -->
+    <!-- DINO LOADER START -->
+    <style id="loader-styles">
+      #dino-loader{position:fixed;inset:0;background:#0e1a16;z-index:99999;display:flex;align-items:center;justify-content:center;opacity:1;transition:opacity 0.5s ease}
+      #dino-loader *{margin:0;padding:0;box-sizing:border-box}
+      .dl-track{width:min(80vw,500px);height:6px;background:rgba(255,255,255,0.1);border-radius:4px;position:relative}
+      .dl-bar{height:100%;background:#d4a843;width:0%;border-radius:4px;box-shadow:0 0 12px #d4a843,0 0 4px #d4a843;transition:width 80ms linear}
+      .dl-asteroid{position:absolute;top:50%;left:0%;transform:translate(-50%,-50%);z-index:2;filter:drop-shadow(0 0 8px #e8652d) drop-shadow(0 0 16px rgba(232,101,45,0.5));transition:left 80ms linear}
+      .dl-trex{position:absolute;top:50%;right:-30px;transform:translateY(-50%);z-index:1}
+      .dl-bubble{background:#fff;color:#0e1a16;padding:3px 7px;border-radius:10px;font-family:sans-serif;font-size:11px;font-weight:700;white-space:nowrap;position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);box-shadow:0 2px 8px rgba(0,0,0,0.4);transition:all 0.2s ease}
+      .dl-bubble::after{content:'';position:absolute;top:100%;left:50%;margin-left:-4px;border:4px solid transparent;border-top-color:#fff}
+      .dl-spark{position:absolute;width:3px;height:3px;border-radius:50%;pointer-events:none;opacity:1;animation:dlspark 0.5s forwards ease-out}
+      @keyframes dlspark{to{opacity:0;transform:translate(var(--dx),var(--dy)) scale(0)}}
+      body.dl-loading > *:not(#dino-loader):not(script):not(style):not(link){visibility:hidden !important}
+    </style>
+    <div id="dino-loader">
+      <div class="dl-track" id="dl-track">
+        <div class="dl-bar" id="dl-bar"></div>
+        <div class="dl-asteroid" id="dl-asteroid">
+          <span class="dl-bubble" id="dl-abub">Here I come!</span>
+          <svg viewBox="0 0 60 40" width="44" height="30"><polygon points="0,15 35,10 35,30 0,25" fill="#d4a843" opacity=".7"/><polygon points="0,17 30,14 30,26 0,23" fill="#ffeb3b" opacity=".5"/><circle cx="40" cy="20" r="14" fill="#e8652d"/><circle cx="37" cy="16" r="3" fill="#c35222"/><circle cx="44" cy="24" r="3.5" fill="#c35222"/></svg>
+        </div>
+        <div class="dl-trex" id="dl-trex">
+          <span class="dl-bubble" id="dl-tbub">Oh no!</span>
+          <svg viewBox="0 0 44 47" width="36" height="30" style="transform:scaleX(-1)"><path d="M22 0h22v7h-2v2h-2v2h-2v2h-12v2h-2v2h-2v2h-2v4h2v4h2v2h2v8h-4v2h-4v-6h2v-4h-2v-4h-2v4h-2v2h-4v4h-4v2h-4v-10h4v-2h4v-4h2v-4h2v-4h2v-4h2v-4h2v-4h2v-2h4v-2z" fill="#699e4b"/><rect x="28" y="6" width="4" height="4" fill="#1a2e1a"/></svg>
+        </div>
+      </div>
+    </div>
+    <script>
+    !function(){
+      document.body.classList.add('dl-loading');
+      var el=document.getElementById('dino-loader');
+      if(!el)return;
+      var bar=document.getElementById('dl-bar');
+      var ast=document.getElementById('dl-asteroid');
+      var tb=document.getElementById('dl-tbub');
+      var ab=document.getElementById('dl-abub');
+      var track=document.getElementById('dl-track');
+      var p=0,ready=false,t0=Date.now();
+      var cols=['#ffeb3b','#e8652d','#ff9800'];
+      function spark(){
+        if(p>95)return;
+        var s=document.createElement('div');
+        s.className='dl-spark';
+        s.style.left=p+'%';s.style.top='50%';
+        s.style.background=cols[Math.random()*3|0];
+        s.style.setProperty('--dx',(Math.random()*20-10)+'px');
+        s.style.setProperty('--dy',(Math.random()*16+4)+'px');
+        track.appendChild(s);
+        setTimeout(function(){if(s.parentNode)s.parentNode.removeChild(s)},500);
+      }
+      function finish(){
+        p=100;bar.style.width='100%';ast.style.left='100%';
+        clearInterval(iv);
+        tb.textContent='BOOM!';tb.style.background='#e8652d';tb.style.color='#fff';
+        ab.style.opacity='0';
+        setTimeout(function(){
+          el.style.opacity='0';
+          setTimeout(function(){
+            document.body.classList.remove('dl-loading');
+            if(el.parentNode)el.parentNode.removeChild(el);
+            var ls=document.getElementById('loader-styles');
+            if(ls)ls.parentNode.removeChild(ls);
+          },500);
+        },350);
+      }
+      var iv=setInterval(function(){
+        if(ready&&p>=88){finish();return}
+        p+=1.2+Math.random()*2.5;if(p>88)p=88;
+        bar.style.width=p+'%';ast.style.left=p+'%';
+        spark();
+        if(p>50&&p<72)tb.textContent='Uh oh...';
+        if(p>=72){tb.textContent='GULP!';tb.style.color='#e8652d';ab.textContent='INCOMING!';ab.style.color='#e8652d'}
+      },65);
+      window.addEventListener('load',function(){
+        var wait=Math.max(0,1500-(Date.now()-t0));
+        setTimeout(function(){ready=true},wait);
+      });
+    }();
+    </script>
+    <!-- DINO LOADER END -->
+
+<!-- Navigation -->
     <nav id="main-nav" class="nav">
       <div class="nav__inner">
         <a href="/DinoDeets_Website/" class="nav__logo" id="nav-logo">
