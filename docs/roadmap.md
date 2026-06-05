@@ -25,7 +25,7 @@
 ## ✅ Phase 3: Community & Growth (v2.0)
 - [x] Episode countdown egg timer
 - [x] Dino Quiz with scoring & results
-- [x] "Ask Devaansh" listener questions form
+- [x] "Ask Devaansh Nara" listener questions form
 - [x] Dino Dictionary / Glossary (A-Z)
 - [x] Dino-o-Meter size comparisons
 - [x] Dino Timeline Explorer (vertical scroll refactor)

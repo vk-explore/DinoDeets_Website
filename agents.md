@@ -1,7 +1,7 @@
 # Dino Deets Website — Agent Context
 
 ## Project Overview
-Website for the **Dino Deets** podcast — a kid-and-family-friendly dinosaur podcast hosted by **Devaansh** on YouTube (@dinodeets). The site features a dark "prehistoric meets modern" aesthetic with interactive elements like a fossil dig game, animated dino mascot, and auto-pulled YouTube episodes.
+Website for the **Dino Deets** podcast — a kid-and-family-friendly dinosaur podcast hosted by **Devaansh Nara** on YouTube (@dinodeets). The site features a dark "prehistoric meets modern" aesthetic with interactive elements like a fossil dig game, animated dino mascot, and auto-pulled YouTube episodes.
 
 ## Key Decisions
 - **Theme:** Dark mode default ("Night at the Museum" vibe)

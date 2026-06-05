@@ -37,7 +37,7 @@ export function initInteractiveMascot() {
     "Check out the Fossil Dig game!",
     "Try the Dino Map to find fossils!",
     "Birds are actually living dinosaurs!",
-    "Devaansh drops new episodes every Friday!",
+    "Devaansh Nara drops new episodes every Friday!",
     "Look around for hidden easter eggs!"
   ];
 

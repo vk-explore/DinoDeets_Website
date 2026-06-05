@@ -840,7 +840,7 @@ body {
 
 .about__content {
   display: flex;
-  gap: 48px;
+  justify-content: center;
   align-items: center;
 }
 
@@ -866,6 +866,9 @@ body {
 
 .about__text {
   flex: 1;
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .about__name {
@@ -1748,12 +1751,11 @@ body {
 
 /* ===== FOOTER LOGO ===== */
 .footer__logo-img {
-  width: 32px;
-  height: 32px;
+  height: 38px;
+  width: auto;
   object-fit: contain;
-  border-radius: 4px;
-  vertical-align: middle;
-  margin-right: 4px;
+  display: block;
+  margin: 0 auto;
 }
 
 /* ===== COUNTDOWN ===== */
@@ -3175,9 +3177,135 @@ body {
   color: var(--color-text-muted);
 }
 
-/* ===== ASK DEVAANSH ===== */
-.ask-devaansh {
+/* ===== ASK DEVAANSH FAB & MODAL OVERLAY ===== */
+.ask-devaansh-fab {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-amber);
+  color: var(--color-bg-primary);
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(212, 168, 67, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.3);
+  transition: all 0.3s var(--ease-bounce);
+  animation: fab-bob 3s ease-in-out infinite;
+}
+
+@keyframes fab-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.ask-devaansh-fab:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(212, 168, 67, 0.6), inset 0 2px 4px rgba(255, 255, 255, 0.4);
+  animation-play-state: paused;
+}
+
+.ask-devaansh-fab__icon {
+  width: 28px;
+  height: 28px;
+  stroke: var(--color-bg-primary);
+  transition: transform 0.3s ease;
+}
+
+.ask-devaansh-fab:hover .ask-devaansh-fab__icon {
+  transform: rotate(15deg);
+}
+
+.ask-devaansh-fab__tooltip {
+  position: absolute;
+  right: 70px;
+  top: 50%;
+  transform: translateY(-50%) translateX(10px);
   background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-family: var(--font-accent);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  border: 1px solid rgba(212, 168, 67, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.ask-devaansh-fab:hover .ask-devaansh-fab__tooltip {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+/* Modal Overlay */
+.ask-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(13, 9, 5, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.ask-modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.ask-modal-card {
+  background: var(--color-bg-secondary);
+  border: 2px solid rgba(212, 168, 67, 0.3);
+  border-radius: 24px;
+  padding: 40px 32px 32px 32px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+  transform: scale(0.9);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.ask-modal-overlay.active .ask-modal-card {
+  transform: scale(1);
+}
+
+.ask-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  font-size: 2.2rem;
+  font-weight: 300;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
+  line-height: 1;
+}
+
+.ask-modal-close:hover {
+  color: var(--color-amber);
+  transform: scale(1.1);
 }
 
 .ask__form {

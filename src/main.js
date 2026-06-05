@@ -502,7 +502,7 @@ function initQuiz() {
       'Every paleontologist starts somewhere. Try the quiz again!',
       'You know your stuff! A few more episodes and you\'ll be an expert.',
       'Impressive knowledge! You\'re a true dino fan.',
-      'Incredible! Devaansh would be proud.',
+      'Incredible! Devaansh Nara would be proud.',
       'PERFECT SCORE! You are a legendary dinosaur expert! 🏆'
     ];
     const tier = pct === 1 ? 4 : pct >= 0.8 ? 3 : pct >= 0.6 ? 2 : pct >= 0.4 ? 1 : 0;
@@ -1099,9 +1099,63 @@ function initDictionary() {
 
 // ===== ASK DEVAANSH =====
 function initAskForm() {
+  // 1. Clean up any existing instances in document.body
+  const existingFabs = document.querySelectorAll('body > #ask-devaansh-fab');
+  const existingModals = document.querySelectorAll('body > #ask-devaansh-modal');
+  existingFabs.forEach(el => el.remove());
+  existingModals.forEach(el => el.remove());
+
+  // 2. Check if we are on the homepage
+  const path = window.location.pathname;
+  const isHomepage = path === '/' || path === '/index.html' || path === '/DinoDeets_Website/' || path === '/DinoDeets_Website/index.html';
+
+  if (!isHomepage) {
+    // If not homepage, we are done (any old ones are removed, and there are no new ones)
+    return;
+  }
+
+  // 3. We are on the homepage, get the fresh elements from the wrapper
+  const fab = document.getElementById('ask-devaansh-fab');
+  const modal = document.getElementById('ask-devaansh-modal');
+  const closeBtn = document.getElementById('ask-modal-close');
   const form = document.getElementById('ask-form');
   const success = document.getElementById('ask-success');
-  if (!form) return;
+  
+  if (!modal || !form || !success) return;
+
+  function closeModal() {
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    window.removeEventListener('keydown', handleEscape);
+  }
+
+  function handleEscape(e) {
+    if (e.key === 'Escape') {
+      closeModal();
+    }
+  }
+
+  function openModal() {
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleEscape);
+  }
+
+  // Move them outside the content wrapper to the body so position: fixed is relative to the viewport
+  document.body.appendChild(fab);
+  document.body.appendChild(modal);
+
+  // Bind event listeners
+  fab?.addEventListener('click', openModal);
+  closeBtn?.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -1114,6 +1168,9 @@ function initAskForm() {
     form.style.display = 'grid';
     success.style.display = 'none';
   });
+
+  // Ensure it is visible
+  if (fab) fab.style.display = 'flex';
 }
 
 

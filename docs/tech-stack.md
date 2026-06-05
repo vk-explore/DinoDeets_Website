@@ -78,7 +78,7 @@ DinoDeets_Website/
 | Dino-o-Meter | Slider size comparison, 8 species |
 | Timeline | Horizontal scroll through geological eras |
 | Dictionary | A-Z glossary with search & letter filter |
-| Ask Devaansh | Question submission form |
+| Ask Devaansh Nara | Question submission form |
 
 | **Fan Art Gallery** | Community art grid with lightbox overlay |
 | **Coloring Pages** | Downloadable line art for printing |

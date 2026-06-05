@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home | Dino Deets</title>
-    <meta name="description" content="Dino Deets is a kid-and-family-friendly dinosaur podcast hosted by Devaansh. Explore prehistoric worlds, discover dino facts, and dig for fossils!" />
-    <meta name="keywords" content="dinosaurs, podcast, kids, education, prehistoric, fossils, Devaansh, dino facts" />
+    <meta name="description" content="Dino Deets is a kid-and-family-friendly dinosaur podcast hosted by Devaansh Nara Nara. Explore prehistoric worlds, discover dino facts, and dig for fossils!" />
+    <meta name="keywords" content="dinosaurs, podcast, kids, education, prehistoric, fossils, Devaansh Nara, dino facts" />
     <meta property="og:title" content="Dino Deets — Dinosaur Podcast for Kids" />
-    <meta property="og:description" content="Where curious minds travel through prehistoric worlds. A fun, educational dinosaur podcast by Devaansh." />
+    <meta property="og:description" content="Where curious minds travel through prehistoric worlds. A fun, educational dinosaur podcast by Devaansh Nara." />
     <meta property="og:type" content="website" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -115,7 +115,7 @@
       </div>
       <div class="hero__content">
         <p class="hero__tagline anim-fade-up">
-          <img src="./images/props/trex-skull.webp" alt="" class="inline-icon inline-icon--md" /> A Podcast by Devaansh
+          <img src="./images/props/trex-skull.webp" alt="" class="inline-icon inline-icon--md" /> A Podcast by Devaansh Nara
         </p>
         <h1 class="hero__title-logo anim-fade-up anim-delay-1">
           <img src="./images/icons/logo.webp" alt="Dino Deets" class="hero__logo-img" />
@@ -164,16 +164,47 @@
       </div>
     </section>
 
-<!-- Ask Devaansh -->
-    <section id="ask-devaansh" class="section ask-devaansh">
+<!-- About Section -->
+    <section id="about" class="section about">
       <div class="section__inner">
         <div class="section__header anim-fade-up">
+          <span class="section__label">Meet the Host</span>
+          <h2 class="section__title">About Dino Deets</h2>
+        </div>
+        <div class="about__content anim-fade-up">
+          <div class="about__text">
+            <h3 class="about__name">Hosted by <span class="text-amber">Devaansh Nara</span></h3>
+            <p>Welcome to <strong>Dino Deets</strong> — where we travel millions of years back in time to uncover the most amazing secrets of the prehistoric world!</p>
+            <p>Every Friday, join Devaansh Nara as he explores the lives of dinosaurs, digs into ancient fossils, uncovers Greek myths, chats with real experts, and shares mind-blowing facts that will make you the coolest kid at school.</p>
+            <p>Whether you're a dino-obsessed kid, a curious parent, or just someone who thinks T-Rex is awesome — this is YOUR podcast!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Floating Ask Devaansh Nara Button (FAB) -->
+    <button id="ask-devaansh-fab" class="ask-devaansh-fab" aria-label="Ask Devaansh Nara a Question">
+      <svg class="ask-devaansh-fab__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" stroke-width="2"></path>
+        <line x1="12" y1="17" x2="12.01" y2="17" stroke-width="2.5"></line>
+      </svg>
+      <span class="ask-devaansh-fab__tooltip">Ask Devaansh!</span>
+    </button>
+
+    <!-- Ask Devaansh Nara Modal Overlay -->
+    <div id="ask-devaansh-modal" class="ask-modal-overlay" aria-hidden="true" role="dialog">
+      <div class="ask-modal-card">
+        <button id="ask-modal-close" class="ask-modal-close" aria-label="Close modal">&times;</button>
+        
+        <div class="section__header">
           <img src="./images/dinos/mascot.webp" alt="" class="section__icon" />
           <span class="section__label">Got Questions?</span>
-          <h2 class="section__title">Ask Devaansh</h2>
+          <h2 class="section__title">Ask Devaansh Nara</h2>
           <p class="section__subtitle">Send a question and it might be featured on the show!</p>
         </div>
-        <form class="ask__form anim-fade-up" id="ask-form">
+        
+        <form class="ask__form" id="ask-form">
           <div class="ask__field">
             <label for="ask-name">Your Name</label>
             <input type="text" id="ask-name" placeholder="Explorer's name" required />
@@ -188,48 +219,15 @@
           </div>
           <button type="submit" class="btn btn--bark ask__submit">Send My Question</button>
         </form>
+        
         <div class="ask__success" id="ask-success" style="display:none">
           <img src="./images/dinos/mascot.webp" alt="" class="ask__success-img" />
           <h3>Question Received!</h3>
-          <p>Thanks for your awesome question! Devaansh will check it out.</p>
+          <p>Thanks for your awesome question! Devaansh Nara will check it out.</p>
           <button class="btn btn--secondary" id="ask-another">Ask Another Question</button>
         </div>
       </div>
-    </section>
-<!-- About Section -->
-    <section id="about" class="section about">
-      <div class="section__inner">
-        <div class="section__header anim-fade-up">
-          <span class="section__label">Meet the Host</span>
-          <h2 class="section__title">About Dino Deets</h2>
-        </div>
-        <div class="about__content anim-fade-up">
-          <div class="about__avatar-wrap">
-            <img src="./images/dinos/mascot.webp" alt="Dino Deets Mascot" class="about__avatar" />
-          </div>
-          <div class="about__text">
-            <h3 class="about__name">Hosted by <span class="text-amber">Devaansh</span></h3>
-            <p>Welcome to <strong>Dino Deets</strong> — where we travel millions of years back in time to uncover the most amazing secrets of the prehistoric world!</p>
-            <p>Every Friday, join Devaansh as he explores the lives of dinosaurs, digs into ancient fossils, uncovers Greek myths, chats with real experts, and shares mind-blowing facts that will make you the coolest kid at school.</p>
-            <p>Whether you're a dino-obsessed kid, a curious parent, or just someone who thinks T-Rex is awesome — this is YOUR podcast!</p>
-            <div class="about__stats">
-              <div class="about__stat">
-                <img src="./images/dinos/trex.webp" alt="" class="about__stat-img" />
-                <span class="about__stat-label">Dinosaurs</span>
-              </div>
-              <div class="about__stat">
-                <img src="./images/dinos/stegosaurus.webp" alt="" class="about__stat-img" />
-                <span class="about__stat-label">Episodes</span>
-              </div>
-              <div class="about__stat">
-                <img src="./images/dinos/triceratops.webp" alt="" class="about__stat-img" />
-                <span class="about__stat-label">Every Friday</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
 <!-- Footer -->
     <footer id="footer" class="footer">
       <div class="footer__strata">
@@ -240,7 +238,7 @@
       <div class="footer__inner">
         <div class="footer__brand">
           <div class="footer__logo">
-            <img src="./images/icons/logo.webp" alt="" class="footer__logo-img" /> Dino Deets
+            <img src="./images/icons/logo_text.webp" alt="Dino Deets" class="footer__logo-img" />
           </div>
           <p class="footer__tagline">Where curious minds travel through prehistoric worlds</p>
         </div>
@@ -262,7 +260,7 @@
           </div>
         </div>
         <div class="footer__bottom">
-          <p>&copy; 2026 Dino Deets. Made with <img src="./images/dinos/trex.webp" alt="dino" class="inline-icon inline-icon--xs" /> by Devaansh</p>
+          <p>&copy; 2026 Dino Deets. Made with <img src="./images/dinos/trex.webp" alt="dino" class="inline-icon inline-icon--xs" /> by Devaansh Nara</p>
 
         </div>
       </div>
@@ -299,10 +297,7 @@
       </div>
     </div>
 
-    <!-- Back to top -->
-    <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
-    </button>
+
 
     <script type="module" src="/src/main.js"></script>
   </body>
