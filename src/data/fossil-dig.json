@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Tyrannosaurus Rex Skull",
+    "dino": "Tyrannosaurus Rex",
+    "era": "Late Cretaceous (68-66 MYA)",
+    "funFact": "T-Rex had forward-facing eyes, giving it excellent depth perception for hunting!",
+    "rarity": "Legendary",
+    "shape": "skull"
+  },
+  {
+    "name": "Triceratops Horn",
+    "dino": "Triceratops",
+    "era": "Late Cretaceous (68-66 MYA)",
+    "funFact": "Each horn could be up to 3 feet long — longer than a baseball bat!",
+    "rarity": "Rare",
+    "shape": "horn"
+  },
+  {
+    "name": "Raptor Claw",
+    "dino": "Velociraptor",
+    "era": "Late Cretaceous (75-71 MYA)",
+    "funFact": "The sickle-shaped claw was used for pinning down prey, not slashing!",
+    "rarity": "Epic",
+    "shape": "claw"
+  },
+  {
+    "name": "Stegosaurus Plate",
+    "dino": "Stegosaurus",
+    "era": "Late Jurassic (155-150 MYA)",
+    "funFact": "The plates weren't attached to the skeleton — they grew in the skin!",
+    "rarity": "Uncommon",
+    "shape": "plate"
+  },
+  {
+    "name": "Sauropod Vertebra",
+    "dino": "Brachiosaurus",
+    "era": "Late Jurassic (154-150 MYA)",
+    "funFact": "A single neck vertebra could be over 3 feet long!",
+    "rarity": "Common",
+    "shape": "bone"
+  },
+  {
+    "name": "Pteranodon Wing Bone",
+    "dino": "Pteranodon",
+    "era": "Late Cretaceous (86-84 MYA)",
+    "funFact": "Despite its huge wingspan, Pteranodon only weighed about 55 pounds!",
+    "rarity": "Rare",
+    "shape": "wing"
+  },
+  {
+    "name": "Ankylosaur Tail Club",
+    "dino": "Ankylosaurus",
+    "era": "Late Cretaceous (68-66 MYA)",
+    "funFact": "The tail club was made of fused bones and could swing with 500 pounds of force!",
+    "rarity": "Epic",
+    "shape": "club"
+  },
+  {
+    "name": "Dinosaur Egg",
+    "dino": "Oviraptor",
+    "era": "Late Cretaceous (75-71 MYA)",
+    "funFact": "Oviraptor means 'egg thief' but it was actually protecting its OWN eggs!",
+    "rarity": "Legendary",
+    "shape": "egg"
+  }
+]

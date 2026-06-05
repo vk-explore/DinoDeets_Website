@@ -1,0 +1,39 @@
+{
+  "fanArtGallery": [
+    {
+      "title": "Garden Explorer",
+      "artist": "Riya, Age 8",
+      "image": "./images/fanart/trex-garden.webp",
+      "likes": 42
+    },
+    {
+      "title": "Family Walk",
+      "artist": "Arjun, Age 10",
+      "image": "./images/fanart/triceratops-family.webp",
+      "likes": 38
+    },
+    {
+      "title": "Rainbow Lunch",
+      "artist": "Ananya, Age 7",
+      "image": "./images/fanart/brachio-rainbow.webp",
+      "likes": 55
+    }
+  ],
+  "coloringPages": [
+    {
+      "name": "Friendly T-Rex",
+      "image": "./images/coloring/trex.webp",
+      "difficulty": "Easy"
+    },
+    {
+      "name": "Stegosaurus",
+      "image": "./images/coloring/stegosaurus.webp",
+      "difficulty": "Medium"
+    },
+    {
+      "name": "Brachiosaurus & Tree",
+      "image": "./images/coloring/brachiosaurus.webp",
+      "difficulty": "Easy"
+    }
+  ]
+}

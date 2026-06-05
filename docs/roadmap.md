@@ -25,16 +25,17 @@
 ## ✅ Phase 3: Community & Growth (v2.0)
 - [x] Episode countdown egg timer
 - [x] Dino Quiz with scoring & results
-- [x] "Ask Devaansh" listener questions form
+- [x] "Ask Devaansh Nara" listener questions form
 - [x] Dino Dictionary / Glossary (A-Z)
 - [x] Dino-o-Meter size comparisons
-- [x] Dino Timeline Explorer (horizontal scroll)
+- [x] Dino Timeline Explorer (vertical scroll refactor)
 
 ## ✅ Phase 4: Advanced (v3.0)
-- [x] "Dino Creator" — design your own dinosaur (Canvas)
+- [x] "Dino Creator" — design your own dinosaur (Canvas - Removed)
 - [x] Fan Art gallery (lightbox)
-- [x] Coloring pages (downloadable PNGs)
+- [x] Coloring pages (downloadable WebP sheets)
 - [x] Auto-generated dino names
+- [x] WebP image asset optimization and size reduction (v9)
 
 ## 🚀 Future Ideas
 - [ ] Multi-language support (Hindi, Spanish)

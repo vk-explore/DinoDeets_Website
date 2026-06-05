@@ -1,0 +1,2342 @@
+[
+  {
+    "name": "Compsognathus",
+    "diet": "Carnivore",
+    "period": "Late Jurassic",
+    "location": "Bavaria, Germany",
+    "length": "1m",
+    "weight": "3 kg",
+    "description": "Compsognathus was discovered by Dr. Joseph Oberndorfer in the late 1850s in the Solnhofen limestone of Germany. For over a century, it was famous for being the smallest known dinosaur, about the size of a turkey, and played a crucial role in early debates about the connection between dinosaurs and birds due to its similarities to Archaeopteryx.",
+    "image": "./images/dinos/compsognathus.webp",
+    "height": "0.3m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Saurischia",
+      "suborder": "Theropoda",
+      "genus": "Compsognathus",
+      "species": "compsognathusensis"
+    },
+    "landFormation": "BAVARIA, GERMANY FORMATION",
+    "timeStages": {
+      "start": "201",
+      "end": "145"
+    },
+    "nameMeaning": "Elegant Jaw, Ancient Greek",
+    "interestingFacts": [
+      "It was one of the few dinosaurs known from a complete skeleton in the 19th century.",
+      "Despite its small size, it was a fast and agile predator that hunted small lizards and insects.",
+      "Its fossils were found with the remains of a small, fast-running lizard in its stomach area.",
+      "It lived alongside the earliest known bird, Archaeopteryx, in the islands of ancient Europe."
+    ]
+  },
+  {
+    "name": "Velociraptor",
+    "diet": "Carnivore",
+    "period": "Late Cretaceous",
+    "location": "Gobi Desert, Mongolia",
+    "length": "1.8m",
+    "weight": "15 kg",
+    "description": "Discovered in 1923 by Peter Kaisen in the Gobi Desert during an American Museum of Natural History expedition. Unlike the giant, scaly creatures shown in popular movies, real Velociraptors were roughly the size of a turkey and heavily covered in feathers, proving the strong evolutionary link between theropod dinosaurs and modern birds.",
+    "image": "./images/dinos/velociraptor.webp",
+    "height": "0.6m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Saurischia",
+      "suborder": "Theropoda",
+      "genus": "Velociraptor",
+      "species": "velociraptorensis"
+    },
+    "landFormation": "GOBI DESERT, MONGOLIA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Swift Seizer, Latin",
+    "interestingFacts": [
+      "Fossil evidence shows they had quill knobs on their bones, proving they were completely covered in feathers.",
+      "They possessed a lethal, sickle-shaped claw on the second toe of each foot used for piercing prey.",
+      "One of the most famous fossil discoveries is the 'Fighting Dinosaurs', showing a Velociraptor locked in deadly combat with a Protoceratops.",
+      "They had a highly developed sense of smell and likely hunted at night or in low light."
+    ]
+  },
+  {
+    "name": "Stegosaurus",
+    "diet": "Herbivore",
+    "period": "Late Jurassic",
+    "location": "Colorado, USA; Utah, USA; Wyoming, USA",
+    "length": "9m",
+    "weight": "5,000 kg",
+    "description": "Stegosaurus was first described by Othniel Charles Marsh in 1877 during the famous 'Bone Wars'. The exact purpose of the large kite-shaped plates along its back has been heavily debated by scientists, with modern theories suggesting they were used for display, species recognition, or thermoregulation (controlling body heat).",
+    "image": "./images/dinos/stegosaurus.webp",
+    "height": "3.1m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Sauropodomorpha",
+      "genus": "Stegosaurus",
+      "species": "stegosaurusensis"
+    },
+    "landFormation": "COLORADO, USA FORMATION",
+    "timeStages": {
+      "start": "201",
+      "end": "145"
+    },
+    "nameMeaning": "Roof Lizard, Ancient Greek",
+    "interestingFacts": [
+      "Its brain was incredibly small for its body size, roughly the size and shape of a bent hotdog or walnut.",
+      "It had a spiked tail known as a 'thagomizer', which it swung to defend itself against predators like Allosaurus.",
+      "The large plates on its back were embedded in its skin, not attached to its skeleton.",
+      "Stegosaurus swallowed small rocks (gastroliths) to help grind up tough plant matter in its stomach."
+    ]
+  },
+  {
+    "name": "Triceratops",
+    "diet": "Herbivore",
+    "period": "Late Cretaceous",
+    "location": "Montana, USA; Wyoming, USA",
+    "length": "9m",
+    "weight": "6,000 kg",
+    "description": "Triceratops was discovered near Denver, Colorado in 1887. Paleontologist Othniel Charles Marsh initially thought the massive fossilized horns belonged to a giant, extinct bison. It is one of the most recognizable dinosaurs, famously known for its massive bony frill and three fearsome facial horns, which provided crucial defense against apex predators like T-Rex.",
+    "image": "./images/dinos/triceratops.webp",
+    "height": "3.1m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Triceratops",
+      "species": "triceratopsensis"
+    },
+    "landFormation": "MONTANA, USA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Three-Horned Face, Ancient Greek",
+    "interestingFacts": [
+      "Its skull was one of the largest and most robust of any land animal, reaching up to 8 feet in length.",
+      "Triceratops had a sharp, parrot-like beak used to snip off tough ferns and cycads.",
+      "Fossil evidence shows healed bite marks from Tyrannosaurus Rex on Triceratops frills, proving they fought in epic battles.",
+      "They continually replaced their teeth, having up to 800 teeth in their jaws at any given time."
+    ]
+  },
+  {
+    "name": "Brachiosaurus",
+    "diet": "Herbivore",
+    "period": "Late Jurassic",
+    "location": "Colorado, USA",
+    "length": "25m",
+    "weight": "56,000 kg",
+    "description": "Discovered in 1900 by Elmer S. Riggs in the Colorado River valley. Unlike most other sauropods, Brachiosaurus had longer front legs than hind legs (giving it its name). This unique skeletal structure allowed it to hold its neck almost vertically to browse on high canopy leaves that other herbivores couldn't reach.",
+    "image": "./images/dinos/brachiosaurus.webp",
+    "height": "8.8m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Sauropodomorpha",
+      "genus": "Brachiosaurus",
+      "species": "brachiosaurusensis"
+    },
+    "landFormation": "COLORADO, USA FORMATION",
+    "timeStages": {
+      "start": "201",
+      "end": "145"
+    },
+    "nameMeaning": "Arm Lizard, Ancient Greek",
+    "interestingFacts": [
+      "Its neck alone was about 30 feet long, containing massive, air-filled vertebrae to keep it light.",
+      "It had to eat up to 400 pounds of plant matter every single day to fuel its massive body.",
+      "Because of its enormous size, an adult Brachiosaurus was virtually immune to attacks from predators.",
+      "Its nostrils were located on the very top of its head, though scientists no longer believe it lived in deep water."
+    ]
+  },
+  {
+    "name": "Argentinosaurus",
+    "diet": "Herbivore",
+    "period": "Late Cretaceous",
+    "location": "Neuqu\u00e9n, Argentina",
+    "length": "35m",
+    "weight": "100,000 kg",
+    "description": "Argentinosaurus was discovered by a local rancher in Argentina in 1987. It is widely considered by paleontologists to be the largest and heaviest land animal to have ever walked the Earth. Its sheer size was its primary defense, as few predators would dare attack a fully grown adult.",
+    "image": "./images/dinos/argentinosaurus.webp",
+    "height": "12.2m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Sauropodomorpha",
+      "genus": "Argentinosaurus",
+      "species": "argentinosaurusensis"
+    },
+    "landFormation": "ARGENTINA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Argentine Lizard, Latin & Greek",
+    "interestingFacts": [
+      "It is estimated to have weighed as much as 10 to 15 full-grown African elephants.",
+      "A single vertebra (backbone) of an Argentinosaurus was over 5 feet tall.",
+      "Newly hatched Argentinosaurus babies were likely the size of a small dog, meaning they grew incredibly fast.",
+      "Because of its colossal weight, it likely could not move faster than 5 miles per hour."
+    ]
+  },
+  {
+    "name": "Ankylosaurus",
+    "diet": "Herbivore",
+    "period": "Late Cretaceous",
+    "location": "Montana, USA",
+    "length": "8m",
+    "weight": "6000kg",
+    "description": "Discovered by Barnum Brown in 1906. Ankylosaurus was the ultimate armored tank of the dinosaur world. Its entire back was covered in thick, bony plates (osteoderms) fused directly to its skeleton. Scientists have noted that even its eyelids were heavily armored to protect its eyes during combat.",
+    "image": "./images/dinos/ankylosaurus.webp",
+    "height": "1.7m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Ankylosaurus",
+      "species": "ankylosaurusensis"
+    },
+    "landFormation": "MONTANA, USA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Fused Lizard, Ancient Greek",
+    "interestingFacts": [
+      "Its tail ended in a massive, bony club that could break the legs of an attacking Tyrannosaurus.",
+      "Its armor plates were similar to the scales of modern crocodiles, but much thicker and denser.",
+      "Despite its heavy armor, it had a relatively small brain and relied heavily on its sense of smell.",
+      "It had a wide, flat beak perfectly designed for grazing on low-lying ferns and bushes."
+    ]
+  },
+  {
+    "name": "Protoceratops",
+    "diet": "Herbivore",
+    "period": "Late Cretaceous",
+    "location": "Gobi Desert, Mongolia",
+    "length": "1.8m",
+    "weight": "180kg",
+    "description": "Discovered in the Gobi Desert by Roy Chapman Andrews in the 1920s. Unlike its later, giant relatives like Triceratops, Protoceratops lacked facial horns and was about the size of a sheep. The discovery of numerous nests, eggs, and juveniles in Mongolia has provided scientists with profound insights into dinosaur herd behavior and growth.",
+    "image": "./images/dinos/protoceratops.webp",
+    "height": "0.6m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Protoceratops",
+      "species": "protoceratopsensis"
+    },
+    "landFormation": "GOBI DESERT, MONGOLIA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "First Horned Face, Ancient Greek",
+    "interestingFacts": [
+      "It lived in harsh desert environments and often died in sudden sandstorms, which perfectly preserved its fossils.",
+      "It is believed that the fossilized remains of Protoceratops may have inspired ancient Greek myths of the Griffin.",
+      "They had a large, bony neck frill that was likely used for display to attract mates or intimidate rivals.",
+      "A famous fossil shows a Protoceratops locked in a deadly fight with a Velociraptor, perfectly preserved as they died."
+    ]
+  },
+  {
+    "name": "Oviraptor",
+    "diet": "Omnivore",
+    "period": "Late Cretaceous",
+    "location": "Gobi Desert, Mongolia",
+    "length": "1.6m",
+    "weight": "33kg",
+    "description": "First discovered in 1924 sitting atop a nest of eggs, scientists originally named it the 'Egg Thief' believing it was stealing them. Decades later in the 1990s, new discoveries proved those eggs actually belonged to Oviraptor itself. It wasn't a thief at all, but a fiercely protective parent brooding its own nest, completely revolutionizing how scientists view dinosaur parenting.",
+    "image": "./images/dinos/oviraptor.webp",
+    "height": "1.5m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Oviraptor",
+      "species": "oviraptorensis"
+    },
+    "landFormation": "GOBI DESERT, MONGOLIA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Egg Thief, Latin",
+    "interestingFacts": [
+      "It had a short, parrot-like beak with no teeth, and a prominent crest on its head.",
+      "Fossils show it sat on its nest with its arms spread out to protect the eggs, exactly like modern birds.",
+      "Because it lacked teeth, scientists believe it may have used its strong beak to crack open clams or eat tough vegetation.",
+      "It was covered in a coat of feathers, providing warmth for itself and its incubating eggs."
+    ]
+  },
+  {
+    "name": "Giganotosaurus",
+    "diet": "Carnivore",
+    "period": "Late Cretaceous",
+    "location": "Neuqu\u00e9n, Argentina",
+    "length": "13m",
+    "weight": "8000kg",
+    "description": "Discovered in Patagonia, Argentina in 1993 by an amateur fossil hunter. Giganotosaurus shocked the paleontology world by proving to be slightly longer and heavier than the famous T-Rex. Scientists have determined it was the apex predator of South America, likely hunting giant sauropods in coordinated packs.",
+    "image": "./images/dinos/giganotosaurus.webp",
+    "height": "4m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Giganotosaurus",
+      "species": "giganotosaurusensis"
+    },
+    "landFormation": "ARGENTINA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Giant Southern Lizard, Ancient Greek",
+    "interestingFacts": [
+      "It had incredibly sharp, serrated teeth designed to slice through flesh rather than crush bone.",
+      "Despite being larger than T-Rex, its brain was significantly smaller, about the shape and size of a banana.",
+      "It had three fingers on each hand, unlike the two-fingered T-Rex.",
+      "Fossil evidence suggests they may have hunted massive sauropods like Argentinosaurus in family groups."
+    ]
+  },
+  {
+    "name": "Dreadnoughtus",
+    "diet": "Herbivore",
+    "period": "Late Cretaceous",
+    "location": "Santa Cruz, Argentina",
+    "length": "26m",
+    "weight": "49000kg",
+    "description": "Discovered in 2005 in Patagonia, Argentina, Dreadnoughtus provides the most complete skeleton ever found of a giant titanosaur. Because over 70% of its bones were recovered, scientists have been able to calculate its immense weight with unprecedented accuracy, confirming it as one of the most massive creatures to ever exist.",
+    "image": "./images/dinos/dreadnoughtus.webp",
+    "height": "9m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Dreadnoughtus",
+      "species": "dreadnoughtusensis"
+    },
+    "landFormation": "ARGENTINA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Fears Nothing, Old English",
+    "interestingFacts": [
+      "Its name honors the heavily armored 'Dreadnought' battleships of the early 20th century.",
+      "The specific fossil skeleton found was still growing at the time of its death, meaning adults were even larger.",
+      "A single shoulder blade of this dinosaur was taller than a human.",
+      "It took four summer expeditions and a team of paleontologists to fully excavate its massive bones."
+    ]
+  },
+  {
+    "name": "Albertosaurus",
+    "diet": "Carnivore",
+    "period": "Late Cretaceous",
+    "location": "Alberta, Canada; Montana, USA",
+    "length": "9m",
+    "weight": "1900kg",
+    "description": "Discovered in 1884 in Alberta, Canada by Joseph Burr Tyrrell. As a smaller, faster relative of the T-Rex, Albertosaurus has provided vital clues about tyrannosaur pack behavior. A famous 'bonebed' discovery in Dry Island Buffalo Jump Provincial Park contained the remains of 26 Albertosaurus individuals of varying ages, heavily suggesting they lived and hunted in multi-generational packs.",
+    "image": "./images/dinos/albertosaurus.webp",
+    "height": "3m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Albertosaurus",
+      "species": "albertosaurusensis"
+    },
+    "landFormation": "ALBERTA, CANADA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Alberta Lizard, Latin",
+    "interestingFacts": [
+      "It lived roughly two million years before the T-Rex evolved.",
+      "Because they were lighter and more agile, young Albertosaurus were incredibly fast runners.",
+      "The discovery of a pack bonebed completely changed the idea that large theropods were always solitary hunters.",
+      "It had small, bony crests above its eyes that may have been brightly colored."
+    ]
+  },
+  {
+    "name": "Corythosaurus",
+    "diet": "Herbivore",
+    "period": "Late Cretaceous",
+    "location": "Alberta, Canada",
+    "length": "9m",
+    "weight": "3000kg",
+    "description": "Discovered in 1911 by Barnum Brown in Alberta, Canada. It is famous for the stunning, hollow, plate-like crest on top of its head, resembling a Corinthian soldier's helmet. Scientists have determined that the crest contained complex nasal passages, acting as a resonating chamber to produce loud, low-frequency honking sounds to communicate across vast distances.",
+    "image": "./images/dinos/corythosaurus.webp",
+    "height": "2.5m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Corythosaurus",
+      "species": "corythosaurusensis"
+    },
+    "landFormation": "ALBERTA, CANADA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Helmet Lizard, Ancient Greek",
+    "interestingFacts": [
+      "They lived in massive herds and used their distinct head crests for both visual display and vocal communication.",
+      "Some incredibly preserved fossils actually contain the impressions of its scaly skin.",
+      "It had a duck-like bill and hundreds of small, interlocking teeth to grind up tough conifer needles.",
+      "Scientists can tell males from females based on the size and shape of their head crests."
+    ]
+  },
+  {
+    "name": "Styracosaurus",
+    "diet": "Herbivore",
+    "period": "Late Cretaceous",
+    "location": "Alberta, Canada",
+    "length": "5.5m",
+    "weight": "2700kg",
+    "description": "Discovered in 1913 in the Dinosaur Provincial Park of Alberta, Canada. Styracosaurus had one of the most wildly elaborate skulls of any dinosaur. It featured a massive nose horn and a stunning array of long, deadly spikes projecting from the back of its neck frill. Scientists believe these spikes were primarily used for dazzling visual displays during mating season, and secondary defense.",
+    "image": "./images/dinos/styracosaurus.webp",
+    "height": "1.8m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Styracosaurus",
+      "species": "styracosaurusensis"
+    },
+    "landFormation": "ALBERTA, CANADA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Spiked Lizard, Ancient Greek",
+    "interestingFacts": [
+      "The long spikes on its frill could grow up to 22 inches in length.",
+      "Unlike Triceratops, it only had one horn on its nose and none above its eyes.",
+      "Massive bonebeds indicate that Styracosaurus migrated in large herds of hundreds of individuals.",
+      "They were low-browsers, using their sharp beaks to shear off thick brush and ferns."
+    ]
+  },
+  {
+    "name": "Archaeopteryx",
+    "diet": "Carnivore",
+    "period": "Late Jurassic",
+    "location": "Bavaria, Germany",
+    "length": "0.5m",
+    "weight": "1kg",
+    "description": "Discovered in 1861 in the Solnhofen limestone of Germany, just two years after Charles Darwin published 'On the Origin of Species'. Archaeopteryx represents one of the most important 'missing links' in paleontology, perfectly capturing the evolutionary transition between non-avian feathered dinosaurs and modern birds. It possessed both dinosaur traits (teeth, long bony tail) and bird traits (flight feathers, wishbone).",
+    "image": "./images/dinos/archaeopteryx.webp",
+    "height": "0.2m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Archaeopteryx",
+      "species": "archaeopteryxensis"
+    },
+    "landFormation": "BAVARIA, GERMANY FORMATION",
+    "timeStages": {
+      "start": "201",
+      "end": "145"
+    },
+    "nameMeaning": "Ancient Wing, Ancient Greek",
+    "interestingFacts": [
+      "Its discovery provided massive support for Charles Darwin's theory of evolution.",
+      "Despite having fully developed flight feathers, scientists debate if it could truly fly or just glide between trees.",
+      "Only 12 fossil specimens have ever been found, making it one of the rarest and most studied fossils in the world.",
+      "It lived on a chain of tropical islands in what is now modern-day Europe."
+    ]
+  },
+  {
+    "name": "Ichthyosaurus",
+    "diet": "Carnivore",
+    "period": "Early Jurassic",
+    "location": "Dorset, England",
+    "length": "3.3m",
+    "weight": "90kg",
+    "description": "Discovered by the pioneering paleontologist Mary Anning in England in 1811 when she was just 12 years old. Ichthyosaurus was not a dinosaur, but a marine reptile that perfectly adapted to life in the ocean. Through convergent evolution, it developed a body shape remarkably similar to modern dolphins and tuna, proving that different animals will evolve similar shapes for speed in the water.",
+    "image": "./images/dinos/ichthyosaurus.webp",
+    "height": "0.5m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Ichthyosaurus",
+      "species": "ichthyosaurusensis"
+    },
+    "landFormation": "DORSET, ENGLAND FORMATION",
+    "timeStages": {
+      "start": "201",
+      "end": "145"
+    },
+    "nameMeaning": "Fish Lizard, Ancient Greek",
+    "interestingFacts": [
+      "They gave birth to live young in the water rather than laying eggs on land, as proven by fossilized mothers.",
+      "They had enormous eyes protected by a bony ring, allowing them to hunt in deep, dark waters.",
+      "Their fossils are so well-preserved that scientists can see the outlines of their dorsal fins and tail flukes.",
+      "They breathed air and had to surface frequently, just like modern whales and dolphins."
+    ]
+  },
+  {
+    "name": "Plesiosaurus",
+    "diet": "Carnivore",
+    "period": "Early Jurassic",
+    "location": "Dorset, England",
+    "length": "3.5m",
+    "weight": "450kg",
+    "description": "Another incredibly famous marine reptile discovered by Mary Anning in 1823 in Dorset, England. Plesiosaurus shocked the scientific community with its bizarre anatomy: a broad, turtle-like body, four massive flippers, and an incredibly long, snake-like neck. Scientists now believe it used its long neck to ambush schools of fish with quick, striking motions.",
+    "image": "./images/dinos/plesiosaurus.webp",
+    "height": "0.8m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Plesiosaurus",
+      "species": "plesiosaurusensis"
+    },
+    "landFormation": "DORSET, ENGLAND FORMATION",
+    "timeStages": {
+      "start": "201",
+      "end": "145"
+    },
+    "nameMeaning": "Near Lizard, Ancient Greek",
+    "interestingFacts": [
+      "Its body shape was so strange that a scientist once described it as 'a snake threaded through the shell of a turtle'.",
+      "It 'flew' through the water using all four flippers in a coordinated motion, similar to sea turtles or penguins.",
+      "It is often cited as the inspiration for the mythical Loch Ness Monster.",
+      "It lacked gills and had to hold its breath to hunt for fish and squid."
+    ]
+  },
+  {
+    "name": "Allosaurus",
+    "diet": "Carnivore",
+    "period": "Late Jurassic",
+    "location": "Colorado, USA; Wyoming, USA",
+    "length": "9.5m",
+    "weight": "2300kg",
+    "description": "Discovered in 1877 during the American 'Bone Wars', Allosaurus was the apex predator of the Late Jurassic period in North America. Paleontologists have uncovered vast numbers of Allosaurus skeletons at the Cleveland-Lloyd Dinosaur Quarry in Utah, leading to theories that they may have hunted in loose packs to take down giant sauropods like Diplodocus.",
+    "image": "./images/dinos/allosaurus.webp",
+    "height": "3m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Allosaurus",
+      "species": "allosaurusensis"
+    },
+    "landFormation": "COLORADO, USA FORMATION",
+    "timeStages": {
+      "start": "201",
+      "end": "145"
+    },
+    "nameMeaning": "Different Lizard, Ancient Greek",
+    "interestingFacts": [
+      "Its jaw could open incredibly wide, and scientists believe it may have used its skull like an axe to strike prey.",
+      "It is the official state fossil of Utah.",
+      "Fossil evidence shows they constantly shed and replaced their sharp, serrated teeth throughout their lives.",
+      "A famous fossil nicknamed 'Big Al' shows incredible evidence of injuries and diseases sustained over its violent life."
+    ]
+  },
+  {
+    "name": "Diplodocus",
+    "diet": "Herbivore",
+    "period": "Late Jurassic",
+    "location": "Colorado, USA; Utah, USA; Wyoming, USA",
+    "length": "27m",
+    "weight": "15000kg",
+    "description": "First discovered in 1877 in Colorado by Benjamin Mudge and Samuel Wendell Williston. Diplodocus is famous for its extreme length, possessing one of the longest necks and tails of any dinosaur. The 'double beam' refers to unique chevron bones under its tail vertebrae that provided extra support. Scientists believe it used its incredibly long tail like a bullwhip to create deafening sonic booms to scare off predators.",
+    "image": "./images/dinos/diplodocus.webp",
+    "height": "6m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Diplodocus",
+      "species": "diplodocusensis"
+    },
+    "landFormation": "COLORADO, USA FORMATION",
+    "timeStages": {
+      "start": "201",
+      "end": "145"
+    },
+    "nameMeaning": "Double Beam, Ancient Greek",
+    "interestingFacts": [
+      "Its tail was so long and thin at the end that it could move faster than the speed of sound.",
+      "Despite its massive length (up to 90 feet), it was relatively lightweight compared to other sauropods.",
+      "It had strange, peg-like teeth only at the front of its mouth, which it used to strip leaves off branches like a comb.",
+      "A famous skeleton cast, 'Dippy', was gifted to museums all over the world by industrialist Andrew Carnegie."
+    ]
+  },
+  {
+    "name": "Sinosauropteryx",
+    "diet": "Carnivore",
+    "period": "Early Cretaceous",
+    "location": "Liaoning, China",
+    "length": "1.1m",
+    "weight": "0.5kg",
+    "description": "Discovered in 1996 in the Liaoning Province of China by a local farmer. Sinosauropteryx was a massive breakthrough in paleontology because it was the very first non-avian dinosaur found with clear evidence of feathers. Incredibly, scientists were able to analyze the fossilized melanosomes (pigment cells) to determine its actual color, a first for any dinosaur.",
+    "image": "./images/dinos/sinosauropteryx.webp",
+    "height": "0.3m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Sinosauropteryx",
+      "species": "sinosauropteryxensis"
+    },
+    "landFormation": "CHINA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Chinese Lizard Wing, Ancient Greek",
+    "interestingFacts": [
+      "It was the first dinosaur to have its true colors determined: a reddish-brown body with a striped tail.",
+      "Its feathers were simple, hair-like filaments affectionately called 'dino-fuzz'.",
+      "Fossils have been found with the remains of small mammals and lizards still inside their stomachs.",
+      "It belonged to the Compsognathidae family, making it a close relative of Compsognathus."
+    ]
+  },
+  {
+    "name": "Microraptor",
+    "diet": "Carnivore",
+    "period": "Early Cretaceous",
+    "location": "Liaoning, China",
+    "length": "1.2m",
+    "weight": "1kg",
+    "description": "Also discovered in the rich fossil beds of Liaoning, China in the early 2000s. Microraptor completely changed how scientists view the evolution of flight. This tiny dinosaur, about the size of a crow, possessed four wings\u2014long flight feathers on both its arms and its legs. Scientists debate whether it actively flew or gracefully glided from tree to tree.",
+    "image": "./images/dinos/microraptor.webp",
+    "height": "0.4m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Microraptor",
+      "species": "microraptorensis"
+    },
+    "landFormation": "CHINA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Small Seizer, Latin",
+    "interestingFacts": [
+      "Analysis of its pigment cells revealed it had glossy, iridescent black feathers, similar to a raven.",
+      "It had fully developed flight feathers on its hind legs, making it a true four-winged dinosaur.",
+      "Despite being a bird-like dinosaur, it still had a mouth full of sharp teeth and a long bony tail.",
+      "It likely lived high in the forest canopy, preying on insects, small mammals, and primitive birds."
+    ]
+  },
+  {
+    "name": "Yutyrannus",
+    "diet": "Carnivore",
+    "period": "Early Cretaceous",
+    "location": "Liaoning, China",
+    "length": "9m",
+    "weight": "1400kg",
+    "description": "Discovered in 2012 in the Liaoning Province of China. Yutyrannus is a spectacular find because it proved that even massive, apex predators could be covered in feathers. As an early relative of the T-Rex, it weighed over a ton and was over 30 feet long, making it the largest known feathered dinosaur.",
+    "image": "./images/dinos/yutyrannus.webp",
+    "height": "3m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Yutyrannus",
+      "species": "yutyrannusensis"
+    },
+    "landFormation": "CHINA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Feathered Tyrant, Mandarin & Greek",
+    "interestingFacts": [
+      "Its discovery forced scientists to reconsider whether the mighty T-Rex itself might have had feathers.",
+      "The shaggy coat of feathers likely helped it survive in cooler, highly seasonal environments.",
+      "It hunted in packs, as several specimens were found buried together.",
+      "It had three fingers on each hand, unlike the later two-fingered tyrannosaurs."
+    ]
+  },
+  {
+    "name": "Giraffatitan",
+    "diet": "Herbivore",
+    "period": "Late Jurassic",
+    "location": "Tendaguru, Tanzania",
+    "length": "22m",
+    "weight": "40000kg",
+    "description": "Originally discovered in Tanzania, Africa in the early 1900s by Werner Janensch. For decades, it was classified as a species of Brachiosaurus. However, scientists eventually realized it was distinct enough to warrant its own genus. It remains one of the largest dinosaurs known from nearly complete skeleton material, famous for its towering, giraffe-like posture.",
+    "image": "./images/dinos/giraffatitan.webp",
+    "height": "12m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Giraffatitan",
+      "species": "giraffatitanensis"
+    },
+    "landFormation": "TANZANIA FORMATION",
+    "timeStages": {
+      "start": "201",
+      "end": "145"
+    },
+    "nameMeaning": "Giraffe Titan, Latin & Greek",
+    "interestingFacts": [
+      "The famous 'Brachiosaurus' skeleton mounted in the Museum f\u00fcr Naturkunde in Berlin is actually a Giraffatitan.",
+      "Its front legs were significantly longer than its hind legs, allowing it to reach foliage nearly 40 feet high.",
+      "It had a massive, domed crest on its head, which housed its large nasal openings.",
+      "A fully grown Giraffatitan could consume hundreds of pounds of vegetation every single day."
+    ]
+  },
+  {
+    "name": "Kentrosaurus",
+    "diet": "Herbivore",
+    "period": "Late Jurassic",
+    "location": "Tendaguru, Tanzania",
+    "length": "4.5m",
+    "weight": "1000kg",
+    "description": "Discovered alongside Giraffatitan in the Tendaguru Formation of Tanzania during the German expeditions of 1909\u20131912. Kentrosaurus is a close, smaller relative of the famous Stegosaurus. While Stegosaurus is known for its large plates, Kentrosaurus was armed with a spectacular array of long, deadly spikes running down the back half of its body and tail.",
+    "image": "./images/dinos/kentrosaurus.webp",
+    "height": "1.5m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Kentrosaurus",
+      "species": "kentrosaurusensis"
+    },
+    "landFormation": "TANZANIA FORMATION",
+    "timeStages": {
+      "start": "201",
+      "end": "145"
+    },
+    "nameMeaning": "Spiked Lizard, Ancient Greek",
+    "interestingFacts": [
+      "Unlike Stegosaurus, only the front half of its back had plates; the back half was covered entirely in spikes.",
+      "It had a massive 'parascapular' spike projecting backward from each of its shoulders.",
+      "Its center of gravity was very far back, meaning it may have been able to rear up on its hind legs to eat.",
+      "The brain of a Kentrosaurus was roughly the size of a golf ball."
+    ]
+  },
+  {
+    "name": "Eoraptor",
+    "diet": "Omnivore",
+    "period": "Late Triassic",
+    "location": "San Juan, Argentina",
+    "length": "1m",
+    "weight": "10kg",
+    "description": "Discovered in 1991 in the Valley of the Moon in Argentina by paleontologist Paul Sereno. Eoraptor is incredibly important because it is one of the earliest known dinosaurs, dating back 230 million years to the dawn of the dinosaur era. Its primitive anatomy gives scientists a perfect look at what the common ancestor of all dinosaurs might have looked like.",
+    "image": "./images/dinos/eoraptor.webp",
+    "height": "0.3m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Eoraptor",
+      "species": "eoraptorensis"
+    },
+    "landFormation": "SAN JUAN, ARGENTINA FORMATION",
+    "timeStages": {
+      "start": "252",
+      "end": "201"
+    },
+    "nameMeaning": "Dawn Plunderer, Ancient Greek",
+    "interestingFacts": [
+      "It was quite small, weighing only about 20 pounds and standing less than 3 feet tall.",
+      "It had heterodont teeth (different shapes in the same mouth), suggesting it ate both meat and plants.",
+      "It was a fast, bipedal runner that relied on speed to catch prey and escape larger predators.",
+      "Its discovery helped pinpoint South America as the likely continent where dinosaurs first evolved."
+    ]
+  },
+  {
+    "name": "Herrerasaurus",
+    "diet": "Carnivore",
+    "period": "Late Triassic",
+    "location": "San Juan, Argentina",
+    "length": "6m",
+    "weight": "350kg",
+    "description": "Discovered in 1959 by an Andean goatherd named Victorino Herrera in Argentina. Living alongside Eoraptor, Herrerasaurus was one of the very first apex predators of the dinosaur lineage. While primitive, it already possessed the sharp teeth, bipedal stance, and grasping claws that would define theropod dinosaurs for the next 160 million years.",
+    "image": "./images/dinos/herrerasaurus.webp",
+    "height": "1.5m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Herrerasaurus",
+      "species": "herrerasaurusensis"
+    },
+    "landFormation": "SAN JUAN, ARGENTINA FORMATION",
+    "timeStages": {
+      "start": "252",
+      "end": "201"
+    },
+    "nameMeaning": "Herrera's Lizard, Spanish & Greek",
+    "interestingFacts": [
+      "It had a unique double-hinged jaw that allowed it to hold onto large, struggling prey.",
+      "For a long time, scientists couldn't agree if it was a true dinosaur or an early ancestor.",
+      "It lived during a time when dinosaurs were rare and overshadowed by giant crocodilian ancestors.",
+      "Despite being an early dinosaur, it was already a highly specialized, fast-running hunter."
+    ]
+  },
+  {
+    "name": "Rajasaurus",
+    "diet": "Carnivore",
+    "period": "Late Cretaceous",
+    "location": "Madhya Pradesh, India",
+    "length": "6.6m",
+    "weight": "2000kg",
+    "description": "Discovered in 1981 in the Narmada River valley of Gujarat, India. Rajasaurus is a fascinating example of an abelisaurid, a group of stocky, powerful theropods that dominated the southern continents. Scientists were thrilled to find this apex predator in India, providing crucial evidence of how the Indian subcontinent was connected to Madagascar and Africa millions of years ago.",
+    "image": "./images/dinos/rajasaurus.webp",
+    "height": "2m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Rajasaurus",
+      "species": "rajasaurusensis"
+    },
+    "landFormation": "MADHYA PRADESH, INDIA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "King Lizard, Sanskrit & Greek",
+    "interestingFacts": [
+      "It had a distinctive, bony horn or crest protruding from the top of its head.",
+      "It lived on the island continent of India as it drifted across the ancient ocean toward Asia.",
+      "Like other abelisaurids, it had incredibly short, almost vestigial arms, even smaller than a T-Rex.",
+      "Its jaws were short, deep, and incredibly powerful, designed for crushing bites."
+    ]
+  },
+  {
+    "name": "Indosaurus",
+    "diet": "Carnivore",
+    "period": "Late Cretaceous",
+    "location": "Madhya Pradesh, India",
+    "length": "6m",
+    "weight": "700kg",
+    "description": "First discovered in 1932 by Charles Matley and Friedrich von Huene in Jabalpur, India. Indosaurus is known primarily from a partial skull, but it was enough to identify it as a formidable abelisaurid predator. Its discovery helped confirm the widespread presence of these unique predators across the prehistoric southern hemisphere.",
+    "image": "./images/dinos/indosaurus.webp",
+    "height": "2m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Indosaurus",
+      "species": "indosaurusensis"
+    },
+    "landFormation": "MADHYA PRADESH, INDIA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Indian Lizard, Latin & Greek",
+    "interestingFacts": [
+      "Its skull was unusually thick and robust, suggesting it may have engaged in head-butting.",
+      "The original fossils were lost, and only detailed casts remain for modern scientists to study.",
+      "It lived in the same environment and time period as the massive sauropod Titanosaurus.",
+      "It was roughly the same size and weight as an adult polar bear."
+    ]
+  },
+  {
+    "name": "Titanosaurus",
+    "diet": "Herbivore",
+    "period": "Late Cretaceous",
+    "location": "Madhya Pradesh, India",
+    "length": "12m",
+    "weight": "13000kg",
+    "description": "Discovered in 1877 in India by Richard Lydekker. Titanosaurus was the very first of the 'titanosaurs' to be named\u2014a massively successful group of sauropods that survived right up until the asteroid impact. Though the original fossils were fragmentary, its discovery opened the door to finding dozens of giant, armored sauropods across the globe.",
+    "image": "./images/dinos/titanosaurus.webp",
+    "height": "3m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Titanosaurus",
+      "species": "titanosaurusensis"
+    },
+    "landFormation": "MADHYA PRADESH, INDIA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Titanic Lizard, Ancient Greek",
+    "interestingFacts": [
+      "Titanosaurs were unique among long-necked dinosaurs because many of them had bony armor plates on their backs.",
+      "They thrived in the Late Cretaceous period, a time when most other types of sauropods had gone extinct.",
+      "Because the original fossils are so incomplete, some scientists consider 'Titanosaurus' an invalid name.",
+      "They had wide, stocky stances compared to the narrow-gauge tracks of earlier sauropods like Diplodocus."
+    ]
+  },
+  {
+    "name": "Bruhathkayosaurus",
+    "diet": "Herbivore",
+    "period": "Late Cretaceous",
+    "location": "Tamil Nadu, India",
+    "length": "35m",
+    "weight": "80000kg",
+    "description": "Discovered in 1989 in southern India by researchers Yadagiri and Ayyasami. Bruhathkayosaurus is one of the most mysterious and controversial dinosaurs ever found. Based on massive, fragmentary bones (including what was thought to be a tibia larger than a human), some scientists initially proposed it could have been larger than Argentinosaurus.",
+    "image": "./images/dinos/bruhathkayosaurus.webp",
+    "height": "10m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Bruhathkayosaurus",
+      "species": "bruhathkayosaurusensis"
+    },
+    "landFormation": "TAMIL NADU, INDIA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Huge-Bodied Lizard, Sanskrit & Greek",
+    "interestingFacts": [
+      "The name is derived from Sanskrit 'bruhath' (huge) and 'kaya' (body).",
+      "The original fossils were unfortunately lost or destroyed during a monsoon, leaving only drawings and photographs.",
+      "Because the bones are lost, some scientists debate whether it was a dinosaur or just petrified wood.",
+      "If the measurements were accurate, it could have weighed up to 100 tons."
+    ]
+  },
+  {
+    "name": "Megalosaurus",
+    "diet": "Carnivore",
+    "period": "Middle Jurassic",
+    "location": "Tamil Nadu, India",
+    "length": "6m",
+    "weight": "700kg",
+    "description": "Described in 1824 by William Buckland in England. Megalosaurus is incredibly historically significant: it was the very first dinosaur to ever be scientifically described and named! The discovery of its massive jawbone and sharp teeth shocked Victorian England and kick-started the worldwide fascination with prehistoric life.",
+    "image": "./images/dinos/megalosaurus.webp",
+    "height": "2m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Megalosaurus",
+      "species": "megalosaurusensis"
+    },
+    "landFormation": "TAMIL NADU, INDIA FORMATION",
+    "timeStages": {
+      "start": "201",
+      "end": "145"
+    },
+    "nameMeaning": "Great Lizard, Ancient Greek",
+    "interestingFacts": [
+      "It was one of the three original animals used by Sir Richard Owen to coin the word 'Dinosauria' in 1842.",
+      "Early depictions incorrectly showed it walking on all four legs like a giant, scaly bear.",
+      "Charles Dickens famously mentioned Megalosaurus in the opening lines of his novel 'Bleak House'.",
+      "Despite its fame, a complete skeleton has never been found."
+    ]
+  },
+  {
+    "name": "Tyrannosaurus Rex",
+    "diet": "Carnivore",
+    "period": "Late Cretaceous",
+    "location": "Montana, USA; South Dakota, USA",
+    "length": "12.3m",
+    "weight": "8400kg",
+    "description": "Tyrannosaurus Rex was discovered by Barnum Brown in 1902 in Hell Creek, Montana. It remains the most heavily studied dinosaur in history. Scientists have discovered that despite its famously small arms, the T-Rex possessed the strongest bite force of any terrestrial animal that has ever lived, capable of crushing bone to extract nutrient-rich marrow.",
+    "image": "./images/dinos/tyrannosaurus_rex.webp",
+    "height": "4m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Saurischia",
+      "suborder": "Theropoda",
+      "genus": "Tyrannosaurus",
+      "species": "Rex"
+    },
+    "landFormation": "HELL CREEK FORMATION",
+    "timeStages": {
+      "start": "68",
+      "end": "66"
+    },
+    "nameMeaning": "Tyrant Lizard King, Ancient Greek & Latin",
+    "interestingFacts": [
+      "A T-Rex's bite force was around 8,000 pounds, enough to crush a car or pulverize solid bone.",
+      "Despite jokes about their size, their arms were incredibly muscular and could likely curl over 400 pounds.",
+      "They had forward-facing eyes, giving them binocular vision similar to a hawk's, allowing them to accurately judge distances.",
+      "Fossilized T-Rex poop (coprolites) has been found containing crushed bone fragments from other dinosaurs."
+    ]
+  },
+  {
+    "name": "Pteranodon",
+    "diet": "Carnivore",
+    "period": "Late Cretaceous",
+    "location": "Kansas, USA",
+    "length": "3m",
+    "weight": "35kg",
+    "description": "Discovered by Othniel Charles Marsh in 1870 in the Smoky Hill Chalk of Kansas. Pteranodon was not a dinosaur, but a massive flying reptile (pterosaur). It soared over the Western Interior Seaway\u2014a shallow ocean that split North America in half\u2014using its massive wingspan to glide effortlessly while plunging its toothless beak into the water to catch fish.",
+    "image": "./images/dinos/pteranodon.webp",
+    "height": "1.5m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Pteranodon",
+      "species": "pteranodonensis"
+    },
+    "landFormation": "NIOBRARA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Wing Without Tooth, Ancient Greek",
+    "interestingFacts": [
+      "It had a wingspan of up to 23 feet, larger than any modern flying bird.",
+      "Males had large, prominent crests on the back of their heads, likely used for display.",
+      "Despite its massive size, its bones were incredibly thin and hollow, so it weighed less than 100 pounds.",
+      "It lacked teeth entirely, swallowing fish whole like a modern pelican."
+    ]
+  },
+  {
+    "name": "Spinosaurus",
+    "diet": "Carnivore",
+    "period": "Late Cretaceous",
+    "location": "Bahariya Oasis, Egypt; Kem Kem, Morocco",
+    "length": "14m",
+    "weight": "7400kg",
+    "description": "Originally discovered in Egypt in 1912 by Richard Markgraf. Spinosaurus is one of the most enigmatic predators ever found. Recent discoveries by Nizar Ibrahim have revolutionized our understanding of this beast, proving it was uniquely adapted for a semi-aquatic lifestyle, making it the first known swimming dinosaur, hunting massive fish in ancient river systems.",
+    "image": "./images/dinos/spinosaurus.webp",
+    "height": "4.5m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Spinosaurus",
+      "species": "spinosaurusensis"
+    },
+    "landFormation": "KEM KEM BEDS",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Spine Lizard, Ancient Greek",
+    "interestingFacts": [
+      "It is the longest known carnivorous dinosaur, edging out both T-Rex and Giganotosaurus.",
+      "Its massive sail was likely used for display to other Spinosaurus, rather than regulating heat.",
+      "It had a crocodile-like snout filled with conical teeth, perfect for gripping slippery fish.",
+      "Its tail was broad and flat, acting like a giant paddle to propel it through the water."
+    ]
+  },
+  {
+    "name": "Micropachycephalosaurus",
+    "diet": "Herbivore",
+    "period": "Late Cretaceous",
+    "location": "Shandong, China",
+    "length": "1m",
+    "weight": "5kg",
+    "description": "Discovered in 1978 in Shandong, China by paleontologist Dong Zhiming. This dinosaur holds the prestigious record for having the longest name of any known dinosaur! Despite its enormous 23-letter name, the animal itself was tiny\u2014barely over three feet long and weighing less than a large house cat.",
+    "image": "./images/dinos/micropachycephalosaurus.webp",
+    "height": "0.3m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Micropachycephalosaurus",
+      "species": "micropachycephalosaurusensis"
+    },
+    "landFormation": "WANGSHI SERIES",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Small Thick-Headed Lizard, Ancient Greek",
+    "interestingFacts": [
+      "It has the longest name of any dinosaur, beating out heavily contested rivals.",
+      "Despite the 'pachycephalosaurus' in its name, scientists now believe it belongs to a different family of horned dinosaurs (Ceratopsia).",
+      "It was a small, bipedal herbivore that relied on speed to escape predators.",
+      "It lacked the massive, thick skull dome of the true pachycephalosaurs."
+    ]
+  },
+  {
+    "name": "Parasaurolophus",
+    "diet": "Herbivore",
+    "period": "Late Cretaceous",
+    "location": "Alberta, Canada",
+    "length": "10m",
+    "weight": "3600kg",
+    "description": "Discovered in 1920 in Alberta, Canada by William Parks. Parasaurolophus is instantly recognizable by the magnificent, sweeping tubular crest extending from the back of its skull. Using computer modeling, scientists have pushed air through digital recreations of the crest, revealing it produced deep, resonant, trombone-like sounds to communicate with its herd.",
+    "image": "./images/dinos/parasaurolophus.webp",
+    "height": "3m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Parasaurolophus",
+      "species": "parasaurolophusensis"
+    },
+    "landFormation": "DINOSAUR PARK FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Near Crested Lizard, Ancient Greek",
+    "interestingFacts": [
+      "The hollow crest could grow up to 6 feet long in adult males.",
+      "Scientists believe the low-frequency sounds it made could travel for miles through dense forests.",
+      "It could walk on two legs to run or reach high leaves, but usually grazed on all fours.",
+      "Like other hadrosaurs, it had hundreds of tightly packed teeth arranged in 'batteries' to chew tough plants."
+    ]
+  },
+  {
+    "name": "Oviraptorosaur",
+    "diet": "Omnivore",
+    "period": "Late Cretaceous",
+    "location": "Gobi Desert, Mongolia",
+    "length": "2m",
+    "weight": "50kg",
+    "description": "Oviraptorosaurs are a fascinating group of highly bird-like, feathered dinosaurs found primarily in Asia and North America. They ranged in size from tiny, turkey-sized creatures to massive, imposing beasts like the Gigantoraptor. Their bizarre, often toothless beaks and elaborate crests make them some of the strangest dinosaurs ever discovered.",
+    "image": "./images/dinos/oviraptorosaur.webp",
+    "height": "1m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Oviraptorosaur",
+      "species": "oviraptorosaurensis"
+    },
+    "landFormation": "BARUN GOYOT FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Egg Thief Lizard, Latin & Greek",
+    "interestingFacts": [
+      "Many species had fan-like tail feathers, which they likely flared out in mating displays like modern peacocks.",
+      "Despite the name 'egg thief', they were incredibly devoted parents that brooded their own nests.",
+      "Some of the largest species, like Gigantoraptor, stood over 16 feet tall and weighed two tons.",
+      "Their diet is heavily debated, with scientists suggesting they ate everything from tough plants to clams and small lizards."
+    ]
+  },
+  {
+    "name": "Utahraptor",
+    "diet": "Carnivore",
+    "period": "Early Cretaceous",
+    "location": "Utah, USA",
+    "length": "7m",
+    "weight": "500kg",
+    "description": "Discovered in 1991 in Utah by Jim Kirkland. Utahraptor is the largest known member of the dromaeosaur (raptor) family. Discovered around the same time 'Jurassic Park' was being filmed, it proved that giant, terrifying raptors actually did exist! It was an incredibly heavily built predator designed for grappling and taking down large prey.",
+    "image": "./images/dinos/utahraptor.webp",
+    "height": "2m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Utahraptor",
+      "species": "utahraptorensis"
+    },
+    "landFormation": "CEDAR MOUNTAIN FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Utah's Thief, English & Latin",
+    "interestingFacts": [
+      "Its lethal 'killing claw' on its foot could reach up to 9 inches long.",
+      "Unlike the slender, speedy Velociraptor, Utahraptor was powerfully built and heavily muscled like a grizzly bear.",
+      "A massive 'quicksand' bonebed was discovered containing multiple Utahraptors that died trying to hunt a trapped herbivore.",
+      "It lived roughly 50 million years *before* its famous, smaller cousin, Velociraptor."
+    ]
+  },
+  {
+    "name": "Pachycephalosaurus",
+    "diet": "Herbivore",
+    "period": "Late Cretaceous",
+    "location": "Montana, USA",
+    "length": "4.5m",
+    "weight": "450kg",
+    "description": "Discovered in the late 1850s in North America. Pachycephalosaurus is the undisputed king of the 'bone-head' dinosaurs. Its skull was topped with a solid dome of bone up to 10 inches thick! For decades, scientists debated if they rammed their heads together like bighorn sheep. Recent studies of healed bone lesions strongly suggest they did indeed engage in violent head-butting combat.",
+    "image": "./images/dinos/pachycephalosaurus.webp",
+    "height": "1.5m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Pachycephalosaurus",
+      "species": "pachycephalosaurusensis"
+    },
+    "landFormation": "HELL CREEK FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Thick-Headed Lizard, Ancient Greek",
+    "interestingFacts": [
+      "The solid bone dome on its head was surrounded by knobby, bony spikes.",
+      "Scientists believe younger individuals had flat heads and large spikes, which morphed into thick domes as they aged.",
+      "They lived right at the end of the dinosaur age, sharing their habitat with T-Rex and Triceratops.",
+      "Its teeth were small and leaf-shaped, perfect for shredding soft leaves, fruits, and seeds."
+    ]
+  },
+  {
+    "name": "Quetzalcoatlus",
+    "diet": "Carnivore",
+    "period": "Late Cretaceous",
+    "location": "Texas, USA",
+    "length": "6m",
+    "weight": "200kg",
+    "description": "Discovered in 1971 in Texas by Douglas A. Lawson. Quetzalcoatlus was not a dinosaur, but an azhdarchid pterosaur\u2014and one of the largest flying animals of all time. Named after the Aztec feathered serpent god, this colossal creature was as tall as a modern giraffe when standing on the ground, using its massive beak to hunt small dinosaurs and mammals like a giant, terrifying stork.",
+    "image": "./images/dinos/quetzalcoatlus.webp",
+    "height": "5m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Quetzalcoatlus",
+      "species": "quetzalcoatlusensis"
+    },
+    "landFormation": "JAVELINA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Feathered Serpent God, Nahuatl",
+    "interestingFacts": [
+      "It had a massive wingspan estimated at 33 to 36 feet, the size of a small airplane.",
+      "Despite being the size of a giraffe, its hollow bones mean it likely weighed only around 400 to 500 pounds.",
+      "It lacked teeth and probably swallowed its prey whole.",
+      "To take off, it used its powerful arms to 'pole-vault' itself into the air."
+    ]
+  },
+  {
+    "name": "Therizinosaurus",
+    "diet": "Herbivore",
+    "period": "Late Cretaceous",
+    "location": "Gobi Desert, Mongolia",
+    "length": "10m",
+    "weight": "5000kg",
+    "description": "First discovered in 1948 in the Gobi Desert of Mongolia by a Soviet expedition. Therizinosaurus is one of the most bizarre dinosaurs ever found. Early scientists thought its massive, three-foot-long fossilized claws belonged to a giant turtle! We now know it was a huge, pot-bellied, feathered theropod that used its terrifying claws not for hunting, but to pull down high tree branches.",
+    "image": "./images/dinos/therizinosaurus.webp",
+    "height": "4.5m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Therizinosaurus",
+      "species": "therizinosaurusensis"
+    },
+    "landFormation": "NEMEGT FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Scythe Lizard, Ancient Greek",
+    "interestingFacts": [
+      "Its claws were the longest of any known animal in Earth's history, reaching up to 3.2 feet (1 meter).",
+      "Despite evolving from meat-eating theropods, it was entirely herbivorous.",
+      "It likely had a large, wide torso to house an enormous digestive tract for fermenting tough plants.",
+      "Its arms were heavily muscled and could have easily been used for defense against predators like Tarbosaurus."
+    ]
+  },
+  {
+    "name": "Iguanodon",
+    "diet": "Herbivore",
+    "period": "Early Cretaceous",
+    "location": "Sussex, England",
+    "length": "10m",
+    "weight": "3000kg",
+    "description": "Discovered in 1822 in Sussex, England by Gideon Mantell (and his wife Mary Ann). Iguanodon was the second dinosaur ever formally named and helped kickstart the entire field of paleontology. Famous for its distinctive thumb spike, early scientists mistakenly thought this spike belonged on its nose like a rhinoceros horn!",
+    "image": "./images/dinos/iguanodon.webp",
+    "height": "3m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Iguanodon",
+      "species": "iguanodonensis"
+    },
+    "landFormation": "WESSEX FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Iguana Tooth, Spanish & Greek",
+    "interestingFacts": [
+      "It possessed a large, conical thumb spike on each hand used for defense and foraging.",
+      "Its 'pinky' finger was incredibly long and flexible, acting almost like a prehensile thumb to wrap around branches.",
+      "The discovery of a massive bonebed in Bernissart, Belgium in 1878 yielded 38 complete Iguanodon skeletons.",
+      "It could effortlessly switch between walking on two legs and walking on all fours."
+    ]
+  },
+  {
+    "name": "Carnotaurus",
+    "diet": "Carnivore",
+    "period": "Late Cretaceous",
+    "location": "Chubut, Argentina",
+    "length": "8m",
+    "weight": "1,350 kg",
+    "description": "Discovered in 1984 by renowned paleontologist Jos\u00e9 Bonaparte in Patagonia, Argentina. Carnotaurus is instantly recognizable by the two thick, bull-like horns protruding from above its eyes. Unlike the heavy, bone-crushing T-Rex, Carnotaurus was built for pure speed, earning it the nickname 'the cheetah of the Cretaceous'.",
+    "image": "./images/dinos/carnotaurus.webp",
+    "height": "2.8m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Saurischia",
+      "suborder": "Theropoda",
+      "genus": "Carnotaurus",
+      "species": "carnotaurusensis"
+    },
+    "landFormation": "ARGENTINA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Meat-Eating Bull, Latin",
+    "interestingFacts": [
+      "Its arms were so incredibly small and stubby that they were practically useless, far smaller than a T-Rex's.",
+      "It had a deep, short skull and an incredibly muscular neck designed for fast, snapping bites.",
+      "It is the only carnivorous dinosaur ever found with a complete, unbroken skin impression showing a bumpy, scaly hide without feathers.",
+      "Its leg bones were long and heavily muscled, making it one of the fastest large theropods ever discovered."
+    ]
+  },
+  {
+    "name": "Apatosaurus",
+    "diet": "Herbivore",
+    "period": "Late Jurassic",
+    "location": "Colorado, USA",
+    "length": "21m",
+    "weight": "16,400 kg",
+    "description": "Discovered in 1877 by Othniel Charles Marsh in Colorado. For over a century, a massive naming mix-up led the public to know this dinosaur by its invalid name, 'Brontosaurus' (though Brontosaurus was later reinstated as a separate genus). Apatosaurus was a massive, heavily built sauropod that dominated the Late Jurassic plains of North America.",
+    "image": "./images/dinos/apatosaurus.webp",
+    "height": "7.3m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Sauropodomorpha",
+      "genus": "Apatosaurus",
+      "species": "apatosaurusensis"
+    },
+    "landFormation": "NORTH AMERICA FORMATION",
+    "timeStages": {
+      "start": "201",
+      "end": "145"
+    },
+    "nameMeaning": "Deceptive Lizard, Ancient Greek",
+    "interestingFacts": [
+      "Its neck was wider and thicker than its close relative Diplodocus.",
+      "It had a long, whip-like tail that it could crack at supersonic speeds to communicate or scare off attackers.",
+      "It didn't chew its food, but instead swallowed stones (gastroliths) to grind up plants in its stomach.",
+      "Despite its massive size, its head was barely larger than a horse's."
+    ]
+  },
+  {
+    "name": "Baryonyx",
+    "diet": "Carnivore (Piscivore)",
+    "period": "Early Cretaceous",
+    "location": "Surrey, England",
+    "length": "7.5m",
+    "weight": "1,200 kg",
+    "description": "Discovered in 1983 by amateur fossil hunter William Walker in a clay pit near London. Baryonyx revolutionized our understanding of theropods by revealing that some dinosaurs were primarily fish-eaters (piscivores). It had a long, narrow snout filled with cone-shaped teeth, remarkably similar to a modern gharial crocodile.",
+    "image": "./images/dinos/baryonyx.webp",
+    "height": "2.6m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Baryonyx",
+      "species": "baryonyxensis"
+    },
+    "landFormation": "ENGLAND, SPAIN FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Heavy Claw, Ancient Greek",
+    "interestingFacts": [
+      "It had an absolutely massive, curved claw on its first finger that was over a foot long.",
+      "Fossilized fish scales were found right in its stomach area, proving its diet.",
+      "It was a close relative of the famous Spinosaurus, but lived millions of years earlier in Europe.",
+      "Its nostrils were set far back on its snout, allowing it to breathe while dipping its jaw in the water."
+    ]
+  },
+  {
+    "name": "Dilophosaurus",
+    "diet": "Carnivore",
+    "period": "Early Jurassic",
+    "location": "Arizona, USA",
+    "length": "7m",
+    "weight": "400 kg",
+    "description": "Discovered in 1942 in northern Arizona by Jesse Williams. Dilophosaurus is famous for the stunning pair of rounded, plate-like crests on its skull. Contrary to its popular depiction in movies (like Jurassic Park), it did *not* have a neck frill, it was *not* the size of a dog, and there is zero evidence it could spit venom. It was actually a large, 20-foot apex predator of the Early Jurassic.",
+    "image": "./images/dinos/dilophosaurus.webp",
+    "height": "2.4m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Saurischia",
+      "suborder": "Theropoda",
+      "genus": "Dilophosaurus",
+      "species": "dilophosaurusensis"
+    },
+    "landFormation": "NORTH AMERICA FORMATION",
+    "timeStages": {
+      "start": "201",
+      "end": "145"
+    },
+    "nameMeaning": "Two-Crested Lizard, Ancient Greek",
+    "interestingFacts": [
+      "It was one of the largest predators of its time, weighing around 800 pounds.",
+      "Its iconic double crests were incredibly thin and fragile, used entirely for visual display to attract mates.",
+      "Its upper jaw had a distinctive 'kink' or notch, similar to modern crocodiles, designed for hooking slippery prey.",
+      "Fossils show it grew incredibly fast early in life, reaching adult size in just a few years."
+    ]
+  },
+  {
+    "name": "Deinonychus",
+    "diet": "Carnivore",
+    "period": "Early Cretaceous",
+    "location": "Montana, USA",
+    "length": "3.4m",
+    "weight": "73 kg",
+    "description": "Discovered in 1964 by paleontologist John Ostrom in Montana. The discovery of Deinonychus completely revolutionized paleontology and sparked the 'Dinosaur Renaissance'. Because it was so obviously agile, fast, and bird-like, Ostrom proposed that dinosaurs were warm-blooded, active animals rather than slow, sluggish reptiles.",
+    "image": "./images/dinos/deinonychus.webp",
+    "height": "1.2m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Saurischia",
+      "suborder": "Theropoda",
+      "genus": "Deinonychus",
+      "species": "deinonychusensis"
+    },
+    "landFormation": "NORTH AMERICA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Terrible Claw, Ancient Greek",
+    "interestingFacts": [
+      "It wielded a massive, 5-inch retractable sickle claw on the second toe of each foot.",
+      "Its discovery was the primary catalyst for the theory that birds evolved directly from dinosaurs.",
+      "It had stiffening rods in its tail, allowing it to use its tail as a rigid counterbalance for high-speed turns.",
+      "The 'Velociraptors' in the Jurassic Park novels and films were actually heavily based on Deinonychus."
+    ]
+  },
+  {
+    "name": "Gallimimus",
+    "diet": "Omnivore",
+    "period": "Late Cretaceous",
+    "location": "Gobi Desert, Mongolia",
+    "length": "6m",
+    "weight": "440 kg",
+    "description": "Discovered in the early 1960s in the Gobi Desert of Mongolia by Polish-Mongolian expeditions. Gallimimus was an 'ornithomimid', or ostrich-mimic dinosaur. Lacking teeth completely, it had a long neck, a small head, and long, powerful legs perfectly adapted for high-speed running to escape the terrifying Tarbosaurus.",
+    "image": "./images/dinos/gallimimus.webp",
+    "height": "2.1m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Gallimimus",
+      "species": "gallimimusensis"
+    },
+    "landFormation": "MONGOLIA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Chicken Mimic, Latin",
+    "interestingFacts": [
+      "It was incredibly fast, capable of sprinting at speeds over 30 miles per hour.",
+      "Its eyes were located on the sides of its head, giving it excellent peripheral vision to spot predators.",
+      "Despite the name 'chicken mimic', it was the largest of the ostrich-dinosaurs, growing up to 20 feet long.",
+      "Scientists believe its toothless beak may have been used to filter-feed in shallow water, like a modern flamingo."
+    ]
+  },
+  {
+    "name": "Troodon",
+    "diet": "Omnivore",
+    "period": "Late Cretaceous",
+    "location": "Montana, USA",
+    "length": "2m",
+    "weight": "50 kg",
+    "description": "First discovered in 1856 by Ferdinand Vandeveer Hayden in North America. For over a century, Troodon was considered the smartest dinosaur to have ever lived, possessing an exceptionally large brain-to-body mass ratio. However, in recent years, scientists have debated if 'Troodon' is a valid genus, reclassifying many of its fossils into other closely related species like Stenonychosaurus.",
+    "image": "./images/dinos/troodon.webp",
+    "height": "0.7m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Troodon",
+      "species": "troodonensis"
+    },
+    "landFormation": "NORTH AMERICA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Wounding Tooth, Ancient Greek",
+    "interestingFacts": [
+      "It had incredibly large, forward-facing eyes, strongly suggesting it was a nocturnal hunter.",
+      "Its brain volume relative to its body size was comparable to modern flightless birds.",
+      "It laid eggs in pairs and arranged them vertically in mud nests.",
+      "Its teeth were unique\u2014highly serrated and curved, perfect for eating both small mammals and tough plants."
+    ]
+  },
+  {
+    "name": "Carcharodontosaurus",
+    "diet": "Carnivore",
+    "period": "Late Cretaceous",
+    "location": "Kem Kem, Morocco",
+    "length": "12m",
+    "weight": "6,000 kg",
+    "description": "First discovered in 1927 in North Africa, its original fossils were tragically destroyed during World War II. In 1995, Paul Sereno rediscovered it in the Sahara Desert. Carcharodontosaurus was a colossal predator, slightly longer than the T-Rex, with jaws packed full of terrifying, serrated teeth that closely resembled those of a great white shark.",
+    "image": "./images/dinos/carcharodontosaurus.webp",
+    "height": "4.2m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Saurischia",
+      "suborder": "Theropoda",
+      "genus": "Carcharodontosaurus",
+      "species": "carcharodontosaurusensis"
+    },
+    "landFormation": "NORTH AFRICA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Shark-Toothed Lizard, Ancient Greek",
+    "interestingFacts": [
+      "Its serrated, slicing teeth could reach up to 8 inches in length.",
+      "It shared its North African habitat with the massive, semi-aquatic Spinosaurus.",
+      "It did not have crushing bite force; instead, it relied on inflicting massive, bleeding flesh wounds.",
+      "Despite its massive size, its optic nerve and inner ear show it relied heavily on smell rather than binocular vision."
+    ]
+  },
+  {
+    "name": "Maiasaura",
+    "diet": "Herbivore",
+    "period": "Late Cretaceous",
+    "location": "Montana, USA",
+    "length": "9m",
+    "weight": "2,500 kg",
+    "description": "Discovered in 1978 in Montana by paleontologist Jack Horner. The discovery of 'Egg Mountain'\u2014a massive nesting ground containing Maiasaura eggs, embryos, and juveniles\u2014was a monumental breakthrough. It provided the very first definitive proof that some dinosaurs cared for and fed their young long after they hatched, completely changing how we view dinosaur behavior.",
+    "image": "./images/dinos/maiasaura.webp",
+    "height": "3.1m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Maiasaura",
+      "species": "maiasauraensis"
+    },
+    "landFormation": "NORTH AMERICA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Good Mother Lizard, Greek & Latin",
+    "interestingFacts": [
+      "Baby Maiasaura skeletons had unformed leg bones, proving they were completely helpless and had to be fed in the nest.",
+      "They lived in massive, migrating herds numbering in the tens of thousands.",
+      "The nests were spaced exactly one 'mother's body length' apart to prevent them from stepping on each other's eggs.",
+      "It was the first dinosaur to fly into space, taking a ride on the Space Shuttle Spacelab 2 in 1985."
+    ]
+  },
+  {
+    "name": "Edmontosaurus",
+    "diet": "Herbivore",
+    "period": "Late Cretaceous",
+    "location": "Alberta, Canada",
+    "length": "12m",
+    "weight": "4,000 kg",
+    "description": "Discovered in 1917 in southern Alberta, Canada. Edmontosaurus is one of the best-understood dinosaurs in the world due to the staggering number of fossils found, including several incredible 'mummies' preserving skin, scales, and soft tissue. It was a massive, 40-foot-long duck-billed dinosaur that served as the primary food source for the T-Rex.",
+    "image": "./images/dinos/edmontosaurus.webp",
+    "height": "4.2m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Sauropodomorpha",
+      "genus": "Edmontosaurus",
+      "species": "edmontosaurusensis"
+    },
+    "landFormation": "NORTH AMERICA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Edmonton Lizard, Latin",
+    "interestingFacts": [
+      "Fossilized 'mummies' reveal it had a fleshy, rooster-like comb on top of its head.",
+      "It had a specialized 'dental battery' containing over 1,000 teeth to endlessly grind tough pine needles and twigs.",
+      "Some specimens have been found with healed T-Rex bite marks on their tails.",
+      "It lacked the hollow bony crest of its cousin Parasaurolophus, but its fleshy nose may have functioned like an inflatable balloon."
+    ]
+  },
+  {
+    "name": "Ceratosaurus",
+    "diet": "Carnivore",
+    "period": "Late Jurassic",
+    "location": "Colorado, USA",
+    "length": "6m",
+    "weight": "900 kg",
+    "description": "Discovered in 1884 by Othniel Charles Marsh in Colorado. Ceratosaurus is easily identifiable by the prominent, blade-like horn sitting directly on its snout, and the row of bony armor plates (osteoderms) running down its back. It shared its Late Jurassic habitat with the much larger Allosaurus, likely hunting smaller prey or scavenging to avoid competition.",
+    "image": "./images/dinos/ceratosaurus.webp",
+    "height": "2.1m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Saurischia",
+      "suborder": "Theropoda",
+      "genus": "Ceratosaurus",
+      "species": "ceratosaurusensis"
+    },
+    "landFormation": "NORTH AMERICA, EUROPE FORMATION",
+    "timeStages": {
+      "start": "201",
+      "end": "145"
+    },
+    "nameMeaning": "Horned Lizard, Ancient Greek",
+    "interestingFacts": [
+      "It is the only known theropod dinosaur to have a row of bony armor running down its spine.",
+      "Its teeth were incredibly long and blade-like, proportionally larger than those of T-Rex.",
+      "The prominent horn on its nose was too thin for combat and was likely brightly colored for display.",
+      "Because of its flexible tail, some scientists suspect it may have been a strong swimmer."
+    ]
+  },
+  {
+    "name": "Amargasaurus",
+    "diet": "Herbivore",
+    "period": "Early Cretaceous",
+    "location": "Neuqu\u00e9n, Argentina",
+    "length": "9m",
+    "weight": "2,600 kg",
+    "description": "Discovered in 1984 in the La Amarga Formation of Patagonia, Argentina. This incredibly strange sauropod was relatively small for a long-necked dinosaur, but it sported two parallel rows of incredibly long, backward-pointing neural spines running down its neck and back. These spines make it one of the most visually striking dinosaurs ever found.",
+    "image": "./images/dinos/amargasaurus.webp",
+    "height": "3.1m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Sauropodomorpha",
+      "genus": "Amargasaurus",
+      "species": "amargasaurusensis"
+    },
+    "landFormation": "ARGENTINA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Amarga Lizard, Latin",
+    "interestingFacts": [
+      "Scientists furiously debate whether the long neck spines were covered in a fleshy sail or exposed like sharp spikes.",
+      "The spines were likely used for visual display to ward off rivals or attract mates.",
+      "Because its neck was relatively short, it mostly fed on low-lying ferns and bushes.",
+      "It was a highly specialized member of the dicraeosaurid family, all known for bizarre spine adaptations."
+    ]
+  },
+  {
+    "name": "Nodosaurus",
+    "diet": "Herbivore",
+    "period": "Late Cretaceous",
+    "location": "Wyoming, USA",
+    "length": "6m",
+    "weight": "2,000 kg",
+    "description": "Discovered in 1889 in Wyoming by Othniel Charles Marsh. Nodosaurus was an armored dinosaur closely related to Ankylosaurus, but it completely lacked the famous tail club. Instead, it relied entirely on its impenetrable armor plating, dropping flat to the ground to protect its soft underbelly when threatened by predators.",
+    "image": "./images/dinos/nodosaurus.webp",
+    "height": "2.1m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Sauropodomorpha",
+      "genus": "Nodosaurus",
+      "species": "nodosaurusensis"
+    },
+    "landFormation": "NORTH AMERICA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Knobbed Lizard, Ancient Greek",
+    "interestingFacts": [
+      "Its back was covered in hundreds of bony 'knobs' and large spikes, giving it its name.",
+      "It had incredibly muscular, powerful shoulders to support the weight of its heavy armor.",
+      "Unlike Ankylosaurus, its snout was narrow, suggesting it was a picky eater that selectively browsed on specific plants.",
+      "A recently discovered, perfectly preserved 'mummy' of a related nodosaur (Borealopelta) showed it was reddish-brown with countershading."
+    ]
+  },
+  {
+    "name": "Mamenchisaurus",
+    "diet": "Herbivore",
+    "period": "Late Jurassic",
+    "location": "Sichuan, China",
+    "length": "35m",
+    "weight": "25,000 kg",
+    "description": "Discovered in 1952 during highway construction in the Sichuan Province of China. Mamenchisaurus holds the record for having one of the longest necks in proportion to its body size of any animal in Earth's history! Its neck alone made up nearly half of its entire 65-foot body length.",
+    "image": "./images/dinos/mamenchisaurus.webp",
+    "height": "12.2m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Sauropodomorpha",
+      "genus": "Mamenchisaurus",
+      "species": "mamenchisaurusensis"
+    },
+    "landFormation": "CHINA FORMATION",
+    "timeStages": {
+      "start": "201",
+      "end": "145"
+    },
+    "nameMeaning": "Mamenchi Ferry Lizard, Mandarin & Greek",
+    "interestingFacts": [
+      "Its spectacular neck contained 19 massive vertebrae, the most of any known dinosaur.",
+      "To support its extreme neck length, its neck bones were highly hollowed out to save weight.",
+      "Scientists believe it could sweep its neck in a massive 20-foot arc to graze without moving its legs.",
+      "The name 'Mamenchi' was actually a typo by the discovering paleontologist; it should have been 'Mamingchi'."
+    ]
+  },
+  {
+    "name": "Camarasaurus",
+    "diet": "Herbivore",
+    "period": "Late Jurassic",
+    "location": "Colorado, USA",
+    "length": "18m",
+    "weight": "18,000 kg",
+    "description": "Discovered in 1877 by Othniel Charles Marsh in Colorado. Camarasaurus is the most common sauropod found in the famous Morrison Formation of North America. It had a remarkably short, boxy skull with large, spoon-shaped teeth perfectly adapted for eating much tougher vegetation than its neighbors Diplodocus and Apatosaurus.",
+    "image": "./images/dinos/camarasaurus.webp",
+    "height": "6.3m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Sauropodomorpha",
+      "genus": "Camarasaurus",
+      "species": "camarasaurusensis"
+    },
+    "landFormation": "NORTH AMERICA FORMATION",
+    "timeStages": {
+      "start": "201",
+      "end": "145"
+    },
+    "nameMeaning": "Chambered Lizard, Ancient Greek",
+    "interestingFacts": [
+      "Its name comes from the large, hollow chambers inside its vertebrae, which kept its skeleton incredibly light.",
+      "Because of its robust teeth, it could eat coarse cycads and conifers that other sauropods couldn't chew.",
+      "It traveled in herds; one famous discovery site contained the remains of adults, sub-adults, and juveniles that died together.",
+      "It was smaller and stockier than Diplodocus, acting like the 'bison' of the Jurassic plains."
+    ]
+  },
+  {
+    "name": "Monolophosaurus",
+    "diet": "Carnivore",
+    "period": "Middle Jurassic",
+    "location": "Xinjiang, China",
+    "length": "5m",
+    "weight": "475 kg",
+    "description": "Discovered in 1981 by a joint Canadian-Chinese expedition in Xinjiang, China. This medium-sized predator is instantly recognizable by the single, highly ornate bony crest running down the entire midline of its snout. This crest was highly pneumatized (filled with air pockets), suggesting it was fragile and used exclusively for visual display.",
+    "image": "./images/dinos/monolophosaurus.webp",
+    "height": "1.8m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Saurischia",
+      "suborder": "Theropoda",
+      "genus": "Monolophosaurus",
+      "species": "monolophosaurusensis"
+    },
+    "landFormation": "CHINA FORMATION",
+    "timeStages": {
+      "start": "201",
+      "end": "145"
+    },
+    "nameMeaning": "Single-Crested Lizard, Ancient Greek",
+    "interestingFacts": [
+      "The large crest was completely hollow, making it too weak to be used as a weapon.",
+      "Its fossils were found in ancient riverbeds, suggesting it lived in lush, water-rich environments.",
+      "It is considered an early, primitive relative of the much later and larger Allosaurus.",
+      "Only one incredibly well-preserved skeleton of Monolophosaurus has ever been found."
+    ]
+  },
+  {
+    "name": "Ouranosaurus",
+    "diet": "Herbivore",
+    "period": "Early Cretaceous",
+    "location": "Agadez, Niger",
+    "length": "7m",
+    "weight": "2,200 kg",
+    "description": "Discovered in 1965 in Niger, Africa by French paleontologist Philippe Taquet. Ouranosaurus was a fascinating ornithopod (iguanodontian) that evolved in the scorching deserts of prehistoric Africa. Its most striking feature was a tall, bony sail running down its back, remarkably similar to the predatory Spinosaurus which lived in the same region.",
+    "image": "./images/dinos/ouranosaurus.webp",
+    "height": "2.4m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Sauropodomorpha",
+      "genus": "Ouranosaurus",
+      "species": "ouranosaurusensis"
+    },
+    "landFormation": "NORTH AFRICA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Brave Lizard, Arabic & Greek",
+    "interestingFacts": [
+      "Its back sail may have been used for thermoregulation, releasing excess heat in the hot African climate.",
+      "Alternatively, the 'sail' may have actually been a thick, fatty hump used to store energy, like a modern camel.",
+      "It had a flattened, duck-like bill and walked on all fours, but could sprint on two legs.",
+      "It had two small thumb spikes on its hands, a trait inherited from its close cousin Iguanodon."
+    ]
+  },
+  {
+    "name": "Psittacosaurus",
+    "diet": "Herbivore",
+    "period": "Early Cretaceous",
+    "location": "Liaoning, China",
+    "length": "2m",
+    "weight": "20 kg",
+    "description": "Discovered in 1922 in Mongolia by the American Museum of Natural History expedition. Psittacosaurus is one of the most completely known dinosaur genera, with over 400 fossil specimens found ranging from hatchlings to adults. This small, bipedal herbivore is famous for its powerful, parrot-like beak used to crack tough nuts and seeds.",
+    "image": "./images/dinos/psittacosaurus.webp",
+    "height": "0.7m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Sauropodomorpha",
+      "genus": "Psittacosaurus",
+      "species": "psittacosaurusensis"
+    },
+    "landFormation": "ASIA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Parrot Lizard, Ancient Greek",
+    "interestingFacts": [
+      "A remarkably preserved specimen revealed it had long, stiff bristles on its tail, like a porcupine.",
+      "Scientists studied its fossilized melanosomes and discovered it was brown with countershading to camouflage in dense forests.",
+      "It is an early ancestor of the massive horned dinosaurs like Triceratops, though it lacked horns itself.",
+      "Fossilized stomach contents show they swallowed small stones to help grind up their food."
+    ]
+  },
+  {
+    "name": "Muttaburrasaurus",
+    "diet": "Herbivore",
+    "period": "Early Cretaceous",
+    "location": "Queensland, Australia",
+    "length": "8m",
+    "weight": "2,800 kg",
+    "description": "Discovered in 1963 by a grazier near the town of Muttaburra in Queensland, Australia. Muttaburrasaurus was a large ornithopod dinosaur that roamed the forests of ancient Australia when the continent was still attached to Antarctica. It is widely known for its large, hollow, bony bump on its snout.",
+    "image": "./images/dinos/muttaburrasaurus.webp",
+    "height": "2.8m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Sauropodomorpha",
+      "genus": "Muttaburrasaurus",
+      "species": "muttaburrasaurusensis"
+    },
+    "landFormation": "AUSTRALIA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Muttaburra Lizard, Aboriginal & Greek",
+    "interestingFacts": [
+      "It is one of the most complete dinosaur skeletons ever found in Australia.",
+      "The hollow bump on its snout was likely used to produce loud honking calls or for visual display.",
+      "It had incredibly powerful jaws with shearing teeth, suggesting it ate very tough vegetation like cycads.",
+      "Its thumb featured a sharp, spiky claw, remarkably similar to its distant relative Iguanodon."
+    ]
+  },
+  {
+    "name": "Leaellynasaura",
+    "diet": "Herbivore",
+    "period": "Early Cretaceous",
+    "location": "Victoria, Australia",
+    "length": "2m",
+    "weight": "10 kg",
+    "description": "Discovered in 1989 in Dinosaur Cove, Australia by paleontologists Thomas Rich and Patricia Vickers-Rich (who named it after their daughter, Leaellyn). Because Australia was located deep within the Antarctic Circle during the Early Cretaceous, Leaellynasaura evolved unique adaptations to survive months of total freezing darkness during the polar winter.",
+    "image": "./images/dinos/leaellynasaura.webp",
+    "height": "0.7m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Leaellynasaura",
+      "species": "leaellynasauraensis"
+    },
+    "landFormation": "AUSTRALIA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Leaellyn's Lizard, English & Latin",
+    "interestingFacts": [
+      "It had unusually large optic lobes and eyes, giving it excellent night vision to forage in the dark polar winter.",
+      "Its tail was incredibly long, measuring three times the length of the rest of its body.",
+      "Because it lived in freezing temperatures, scientists strongly suspect it was covered in a thick coat of insulating feathers.",
+      "It lived alongside early mammals, giant amphibians, and ancient lungfish in a unique polar ecosystem."
+    ]
+  },
+  {
+    "name": "Saltasaurus",
+    "diet": "Herbivore",
+    "period": "Late Cretaceous",
+    "location": "Salta, Argentina",
+    "length": "12m",
+    "weight": "7,000 kg",
+    "description": "Discovered in 1980 in the Salta Province of Argentina by Jos\u00e9 Bonaparte. Saltasaurus shocked the paleontology community because it provided the first conclusive proof that some sauropods were covered in bony armor plating (osteoderms). Before this discovery, scientists believed all sauropods relied entirely on their massive size for defense.",
+    "image": "./images/dinos/saltasaurus.webp",
+    "height": "4.2m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Sauropodomorpha",
+      "genus": "Saltasaurus",
+      "species": "saltasaurusensis"
+    },
+    "landFormation": "ARGENTINA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Lizard from Salta, Latin & Greek",
+    "interestingFacts": [
+      "Its back was completely studded with bony plates and thousands of smaller, bead-like scales.",
+      "Despite being a titanosaur, it was quite small for a sauropod, measuring only about 40 feet long.",
+      "Hundreds of Saltasaurus eggs were found in a massive nesting site in Patagonia, revealing they laid eggs in large colonies.",
+      "Its barrel-shaped body and wide-set legs gave it a highly unusual, sprawling walk."
+    ]
+  },
+  {
+    "name": "Shantungosaurus",
+    "diet": "Herbivore",
+    "period": "Late Cretaceous",
+    "location": "Shandong, China",
+    "length": "15m",
+    "weight": "16,000 kg",
+    "description": "Discovered in 1973 in the Shandong Peninsula of China. Shantungosaurus holds the incredible title of being the largest known hadrosaur (duck-billed dinosaur) and arguably the largest bipedal animal to have ever lived on Earth. Reaching nearly 50 feet in length, it weighed as much as a fully grown T-Rex.",
+    "image": "./images/dinos/shantungosaurus.webp",
+    "height": "5.2m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Sauropodomorpha",
+      "genus": "Shantungosaurus",
+      "species": "shantungosaurusensis"
+    },
+    "landFormation": "CHINA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Shandong Lizard, Mandarin & Greek",
+    "interestingFacts": [
+      "It was so massive that it lacked the hollow head crests of other hadrosaurs, relying purely on its size for defense.",
+      "Its massive jaws contained a 'dental battery' with around 1,500 tiny teeth for endless chewing.",
+      "Vast bonebeds containing thousands of individuals prove they migrated across China in enormous herds.",
+      "A single thigh bone of a Shantungosaurus measures nearly 6 feet tall."
+    ]
+  },
+  {
+    "name": "Tuojiangosaurus",
+    "diet": "Herbivore",
+    "period": "Late Jurassic",
+    "location": "Sichuan, China",
+    "length": "7m",
+    "weight": "2,800 kg",
+    "description": "Discovered in 1977 during the construction of a dam in Sichuan, China. Tuojiangosaurus is the most famous Asian relative of the American Stegosaurus. It provides a fascinating look at how plate-backed dinosaurs evolved on separate continents, featuring tall, sharply pointed plates that were far more triangular than those of its American cousin.",
+    "image": "./images/dinos/tuojiangosaurus.webp",
+    "height": "2.4m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Sauropodomorpha",
+      "genus": "Tuojiangosaurus",
+      "species": "tuojiangosaurusensis"
+    },
+    "landFormation": "CHINA FORMATION",
+    "timeStages": {
+      "start": "201",
+      "end": "145"
+    },
+    "nameMeaning": "Tuo River Lizard, Mandarin & Greek",
+    "interestingFacts": [
+      "It had 15 pairs of tall, triangular plates running down its back.",
+      "Its tail ended in a deadly 'thagomizer' made of four long, horizontal spikes.",
+      "Because its front legs were significantly shorter than its hind legs, its head hung very close to the ground.",
+      "It was the very first stegosaurid dinosaur ever discovered in Asia."
+    ]
+  },
+  {
+    "name": "Gorgosaurus",
+    "diet": "Carnivore",
+    "period": "Late Cretaceous",
+    "location": "Alberta, Canada",
+    "length": "8m",
+    "weight": "2,500 kg",
+    "description": "Discovered in 1914 by Charles H. Sternberg in Alberta, Canada. Gorgosaurus was a terrifying tyrannosaurid that lived slightly earlier and was more lightly built than the T-Rex. Because dozens of complete skeletons have been found, it is actually one of the best-represented tyrannosaurs in the fossil record, providing invaluable data on how these apex predators grew from juveniles to adults.",
+    "image": "./images/dinos/gorgosaurus.webp",
+    "height": "2.8m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Saurischia",
+      "suborder": "Theropoda",
+      "genus": "Gorgosaurus",
+      "species": "gorgosaurusensis"
+    },
+    "landFormation": "NORTH AMERICA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Fierce Lizard, Ancient Greek",
+    "interestingFacts": [
+      "It coexisted with another tyrannosaur, Daspletosaurus, but likely hunted different, faster prey to avoid competition.",
+      "Young Gorgosaurus were incredibly fast runners with blade-like teeth, changing to bone-crushing predators as they grew.",
+      "A famous fossil shows a Gorgosaurus that suffered and survived a broken leg, broken ribs, and a severe brain infection.",
+      "It had a smooth, bony crest located just in front of its eyes."
+    ]
+  },
+  {
+    "name": "Peltosaurus",
+    "diet": "Carnivore",
+    "period": "Paleogene",
+    "location": "Wyoming, USA",
+    "length": "0.6m",
+    "weight": "1kg",
+    "description": "Peltosaurus is actually a genus of extinct anguid lizard, not a dinosaur! However, in the context of prehistoric armor, its name (Shield Lizard) perfectly describes its heavily armored, osteoderm-covered body. It lived millions of years after the dinosaurs, thriving during the Eocene and Oligocene epochs in North America.",
+    "image": "./images/dinos/peltosaurus.webp",
+    "height": "0.1m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Peltosaurus",
+      "species": "peltosaurusensis"
+    },
+    "landFormation": "WHITE RIVER FORMATION",
+    "timeStages": {
+      "start": "38",
+      "end": "28"
+    },
+    "nameMeaning": "Shield Lizard, Ancient Greek",
+    "interestingFacts": [
+      "It was a lizard, closely related to modern-day alligator lizards and glass lizards.",
+      "Its entire body and head were covered in interlocking, bony armor plates (osteoderms).",
+      "Fossils of Peltosaurus are incredibly common in the White River Badlands of the American Midwest.",
+      "It survived the massive climate shifts that occurred after the extinction of the dinosaurs."
+    ]
+  },
+  {
+    "name": "Kosmoceratops",
+    "diet": "Herbivore",
+    "period": "Late Cretaceous",
+    "location": "Utah, USA",
+    "length": "4.5m",
+    "weight": "1,200 kg",
+    "description": "Discovered in 2007 in the Grand Staircase-Escalante National Monument of Utah. Kosmoceratops has arguably the most bizarre and elaborate skull of any known dinosaur. It possessed a staggering total of 15 horns and spikes adorning its head, leading paleontologists to nickname it the 'most ornamented dinosaur ever found'.",
+    "image": "./images/dinos/kosmoceratops.webp",
+    "height": "1.6m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Thyreophora",
+      "genus": "Kosmoceratops",
+      "species": "kosmoceratopsensis"
+    },
+    "landFormation": "UTAH, USA FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Ornate Horned Face, Ancient Greek",
+    "interestingFacts": [
+      "It had two horns above its eyes, one on its nose, and a fringe of ten hooked horns curling downward over its neck frill.",
+      "Scientists believe this extreme ornamentation was entirely for showing off to mates, much like a peacock's tail.",
+      "It lived on a prehistoric island continent called Laramidia, which was separated from the rest of North America by a shallow sea.",
+      "Its massive skull was roughly 6 feet long from beak to frill."
+    ]
+  },
+  {
+    "name": "Cryolophosaurus",
+    "diet": "Carnivore",
+    "period": "Early Jurassic",
+    "location": "Mount Kirkpatrick, Antarctica",
+    "length": "6.5m",
+    "weight": "465 kg",
+    "description": "Discovered in 1990 by William Hammer on Mount Kirkpatrick, Antarctica\u2014at an elevation of 13,000 feet! Cryolophosaurus is famously known as the first meat-eating dinosaur discovered in Antarctica. It is instantly recognizable by the bizarre, forward-curving bony crest on its head, which earned it the humorous nickname 'Elvisaurus' due to its resemblance to an Elvis Presley pompadour.",
+    "image": "./images/dinos/cryolophosaurus.webp",
+    "height": "2.3m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Saurischia",
+      "suborder": "Theropoda",
+      "genus": "Cryolophosaurus",
+      "species": "cryolophosaurusensis"
+    },
+    "landFormation": "ANTARCTICA FORMATION",
+    "timeStages": {
+      "start": "201",
+      "end": "145"
+    },
+    "nameMeaning": "Cold Crested Lizard, Ancient Greek",
+    "interestingFacts": [
+      "It was the largest known theropod predator of the Early Jurassic period.",
+      "During its lifetime, Antarctica was much warmer and covered in lush, dense forests, not ice.",
+      "Its distinct crest was fragile and grooved, meaning it was purely for visual display.",
+      "Excavating it was incredibly dangerous, requiring paleontologists to use jackhammers and dynamite in freezing blizzard conditions."
+    ]
+  },
+  {
+    "name": "Majungasaurus",
+    "diet": "Carnivore",
+    "period": "Late Cretaceous",
+    "location": "Madagascar",
+    "length": "7m",
+    "weight": "1,100 kg",
+    "description": "Discovered in 1896 on the isolated island of Madagascar. Majungasaurus was the apex predator of its unique island ecosystem. Because Madagascar was cut off from the rest of the world, this abelisaurid evolved highly specialized traits, including an incredibly stocky body, practically useless stubby arms, and one of the most brutal, bone-crushing bites of any dinosaur.",
+    "image": "./images/dinos/majungasaurus.webp",
+    "height": "2.4m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Saurischia",
+      "suborder": "Theropoda",
+      "genus": "Majungasaurus",
+      "species": "majungasaurusensis"
+    },
+    "landFormation": "MADAGASCAR FORMATION",
+    "timeStages": {
+      "start": "145",
+      "end": "66"
+    },
+    "nameMeaning": "Mahajanga Lizard, Malagasy & Greek",
+    "interestingFacts": [
+      "It is one of the only dinosaurs with definitive fossil evidence of cannibalism, with teeth marks matching its own species found on its bones.",
+      "It had a single, rounded bony dome on top of its skull, unlike the horns of its cousin Carnotaurus.",
+      "It replaced its teeth at an incredibly fast rate, growing a new tooth every couple of months.",
+      "Its legs were exceptionally short and stocky, meaning it was a slow, ambush predator."
+    ]
+  },
+  {
+    "name": "Guanlong",
+    "diet": "Carnivore",
+    "period": "Late Jurassic",
+    "location": "Xinjiang, China",
+    "length": "3m",
+    "weight": "75 kg",
+    "description": "Discovered in 2006 in the Junggar Basin of Xinjiang, China. Guanlong is an incredibly important dinosaur because it is one of the earliest known ancestors of the Tyrannosaurus Rex. Unlike its massive, bone-crushing descendants, Guanlong was small, agile, likely covered in feathers, and sported a spectacular, fragile crest on its snout.",
+    "image": "./images/dinos/guanlong.webp",
+    "height": "1.0m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Saurischia",
+      "suborder": "Theropoda",
+      "genus": "Guanlong",
+      "species": "guanlongensis"
+    },
+    "landFormation": "CHINA FORMATION",
+    "timeStages": {
+      "start": "201",
+      "end": "145"
+    },
+    "nameMeaning": "Crowned Dragon, Mandarin",
+    "interestingFacts": [
+      "Its spectacular head crest was just 1.5 millimeters thick, as thin as a tortilla shell.",
+      "Despite being a tyrannosaur ancestor, it had three long fingers on each hand, not two.",
+      "The original fossils were discovered stacked on top of each other, trapped in what is known as a 'dinosaur death pit'.",
+      "It lived roughly 90 million years before the famous T-Rex evolved."
+    ]
+  },
+  {
+    "name": "Coelophysis",
+    "diet": "Carnivore",
+    "period": "Late Triassic",
+    "location": "New Mexico, USA",
+    "length": "3m",
+    "weight": "15-20 kg",
+    "description": "First discovered in 1881 by David Baldwin in New Mexico. Coelophysis was one of the earliest true dinosaurs to roam the Earth during the Triassic period. A massive bonebed found at Ghost Ranch in 1947 contained hundreds of complete skeletons, revealing that these small, agile predators gathered in massive packs or flocks near water sources.",
+    "image": "./images/dinos/coelophysis.webp",
+    "height": "1.0m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Saurischia",
+      "suborder": "Theropoda",
+      "genus": "Coelophysis",
+      "species": "coelophysisensis"
+    },
+    "landFormation": "NORTH AMERICA FORMATION",
+    "timeStages": {
+      "start": "252",
+      "end": "201"
+    },
+    "nameMeaning": "Hollow Form, Ancient Greek",
+    "interestingFacts": [
+      "Its name refers to its hollow limb bones, which made it incredibly lightweight and fast.",
+      "It is the official state fossil of New Mexico.",
+      "For years, scientists thought they were cannibals because small bones were found in their stomachs, but these were later proven to be ancient crocodiles.",
+      "They had a furcula (wishbone), a trait previously thought to only exist in modern birds."
+    ]
+  },
+  {
+    "name": "Plateosaurus",
+    "diet": "Herbivore",
+    "period": "Late Triassic",
+    "location": "Bavaria, Germany",
+    "length": "5-10m",
+    "weight": "600-4,000 kg",
+    "description": "Discovered in 1834 in Germany by Johann Friedrich Engelhardt. Plateosaurus was one of the very first large dinosaurs to evolve. As a 'prosauropod', it represents the evolutionary step between small bipedal runners and the massive, four-legged long-necked giants like Brachiosaurus that would dominate the later Jurassic period.",
+    "image": "./images/dinos/plateosaurus.webp",
+    "height": "1.8m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Sauropodomorpha",
+      "genus": "Plateosaurus",
+      "species": "plateosaurusensis"
+    },
+    "landFormation": "EUROPE FORMATION",
+    "timeStages": {
+      "start": "252",
+      "end": "201"
+    },
+    "nameMeaning": "Broad Lizard, Ancient Greek",
+    "interestingFacts": [
+      "Despite its large size, its arm anatomy proves it physically could not walk on all fours, remaining entirely bipedal.",
+      "Dozens of skeletons have been found trapped in ancient mud swamps in Germany, creating massive 'bonebeds'.",
+      "It had large, sharp thumb claws that it likely used to dig for roots or defend itself.",
+      "It had a unique breathing system similar to modern birds, allowing highly efficient oxygen intake."
+    ]
+  },
+  {
+    "name": "Melanorosaurus",
+    "diet": "Herbivore",
+    "period": "Late Triassic",
+    "location": "Cape Province, South Africa",
+    "length": "8m",
+    "weight": "1,300 kg",
+    "description": "Discovered in 1924 in the Elliot Formation of South Africa by Sidney H. Haughton. Melanorosaurus marks a critical turning point in dinosaur evolution. It was one of the very first 'sauropodomorphs' to grow so incredibly large and heavy that it was forced to walk on all four legs permanently, paving the way for the true sauropod giants.",
+    "image": "./images/dinos/melanorosaurus.webp",
+    "height": "2.8m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Sauropodomorpha",
+      "genus": "Melanorosaurus",
+      "species": "melanorosaurusensis"
+    },
+    "landFormation": "SOUTH AFRICA FORMATION",
+    "timeStages": {
+      "start": "252",
+      "end": "201"
+    },
+    "nameMeaning": "Black Mountain Lizard, Ancient Greek",
+    "interestingFacts": [
+      "Its limbs were thick and pillar-like to support its massive weight, unlike the slender legs of its ancestors.",
+      "It had a very small head and leaf-shaped teeth, perfect for stripping vegetation in bulk.",
+      "It lived during the Late Triassic, a time when massive, four-legged herbivores were an entirely new concept.",
+      "Its massive vertebrae had hollowed-out cavities to help lighten its enormous bulk."
+    ]
+  },
+  {
+    "name": "Staurikosaurus",
+    "diet": "Carnivore",
+    "period": "Late Triassic",
+    "location": "Rio Grande do Sul, Brazil",
+    "length": "2m",
+    "weight": "30 kg",
+    "description": "Discovered in 1936 in the Santa Maria Formation of Brazil by Llewellyn Ivor Price. Staurikosaurus is one of the absolute oldest dinosaurs ever discovered, dating back approximately 233 million years to the Late Triassic. It was a primitive, fast-running predator that sheds light on the very dawn of the dinosaur lineage.",
+    "image": "./images/dinos/staurikosaurus.webp",
+    "height": "0.7m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Saurischia",
+      "suborder": "Theropoda",
+      "genus": "Staurikosaurus",
+      "species": "staurikosaurusensis"
+    },
+    "landFormation": "BRAZIL FORMATION",
+    "timeStages": {
+      "start": "252",
+      "end": "201"
+    },
+    "nameMeaning": "Southern Cross Lizard, Ancient Greek",
+    "interestingFacts": [
+      "It was named after the constellation 'Crux' (The Southern Cross) which is visible from the Southern Hemisphere.",
+      "It weighed only about 65 pounds and was lightly built for pure speed.",
+      "It had a very primitive hip structure that still showed traits of its non-dinosaur ancestors.",
+      "It lived in a time when dinosaurs were small underdogs, competing against massive, predatory crocodile relatives."
+    ]
+  },
+  {
+    "name": "Procompsognathus",
+    "diet": "Carnivore",
+    "period": "Late Triassic",
+    "location": "Baden-W\u00fcrttemberg, Germany",
+    "length": "1m",
+    "weight": "1 kg",
+    "description": "Discovered in 1911 in the Stubensandstein of Germany by Eberhard Fraas. Procompsognathus was a tiny, primitive theropod that hunted insects and small lizards in the Late Triassic. It is famously known to the public as the 'Compys' from the novel and film 'The Lost World: Jurassic Park', though the real animal was quite different from its fictional counterpart.",
+    "image": "./images/dinos/procompsognathus.webp",
+    "height": "0.3m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Saurischia",
+      "suborder": "Theropoda",
+      "genus": "Procompsognathus",
+      "species": "procompsognathusensis"
+    },
+    "landFormation": "GERMANY FORMATION",
+    "timeStages": {
+      "start": "252",
+      "end": "201"
+    },
+    "nameMeaning": "Before Elegant Jaw, Ancient Greek",
+    "interestingFacts": [
+      "The real Procompsognathus did not have venomous bites, despite the famous depiction in Michael Crichton's novel.",
+      "It was incredibly small, weighing roughly 2 pounds.",
+      "It had long, slender legs and was an extremely agile, fast runner.",
+      "Because its fossils are so incomplete, some scientists debate if it is a true dinosaur or a closely related reptile."
+    ]
+  },
+  {
+    "name": "Riojasaurus",
+    "diet": "Herbivore",
+    "period": "Late Triassic",
+    "location": "La Rioja, Argentina",
+    "length": "10m",
+    "weight": "3,000 kg",
+    "description": "Discovered in 1969 by Jos\u00e9 Bonaparte in the La Rioja Province of Argentina. Riojasaurus was a massive, heavily built early herbivore from the Late Triassic. Unlike its contemporary Plateosaurus, Riojasaurus was so incredibly large and heavy that it was physically incapable of rearing up on its hind legs, forced to permanently walk on all fours.",
+    "image": "./images/dinos/riojasaurus.webp",
+    "height": "3.5m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Ornithischia",
+      "suborder": "Sauropodomorpha",
+      "genus": "Riojasaurus",
+      "species": "riojasaurusensis"
+    },
+    "landFormation": "ARGENTINA FORMATION",
+    "timeStages": {
+      "start": "252",
+      "end": "201"
+    },
+    "nameMeaning": "Rioja Lizard, Spanish & Greek",
+    "interestingFacts": [
+      "It was one of the largest animals of the Triassic period, reaching 33 feet in length.",
+      "Its ankle joints and limb proportions were heavily adapted to bear its massive, crushing weight.",
+      "It had a long, flexible neck and a relatively small head with leaf-shaped teeth.",
+      "It shared its environment with some of the earliest known predatory dinosaurs like Herrerasaurus."
+    ]
+  },
+  {
+    "name": "Liliensternus",
+    "diet": "Carnivore",
+    "period": "Late Triassic",
+    "location": "Thuringia, Germany",
+    "length": "5m",
+    "weight": "130 kg",
+    "description": "Discovered in 1934 in the Trossingen Formation of Germany, and named after the German scientist Hugo R\u00fchle von Lilienstern. Liliensternus was a large, highly active predator of the Late Triassic period. It bridges the evolutionary gap between the primitive, small Coelophysis and the massive, dominant apex predators of the later Jurassic.",
+    "image": "./images/dinos/liliensternus.webp",
+    "height": "1.8m",
+    "scientificClassification": {
+      "superorder": "Dinosauria",
+      "order": "Saurischia",
+      "suborder": "Theropoda",
+      "genus": "Liliensternus",
+      "species": "liliensternusensis"
+    },
+    "landFormation": "GERMANY FORMATION",
+    "timeStages": {
+      "start": "252",
+      "end": "201"
+    },
+    "nameMeaning": "Lilienstern's Lizard, German & Latin",
+    "interestingFacts": [
+      "It was significantly larger than most other predators of its time, measuring over 16 feet long.",
+      "It likely hunted large early herbivores like Plateosaurus.",
+      "Many reconstructions show it with a double crest on its snout, similar to its later relative Dilophosaurus.",
+      "It had a long, counterbalancing tail and hollow bones to maintain incredible running speeds."
+    ]
+  }
+]

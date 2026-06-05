@@ -1,0 +1,173 @@
+[
+  {
+    "era": "Triassic",
+    "years": "252–201 MYA",
+    "color": "#FF7043",
+    "description": "The dawn of the Mesozoic Era. The Earth was a single giant landmass called Pangaea, mostly covered in warm, dry deserts. Conifers and ferns began to grow, and the first dinosaurs evolved alongside early mammals.",
+    "subperiods": [
+      {
+        "name": "Early Triassic",
+        "years": "252–247 MYA",
+        "ages": ["Induan", "Olenekian"],
+        "description": "Life was slowly recovering from the devastating Permian Extinction. The land was dry and hot.",
+        "events": [
+          {
+            "year": "252 MYA",
+            "title": "The Great Recovery",
+            "desc": "Life begins to slowly repopulate the desert landscapes of Pangaea."
+          },
+          {
+            "year": "250 MYA",
+            "title": "Lystrosaurus Era",
+            "desc": "Shovel-faced Lystrosaurus becomes one of the most common land animals on Earth."
+          }
+        ]
+      },
+      {
+        "name": "Middle Triassic",
+        "years": "247–237 MYA",
+        "ages": ["Anisian", "Ladinian"],
+        "description": "Temperatures moderated, and early Archosaurs ('Ruling Reptiles') evolved, spliting into crocodilian and dinosaur ancestors.",
+        "events": [
+          {
+            "year": "245 MYA",
+            "title": "First Archosaurs",
+            "desc": "Crocodilian and dinosaur ancestors develop an upright posture for faster speeds."
+          },
+          {
+            "year": "240 MYA",
+            "title": "Dinosauromorphs",
+            "desc": "Tiny, jumping dinosaur cousins like Marasuchus run through the forests."
+          }
+        ]
+      },
+      {
+        "name": "Late Triassic",
+        "years": "237–201 MYA",
+        "ages": ["Carnian", "Norian", "Rhaetian"],
+        "description": "The first true dinosaurs evolved! They were small, agile predators. By the end, massive volcanic eruptions began splitting Pangaea.",
+        "events": [
+          {
+            "year": "230 MYA",
+            "title": "First Dinosaurs",
+            "desc": "Small, two-legged runners like Eoraptor and Herrerasaurus appear in South America.",
+            "image": "./images/dinos/eoraptor.webp"
+          },
+          {
+            "year": "201 MYA",
+            "title": "Triassic Extinction",
+            "desc": "Volcanic eruptions wipe out competitors, opening the stage for dinosaurs to dominate."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Jurassic",
+    "years": "201–145 MYA",
+    "color": "#4CAF50",
+    "description": "Pangaea split into two massive continents, Gondwana and Laurasia. The climate turned warm and humid, creating massive tropical jungles. This was the golden age of giant long-necked sauropods and plated stegosaurs.",
+    "subperiods": [
+      {
+        "name": "Early Jurassic",
+        "years": "201–174 MYA",
+        "ages": ["Hettangian", "Sinemurian", "Pliensbachian", "Toarcian"],
+        "description": "Dinosaurs claimed the empty lands after the Triassic extinction, growing rapidly in numbers.",
+        "events": [
+          {
+            "year": "190 MYA",
+            "title": "Dilophosaurus Reigns",
+            "desc": "Fierce double-crested carnivores hunt early plant-eaters across North America.",
+            "image": "./images/dinos/dilophosaurus.webp"
+          }
+        ]
+      },
+      {
+        "name": "Middle Jurassic",
+        "years": "174–163 MYA",
+        "ages": ["Aalenian", "Bajocian", "Bathonian", "Callovian"],
+        "description": "As the oceans widened, moist winds spread inland, feeding dense forests of conifers and cycads.",
+        "events": [
+          {
+            "year": "166 MYA",
+            "title": "Megalosaurus Hunts",
+            "desc": "Megalosaurus becomes one of the first giant meat-eating dinosaurs.",
+            "image": "./images/dinos/megalosaurus.webp"
+          }
+        ]
+      },
+      {
+        "name": "Late Jurassic",
+        "years": "163–145 MYA",
+        "ages": ["Oxfordian", "Kimmeridgian", "Tithonian"],
+        "description": "Gigantic long-necks browsed the high tree canopies, defended by stegosaurs and hunted by fierce Allosaurus.",
+        "events": [
+          {
+            "year": "155 MYA",
+            "title": "Super-Giants Emerge",
+            "desc": "Colossal sauropods like Brachiosaurus, Diplodocus, and Giraffatitan dominate.",
+            "image": "./images/dinos/brachiosaurus.webp"
+          },
+          {
+            "year": "150 MYA",
+            "title": "Archaeopteryx Evolves",
+            "desc": "The first bird takes flight, showcasing both dinosaur and bird features.",
+            "image": "./images/dinos/archaeopteryx.webp"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Cretaceous",
+    "years": "145–66 MYA",
+    "color": "#00BCD4",
+    "description": "Continents drifted into positions similar to today. The first flowering plants evolved, and dinosaurs developed feathers for warmth, camouflage, and visual displays. The era ended in a catastrophic asteroid impact.",
+    "subperiods": [
+      {
+        "name": "Early Cretaceous",
+        "years": "145–100 MYA",
+        "ages": ["Berriasian", "Valanginian", "Hauterivian", "Barremian", "Aptian", "Albian"],
+        "description": "A diverse period where feathered dinosaurs thrived in forests and flowering plants began to bloom.",
+        "events": [
+          {
+            "year": "130 MYA",
+            "title": "Feathered Dinos Rise",
+            "desc": "Sinosauropteryx and Microraptor show detailed feather impressions in Chinese lake beds.",
+            "image": "./images/dinos/sinosauropteryx.webp"
+          },
+          {
+            "year": "125 MYA",
+            "title": "Flowering Plants Bloom",
+            "desc": "Angiosperms evolve, transforming landscapes and attracting early pollinators."
+          }
+        ]
+      },
+      {
+        "name": "Late Cretaceous",
+        "years": "100–66 MYA",
+        "ages": ["Cenomanian", "Turonian", "Coniacian", "Santonian", "Campanian", "Maastrichtian"],
+        "description": "The climax of the dinosaur age, featuring specialized horn-faced dinos, armor-plated tanks, and giant tyrannosaurs.",
+        "events": [
+          {
+            "year": "80 MYA",
+            "title": "Horned Herds",
+            "desc": "Triceratops and Styracosaurus develop massive horns and neck frills for defense and display.",
+            "image": "./images/dinos/triceratops.webp"
+          },
+          {
+            "year": "68 MYA",
+            "title": "T-Rex Reigns",
+            "desc": "The apex tyrannosaur patrols western North America as a bone-crushing hunter.",
+            "image": "./images/dinos/trex.webp"
+          },
+          {
+            "year": "66 MYA",
+            "title": "The Asteroid Impact",
+            "desc": "A mountain-sized asteroid strikes Yucatán, Mexico, triggering global cooling and ending the dinosaurs' reign."
+          }
+        ]
+      }
+    ]
+  }
+]

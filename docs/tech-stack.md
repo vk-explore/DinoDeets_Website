@@ -10,7 +10,7 @@
 
 ## Key APIs & Techniques
 - **YouTube RSS Feed** — Auto-fetch episodes from @dinodeets channel (via rss2json proxy)
-- **Canvas API** — Fossil Dig mini-game + Dino Creator drawing engine
+- **Canvas API** — Fossil Dig mini-game
 - **Intersection Observer** — Scroll-triggered entrance animations
 - **CSS Custom Properties** — Theming and design tokens
 - **Range Input** — Dino-o-Meter size comparison slider
@@ -24,33 +24,43 @@
 ## File Structure
 ```
 DinoDeets_Website/
-├── index.html              # Main HTML (all sections)
-├── vite.config.js          # Vite configuration
+├── index.html              # Main HTML (Home)
+├── vite.config.js          # Vite config for multi-page build
 ├── package.json
 ├── agents.md               # AI agent context file
-├── docs/
-│   ├── roadmap.md          # Feature phases & release plan
-│   ├── design-system.md    # Colors, typography, spacing tokens
-│   └── tech-stack.md       # Architecture, APIs, file structure
+├── scripts/                # Helper scripts (build_json.js, remove_matte.py)
+├── docs/                   # Documentation files
+├── games/                  # Games category pages
+│   ├── fossil-dig.html
+│   └── dino-quiz.html
+├── explore/                # Explore category pages
+│   ├── dino-map.html
+│   ├── dino-timeline.html
+│   ├── dino-meter.html
+│   ├── encyclopedia.html
+│   ├── dino-detail.html
+│   ├── origins.html
+│   ├── extinction.html
+│   └── paleo-guide.html
+├── printables/             # Printables category pages
+│   ├── index.html
+│   ├── coloring-pages.html
+│   └── fan-art.html
 ├── src/
-│   ├── style.css           # Design system + all component styles (~1200 lines)
-│   ├── main.js             # App entry, all feature logic (~900 lines)
+│   ├── style.css           # Design system + all component styles
+│   ├── main.js             # App entry, all feature logic
 │   └── data/
-│       ├── dino-facts.js   # Dinosaur facts + fossil data
-│       ├── map-data.js     # Fossil discovery locations (global)
-│       ├── phase3-data.js  # Quiz, glossary, sizes, timeline
-│       └── phase4-data.js  # Creator parts, fan art, coloring, names
+│       ├── encyclopedia.json   # Dinosaur encyclopedia data
+│       ├── random-deet.json    # Facts for Random Deet
+│       ├── fossil-dig.json     # Fossil dig game data
+│       ├── dino-map.json       # Dinosaur discovery map coordinates
+│       ├── quiz.json           # Quiz questions
+│       ├── glossary.json       # Dictionary terms
+│       ├── timeline.json       # Geological timeline data
+│       └── art.json            # Fan art gallery & coloring files
 └── public/
-    ├── favicon.svg
-    └── images/
-        ├── hero-bg.png     # Hero landscape
-        ├── mascot.png      # Baby dino mascot
-        ├── logo.png        # Fossil skull logo
-        ├── world-map.png   # Dark world map
-        ├── dinos/          # Species illustrations (5 images)
-        ├── fossils/        # Fossil assets (2 images)
-        ├── fanart/         # Fan art gallery (3 images)
-        └── coloring/       # Coloring pages (3 images)
+    ├── fonts/              # Custom fonts (Adumu)
+    └── images/             # Organized image assets (backgrounds, dinos, props, icons, etc.)
 ```
 
 ## Feature Modules (in main.js)
@@ -61,15 +71,15 @@ DinoDeets_Website/
 | Hero | Parallax bg, particles, CTA |
 | Episodes | YouTube RSS + static fallback |
 | Fossil Dig | Canvas scratch-off mini-game |
-| Random Deet | 30 facts with species-matched images |
+| Random Deet | Integrated directly into the mascot speech bubble on click |
 | Dino Map | 12 sites with Mercator projection pins |
 | Countdown | Live timer to next Friday episode |
 | Dino Quiz | 10 questions, scoring, results tiers |
 | Dino-o-Meter | Slider size comparison, 8 species |
 | Timeline | Horizontal scroll through geological eras |
 | Dictionary | A-Z glossary with search & letter filter |
-| Ask Devaansh | Question submission form |
-| **Dino Creator** | Canvas drawing with 5 head/body/tail/special options + 8 colors |
+| Ask Devaansh Nara | Question submission form |
+
 | **Fan Art Gallery** | Community art grid with lightbox overlay |
 | **Coloring Pages** | Downloadable line art for printing |
 | Mascot | Floating companion with speech bubbles |

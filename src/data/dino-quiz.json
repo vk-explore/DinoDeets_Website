@@ -1,0 +1,2252 @@
+[
+  {
+    "question": "If a T-Rex wanted to play a sport, which one would it be TERRIBLE at because of its arms?",
+    "options": [
+      "Soccer",
+      "Track and Field",
+      "Basketball",
+      "Head-butting"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "Imagine you have a pet Stegosaurus. What should you absolutely NOT let it do in your house?",
+    "options": [
+      "Eat your houseplants",
+      "Wag its spiky tail near the TV",
+      "Sleep on the floor",
+      "Drink water from a bowl"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "If a Spinosaurus invited you to its house for dinner, what would most likely be on the menu?",
+    "options": [
+      "Giant prehistoric fish",
+      "A fresh salad",
+      "Toasted marshmallows",
+      "Other small dinosaurs"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "Which modern animal is basically a small, feathery dinosaur that managed to survive the asteroid?",
+    "options": [
+      "Crocodile",
+      "Chicken",
+      "Lizard",
+      "Shark"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "If you raced a Velociraptor on your bicycle, what would probably happen?",
+    "options": [
+      "You would win easily",
+      "It would be a tie",
+      "It would win! They were super fast runners",
+      "Velociraptors can't run, they only hop"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "Triceratops had three horns on its face. What do scientists think they were mostly used for?",
+    "options": [
+      "Digging up potatoes",
+      "Showing off and defending themselves",
+      "Scratching their backs",
+      "Holding giant donuts"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "The asteroid that wiped out the non-flying dinosaurs was huge! About how big was it?",
+    "options": [
+      "The size of a car",
+      "The size of a football stadium",
+      "The size of Mount Everest",
+      "The size of the moon"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "Brachiosaurus was so tall, if it stood on a modern street, what could it do?",
+    "options": [
+      "Look into a 4-story building window",
+      "Step over a skyscraper",
+      "Hide behind a stop sign",
+      "Fit inside a school bus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "Pterodactyls are famous flying prehistoric animals, but there's a catch! What is it?",
+    "options": [
+      "They were actually aliens",
+      "They weren't technically dinosaurs!",
+      "They couldn't actually fly",
+      "They were made of jelly"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "If you found a fossilized dinosaur footprint, what do scientists call that kind of fossil?",
+    "options": [
+      "A bone fossil",
+      "A trace fossil",
+      "A mud fossil",
+      "A fake fossil"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Ankylosaurus was basically a living tank. What was its most dangerous weapon?",
+    "options": [
+      "Laser eyes",
+      "A giant club on the end of its tail",
+      "Super sonic roars",
+      "Sharp venomous teeth"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur had a brain the size of a tiny walnut, even though it had a body the size of a bus?",
+    "options": [
+      "Velociraptor",
+      "T-Rex",
+      "Stegosaurus",
+      "Triceratops"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "Parasaurolophus had a weird tube on its head. What do we think it was used for?",
+    "options": [
+      "Breathing underwater",
+      "Storing snacks for later",
+      "Making loud, honking sounds like a trombone",
+      "A built-in umbrella"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "Which of these is a REAL name of a dinosaur that scientists actually chose?",
+    "options": [
+      "Bambiraptor",
+      "Sillysaurus",
+      "Loud-o-don",
+      "Super-Rex"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "If you looked at a T-Rex\u2019s mouth closely, what would you notice about its teeth?",
+    "options": [
+      "They were completely flat",
+      "They were the size and shape of bananas",
+      "They had no teeth",
+      "They were shaped like stars"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Scientists have found real dinosaur poop! What is the fancy scientific name for it?",
+    "options": [
+      "Pooposaurus",
+      "Dino-droppings",
+      "Coprolite",
+      "Stink-stone"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "Which dinosaur had the longest neck, so long it was longer than a school bus?",
+    "options": [
+      "T-Rex",
+      "Mamenchisaurus",
+      "Triceratops",
+      "Ankylosaurus"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "If you wanted to hide from a T-Rex in Jurassic Park, standing still worked. Would it work in real life?",
+    "options": [
+      "Yes, they could only see movement",
+      "No, they had amazing eyesight and a great sense of smell!",
+      "Yes, they were totally blind",
+      "No, they would ask you for directions"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "A Microraptor was a very special dinosaur. What did it have that made it unique?",
+    "options": [
+      "It was completely invisible",
+      "It had four wings instead of two",
+      "It could shoot fire",
+      "It had a shell like a turtle"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "What does the word 'Dinosaur' actually mean in Greek?",
+    "options": [
+      "Giant chicken",
+      "Terrible lizard",
+      "Old reptile",
+      "Big monster"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur is famous for having a giant dome on its head, possibly for head-butting?",
+    "options": [
+      "Pachycephalosaurus",
+      "Diplodocus",
+      "Stegosaurus",
+      "Velociraptor"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "How many horns did a Triceratops really have?",
+    "options": [
+      "One",
+      "Two",
+      "Three",
+      "Four"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "Imagine living 150 million years ago. Which period are you in?",
+    "options": [
+      "The Triassic",
+      "The Jurassic",
+      "The Cretaceous",
+      "The Cambrian"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Some dinosaurs swallowed rocks on purpose! Why on earth did they do that?",
+    "options": [
+      "Because rocks tasted like candy",
+      "To help grind up food in their stomachs",
+      "To make themselves heavier",
+      "To build a nest inside their belly"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which of these dinosaurs lived in the Arctic where it actually got cold and snowy?",
+    "options": [
+      "Cryolophosaurus",
+      "Spinosaurus",
+      "Brachiosaurus",
+      "Stegosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What is the study of dinosaurs and prehistoric life called?",
+    "options": [
+      "Archaeology",
+      "Biology",
+      "Paleontology",
+      "Dino-ology"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "If you saw a fluffy baby dinosaur, what was likely covering its body?",
+    "options": [
+      "Scales",
+      "Armor",
+      "Feathers or fuzz",
+      "Spikes"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "Which dinosaur had tiny arms but was one of the fiercest predators of the Late Cretaceous?",
+    "options": [
+      "Tyrannosaurus Rex",
+      "Triceratops",
+      "Iguanodon",
+      "Diplodocus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What kind of animal is a Mosasaurus?",
+    "options": [
+      "A flying dinosaur",
+      "A marine reptile",
+      "A land dinosaur",
+      "A giant fish"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which continent has NO dinosaur fossils found on it?",
+    "options": [
+      "Antarctica",
+      "Australia",
+      "Europe",
+      "Trick question! Dinosaurs have been found on ALL continents."
+    ],
+    "answerIndex": 3
+  },
+  {
+    "question": "Which dinosaur is known as the 'Egg Thief', even though it was probably just protecting its own nest?",
+    "options": [
+      "Oviraptor",
+      "T-Rex",
+      "Stegosaurus",
+      "Allosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "If a dinosaur was a 'herbivore', what did it eat?",
+    "options": [
+      "Only meat",
+      "Only plants",
+      "Both meat and plants",
+      "Only bugs"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "What is the largest known carnivorous (meat-eating) dinosaur?",
+    "options": [
+      "T-Rex",
+      "Giganotosaurus",
+      "Spinosaurus",
+      "Velociraptor"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "Which prehistoric creature is often mistaken for a dinosaur but lived millions of years BEFORE them?",
+    "options": [
+      "Dimetrodon",
+      "Triceratops",
+      "Stegosaurus",
+      "Brachiosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What do we call a person who digs up dinosaur bones?",
+    "options": [
+      "A geologist",
+      "A paleontologist",
+      "An archaeologist",
+      "A dino-hunter"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "What was the Megalodon?",
+    "options": [
+      "A giant flying dinosaur",
+      "A massive prehistoric shark",
+      "The biggest dinosaur ever",
+      "A tiny feathered dinosaur"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur had huge claws that were up to 3 feet long, looking like giant scythes?",
+    "options": [
+      "Therizinosaurus",
+      "T-Rex",
+      "Spinosaurus",
+      "Velociraptor"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What color were dinosaurs?",
+    "options": [
+      "All green",
+      "All grey",
+      "Scientists don't know for sure, but some had colorful feathers!",
+      "Only brown and black"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "Which dinosaur's name means 'fast seizer' or 'swift thief'?",
+    "options": [
+      "T-Rex",
+      "Velociraptor",
+      "Triceratops",
+      "Stegosaurus"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "What did the duck-billed dinosaur (Hadrosaur) use its beak for?",
+    "options": [
+      "Catching fish",
+      "Snapping at flies",
+      "Cropping leaves and plants",
+      "Digging holes"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "Which period came first in the Age of Dinosaurs?",
+    "options": [
+      "Triassic",
+      "Jurassic",
+      "Cretaceous",
+      "Precambrian"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What is amber?",
+    "options": [
+      "A type of dinosaur",
+      "Fossilized tree resin that sometimes traps insects",
+      "A type of rock",
+      "A dinosaur bone"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur was the first to be discovered and named?",
+    "options": [
+      "Megalosaurus",
+      "T-Rex",
+      "Iguanodon",
+      "Stegosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "Did humans and dinosaurs (like T-Rex) ever live at the same time?",
+    "options": [
+      "Yes, they were best friends",
+      "Yes, they hunted together",
+      "No, dinosaurs died out millions of years before humans existed",
+      "No, humans lived first"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "Which of these is NOT a real dinosaur?",
+    "options": [
+      "Diplodocus",
+      "Allosaurus",
+      "Godzillasaurus",
+      "Brontosaurus"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "What is the heavy club on the tail of an Ankylosaurus made of?",
+    "options": [
+      "Wood",
+      "Solid bone",
+      "Spikes",
+      "Rock"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur is famous for its large sail on its back, likely used for swimming?",
+    "options": [
+      "Spinosaurus",
+      "Stegosaurus",
+      "Triceratops",
+      "Dimetrodon"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What did Sauropods (long-necked dinosaurs) eat?",
+    "options": [
+      "Other dinosaurs",
+      "Fish",
+      "Plants and trees",
+      "Insects"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "Which of these dinosaurs walked on four legs?",
+    "options": [
+      "T-Rex",
+      "Velociraptor",
+      "Allosaurus",
+      "Stegosaurus"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "question": "What is the closest living relative to a T-Rex?",
+    "options": [
+      "A crocodile",
+      "A chicken",
+      "A lizard",
+      "A snake"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "If you had a race with an adult T-Rex, could you outrun it?",
+    "options": [
+      "Yes, easily",
+      "Probably, if you're a fast sprinter",
+      "No way, they could run up to 15-25 mph!",
+      "Yes, T-Rexes could only walk slowly"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "What did the massive Sauroposeidon use its incredibly long neck for?",
+    "options": [
+      "To peek over mountains",
+      "To reach the tops of the tallest trees for food",
+      "To tie in knots to sleep",
+      "To swim like a snorkel"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur had the thickest skull, practically wearing a built-in bicycle helmet?",
+    "options": [
+      "Pachycephalosaurus",
+      "Triceratops",
+      "Brachiosaurus",
+      "Velociraptor"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "Imagine you are a Paleontologist. What tool would you NOT use to dig up dinosaur bones?",
+    "options": [
+      "A small brush",
+      "A dental pick",
+      "A dynamite explosion",
+      "A trowel"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "If a Spinosaurus stood next to a T-Rex, who would be longer?",
+    "options": [
+      "T-Rex",
+      "Spinosaurus",
+      "They were exactly the same",
+      "Neither, they were tiny"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur's name actually means 'Roof Lizard' because of the plates on its back?",
+    "options": [
+      "Stegosaurus",
+      "Ankylosaurus",
+      "Triceratops",
+      "Iguanodon"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What modern invention looks most like a Triceratops' face?",
+    "options": [
+      "A vacuum cleaner",
+      "A bulldozer",
+      "A shield with spikes",
+      "A frying pan"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "How did the gigantic Diplodocus protect itself without sharp teeth or horns?",
+    "options": [
+      "By becoming invisible",
+      "By cracking its whip-like tail at supersonic speeds",
+      "By asking nicely",
+      "By burying its head in the sand"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which of these is NOT a real era when dinosaurs lived?",
+    "options": [
+      "Triassic",
+      "Jurassic",
+      "Cretaceous",
+      "Plastocenic"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "question": "If you found fossilized poop, what could it tell you about the dinosaur?",
+    "options": [
+      "Its favorite color",
+      "What it ate for its last meal",
+      "How fast it could run",
+      "Its name"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Why did the mighty T-Rex have such tiny arms?",
+    "options": [
+      "To knit sweaters",
+      "No one knows for sure, but maybe to help them get up from a nap!",
+      "To hold tiny cups of tea",
+      "Because they forgot to grow them"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur could probably win a swimming race?",
+    "options": [
+      "Stegosaurus",
+      "Spinosaurus",
+      "Ankylosaurus",
+      "Triceratops"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "What is the biggest clue that birds are related to dinosaurs?",
+    "options": [
+      "They both sing",
+      "Many dinosaurs had feathers and hollow bones just like birds!",
+      "They both lay square eggs",
+      "They both like birdseed"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "If you were a mosquito trapped in tree sap during the dinosaur age, what would you eventually become?",
+    "options": [
+      "A jellybean",
+      "Amber",
+      "A diamond",
+      "A pearl"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur is famous for having a club on its tail that could break a T-Rex's leg?",
+    "options": [
+      "Triceratops",
+      "Ankylosaurus",
+      "Diplodocus",
+      "Brachiosaurus"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "How did plant-eating dinosaurs (herbivores) grind up tough leaves if they didn't chew well?",
+    "options": [
+      "They used blenders",
+      "They swallowed small rocks called gastroliths to mash the food in their bellies!",
+      "They stomped on the leaves first",
+      "They only drank leaf juice"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "What did the massive flying Quetzalcoatlus look most like when it was standing on the ground?",
+    "options": [
+      "A giant pigeon",
+      "A terrifyingly huge giraffe with wings",
+      "A tiny bat",
+      "A fluffy bunny"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which continent would you visit if you wanted to find the MOST dinosaur fossils?",
+    "options": [
+      "Antarctica",
+      "North America",
+      "Europe",
+      "Dinosaurs have been found on ALL of them!"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "question": "If you saw a dinosaur with three sharp horns on its face and a giant frill, what is it?",
+    "options": [
+      "Stegosaurus",
+      "Triceratops",
+      "Velociraptor",
+      "Pteranodon"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Why do Paleontologists wrap dinosaur bones in plaster before moving them?",
+    "options": [
+      "To make them look pretty",
+      "To keep them warm",
+      "To protect the fragile bones from breaking during the bumpy ride to the museum",
+      "To hide them from egg thieves"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "If you lived in the Mesozoic Era, what would the weather be like?",
+    "options": [
+      "Freezing cold everywhere",
+      "Much warmer than today, with no ice caps at the poles!",
+      "Raining 24/7",
+      "Completely dry like a desert everywhere"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "What makes a 'dinosaur' different from other prehistoric reptiles like crocodiles?",
+    "options": [
+      "Dinosaurs wore hats",
+      "Dinosaurs stood with their legs straight under their bodies, not sprawled out to the sides!",
+      "Dinosaurs only ate cheese",
+      "Dinosaurs were always green"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which of these dinosaurs was actually the size of a turkey?",
+    "options": [
+      "T-Rex",
+      "Brachiosaurus",
+      "Velociraptor",
+      "Spinosaurus"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "If a Brachiosaurus wanted a snack, where would it look?",
+    "options": [
+      "Deep underground",
+      "At the very tops of the tallest trees",
+      "In a river",
+      "Under a rock"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "What did the long-necked Elasmosaurus use its crazy long neck for?",
+    "options": [
+      "To tie its shoes",
+      "To sneak up on schools of fish underwater",
+      "To fly like a helicopter",
+      "To reach apples on land"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur had the longest claws, looking like giant scythes?",
+    "options": [
+      "Therizinosaurus",
+      "T-Rex",
+      "Allosaurus",
+      "Triceratops"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "How many teeth did a T-Rex have at one time?",
+    "options": [
+      "Only 4",
+      "Around 60 bone-crushing teeth!",
+      "Over 1000",
+      "Zero, it gummed its food"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "If you heard a noise like a loud, booming trombone in the Cretaceous forest, what dinosaur made it?",
+    "options": [
+      "T-Rex",
+      "Parasaurolophus",
+      "Velociraptor",
+      "Stegosaurus"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "What is the biggest dinosaur ever discovered (so far!)?",
+    "options": [
+      "Argentinosaurus",
+      "T-Rex",
+      "Triceratops",
+      "Velociraptor"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "If a dinosaur was covered in armor plates, what was its main goal?",
+    "options": [
+      "To stay warm",
+      "To look fashionable",
+      "To protect itself from hungry predators like T-Rex",
+      "To sink in the water"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "Which famous dinosaur was named 'Good Mother Lizard' because it cared for its babies in nests?",
+    "options": [
+      "Maiasaura",
+      "T-Rex",
+      "Velociraptor",
+      "Stegosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What did the tiny Microraptor have that most dinosaurs didn't?",
+    "options": [
+      "Four wings!",
+      "Eight legs",
+      "A laser beam",
+      "A backpack"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "How did scientists figure out what colors some dinosaurs were?",
+    "options": [
+      "They guessed",
+      "They asked them",
+      "By looking at microscopic pigment cells in fossilized feathers!",
+      "By looking at cave paintings"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "Which dinosaur is famous for having a huge sail on its back to possibly control its body temperature?",
+    "options": [
+      "Spinosaurus",
+      "Triceratops",
+      "Ankylosaurus",
+      "Dimetrodon"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What do you call a dinosaur that only eats meat?",
+    "options": [
+      "Herbivore",
+      "Carnivore",
+      "Omnivore",
+      "Vegansaurus"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "If you wanted to ride a Triceratops, what would be the biggest problem?",
+    "options": [
+      "It's too fluffy",
+      "The giant bony frill and horns on its head!",
+      "It's too fast",
+      "It's underwater"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which of these dinosaurs was an apex predator during the Jurassic Period (before T-Rex)?",
+    "options": [
+      "Allosaurus",
+      "Triceratops",
+      "Stegosaurus",
+      "Brachiosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What did the weird dinosaur 'Oviraptor' actually use its strong beak for?",
+    "options": [
+      "Eating hard seeds and shellfish",
+      "Brushing its teeth",
+      "Singing songs",
+      "Digging for gold"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "Why is it so hard to find a complete dinosaur skeleton?",
+    "options": [
+      "Dinosaurs played hide and seek",
+      "Bones get scattered by weather, rivers, and scavengers over millions of years",
+      "They buried themselves too deep",
+      "Aliens took them"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which of these marine reptiles looked like a mix between a dolphin and a shark?",
+    "options": [
+      "Ichthyosaurus",
+      "Mosasaurus",
+      "Plesiosaurus",
+      "Kronosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What is the study of fossilized plants from the dinosaur age called?",
+    "options": [
+      "Paleobotany",
+      "Plantology",
+      "Dino-farming",
+      "Archaeology"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "Which dinosaur's name means 'Swift Seizer'?",
+    "options": [
+      "Velociraptor",
+      "T-Rex",
+      "Slowpokeosaurus",
+      "Gallimimus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "If you looked at a Stegosaurus' brain, what size would it be?",
+    "options": [
+      "The size of a watermelon",
+      "The size of a walnut or a lime!",
+      "The size of a pea",
+      "The size of a car"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "What do scientists think the giant asteroid that killed the dinosaurs caused?",
+    "options": [
+      "A giant party",
+      "Massive earthquakes, tsunamis, and a thick dust cloud that blocked the sun",
+      "It turned them into chickens instantly",
+      "It made them float away"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur had the most teeth, sometimes up to 1,000 at a time?",
+    "options": [
+      "T-Rex",
+      "Hadrosaur (Duck-billed dinosaur)",
+      "Velociraptor",
+      "Stegosaurus"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "What did the scary Mosasaurus use its second row of teeth on the roof of its mouth for?",
+    "options": [
+      "Chewing gum",
+      "To hold slippery prey like squid and fish so they couldn't escape!",
+      "To smile brighter",
+      "To brush its main teeth"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur was basically a giant, prehistoric ostrich?",
+    "options": [
+      "Gallimimus",
+      "T-Rex",
+      "Brachiosaurus",
+      "Ankylosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "If a T-Rex lost a tooth, what happened?",
+    "options": [
+      "It wore false teeth",
+      "It grew a new one right back! They replaced teeth their whole lives.",
+      "It had to go to the dentist",
+      "It could never eat again"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur's name means 'Tyrant Lizard King'?",
+    "options": [
+      "Triceratops",
+      "Spinosaurus",
+      "Tyrannosaurus Rex",
+      "Velociraptor"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "What makes the 'Jurassic Park' movie name a bit silly?",
+    "options": [
+      "Parks didn't exist back then",
+      "Many of the famous dinosaurs in it actually lived in the Cretaceous Period, not the Jurassic!",
+      "It should be called 'Triassic Park'",
+      "Dinosaurs hated parks"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which tiny dinosaur was one of the first ever to exist, hunting bugs in the Triassic period?",
+    "options": [
+      "Eoraptor",
+      "T-Rex",
+      "Brachiosaurus",
+      "Triceratops"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "How did the enormous Argentinosaurus sleep?",
+    "options": [
+      "In a giant bed",
+      "Probably standing up or resting on its belly, because getting back up would be too hard!",
+      "Hanging upside down like a bat",
+      "Underwater"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "If you touched an Ankylosaurus, what would it feel like?",
+    "options": [
+      "Soft and fluffy",
+      "Like a giant, bumpy, bony pineapple!",
+      "Like a smooth balloon",
+      "Like wet slime"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which flying reptile had a crest on the back of its head that looked like a giant rudder?",
+    "options": [
+      "Pteranodon",
+      "T-Rex",
+      "Triceratops",
+      "Stegosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What do you call a dinosaur that eats both meat AND plants?",
+    "options": [
+      "Carnivore",
+      "Herbivore",
+      "Omnivore",
+      "Pizzavore"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "Which dinosaur's fossil was famously found in England in 1824, starting the whole dinosaur craze?",
+    "options": [
+      "Megalosaurus",
+      "T-Rex",
+      "Velociraptor",
+      "Triceratops"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "How many claws did a T-Rex have on each of its tiny hands?",
+    "options": [
+      "One",
+      "Two",
+      "Three",
+      "Four"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "What did the 'Thagomizer' on a Stegosaurus tail do?",
+    "options": [
+      "Played music",
+      "Swatted flies",
+      "Used its four giant spikes to defend against predators like Allosaurus",
+      "Swept the floor"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "If a Paleontologist finds a 'bone bed', what did they find?",
+    "options": [
+      "A dinosaur mattress",
+      "A place where many dinosaur fossils are piled up together",
+      "A single tiny bone",
+      "A museum exhibit"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur had a skull that was over 8 feet long\u2014one of the biggest heads of any land animal ever?",
+    "options": [
+      "Pentaceratops",
+      "T-Rex",
+      "Velociraptor",
+      "Stegosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "Why did the long-necked Diplodocus hold its neck straight out instead of straight up?",
+    "options": [
+      "It was too tired",
+      "To sweep back and forth over low plants and ferns like a giant lawnmower!",
+      "To look at bugs",
+      "To hide from flying reptiles"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which continent is home to the famous Gobi Desert, where lots of dinosaur eggs have been found?",
+    "options": [
+      "North America",
+      "South America",
+      "Asia",
+      "Europe"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "What did the strange dinosaur 'Therizinosaurus' likely use its gigantic 3-foot claws for?",
+    "options": [
+      "Sword fighting",
+      "Raking leaves and branches to eat, like a giant sloth",
+      "Digging to the center of the earth",
+      "Combing its hair"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "If you heard someone say 'Theropod', what kind of dinosaur are they talking about?",
+    "options": [
+      "A long-necked plant eater",
+      "A two-legged dinosaur, mostly meat-eaters like T-Rex and raptors",
+      "A flying reptile",
+      "A marine reptile"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur had the absolute strongest bite force of any land animal ever?",
+    "options": [
+      "Velociraptor",
+      "Spinosaurus",
+      "T-Rex",
+      "Allosaurus"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "What was the Earth's supercontinent called when the first dinosaurs appeared?",
+    "options": [
+      "Pangea",
+      "Atlantis",
+      "Gondwana",
+      "Laurasia"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "Which famous 'dinosaur' with a sail on its back actually lived 40 million years BEFORE the first dinosaur?",
+    "options": [
+      "Dimetrodon",
+      "Spinosaurus",
+      "Stegosaurus",
+      "Ouranosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "If you were an early mammal during the time of the dinosaurs, what would you probably look like?",
+    "options": [
+      "A giant elephant",
+      "A tiny, furry, mouse-like creature hiding in the bushes",
+      "A monkey",
+      "A dog"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "What did scientists find perfectly preserved inside some fossilized dinosaur eggs?",
+    "options": [
+      "Gold coins",
+      "Tiny, unhatched baby dinosaur skeletons!",
+      "Yolk you could still eat",
+      "Nothing, they were always empty"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur had a huge bony crest shaped like a half-moon on top of its head?",
+    "options": [
+      "Corythosaurus",
+      "Triceratops",
+      "Stegosaurus",
+      "T-Rex"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "How did dinosaurs get their names?",
+    "options": [
+      "They were picked from a hat",
+      "Usually from Greek or Latin words describing how they look, where they were found, or who found them",
+      "They named themselves",
+      "From a dictionary"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which of these is considered a 'living dinosaur'?",
+    "options": [
+      "A crocodile",
+      "A sea turtle",
+      "A pigeon",
+      "A lizard"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "What did the duck-billed Parasaurolophus and a trumpet have in common?",
+    "options": [
+      "They were made of brass",
+      "They both had a hollow tube to make loud, echoing sounds!",
+      "They both had valves",
+      "Nothing at all"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur was named 'Thief of the Dawn' because it was one of the very first dinosaurs?",
+    "options": [
+      "Eoraptor",
+      "T-Rex",
+      "Velociraptor",
+      "Stegosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "If an Ankylosaurus swung its tail club at a predator, what was it aiming for?",
+    "options": [
+      "The predator's nose",
+      "The predator's fragile leg bones to knock it down!",
+      "The predator's tail",
+      "The nearest tree"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which meat-eating dinosaur had strange, tiny horns above its eyes, making it look like a dragon?",
+    "options": [
+      "Carnotaurus",
+      "T-Rex",
+      "Velociraptor",
+      "Spinosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "How do scientists know T-Rex had great eyesight?",
+    "options": [
+      "It wore glasses",
+      "Its eyes faced forward, giving it 3D binocular vision like an eagle!",
+      "It left a note",
+      "It had giant eyeballs the size of basketballs"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "What happened to all the giant marine reptiles when the asteroid hit?",
+    "options": [
+      "They swam away",
+      "They went extinct along with the non-flying dinosaurs",
+      "They evolved into whales",
+      "They hid in the Mariana Trench"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur is famous for having a 'thumb spike' that scientists originally thought went on its nose?",
+    "options": [
+      "Iguanodon",
+      "Triceratops",
+      "Stegosaurus",
+      "Brachiosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "If you put a Velociraptor next to an adult human, how tall would the Velociraptor be?",
+    "options": [
+      "Taller than a house",
+      "As tall as the human",
+      "Only up to the human's knees!",
+      "The size of a mouse"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "What is the name of the era that came AFTER the dinosaurs went extinct?",
+    "options": [
+      "The Cenozoic Era (The Age of Mammals)",
+      "The Paleozoic Era",
+      "The Mesozoic Era",
+      "The Future"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "Which group of dinosaurs were the largest animals to EVER walk on land?",
+    "options": [
+      "Theropods",
+      "Ceratopsians",
+      "Sauropods (the long-necks)",
+      "Ankylosaurs"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "Why did Triceratops live in herds?",
+    "options": [
+      "To play games",
+      "For protection! A circle of Triceratops horns is impossible for a T-Rex to break through.",
+      "To keep warm",
+      "Because they were scared of the dark"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur had a 'parrot-like' beak and quills on its tail?",
+    "options": [
+      "Psittacosaurus",
+      "T-Rex",
+      "Stegosaurus",
+      "Ankylosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What is the fastest a T-Rex could realistically run without breaking its own legs?",
+    "options": [
+      "60 mph",
+      "About 15 to 25 mph (still faster than most humans!)",
+      "5 mph",
+      "It couldn't run at all"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which famous dinosaur was actually completely made up by combining a Brachiosaurus body and a Camarasaurus head?",
+    "options": [
+      "The Brontosaurus (though scientists later decided it actually IS a real genus!)",
+      "The T-Rex",
+      "The Stegosaurus",
+      "The Triceratops"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "If a Pteranodon lost a tooth, what happened?",
+    "options": [
+      "It grew a new one",
+      "Pteranodons actually had NO teeth at all\u2014their name means 'Toothless Wing'!",
+      "It wore dentures",
+      "It couldn't eat"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur could be considered the 'Cheetah' of the dinosaur world because it was so fast?",
+    "options": [
+      "Ornithomimus (The Ostrich Mimic)",
+      "T-Rex",
+      "Ankylosaurus",
+      "Stegosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What is the soft, muddy stuff that turns dinosaur footprints into trace fossils over millions of years?",
+    "options": [
+      "Cement",
+      "Sediment",
+      "Jelly",
+      "Clay-dough"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which giant shark lived millions of years AFTER the dinosaurs, but is still super famous?",
+    "options": [
+      "The Great White",
+      "The Megalodon",
+      "The Hammerhead",
+      "The Whale Shark"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "What did the Dilophosaurus actually look like, unlike the movie Jurassic Park?",
+    "options": [
+      "It had no neck frill and did NOT spit venom!",
+      "It was the size of a dog",
+      "It had wings",
+      "It was neon pink"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "Which dinosaur had the longest tail, cracking it like a whip to scare off predators?",
+    "options": [
+      "Diplodocus",
+      "T-Rex",
+      "Stegosaurus",
+      "Ankylosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "If you looked at a baby dinosaur growing up, what would happen to its bones?",
+    "options": [
+      "They shrank",
+      "They grew growth rings, just like a tree!",
+      "They turned to jelly",
+      "They stayed the exact same size"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur had a skull that was nearly solid bone, perfect for absorbing head-butting shocks?",
+    "options": [
+      "Pachycephalosaurus",
+      "T-Rex",
+      "Velociraptor",
+      "Brachiosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What does 'Rex' mean in Tyrannosaurus Rex?",
+    "options": [
+      "Giant",
+      "King",
+      "Scary",
+      "Fast"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which marine reptile is famous for its incredibly long neck, making up half its body length?",
+    "options": [
+      "Elasmosaurus",
+      "Mosasaurus",
+      "Ichthyosaurus",
+      "Pliosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "Why did the mighty Stegosaurus need plates on its back?",
+    "options": [
+      "To carry passengers",
+      "To look bigger and possibly control its body temperature by catching the sun",
+      "To surf",
+      "To hide in tall grass"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which of these places is a famous spot in the US for digging up dinosaur bones?",
+    "options": [
+      "New York City",
+      "The Badlands of South Dakota and Montana",
+      "Miami Beach",
+      "Disneyland"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "What is a 'Coprolite'?",
+    "options": [
+      "A shiny gem",
+      "Fossilized dinosaur poop!",
+      "A type of meteor",
+      "A dinosaur tooth"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur was discovered with feathers so well-preserved we actually know it was black with a shiny sheen, like a crow?",
+    "options": [
+      "Microraptor",
+      "T-Rex",
+      "Stegosaurus",
+      "Triceratops"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "Which dinosaur had a massive bony frill that it could possibly pump blood into to make it flush red and scare enemies?",
+    "options": [
+      "Triceratops",
+      "T-Rex",
+      "Stegosaurus",
+      "Diplodocus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "If you looked at a Velociraptor's foot, what terrifying weapon would you see?",
+    "options": [
+      "A giant laser",
+      "A huge, curved sickle claw on its second toe",
+      "Webbed feet for swimming",
+      "Roller skates"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "What did the Baryonyx mostly eat, thanks to its crocodile-like snout?",
+    "options": [
+      "Leaves",
+      "Fish from rivers",
+      "Other big dinosaurs",
+      "Bugs"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which of these dinosaurs was famously discovered in a 'Death Pose', with its neck arched backward?",
+    "options": [
+      "Archaeopteryx (and many other theropods!)",
+      "Triceratops",
+      "Stegosaurus",
+      "Brachiosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What is the name of the supercontinent that broke apart during the time of the dinosaurs?",
+    "options": [
+      "Atlantis",
+      "Pangea",
+      "Gondwana",
+      "Laurasia"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "How big was a T-Rex's brain compared to its giant body?",
+    "options": [
+      "The size of a pea",
+      "About the size of a long loaf of bread or a gorilla's brain",
+      "Bigger than a human's",
+      "The size of a car"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which of these flying reptiles had the biggest wingspan ever, the size of a small airplane?",
+    "options": [
+      "Quetzalcoatlus",
+      "Pteranodon",
+      "Archaeopteryx",
+      "Microraptor"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What did the duck-billed Edmontosaurus do to chew its tough plant food?",
+    "options": [
+      "It swallowed it whole",
+      "It used its 'dental battery' of up to 1,000 grinding teeth",
+      "It mashed it with its hands",
+      "It soaked it in water first"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "If you found an Iguanodon fossil, what strange thing would you notice on its hand?",
+    "options": [
+      "A thumb spike for defense or breaking open seeds",
+      "A built-in flashlight",
+      "Webbed fingers",
+      "Six fingers"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "Which dinosaur was the top predator in North America BEFORE T-Rex existed?",
+    "options": [
+      "Allosaurus",
+      "Spinosaurus",
+      "Velociraptor",
+      "Carnotaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What did the heavily armored Ankylosaurus use to defend itself from a hungry T-Rex?",
+    "options": [
+      "A loud roar",
+      "Running away really fast",
+      "A heavy, bony tail club that could shatter bone",
+      "Shooting spikes from its back"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "Which of these dinosaurs had the absolute smallest brain relative to its body size?",
+    "options": [
+      "Stegosaurus",
+      "T-Rex",
+      "Troodon",
+      "Velociraptor"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "How did long-necked dinosaurs (Sauropods) lighten their huge skeletons so they wouldn't collapse under their own weight?",
+    "options": [
+      "They filled them with helium",
+      "They had hollow air sacs in their neck bones, just like birds!",
+      "They exercised a lot",
+      "They didn't have bones"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur's fossil was famously found locked in a deadly battle with a Protoceratops?",
+    "options": [
+      "Velociraptor",
+      "T-Rex",
+      "Spinosaurus",
+      "Allosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What is the Mesozoic Era often called?",
+    "options": [
+      "The Age of Mammals",
+      "The Age of Reptiles (or Dinosaurs)",
+      "The Ice Age",
+      "The Stone Age"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "If a Spinosaurus went swimming, how did it catch its food?",
+    "options": [
+      "With a fishing pole",
+      "Using its long, crocodile-like snout filled with cone-shaped teeth to snatch slippery fish",
+      "By drinking all the water",
+      "By asking nicely"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur is famous for having a thick, dome-shaped skull up to 10 inches thick?",
+    "options": [
+      "Pachycephalosaurus",
+      "Triceratops",
+      "Stegosaurus",
+      "Ankylosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What was the main purpose of the bright colors scientists think some feathered dinosaurs had?",
+    "options": [
+      "To hide in the snow",
+      "For showing off to find a mate, just like modern birds!",
+      "To look scary",
+      "They just liked pretty colors"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which of these marine reptiles looked a bit like a giant, angry sea turtle without a shell?",
+    "options": [
+      "Placodus",
+      "Ichthyosaurus",
+      "Mosasaurus",
+      "Plesiosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "How long ago did the non-flying dinosaurs go extinct?",
+    "options": [
+      "1000 years ago",
+      "1 million years ago",
+      "66 million years ago",
+      "They are still alive!"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "Which dinosaur was discovered with fossilized stomach contents showing it had just eaten a baby dinosaur?",
+    "options": [
+      "Compsognathus",
+      "Stegosaurus",
+      "Triceratops",
+      "Brachiosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "If you saw a Gallimimus running across a plain, what modern animal would it remind you of?",
+    "options": [
+      "An elephant",
+      "An ostrich",
+      "A crocodile",
+      "A kangaroo"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "What did the scary-looking Carnotaurus have above its eyes?",
+    "options": [
+      "Two small, devil-like horns",
+      "A giant frill",
+      "Feathers",
+      "Laser beams"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "Which dinosaur's name means 'Double Beam' because of the weird shape of its tail bones?",
+    "options": [
+      "Diplodocus",
+      "T-Rex",
+      "Stegosaurus",
+      "Triceratops"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "How did scientists prove that some dinosaurs lived in big herds?",
+    "options": [
+      "They found giant fossilized trackways (footprints) with many dinosaurs walking in the same direction!",
+      "They read it in a book",
+      "They asked them",
+      "They found a dinosaur city"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "Which dinosaur had the biggest teeth, some the size of bananas?",
+    "options": [
+      "T-Rex",
+      "Velociraptor",
+      "Spinosaurus",
+      "Allosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "If you looked at the mouth of an Oviraptor, what would you notice?",
+    "options": [
+      "Hundreds of sharp teeth",
+      "It had a strong, toothless beak, like a parrot!",
+      "It breathed fire",
+      "It had tusks"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which of these dinosaurs was an apex predator in South America and was even bigger than a T-Rex?",
+    "options": [
+      "Giganotosaurus",
+      "Velociraptor",
+      "Allosaurus",
+      "Spinosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What is the name of the crater in Mexico where the dinosaur-killing asteroid hit?",
+    "options": [
+      "The Grand Canyon",
+      "The Chicxulub Crater",
+      "Meteor Crater",
+      "The Mariana Trench"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur had huge, 3-foot-long claws but only ate plants?",
+    "options": [
+      "Therizinosaurus",
+      "T-Rex",
+      "Velociraptor",
+      "Spinosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "If a dinosaur had a very long neck, what kind of dinosaur was it most likely?",
+    "options": [
+      "A Theropod (meat-eater)",
+      "A Sauropod (plant-eater)",
+      "A Ceratopsian (horned dinosaur)",
+      "An Ankylosaur (armored dinosaur)"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur's name means 'Fears Nothing' because it was so massive?",
+    "options": [
+      "Dreadnoughtus",
+      "T-Rex",
+      "Triceratops",
+      "Stegosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What did the Dilophosaurus really look like, despite what movies show?",
+    "options": [
+      "It had a neck frill and spit venom",
+      "It was small and friendly",
+      "It was a large predator with two crests on its head, but NO neck frill or venom!",
+      "It had wings"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "Which of these flying reptiles is famous for its long, pointed crest on the back of its head?",
+    "options": [
+      "Pteranodon",
+      "Archaeopteryx",
+      "Microraptor",
+      "Quetzalcoatlus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "How did dinosaurs get their water?",
+    "options": [
+      "From plastic bottles",
+      "From lakes, rivers, and streams, just like animals today!",
+      "They absorbed it from the air",
+      "They didn't need water"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur is famous for having a large, hollow, backwards-pointing crest on its head?",
+    "options": [
+      "Parasaurolophus",
+      "T-Rex",
+      "Triceratops",
+      "Stegosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What did the 'Ostrich Mimic' dinosaur, Struthiomimus, use to escape predators?",
+    "options": [
+      "It flew away",
+      "It ran really, really fast on its long legs!",
+      "It hid in a shell",
+      "It fought them"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur's name means 'Three-Horned Face'?",
+    "options": [
+      "Triceratops",
+      "T-Rex",
+      "Stegosaurus",
+      "Ankylosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "If you found a fossilized footprint, what kind of fossil is it?",
+    "options": [
+      "A body fossil",
+      "A trace fossil",
+      "A fake fossil",
+      "A rock"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur was discovered with a perfectly preserved, mummified body showing its skin?",
+    "options": [
+      "Edmontosaurus (often called the 'dinosaur mummy'!)",
+      "T-Rex",
+      "Velociraptor",
+      "Stegosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What did the Spinosaurus use its huge sail for?",
+    "options": [
+      "To swim faster",
+      "Maybe to control its body temperature or show off to other Spinosaurus",
+      "To fly",
+      "To block the sun"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur was essentially a tiny, chicken-sized meat-eater that lived in the Jurassic period?",
+    "options": [
+      "Compsognathus",
+      "T-Rex",
+      "Brachiosaurus",
+      "Triceratops"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "How many fingers did an adult T-Rex have on each hand?",
+    "options": [
+      "One",
+      "Two",
+      "Three",
+      "Four"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which of these dinosaurs was an apex predator that lived millions of years before T-Rex?",
+    "options": [
+      "Allosaurus",
+      "Velociraptor",
+      "Triceratops",
+      "Spinosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What is the study of ancient life, including dinosaurs, called?",
+    "options": [
+      "Biology",
+      "Geology",
+      "Paleontology",
+      "Archaeology"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "Which dinosaur had the longest neck, reaching up to 46 feet long?",
+    "options": [
+      "Mamenchisaurus",
+      "T-Rex",
+      "Triceratops",
+      "Stegosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What did the Ankylosaurus use its bony tail club for?",
+    "options": [
+      "To play baseball",
+      "To defend itself by smashing the legs of predators like T-Rex!",
+      "To sweep the ground",
+      "To knock down trees"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "question": "Which dinosaur is known as the 'Good Mother Lizard'?",
+    "options": [
+      "Maiasaura",
+      "T-Rex",
+      "Velociraptor",
+      "Stegosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "If a dinosaur ate both plants AND meat, what was it called?",
+    "options": [
+      "Carnivore",
+      "Herbivore",
+      "Omnivore",
+      "Dinovore"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "question": "Which famous fossil showed a creature with both dinosaur traits (teeth, tail) and bird traits (feathers, wings)?",
+    "options": [
+      "Archaeopteryx",
+      "T-Rex",
+      "Triceratops",
+      "Stegosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "Which dinosaur had a club on its tail that was so heavy, it could break the legs of an attacking T-Rex?",
+    "options": [
+      "Ankylosaurus",
+      "Stegosaurus",
+      "Triceratops",
+      "Diplodocus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What did the incredibly long-necked Brachiosaurus likely eat?",
+    "options": [
+      "Leaves from the very tops of tall trees",
+      "Fish from deep rivers",
+      "Small dinosaurs",
+      "Grass on the ground"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "Which dinosaur is known for having a thick, dome-shaped skull that was up to 10 inches thick?",
+    "options": [
+      "Pachycephalosaurus",
+      "T-Rex",
+      "Triceratops",
+      "Stegosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "If you looked at a Spinosaurus, what would you notice on its back?",
+    "options": [
+      "A huge, sail-like structure made of bone",
+      "Spikes like a Stegosaurus",
+      "A heavy shell like a turtle",
+      "Wings"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "Which of these dinosaurs was an apex predator in North America BEFORE T-Rex existed?",
+    "options": [
+      "Allosaurus",
+      "Spinosaurus",
+      "Velociraptor",
+      "Carnotaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What did the duck-billed Parasaurolophus use the hollow tube on its head for?",
+    "options": [
+      "To make loud, trumpeting sounds to communicate with its herd",
+      "To breathe fire",
+      "To suck up water like a straw",
+      "To store snacks"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "If you saw a Velociraptor in real life, what would it probably have covering its body?",
+    "options": [
+      "Feathers, just like a bird!",
+      "Scales like a snake",
+      "Fur like a dog",
+      "Smooth, wet skin like a frog"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "Which dinosaur's name means 'Egg Thief', even though it was actually just protecting its own nest?",
+    "options": [
+      "Oviraptor",
+      "T-Rex",
+      "Velociraptor",
+      "Stegosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "If a T-Rex tried to scratch its nose, could it?",
+    "options": [
+      "No, its arms were too short to reach its face!",
+      "Yes, easily",
+      "It used its tail",
+      "It asked a friend for help"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "Which dinosaur had the longest claws of any known animal, reaching up to 3 feet long?",
+    "options": [
+      "Therizinosaurus",
+      "T-Rex",
+      "Velociraptor",
+      "Spinosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What did the huge, long-necked dinosaurs (Sauropods) use to help grind up food in their stomachs?",
+    "options": [
+      "They swallowed rocks called gastroliths!",
+      "They drank a lot of water",
+      "They chewed very carefully",
+      "They only ate soup"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "Which of these dinosaurs had a 'sail' on its back?",
+    "options": [
+      "Spinosaurus",
+      "T-Rex",
+      "Triceratops",
+      "Ankylosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "How did the Stegosaurus control its body temperature?",
+    "options": [
+      "By pumping blood through the large plates on its back to cool down or warm up!",
+      "By wearing a sweater",
+      "By jumping in a cold lake",
+      "It couldn't control its temperature"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "Which dinosaur is considered one of the smartest because of its large brain size compared to its body?",
+    "options": [
+      "Troodon",
+      "Stegosaurus",
+      "T-Rex",
+      "Brachiosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "If you wanted to find the heaviest dinosaur ever, which one would it be?",
+    "options": [
+      "Argentinosaurus",
+      "T-Rex",
+      "Triceratops",
+      "Velociraptor"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What is the study of dinosaur fossils called?",
+    "options": [
+      "Paleontology",
+      "Archaeology",
+      "Geology",
+      "Biology"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "Which flying reptile lived during the time of the dinosaurs but was NOT a dinosaur?",
+    "options": [
+      "Pterodactyl (Pterosaur)",
+      "T-Rex",
+      "Triceratops",
+      "Stegosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What did the Ankylosaurus look like?",
+    "options": [
+      "A giant, walking tank with a club tail!",
+      "A tall giraffe",
+      "A fast ostrich",
+      "A furry bear"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "Which dinosaur had a skull that was longer than a grown human is tall?",
+    "options": [
+      "Triceratops (and other Ceratopsians)",
+      "T-Rex",
+      "Velociraptor",
+      "Stegosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "If you lived in the Jurassic Period, what would you NOT see?",
+    "options": [
+      "Grass! Grass hadn't evolved yet.",
+      "Trees",
+      "Ferns",
+      "Water"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "Which dinosaur is famous for having up to 1,000 teeth in its mouth at one time?",
+    "options": [
+      "Hadrosaur (Duck-billed dinosaur)",
+      "T-Rex",
+      "Velociraptor",
+      "Spinosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What is the closest living relative to the mighty T-Rex?",
+    "options": [
+      "A chicken (or any bird!)",
+      "A crocodile",
+      "A lizard",
+      "A snake"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "What is the name of the supercontinent that existed when the first dinosaurs evolved?",
+    "options": [
+      "Pangea",
+      "Atlantis",
+      "Gondwana",
+      "Laurasia"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "Which of these marine reptiles looked a bit like a mix between a dolphin and a shark?",
+    "options": [
+      "Ichthyosaurus",
+      "Mosasaurus",
+      "Plesiosaurus",
+      "Kronosaurus"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "question": "Which dinosaur was named 'Good Mother Lizard' because it cared for its babies in nests?",
+    "options": [
+      "Maiasaura",
+      "T-Rex",
+      "Velociraptor",
+      "Stegosaurus"
+    ],
+    "answerIndex": 0
+  }
+]

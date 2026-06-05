@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dino Quiz | Dino Deets</title>
+    <meta name="description" content="Dino Deets is a kid-and-family-friendly dinosaur podcast hosted by Devaansh Nara Nara. Explore prehistoric worlds, discover dino facts, and dig for fossils!" />
+    <meta name="keywords" content="dinosaurs, podcast, kids, education, prehistoric, fossils, Devaansh Nara, dino facts" />
+    <meta property="og:title" content="Dino Deets — Dinosaur Podcast for Kids" />
+    <meta property="og:description" content="Where curious minds travel through prehistoric worlds. A fun, educational dinosaur podcast by Devaansh Nara." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Nunito:wght@400;600;700;800&family=Caveat:wght@400;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- DINO LOADER START -->
+    <style id="loader-styles">
+      #dino-loader{position:fixed;inset:0;background:#0e1a16;z-index:99999;display:flex;align-items:center;justify-content:center;opacity:1;transition:opacity 0.5s ease}
+      #dino-loader *{margin:0;padding:0;box-sizing:border-box}
+      .dl-track{width:min(80vw,500px);height:6px;background:rgba(255,255,255,0.1);border-radius:4px;position:relative}
+      .dl-bar{height:100%;background:#d4a843;width:0%;border-radius:4px;box-shadow:0 0 12px #d4a843,0 0 4px #d4a843;transition:width 80ms linear}
+      .dl-asteroid{position:absolute;top:50%;left:0%;transform:translate(-50%,-50%);z-index:2;filter:drop-shadow(0 0 8px #e8652d) drop-shadow(0 0 16px rgba(232,101,45,0.5));transition:left 80ms linear}
+      .dl-trex{position:absolute;top:50%;right:-30px;transform:translateY(-50%);z-index:1}
+      .dl-bubble{background:#fff;color:#0e1a16;padding:3px 7px;border-radius:10px;font-family:sans-serif;font-size:11px;font-weight:700;white-space:nowrap;position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);box-shadow:0 2px 8px rgba(0,0,0,0.4);transition:all 0.2s ease}
+      .dl-bubble::after{content:'';position:absolute;top:100%;left:50%;margin-left:-4px;border:4px solid transparent;border-top-color:#fff}
+      .dl-spark{position:absolute;width:3px;height:3px;border-radius:50%;pointer-events:none;opacity:1;animation:dlspark 0.5s forwards ease-out}
+      @keyframes dlspark{to{opacity:0;transform:translate(var(--dx),var(--dy)) scale(0)}}
+      body.dl-loading > *:not(#dino-loader):not(script):not(style):not(link){visibility:hidden !important}
+    </style>
+    <div id="dino-loader">
+      <div class="dl-track" id="dl-track">
+        <div class="dl-bar" id="dl-bar"></div>
+        <div class="dl-asteroid" id="dl-asteroid">
+          <span class="dl-bubble" id="dl-abub">Here I come!</span>
+          <svg viewBox="0 0 60 40" width="44" height="30"><polygon points="0,15 35,10 35,30 0,25" fill="#d4a843" opacity=".7"/><polygon points="0,17 30,14 30,26 0,23" fill="#ffeb3b" opacity=".5"/><circle cx="40" cy="20" r="14" fill="#e8652d"/><circle cx="37" cy="16" r="3" fill="#c35222"/><circle cx="44" cy="24" r="3.5" fill="#c35222"/></svg>
+        </div>
+        <div class="dl-trex" id="dl-trex">
+          <span class="dl-bubble" id="dl-tbub">Oh no!</span>
+          <svg viewBox="0 0 44 47" width="36" height="30" style="transform:scaleX(-1)"><path d="M22 0h22v7h-2v2h-2v2h-2v2h-12v2h-2v2h-2v2h-2v4h2v4h2v2h2v8h-4v2h-4v-6h2v-4h-2v-4h-2v4h-2v2h-4v4h-4v2h-4v-10h4v-2h4v-4h2v-4h2v-4h2v-4h2v-4h2v-4h2v-2h4v-2z" fill="#699e4b"/><rect x="28" y="6" width="4" height="4" fill="#1a2e1a"/></svg>
+        </div>
+      </div>
+    </div>
+    <script>
+    !function(){
+      document.body.classList.add('dl-loading');
+      var el=document.getElementById('dino-loader');
+      if(!el)return;
+      var bar=document.getElementById('dl-bar');
+      var ast=document.getElementById('dl-asteroid');
+      var tb=document.getElementById('dl-tbub');
+      var ab=document.getElementById('dl-abub');
+      var track=document.getElementById('dl-track');
+      var p=0,ready=false,t0=Date.now();
+      var cols=['#ffeb3b','#e8652d','#ff9800'];
+      function spark(){
+        if(p>95)return;
+        var s=document.createElement('div');
+        s.className='dl-spark';
+        s.style.left=p+'%';s.style.top='50%';
+        s.style.background=cols[Math.random()*3|0];
+        s.style.setProperty('--dx',(Math.random()*20-10)+'px');
+        s.style.setProperty('--dy',(Math.random()*16+4)+'px');
+        track.appendChild(s);
+        setTimeout(function(){if(s.parentNode)s.parentNode.removeChild(s)},500);
+      }
+      function finish(){
+        p=100;bar.style.width='100%';ast.style.left='100%';
+        clearInterval(iv);
+        tb.textContent='BOOM!';tb.style.background='#e8652d';tb.style.color='#fff';
+        ab.style.opacity='0';
+        setTimeout(function(){
+          el.style.opacity='0';
+          setTimeout(function(){
+            document.body.classList.remove('dl-loading');
+            if(el.parentNode)el.parentNode.removeChild(el);
+            var ls=document.getElementById('loader-styles');
+            if(ls)ls.parentNode.removeChild(ls);
+          },500);
+        },350);
+      }
+      var iv=setInterval(function(){
+        if(ready&&p>=88){finish();return}
+        p+=1.2+Math.random()*2.5;if(p>88)p=88;
+        bar.style.width=p+'%';ast.style.left=p+'%';
+        spark();
+        if(p>50&&p<72)tb.textContent='Uh oh...';
+        if(p>=72){tb.textContent='GULP!';tb.style.color='#e8652d';ab.textContent='INCOMING!';ab.style.color='#e8652d'}
+      },65);
+      window.addEventListener('load',function(){
+        var wait=Math.max(0,1500-(Date.now()-t0));
+        setTimeout(function(){ready=true},wait);
+      });
+    }();
+    </script>
+    <!-- DINO LOADER END -->
+
+<!-- Navigation -->
+    <nav id="main-nav" class="nav">
+      <div class="nav__inner">
+        <a href="/DinoDeets_Website/" class="nav__logo" id="nav-logo">
+          <img src="../images/icons/logo_text.webp" alt="Dino Deets" class="nav__logo-text-img" />
+        </a>
+        <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+        
+        
+        <ul class="nav__links" id="nav-links">
+          <li>
+            <a href="/DinoDeets_Website/" class="nav__icon-link" aria-label="Home">
+              <svg class="nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+              <span class="nav__tooltip">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="/DinoDeets_Website/explore/encyclopedia.html" class="nav__icon-link" aria-label="Encyclopedia">
+              <svg class="nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+              <span class="nav__tooltip">Encyclopedia</span>
+            </a>
+          </li>
+          
+          <li class="nav__dropdown">
+            <a href="#" class="nav__icon-link nav__dropdown-toggle" aria-label="Games" data-dropdown="games">
+              <svg class="nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="6" width="20" height="12" rx="2" ry="2"></rect><path d="M6 12h4"></path><path d="M8 10v4"></path><path d="M15 13h.01"></path><path d="M18 11h.01"></path>
+              </svg>
+              <span class="nav__tooltip">Games</span>
+            </a>
+            <div class="nav__submenu" id="dropdown-games">
+              <a href="/DinoDeets_Website/games/fossil-dig.html" class="nav__submenu-link">Fossil Dig</a>
+              <a href="/DinoDeets_Website/games/dino-quiz.html" class="nav__submenu-link">Dino Quiz</a>
+            </div>
+          </li>
+          
+          <li class="nav__dropdown">
+            <a href="#" class="nav__icon-link nav__dropdown-toggle" aria-label="Explore" data-dropdown="explore">
+              <svg class="nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+              </svg>
+              <span class="nav__tooltip">Explore</span>
+            </a>
+            <div class="nav__submenu" id="dropdown-explore">
+              <a href="/DinoDeets_Website/explore/dino-map.html" class="nav__submenu-link">Dino Map</a>
+              <a href="/DinoDeets_Website/explore/dino-timeline.html" class="nav__submenu-link">Dino Timeline</a>
+              <a href="/DinoDeets_Website/explore/dino-meter.html" class="nav__submenu-link">Dino-o-Meter</a>
+            </div>
+          </li>
+          
+          
+                    <li>
+            <a href="/DinoDeets_Website/art/index.html" class="nav__icon-link" aria-label="Art">
+              <svg class="nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8" cy="8" r="1.5"></circle>
+                <path d="M5 21v-3a3 3 0 0 1 3-3h3a3 3 0 0 0 3-3V8a2 2 0 1 1 4 0v13"></path>
+              </svg>
+              <span class="nav__tooltip">Art</span>
+            </a>
+          </li>
+        </ul>
+        
+        </div>
+      </div>
+    </nav>
+
+    <main class="section dino-quiz">
+      <div class="section__inner">
+        <div class="dino-quiz__wrapper">
+          <!-- Start Screen -->
+          <div id="quiz-start" class="quiz-screen quiz-screen--active">
+            <img src="../images/dinos/triceratops.webp" alt="Triceratops" class="quiz__mascot" />
+            <h1 class="quiz__title">Dino Brain Quiz</h1>
+            <p class="quiz__desc">Test your prehistoric knowledge! Can you answer these 10 fun questions correctly?</p>
+            <button id="btn-start-quiz" class="btn btn--primary quiz__btn-start">Start Quiz</button>
+          </div>
+
+          <!-- Active Quiz Screen -->
+          <div id="quiz-active" class="quiz-screen" style="display: none;">
+            <div class="quiz__header">
+              <div class="quiz__progress-text">Question <span id="quiz-current-num">1</span> of 10</div>
+              <div class="quiz__score-display">Score: <span id="quiz-score">0</span></div>
+            </div>
+            <div class="quiz__progress-bar"><div class="quiz__progress-fill" id="quiz-progress-fill" style="width: 10%;"></div></div>
+            
+            <h2 id="quiz-question" class="quiz__question-text">Loading...</h2>
+            
+            <div id="quiz-options" class="quiz__options">
+              <!-- Buttons injected by JS -->
+            </div>
+          </div>
+
+          <!-- Results Screen -->
+          <div id="quiz-results" class="quiz-screen" style="display: none;">
+            <div id="quiz-results-emoji" class="quiz__results-emoji">🏆</div>
+            <h2 class="quiz__results-title">Quiz Complete!</h2>
+            <div class="quiz__final-score">You scored <span id="quiz-final-score-val">0</span> out of 10</div>
+            <p id="quiz-feedback" class="quiz__feedback">Great job!</p>
+            <button id="btn-restart-quiz" class="btn btn--primary quiz__btn-restart">Play Again</button>
+          </div>
+        </div>
+
+        <!-- Progress Graph Section -->
+        <div class="dino-quiz__history">
+          <h3 class="history__title">Recent Scores</h3>
+          <div class="history__chart" id="quiz-history-chart">
+            <!-- Chart bars injected by JS -->
+            <p class="history__empty">Play a game to see your history!</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+<!-- Footer -->
+    <footer id="footer" class="footer">
+      <div class="footer__strata">
+        <div class="footer__strata-layer footer__strata-layer--1"></div>
+        <div class="footer__strata-layer footer__strata-layer--2"></div>
+        <div class="footer__strata-layer footer__strata-layer--3"></div>
+      </div>
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <img src="../images/icons/logo_text.webp" alt="Dino Deets" class="footer__logo-img" />
+          </div>
+          <p class="footer__tagline">Where curious minds travel through prehistoric worlds</p>
+        </div>
+        <div class="footer__socials">
+          <h4>Follow the Adventure</h4>
+          <div class="footer__social-links">
+            <a href="https://www.youtube.com/@dinodeets" target="_blank" rel="noopener" class="footer__social-link" id="social-youtube" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              YouTube
+            </a>
+            <a href="https://www.instagram.com/dinodeets/" target="_blank" rel="noopener" class="footer__social-link" id="social-instagram" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+              Instagram
+            </a>
+            <a href="https://www.facebook.com/DinoDeets/" target="_blank" rel="noopener" class="footer__social-link" id="social-facebook" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              Facebook
+            </a>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>&copy; 2026 Dino Deets. Made with <img src="../images/dinos/trex.webp" alt="dino" class="inline-icon inline-icon--xs" /> by Devaansh Nara</p>
+
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mascot -->
+    <div class="mascot" id="mascot">
+      <div id="mascot-fly" class="mascot__fly" style="display: none; transform-origin: center;">
+        <!-- Cute profile mosquito (faces right) -->
+        <svg viewBox="0 0 32 32" width="32" height="32" style="overflow: visible;">
+          <!-- Legs -->
+          <path d="M 14 20 L 12 26 M 16 21 L 16 27 M 18 20 L 20 25" stroke="#111" stroke-width="1.5" fill="none"/>
+          <!-- Wing -->
+          <path d="M 14 14 C 6 2, -2 6, 12 14 Z" fill="#bbf" opacity="0.8">
+            <animateTransform attributeName="transform" type="rotate" values="0 14 14; 50 14 14; 0 14 14" dur="0.025s" repeatCount="indefinite" />
+          </path>
+          <!-- Body -->
+          <ellipse cx="16" cy="16" rx="7" ry="5" fill="#ffd700"/>
+          <!-- Proboscis (nose) -->
+          <line x1="22" y1="16" x2="28" y2="17" stroke="#111" stroke-width="1.5" stroke-linecap="round"/>
+          <!-- Big Cute Eye -->
+          <circle cx="20" cy="13" r="3.5" fill="#fff"/>
+          <circle cx="21.5" cy="13" r="1.5" fill="#000"/>
+        </svg>
+      </div>
+      <div id="mascot-stars-html" class="mascot__stars-container">
+        <div class="mascot__star mascot__star--1"><svg viewBox="0 0 24 24"><polygon points="12,2 15,9 22,9 16,14 18,21 12,17 6,21 8,14 2,9 9,9" fill="#FFD700"/></svg></div>
+        <div class="mascot__star mascot__star--2"><svg viewBox="0 0 24 24"><polygon points="12,2 15,9 22,9 16,14 18,21 12,17 6,21 8,14 2,9 9,9" fill="#FFD700"/></svg></div>
+        <div class="mascot__star mascot__star--3"><svg viewBox="0 0 24 24"><polygon points="12,2 15,9 22,9 16,14 18,21 12,17 6,21 8,14 2,9 9,9" fill="#FFD700"/></svg></div>
+      </div>
+      <div id="mascot-svg-container"></div>
+      <div class="mascot__bubble" id="mascot-bubble">
+        <p id="mascot-text">Hey there, explorer!</p>
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <script type="module" src="../src/main.js"></script>
+  </body>
+</html>
