@@ -109,23 +109,33 @@
     </nav>
 <!-- Hero Section -->
     <section id="hero" class="hero">
-      <div class="hero__bg">
-        <img src="./images/backgrounds/hero-bg.webp" alt="" class="hero__bg-img" />
+      <div class="hero__bg" id="hero-slideshow">
+        <img src="./images/backgrounds/hero-bg.webp" alt="" class="hero__slide" />
+        <img src="./images/backgrounds/hero-bg-2.webp" alt="" class="hero__slide" />
+        <img src="./images/backgrounds/hero-bg-3.webp" alt="" class="hero__slide" />
+        <img src="./images/backgrounds/hero-bg-4.webp" alt="" class="hero__slide" />
+        <img src="./images/backgrounds/hero-bg-5.webp" alt="" class="hero__slide" />
         <div class="hero__overlay"></div>
       </div>
       <div class="hero__content">
-        <p class="hero__tagline anim-fade-up">
-          <img src="./images/props/trex-skull.webp" alt="" class="inline-icon inline-icon--md" /> A Podcast by Devaansh Nara
-        </p>
-        <h1 class="hero__title-logo anim-fade-up anim-delay-1">
-          <img src="./images/icons/logo.webp" alt="Dino Deets" class="hero__logo-img" />
-        </h1>
-        <p class="hero__subtitle anim-fade-up anim-delay-2">Where curious minds travel through prehistoric worlds</p>
-        <div class="hero__cta anim-fade-up anim-delay-3">
-          <a href="https://www.youtube.com/@dinodeets" target="_blank" rel="noopener" class="btn btn--primary" id="hero-cta-watch">
-            <svg viewBox="0 0 24 24" fill="currentColor" class="btn-icon"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-            Watch on YouTube
-          </a>
+        <div class="hero__card anim-fade-up">
+          <p class="hero__tagline anim-fade-up">
+            <img src="./images/props/trex-skull.webp" alt="" class="inline-icon inline-icon--md" />
+            <span class="hero__tagline-text">A Podcast by Devaansh Nara</span>
+          </p>
+          <h1 class="hero__title-logo anim-fade-up anim-delay-1">
+            <img src="./images/icons/logo.webp" alt="Dino Deets" class="hero__logo-img" />
+          </h1>
+          <p class="hero__subtitle hero__subtitle-enhanced anim-fade-up anim-delay-2">Where curious minds travel through prehistoric worlds</p>
+          <div class="hero__cta anim-fade-up anim-delay-3">
+            <a href="https://www.youtube.com/@dinodeets" target="_blank" rel="noopener" class="btn btn--primary btn--pulse" id="hero-cta-watch">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="btn-icon"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              Watch on YouTube
+            </a>
+            <a href="/DinoDeets_Website/explore/encyclopedia.html" class="btn btn--outline" id="hero-cta-explore">
+              Explore Encyclopedia
+            </a>
+          </div>
         </div>
         <div class="hero__scroll-hint anim-fade-up anim-delay-4">
           <span>Scroll to explore</span>
@@ -134,28 +144,49 @@
       </div>
       <div class="hero__particles" id="hero-particles"></div>
     </section>
+
+    <!-- Geological Strata Divider: Hero to Episodes -->
+    <div class="section-divider section-divider--bottom">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+        <path class="strata-path--3" d="M0,15 Q360,45 720,15 T1440,30 L1440,60 L0,60 Z"></path>
+        <path class="strata-path--2" d="M0,25 Q360,5 720,25 T1440,15 L1440,60 L0,60 Z"></path>
+        <path class="strata-path--1" d="M0,35 Q360,55 720,35 T1440,40 L1440,60 L0,60 Z"></path>
+      </svg>
+    </div>
+
 <!-- Episodes Section -->
     <section id="episodes" class="section episodes">
       <div class="section__inner">
         <div class="section__header anim-fade-up">
-          <img src="./images/dinos/brachiosaurus.webp" alt="" class="section__icon" />
+          <div class="episodes__header-icon-wrap">
+            <img src="./images/dinos/brachiosaurus.webp" alt="" />
+          </div>
           <span class="section__label">Latest Adventures</span>
           <h2 class="section__title">Episodes</h2>
           <p class="section__subtitle">New dino discoveries every Friday!</p>
-
-        <div class="episodes__countdown anim-fade-up" id="countdown-timer">
-          <div class="episodes__countdown-inner">
-            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-            <span class="episodes__countdown-label">Next Hatching:</span>
-            <span class="episodes__countdown-time">
-              <span id="cd-days">0</span>d : 
-              <span id="cd-hours">00</span>h : 
-              <span id="cd-mins">00</span>m : 
-              <span id="cd-secs">00</span>s
-            </span>
+ 
+          <div class="episodes__countdown--egg anim-fade-up" id="countdown-timer">
+            <div class="countdown-egg-slot">
+              <span class="countdown-egg-num" id="cd-days">0</span>
+              <span class="countdown-egg-label">Days</span>
+            </div>
+            <span class="countdown-egg-sep">:</span>
+            <div class="countdown-egg-slot">
+              <span class="countdown-egg-num" id="cd-hours">00</span>
+              <span class="countdown-egg-label">Hours</span>
+            </div>
+            <span class="countdown-egg-sep">:</span>
+            <div class="countdown-egg-slot">
+              <span class="countdown-egg-num" id="cd-mins">00</span>
+              <span class="countdown-egg-label">Mins</span>
+            </div>
+            <span class="countdown-egg-sep">:</span>
+            <div class="countdown-egg-slot">
+              <span class="countdown-egg-num" id="cd-secs">00</span>
+              <span class="countdown-egg-label">Secs</span>
+            </div>
           </div>
-          <p class="episodes__countdown-date" id="countdown-next"></p>
-        </div>
+          <p class="episodes__countdown-date" id="countdown-next" style="margin-top:-20px; margin-bottom: 24px;"></p>
         </div>
         <div class="episodes__grid" id="episodes-grid"></div>
         <a href="https://www.youtube.com/@dinodeets" target="_blank" rel="noopener" class="btn btn--outline episodes__more anim-fade-up" id="episodes-see-all">
@@ -164,6 +195,15 @@
       </div>
     </section>
 
+    <!-- Geological Strata Divider: Episodes to About -->
+    <div class="section-divider section-divider--bottom">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+        <path class="strata-path--about-3" d="M0,20 Q360,40 720,10 T1440,35 L1440,60 L0,60 Z"></path>
+        <path class="strata-path--about-2" d="M0,10 Q360,30 720,20 T1440,15 L1440,60 L0,60 Z"></path>
+        <path class="strata-path--about-1" d="M0,30 Q360,45 720,30 T1440,35 L1440,60 L0,60 Z"></path>
+      </svg>
+    </div>
+
 <!-- About Section -->
     <section id="about" class="section about">
       <div class="section__inner">
@@ -171,12 +211,31 @@
           <span class="section__label">Meet the Host</span>
           <h2 class="section__title">About Dino Deets</h2>
         </div>
-        <div class="about__content anim-fade-up">
-          <div class="about__text">
-            <h3 class="about__name">Hosted by <span class="text-amber">Devaansh Nara</span></h3>
-            <p>Welcome to <strong>Dino Deets</strong> — where we travel millions of years back in time to uncover the most amazing secrets of the prehistoric world!</p>
-            <p>Every Friday, join Devaansh Nara as he explores the lives of dinosaurs, digs into ancient fossils, uncovers Greek myths, chats with real experts, and shares mind-blowing facts that will make you the coolest kid at school.</p>
-            <p>Whether you're a dino-obsessed kid, a curious parent, or just someone who thinks T-Rex is awesome — this is YOUR podcast!</p>
+        
+        <div class="about__grid anim-fade-up">
+          <!-- Left Column: Field Researcher Explorer Card -->
+          <div class="about__badge-column">
+            <div class="explorer-card">
+              <div class="explorer-card__paperclip"></div>
+              <div class="explorer-card__photo-container">
+                <img src="./images/props/host_avatar.webp" alt="Devaansh Nara" class="explorer-card__photo" />
+              </div>
+              <div class="explorer-card__info">
+                <span class="explorer-card__role">Dino Deets Host</span>
+                <h4 class="explorer-card__name">Devaansh Nara</h4>
+                <p class="explorer-card__motto">"Let's uncover the past!"</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right Column: Biography Block -->
+          <div class="about__text-column">
+            <div class="about__text-card">
+              <h3>Hosted by <span class="text-amber">Devaansh Nara</span></h3>
+              <p>Welcome to <span class="text-highlight">Dino Deets</span> — where we travel millions of years back in time to uncover the most amazing secrets of the prehistoric world!</p>
+              <p>Every Friday, join Devaansh Nara as he explores the lives of dinosaurs, digs into ancient fossils, uncovers Greek myths, chats with real experts, and shares mind-blowing facts.</p>
+              <p>Whether you're a dino-obsessed kid, a curious parent, or just someone who thinks T-Rex is awesome — this is <span class="text-highlight">YOUR</span> podcast!</p>
+            </div>
           </div>
         </div>
       </div>
@@ -249,11 +308,11 @@
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
               YouTube
             </a>
-            <a href="#" class="footer__social-link" id="social-instagram" aria-label="Instagram">
+            <a href="https://www.instagram.com/dinodeets/" target="_blank" rel="noopener" class="footer__social-link" id="social-instagram" aria-label="Instagram">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
               Instagram
             </a>
-            <a href="#" class="footer__social-link" id="social-facebook" aria-label="Facebook">
+            <a href="https://www.facebook.com/DinoDeets/" target="_blank" rel="noopener" class="footer__social-link" id="social-facebook" aria-label="Facebook">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
               Facebook
             </a>

@@ -71,18 +71,23 @@ function initNav() {
 function initParticles() {
   const container = document.getElementById('hero-particles');
   if (!container) return;
-  const colors = ['rgba(212,168,67,0.4)', 'rgba(76,175,80,0.3)', 'rgba(232,101,45,0.3)'];
-  for (let i = 0; i < 20; i++) {
+  container.innerHTML = '';
+  const colors = ['rgba(212, 168, 67, 0.45)', 'rgba(76, 175, 80, 0.35)', 'rgba(232, 101, 45, 0.35)'];
+  for (let i = 0; i < 35; i++) {
     const p = document.createElement('div');
-    p.className = 'particle';
+    p.className = 'particle--enhanced';
+    const size = 3 + Math.random() * 5;
+    const borderRadius = 30 + Math.random() * 20;
     p.style.cssText = `
       left: ${Math.random() * 100}%;
-      top: ${50 + Math.random() * 50}%;
-      width: ${2 + Math.random() * 4}px;
-      height: ${2 + Math.random() * 4}px;
+      top: ${60 + Math.random() * 35}%;
+      width: ${size}px;
+      height: ${size}px;
+      border-radius: ${borderRadius}%;
       background: ${colors[Math.floor(Math.random() * colors.length)]};
-      animation-delay: ${Math.random() * 8}s;
-      animation-duration: ${6 + Math.random() * 6}s;
+      animation-delay: ${Math.random() * 10}s;
+      animation-duration: ${8 + Math.random() * 8}s;
+      box-shadow: 0 0 6px ${colors[Math.floor(Math.random() * colors.length)]};
     `;
     container.appendChild(p);
   }
@@ -122,12 +127,14 @@ function renderEpisodes(items) {
     const videoId = item.link?.match(/v=([^&]+)/)?.[1] || item.guid?.split(':').pop() || '';
     const thumb = item.thumbnail || `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
     const date = new Date(item.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+    const isNew = i === 0;
     return `
       <a href="${item.link || '#'}" target="_blank" rel="noopener"
          class="episode-card anim-fade-up" style="animation-delay: ${i * 0.1}s" id="episode-${i}">
+        ${isNew ? '<span class="episode-card__badge">Fresh Release</span>' : ''}
         <div class="episode-card__thumb">
           <img src="${thumb}" alt="${item.title}" loading="lazy" />
-          <div class="episode-card__play"><span class="episode-card__play-icon">▶</span></div>
+          <div class="episode-card__play episode-card__play-mask"><span class="episode-card__play-icon">▶</span></div>
         </div>
         <div class="episode-card__body">
           <h3 class="episode-card__title">${item.title}</h3>
@@ -148,19 +155,22 @@ function renderFallbackEpisodes() {
     { title: "India's Own Dinosaurs!", img: "./images/dinos/triceratops.webp" },
   ];
   const grid = document.getElementById('episodes-grid');
-  grid.innerHTML = fallback.map((ep, i) => `
-    <a href="https://www.youtube.com/@dinodeets" target="_blank" rel="noopener"
-       class="episode-card anim-fade-up" id="episode-${i}">
-      <div class="episode-card__thumb">
-        <img src="${resolveAssetPath(ep.img)}" alt="${ep.title}" loading="lazy" style="object-fit: cover;" />
-        <div class="episode-card__play"><span class="episode-card__play-icon">▶</span></div>
-      </div>
-      <div class="episode-card__body">
-        <h3 class="episode-card__title">${ep.title}</h3>
-        <span class="episode-card__date">Watch on YouTube</span>
-      </div>
-    </a>
-  `).join('');
+  grid.innerHTML = fallback.map((ep, i) => {
+    const isNew = i === 0;
+    return `
+      <a href="https://www.youtube.com/@dinodeets" target="_blank" rel="noopener"
+         class="episode-card anim-fade-up" id="episode-${i}">
+        ${isNew ? '<span class="episode-card__badge">Fresh Release</span>' : ''}
+        <div class="episode-card__thumb">
+          <img src="${resolveAssetPath(ep.img)}" alt="${ep.title}" loading="lazy" style="object-fit: cover;" />
+          <div class="episode-card__play episode-card__play-mask"><span class="episode-card__play-icon">▶</span></div>
+        </div>
+        <div class="episode-card__body">
+          <h3 class="episode-card__title">${ep.title}</h3>
+          <span class="episode-card__date">Watch on YouTube</span>
+        </div>
+      </a>`;
+  }).join('');
   initScrollAnimations();
 }
 
@@ -396,19 +406,24 @@ function initScrollAnimations() {
 function initCountdown() {
   function getNextFriday() {
     const now = new Date();
-    const next = new Date(now);
     const day = now.getDay();
-    const daysUntilFri = (5 - day + 7) % 7 || 7;
-    next.setDate(now.getDate() + daysUntilFri);
-    next.setHours(10, 0, 0, 0); // 10 AM release time
-    if (next <= now) next.setDate(next.getDate() + 7);
-    return next;
+    let daysUntilFri = (5 - day + 7) % 7;
+    
+    const nextFri = new Date(now);
+    nextFri.setDate(now.getDate() + daysUntilFri);
+    nextFri.setUTCHours(11, 30, 0, 0); // 11:30 AM UTC = 5:00 PM IST
+    
+    if (nextFri <= now) {
+      nextFri.setDate(nextFri.getDate() + 7);
+    }
+    return nextFri;
   }
 
   const nextFri = getNextFriday();
   const nextEl = document.getElementById('countdown-next');
   if (nextEl) {
-    nextEl.textContent = `New episode: ${nextFri.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}`;
+    const dateStr = nextFri.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+    nextEl.textContent = `New episode: ${dateStr} at 5:00 PM IST`;
   }
 
   function update() {
