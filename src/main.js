@@ -12,6 +12,7 @@ import dinoGlossary from './data/glossary.json';
 import timelineData from './data/timeline.json';
 import dinoData from './data/encyclopedia.json';
 import artData from './data/art.json';
+import { resolveAssetPath, normalizeAllImages } from './resolve-path.js';
 
 const { fanArtGallery, coloringPages } = artData;
 
@@ -151,7 +152,7 @@ function renderFallbackEpisodes() {
     <a href="https://www.youtube.com/@dinodeets" target="_blank" rel="noopener"
        class="episode-card anim-fade-up" id="episode-${i}">
       <div class="episode-card__thumb">
-        <img src="${ep.img}" alt="${ep.title}" loading="lazy" style="object-fit: cover;" />
+        <img src="${resolveAssetPath(ep.img)}" alt="${ep.title}" loading="lazy" style="object-fit: cover;" />
         <div class="episode-card__play"><span class="episode-card__play-icon">▶</span></div>
       </div>
       <div class="episode-card__body">
@@ -446,7 +447,7 @@ function initQuiz() {
     document.getElementById('quiz-question').textContent = q.question;
 
     const imgWrap = document.getElementById('quiz-img-wrap');
-    imgWrap.innerHTML = q.image ? `<img src="${q.image}" alt="" />` : '';
+    imgWrap.innerHTML = q.image ? `<img src="${resolveAssetPath(q.image)}" alt="" />` : '';
 
     const optionsEl = document.getElementById('quiz-options');
     optionsEl.innerHTML = q.options.map((opt, i) => `
@@ -690,7 +691,7 @@ function initMeter() {
     const html = entities.map(entity => {
       // Height in pixels based on proportion to H_max and drawable height
       const heightPx = Math.round((entity.height / H_max) * drawableHeight);
-      const cleanSrc = entity.image.startsWith('./') ? entity.image.replace('./', '../') : entity.image;
+      const cleanSrc = resolveAssetPath(entity.image);
       const cls = entity.isHuman ? ' meter__entity--human' : '';
       return `
         <div class="meter__entity${cls}" style="height:${heightPx}px; --dino-color:${entity.color};">
@@ -790,8 +791,8 @@ function initMeter() {
       const icon = isAdded ? '&#10003;' : '+';
       
       const profileSrc = meterProfileMapping.hasOwnProperty(d.name)
-        ? meterProfileMapping[d.name].image
-        : `../images/meter/${d.name.toLowerCase().replace(/[^a-z0-9]/g, '_')}.webp`;
+        ? resolveAssetPath(meterProfileMapping[d.name].image)
+        : resolveAssetPath(`images/meter/${d.name.toLowerCase().replace(/[^a-z0-9]/g, '_')}.webp`);
 
       const parsedHeight = parseFloat(d.height) || 0;
       const parsedLength = parseFloat(d.length) || 0;
@@ -943,9 +944,9 @@ function initTimeline() {
             <h4 class="timeline__dinos-header">Meet the Dinosaurs</h4>
             <div class="timeline__dino-grid">
               ${subDinos.map(dino => {
-                const imgSrc = dino.image && dino.image.trim() !== '' ? dino.image : './images/dinos/trex.webp';
-                const cleanSrc = imgSrc.startsWith('./') ? imgSrc.replace('./', '../') : imgSrc;
-                return `
+                  const imgSrc = dino.image && dino.image.trim() !== '' ? dino.image : 'images/dinos/trex.webp';
+                  const cleanSrc = resolveAssetPath(imgSrc);
+                  return `
                   <a href="/DinoDeets_Website/explore/dino-detail.html?dino=${encodeURIComponent(dino.name)}" class="timeline__dino-icon" style="background-image: url('${cleanSrc}'); border-color: ${era.color};" data-dino="${dino.name}">
                     <div class="timeline__dino-bubble" style="--bubble-color: ${era.color}; color: #0E1A16;">
                       <p class="timeline__dino-bubble-name">${dino.name}</p>
@@ -1000,7 +1001,7 @@ function initTimeline() {
           <h4 class="timeline__dinos-header">Key Milestones</h4>
           <div class="timeline__vertical-events">
             ${subperiod.events.map(ev => {
-              const evImgSrc = ev.image ? (ev.image.startsWith('./') ? ev.image.replace('./', '../') : ev.image) : '';
+              const evImgSrc = ev.image ? resolveAssetPath(ev.image) : '';
               return `
                 <div class="timeline__vertical-event">
                   <span class="timeline__event-year-pill" style="background: ${era.color}; color: #0E1A16;">${ev.year}</span>
@@ -1124,7 +1125,7 @@ function initGallery() {
 
   grid.innerHTML = fanArtGallery.map((art, i) => `
     <div class="gallery__card" data-idx="${i}">
-      <img src="${art.image}" alt="${art.title}" class="gallery__card-img" loading="lazy" />
+      <img src="${resolveAssetPath(art.image)}" alt="${art.title}" class="gallery__card-img" loading="lazy" />
       <div class="gallery__card-info">
         <span class="gallery__card-likes">♥ ${art.likes}</span>
         <h3 class="gallery__card-title">${art.title}</h3>
@@ -1138,7 +1139,7 @@ function initGallery() {
     const card = e.target.closest('.gallery__card');
     if (!card) return;
     const art = fanArtGallery[parseInt(card.dataset.idx)];
-    document.getElementById('gallery-lightbox-img').src = art.image;
+    document.getElementById('gallery-lightbox-img').src = resolveAssetPath(art.image);
     document.getElementById('gallery-lightbox-title').textContent = art.title;
     document.getElementById('gallery-lightbox-artist').textContent = art.artist;
     lightbox.style.display = 'flex';
@@ -1155,11 +1156,11 @@ function initColoringPages() {
 
   grid.innerHTML = coloringPages.map(page => `
     <div class="coloring__card">
-      <img src="${page.image}" alt="${page.name}" class="coloring__card-img" loading="lazy" />
+      <img src="${resolveAssetPath(page.image)}" alt="${page.name}" class="coloring__card-img" loading="lazy" />
       <div class="coloring__card-info">
         <h3 class="coloring__card-name">${page.name}</h3>
         <p class="coloring__card-diff">Difficulty: ${page.difficulty}</p>
-        <a href="${page.image}" download="DinoDeets-${page.name.replace(/\s+/g, '-')}.webp" class="coloring__download">
+        <a href="${resolveAssetPath(page.image)}" download="DinoDeets-${page.name.replace(/\s+/g, '-')}.webp" class="coloring__download">
           Download & Print
         </a>
       </div>
@@ -1210,6 +1211,7 @@ function wrapPageContent() {
 
 function initPageContent() {
   runPageCleanups();
+  normalizeAllImages();
 
   initParticles();
   loadEpisodes();
@@ -1413,6 +1415,10 @@ async function navigateToPage(url, pushState = true) {
       document.title = newDoc.querySelector('title')?.innerText || '';
       document.body.className = newDoc.body.className;
       
+      if (pushState) {
+        window.history.pushState(null, '', url.href);
+      }
+      
       if (wrapper) {
         wrapper.innerHTML = '';
         const newElements = getPageContentElements(newDoc);
@@ -1431,10 +1437,6 @@ async function navigateToPage(url, pushState = true) {
         }
       } else {
         window.scrollTo({ top: 0, behavior: 'auto' });
-      }
-      
-      if (pushState) {
-        window.history.pushState(null, '', url.href);
       }
       
       initPageContent();
@@ -1510,6 +1512,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize persistent components
   initInteractiveMascot();
   initBackToTop();
+  
+  // Normalize images
+  normalizeAllImages();
   
   // Initialize dynamic page content
   initPageContent();

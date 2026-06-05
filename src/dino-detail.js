@@ -1,6 +1,7 @@
 // dino-detail.js
 
 import dinoData from './data/encyclopedia.json';
+import { resolveAssetPath } from './resolve-path.js';
 
 // Coordinates matching dino-map.js for accurate projection on world.svg
 const locationCoords = {
@@ -86,8 +87,8 @@ export function initDinoDetail() {
 
     document.title = `${dino.name} | Dino Deets`;
 
-    const imgSrc = dino.image && dino.image.trim() !== '' ? dino.image : '../images/dinos/trex.webp';
-    const originalSrc = imgSrc.startsWith('./') ? imgSrc.replace('./', '../') : imgSrc;
+    const imgSrc = dino.image && dino.image.trim() !== '' ? dino.image : 'images/dinos/trex.webp';
+    const originalSrc = resolveAssetPath(imgSrc);
 
     const diets = getActiveDiets(dino.diet);
     
@@ -225,7 +226,7 @@ export function initDinoDetail() {
     // Fetch and draw the high-fidelity minimap
     const mapWrap = container.querySelector('.dd-map-wrap');
     if (mapWrap) {
-      fetch('../images/map/world-accurate.svg')
+      fetch(resolveAssetPath('images/map/world-accurate.svg'))
         .then(res => {
           if (!res.ok) throw new Error('Failed to load map file');
           return res.text();

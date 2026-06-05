@@ -1,6 +1,7 @@
 // encyclopedia.js
 
 import dinoData from './data/encyclopedia.json';
+import { resolveAssetPath } from './resolve-path.js';
 
 let currentFilter = 'all';
 
@@ -79,8 +80,8 @@ function renderCards(dinos, container) {
     card.className = 'dino-card';
     
     // Handle placeholder image
-    const imgSrc = dino.image && dino.image.trim() !== '' ? dino.image : '../images/dinos/trex.webp';
-    const originalSrc = imgSrc.startsWith('./') ? imgSrc.replace('./', '../') : imgSrc;
+    const imgSrc = dino.image && dino.image.trim() !== '' ? dino.image : 'images/dinos/trex.webp';
+    const originalSrc = resolveAssetPath(imgSrc);
 
     card.innerHTML = `
       <div class="dino-card__image-container">

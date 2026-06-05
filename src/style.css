@@ -169,6 +169,13 @@ body {
   border-radius: 6px;
 }
 
+.nav__logo-text-img {
+  height: 26px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
 .nav__icon-link {
   position: relative;
   display: flex;
@@ -178,7 +185,7 @@ body {
   height: 44px;
   border-radius: 50%;
   transition: all 0.3s ease;
-  color: var(--color-text-primary);
+  color: var(--color-text-secondary);
   text-decoration: none;
 }
 
@@ -331,6 +338,25 @@ body {
   font-size: clamp(3.5rem, 10vw, 7rem);
   line-height: 1.05;
   margin-bottom: 20px;
+}
+
+.hero__title-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.hero__logo-img {
+  width: clamp(180px, 35vw, 280px);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 35px rgba(212, 168, 67, 0.45)) drop-shadow(0 6px 15px rgba(0, 0, 0, 0.6));
+  transition: transform 0.5s var(--ease-bounce);
+}
+
+.hero__logo-img:hover {
+  transform: scale(1.08) rotate(2deg);
 }
 
 .hero__title-dino {
