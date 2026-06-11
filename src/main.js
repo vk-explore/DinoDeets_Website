@@ -12,6 +12,7 @@ import dinoGlossary from './data/glossary.json';
 import timelineData from './data/timeline.json';
 import dinoData from './data/encyclopedia.json';
 import artData from './data/art.json';
+import episodesData from './data/episodes.json';
 import { resolveAssetPath, normalizeAllImages } from './resolve-path.js';
 
 
@@ -95,84 +96,38 @@ function initParticles() {
   }
 }
 
-// ===== EPISODES (YouTube RSS) =====
+// ===== EPISODES (Manual Update) =====
 async function loadEpisodes() {
   const grid = document.getElementById('episodes-grid');
   if (!grid) return;
 
-  grid.innerHTML = Array(6).fill('').map(() => `
-    <div class="episode-skeleton anim-fade-up">
-      <div class="episode-skeleton__thumb"></div>
-      <div class="episode-skeleton__body">
-        <div class="episode-skeleton__line"></div>
-        <div class="episode-skeleton__line episode-skeleton__line--short"></div>
-      </div>
-    </div>
-  `).join('');
-
-  try {
-    const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=UCyUZWmztaj_lRgG4n1kt-Ug`;
-    const proxyUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
-    const res = await fetch(proxyUrl);
-    const data = await res.json();
-    if (data.status === 'ok' && data.items?.length) {
-      renderEpisodes(data.items.slice(0, 6));
-    } else { renderFallbackEpisodes(); }
-  } catch {
-    renderFallbackEpisodes();
-  }
-}
-
-function renderEpisodes(items) {
-  const grid = document.getElementById('episodes-grid');
-  grid.innerHTML = items.map((item, i) => {
-    const videoId = item.link?.match(/v=([^&]+)/)?.[1] || item.guid?.split(':').pop() || '';
-    const thumb = item.thumbnail || `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
-    const date = new Date(item.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+  grid.innerHTML = episodesData.map((ep, i) => {
     const isNew = i === 0;
+    const dateStr = ep.date ? new Date(ep.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }) : 'Watch on YouTube';
+    
+    // Check if thumbnail is an external URL (e.g. YouTube thumbnail) or local asset
+    const thumbUrl = (ep.img.startsWith('http') || ep.img.startsWith('//')) 
+      ? ep.img 
+      : resolveAssetPath(ep.img);
+
     return `
-      <a href="${item.link || '#'}" target="_blank" rel="noopener"
+      <a href="${ep.link || 'https://www.youtube.com/@dinodeets'}" target="_blank" rel="noopener"
          class="episode-card anim-fade-up" style="animation-delay: ${i * 0.1}s" id="episode-${i}">
         ${isNew ? '<span class="episode-card__badge">Fresh Release</span>' : ''}
         <div class="episode-card__thumb">
-          <img src="${thumb}" alt="${item.title}" loading="lazy" />
-          <div class="episode-card__play episode-card__play-mask"><span class="episode-card__play-icon">▶</span></div>
-        </div>
-        <div class="episode-card__body">
-          <h3 class="episode-card__title">${item.title}</h3>
-          <span class="episode-card__date"><svg class="inline-icon" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" style="vertical-align: middle; margin-bottom: 2px;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> ${date}</span>
-        </div>
-      </a>`;
-  }).join('');
-  initScrollAnimations();
-}
-
-function renderFallbackEpisodes() {
-  const fallback = [
-    { title: "The BIGGEST Dinosaur Ever Found!", img: "./images/dinos/brachiosaurus.webp" },
-    { title: "T-Rex: King of the Dinosaurs", img: "./images/dinos/trex.webp" },
-    { title: "Fossils: How Dinosaurs Become Stones", img: "./images/props/trex-skull.webp" },
-    { title: "Underwater Monsters of the Deep", img: "./images/dinos/velociraptor.webp" },
-    { title: "The Armored Stegosaurus", img: "./images/dinos/stegosaurus.webp" },
-    { title: "India's Own Dinosaurs!", img: "./images/dinos/triceratops.webp" },
-  ];
-  const grid = document.getElementById('episodes-grid');
-  grid.innerHTML = fallback.map((ep, i) => {
-    const isNew = i === 0;
-    return `
-      <a href="https://www.youtube.com/@dinodeets" target="_blank" rel="noopener"
-         class="episode-card anim-fade-up" id="episode-${i}">
-        ${isNew ? '<span class="episode-card__badge">Fresh Release</span>' : ''}
-        <div class="episode-card__thumb">
-          <img src="${resolveAssetPath(ep.img)}" alt="${ep.title}" loading="lazy" style="object-fit: cover;" />
+          <img src="${thumbUrl}" alt="${ep.title}" loading="lazy" style="object-fit: cover;" />
           <div class="episode-card__play episode-card__play-mask"><span class="episode-card__play-icon">▶</span></div>
         </div>
         <div class="episode-card__body">
           <h3 class="episode-card__title">${ep.title}</h3>
-          <span class="episode-card__date">Watch on YouTube</span>
+          <span class="episode-card__date">
+            <svg class="inline-icon" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" style="vertical-align: middle; margin-bottom: 2px;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            ${dateStr}
+          </span>
         </div>
       </a>`;
   }).join('');
+  
   initScrollAnimations();
 }
 

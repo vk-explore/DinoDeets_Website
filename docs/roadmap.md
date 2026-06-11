@@ -6,7 +6,7 @@
 - [x] Base layout & responsive grid
 - [x] Navigation (sticky, animated)
 - [x] Hero section (parallax prehistoric landscape)
-- [x] Episodes section (YouTube RSS auto-pull + fallback)
+- [x] Episodes section (Manual JSON data, previously RSS auto-pull)
 - [x] About section (Meet Devaansh)
 - [x] Social links (YouTube, Instagram, Facebook)
 - [x] Footer (geological strata design)

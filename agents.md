@@ -1,13 +1,13 @@
 # Dino Deets Website — Agent Context
 
 ## Project Overview
-Website for the **Dino Deets** podcast — a kid-and-family-friendly dinosaur podcast hosted by **Devaansh Nara** on YouTube (@dinodeets). The site features a dark "prehistoric meets modern" aesthetic with interactive elements like a fossil dig game, animated dino mascot, and auto-pulled YouTube episodes.
+Website for the **Dino Deets** podcast — a kid-and-family-friendly dinosaur podcast hosted by **Devaansh Nara** on YouTube (@dinodeets). The site features a dark "prehistoric meets modern" aesthetic with interactive elements like a fossil dig game, animated dino mascot, and manually curated YouTube episodes.
 
 ## Key Decisions
 - **Theme:** Dark mode default ("Night at the Museum" vibe)
 - **Target Audience:** Growing kids (primary), parents (secondary)
 - **Hosting:** GitHub Pages (static build via Vite)
-- **Episodes:** Auto-pulled from YouTube channel @dinodeets
+- **Episodes:** Manually populated local JSON from YouTube channel @dinodeets (due to RSS deprecation)
 - **Socials:** YouTube, Instagram, Facebook only
 - **Audio:** Ambient prehistoric sounds with toggle
 - **Domain:** TBD
@@ -29,6 +29,7 @@ Website for the **Dino Deets** podcast — a kid-and-family-friendly dinosaur po
 11. Smooth Page Transitions & Progress Bar (Completed - implemented client-side PJAX routing to swap page content smoothly, showing a gold-green-orange trickle progress bar at the top, and dissolving the old page content into the new page to eliminate browser loading flashes.)
 12. Image Path Resolution (Completed - resolved relative-to-absolute asset loading issues on PJAX routing transitions across varying directory depths)
 13. Hero Logo & Header Customizations (Completed - replaced hero text heading with the logo image using SEO-friendly semantics, and replaced the plain logo text inside the header navigation across all pages with a custom-generated transparent logo image featuring a dino footprint in the "O")
+14. YouTube Episode Data (Completed - migrated from failing dynamic RSS-to-JSON proxy fetch to a manually updated local `episodes.json` file due to YouTube API/RSS deprecation, ensuring faster load times and eliminating 422 errors.)
 
 ## Agent Guidelines
 - **Living Documentation:** Agents MUST proactively update `agents.md` and all files in the `docs/` folder as new decisions are made, requirements change, or features are implemented during the chat. Do not wait for explicit user prompts to keep documentation synchronized.

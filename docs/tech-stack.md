@@ -9,7 +9,7 @@
 - **Vite** — Dev server with HMR, static build output
 
 ## Key APIs & Techniques
-- **YouTube RSS Feed** — Auto-fetch episodes from @dinodeets channel (via rss2json proxy)
+- **Local Episodes JSON** — Manually updated list of episodes replacing the deprecated YouTube RSS Feed
 - **Canvas API** — Fossil Dig mini-game
 - **Intersection Observer** — Scroll-triggered entrance animations
 - **CSS Custom Properties** — Theming and design tokens
@@ -69,7 +69,7 @@ DinoDeets_Website/
 |---------|-------------|
 | Navigation | Sticky, scrollspy, hamburger mobile |
 | Hero | Parallax bg, particles, CTA |
-| Episodes | YouTube RSS + static fallback |
+| Episodes | Local static JSON (episodes.json) |
 | Fossil Dig | Canvas scratch-off mini-game |
 | Random Deet | Integrated directly into the mascot speech bubble on click |
 | Dino Map | 12 sites with Mercator projection pins |
